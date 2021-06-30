@@ -1,0 +1,1 @@
+(self.webpackChunkipc_144=self.webpackChunkipc_144||[]).push([[2535],{6353:function(e){"use strict";e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Welcome","permalink":"/IPC144/blog/welcome"},{"title":"Hello","permalink":"/IPC144/blog/hello-world"},{"title":"Hola","permalink":"/IPC144/blog/hola"}]}')}}]);
