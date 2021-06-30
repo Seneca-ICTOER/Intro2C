@@ -5,13 +5,13 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 module.exports = {
   title: 'IPC144 - Course Notes',
   tagline: 'C Programming',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  url: 'https://camerongray1210.github.io',
+  baseUrl: '/IPC144/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'camerongray1210', // Usually your GitHub org/user name.
+  projectName: 'IPC144', // Usually your repo name.
   themeConfig: {
     navbar: {
       title: 'IPC144',
