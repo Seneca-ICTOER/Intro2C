@@ -2,11 +2,14 @@
 /node_modules
 
 # Production
-#/build
+/build
 
 # Generated files
 .docusaurus
 .cache-loader
+
+# helper windows batch scripts
+.bat
 
 # Misc
 .DS_Store

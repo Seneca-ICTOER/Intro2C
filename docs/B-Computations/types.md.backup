@@ -45,7 +45,7 @@ A **`double`** typically occupies 8 bytes and can store a double-precision, floa
 
 Size specifiers adjust the size of the **`int`** and **`double`** types.
 
-### Type **`int`** Size Specifiers
+### *int* Type Size Specifiers
 
 Specifying the size of an int ensures that the type contains a minimum number of bits.  The three specifiers are:
 
@@ -67,7 +67,7 @@ A **`long long int`** \(or simply, a long long\) contains at least 64 bits:
 
 The size of a simple **`int`** is no less than the size of a **`short`**.
 
-### **`Type` double `Size Specifier`**
+### *double* Type Size Specifier
 
 The size of a **`long double`** depends on the environment and is typically at least 64 bits:
 
@@ -127,7 +127,7 @@ Floating-point types store tiny as well as huge values by decomposing the values
 
 The most popular model is the IEEE \(I-triple-E or Institute of Electrical and Electronics Engineers\) Standard 754 for Binary and Floating-Point Arithmetic.  Under IEEE 754, a float has 32 bits, consisting of one sign bit, an 8-bit exponent and a 23-bit significand \(or mantissa\):
 
-![](../static/img/image17.png)
+![](/img/image17.png)
 
 Under IEEE 754, a double occupies 64 bits, has one sign bit, an 11-bit exponent and a 52-bit significand:
 

@@ -45,7 +45,7 @@ A **`double`** typically occupies 8 bytes and can store a double-precision, floa
 
 Size specifiers adjust the size of the **`int`** and **`double`** types.
 
-### Type **`int`** Size Specifiers
+### *int* Type Size Specifiers
 
 Specifying the size of an int ensures that the type contains a minimum number of bits.  The three specifiers are:
 
@@ -67,7 +67,7 @@ A **`long long int`** \(or simply, a long long\) contains at least 64 bits:
 
 The size of a simple **`int`** is no less than the size of a **`short`**.
 
-### **`Type` double `Size Specifier`**
+### *double* Type Size Specifier
 
 The size of a **`long double`** depends on the environment and is typically at least 64 bits:
 

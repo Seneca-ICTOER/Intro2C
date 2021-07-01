@@ -6,7 +6,7 @@ module.exports = {
   title: 'IPC144 - Course Notes',
   tagline: 'C Programming',
   url: 'https://camerongray1210.github.io',
-  baseUrl: '/IPC144/',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
@@ -28,7 +28,7 @@ module.exports = {
           items: [
             {
               label: 'Contents',
-              to: '/docs',
+              to: '/',
             },
           ],
         },
@@ -47,6 +47,7 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
+		  routeBasePath: '/',
           editUrl:
             'https://github.com/facebook/docusaurus/edit/master/website/',
         },

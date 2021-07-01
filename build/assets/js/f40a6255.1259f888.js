@@ -1,1 +1,0 @@
-(self.webpackChunkipc_144=self.webpackChunkipc_144||[]).push([[8147],{7343:function(e){"use strict";e.exports=JSON.parse('{"permalink":"/IPC144/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":3,"previousPage":null,"nextPage":null,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

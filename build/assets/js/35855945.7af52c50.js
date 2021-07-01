@@ -1,1 +1,0 @@
-(self.webpackChunkipc_144=self.webpackChunkipc_144||[]).push([[6058],{757:function(l){"use strict";l.exports=JSON.parse('{"allTagsPath":"/IPC144/blog/tags","slug":"hello","name":"hello","count":2,"permalink":"/IPC144/blog/tags/hello"}')}}]);
