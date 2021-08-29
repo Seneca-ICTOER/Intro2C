@@ -1,3 +1,7 @@
+---
+sidebar_position: 2
+---
+
 # Information
 
 ### Learning Outcomes
@@ -88,9 +92,8 @@ For example, 4 Gigabytes of RAM
 
 ![](/img/image21.png)
 
-{% hint style="info" %}
-Note that each byte, and not each bit, has its own address. We say that RAM is byte-addressable.
-{% endhint %}
+>**Note** that each byte, and not each bit, has its own address. We say that RAM is byte-addressable.
+
 
 ### Sets of Bytes
 

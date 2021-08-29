@@ -1,3 +1,7 @@
+---
+sidebar_position: 5
+---
+
 # Style Guidelines
 
 ## Learning Outcomes

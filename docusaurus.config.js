@@ -7,6 +7,7 @@ module.exports = {
   tagline: 'C Programming',
   url: 'https://camerongray1210.github.io',
   baseUrl: '/',
+  trailingSlash: false,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',

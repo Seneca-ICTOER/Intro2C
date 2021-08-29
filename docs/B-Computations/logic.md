@@ -1,3 +1,7 @@
+---
+sidebar_position: 4
+---
+
 # Logic
 
 ## Learning Outcomes
@@ -102,7 +106,8 @@ if (likePizza == 1)
 #### Code Block \(more than a single statement\)
 
 ```c
-if (likePizza == 1) {
+if (likePizza == 1)
+{
      printf("I like pizza\n");
      printf("I want more pizza\n"); 
 }
@@ -139,10 +144,12 @@ else
 #### Code Block \(more than a single statement\)
 
 ```c
-if (likePizza == 1) {
+if (likePizza == 1)
+{
     printf("I like pizza\n");
 } 
-else {
+else
+{
     printf("I hate pizza\n");
     printf("I don't want pizza\n"); 
 }
@@ -185,7 +192,8 @@ if (age > 12 && age < 16)
 The case-by-case selection construct compares a condition - simple or compound - against a set of constant values or constant expressions.  This construct takes the form:
 
 ```c
-switch (condition) {
+switch (condition)
+{
 case constant:
        sequence
        break;
@@ -212,7 +220,8 @@ double cost;
 printf("Enter your selection (a, b or c) ? "); 
 scanf("%c", &choice);
 
-switch (choice) {
+switch (choice)
+{
 case 'A' :
 case 'a' :
     cost = 1.50;
@@ -283,7 +292,8 @@ If the change statement is missing or if the test condition is always satisfied,
 The _**while**_ construct executes its sequence as long as the test condition is true.  This construct takes the form:
 
 ```c
-while (condition) {
+while (condition)
+{
     sequence
 }
 ```
@@ -292,7 +302,8 @@ Example
 
 ```c
 slices = 4;
-while (slices > 0) {
+while (slices > 0)
+{
     slices--;
     printf("Gulp! Slices left %d\n", slices); 
 }
@@ -361,7 +372,8 @@ This code contains a _**semantic error**_: if the initial value was 5, the itera
 The _**for**_ construct groups the initialization, test condition and change together, separating them with semi-colons.  This construct takes the form:
 
 ```c
-for (initialization; condition; change) {
+for (initialization; condition; change)
+{
     sequence
 }
 ```
@@ -369,7 +381,8 @@ for (initialization; condition; change) {
 #### Example
 
 ```c
-for (slices = 4; slices > 0; --slices) {
+for (slices = 4; slices > 0; --slices)
+{
     printf("Gulp! Slices left %d\n", slices - 1); 
 }
 ```
@@ -389,13 +402,16 @@ The following code snippet uses a flag to terminate the iteration prematurely.
 ```c
 int done = 0;  // flag
 int total = 0; // accumulator
-for (i = 0; i < 10 && done == 0; i++) {
+for (i = 0; i < 10 && done == 0; i++)
+{
     printf("Enter integer (0 to stop) "); 
     scanf("%d", &value);
-    if (value == 0) {
+    if (value == 0)
+    {
         done = 1;
     }
-    else {
+    else
+    {
         total += value;
     }
 }
@@ -424,6 +440,7 @@ Designing a program with jumps or intersecting paths makes it more difficult to 
 Enclosing one logic construct within another is called _**nesting**_.   
 
 
+
 ### Nested Selections
 
 A selection within another selection is called a _**nested selection**_.
@@ -431,7 +448,8 @@ A selection within another selection is called a _**nested selection**_.
 #### Example
 
 ```c
-if (grade < 50) {
+if (grade < 50)
+{
     if (sup == 1)
         printf("Sup\n");
     else
@@ -446,7 +464,8 @@ else
 An ambiguity arises in a _**nested if else**_ construct that contains an optional sequence \(_**if**_\).  Consider the following code snippet:
 
 ```c
-if (grade < 50) {
+if (grade < 50)
+{
     if (sup == 1)
         printf("Sup\n");
 }
@@ -481,11 +500,13 @@ The C language always attaches the dangling else to the innermost if.
 To associate an else with the next innermost selection, we retain the braces that wrap the innermost selection. 
 
 ```c
-if (grade < 50) b{
+if (grade < 50)
+{
     if (sup == 1)
         printf("Sup\n");
 } 
-else {
+else
+{
     printf("Pass\n); 
 }
 ```
@@ -505,8 +526,10 @@ The program below includes a nested iteration:
 int main(void)
 {
     int i, j;
-    for (i = 0; i < 5; i++) {
-        for (j = 0; j < 5; j++) {
+    for (i = 0; i < 5; i++)
+    {
+        for (j = 0; j < 5; j++)
+        {
             printf("%d,%d  ", i, j); 
         }
         printf("\n");
@@ -525,4 +548,3 @@ The output of the code above:
 3,0  3,1  3,2  3,3  3,4
 4,0  4,1  4,2  4,3  4,4 
 ```
-
