@@ -29,7 +29,7 @@ The core language defines the primitive types.  We cannot redefine these types o
 
 Each type defines how a value of that type is stored in a region of memory.  Consider the int type.  A value of int type is stored in equivalent binary representation in 4 bytes on a 32-bit platform:
 
-<table border="1">
+<table border="0">
 <td align="center" colspan="32">int (32-bit platform)</td>
 <tr>
 <td align="center" colspan="8">1 Byte</td>
@@ -99,7 +99,7 @@ struct Student
 
 The members occupy memory in the order in which we have listed them in the declaration of our structure:
 
-<table border="1">
+<table border="0">
 <tr>
     <td align="center">struct</td>
     <td align="center" colspan="20">Student</td>
@@ -166,7 +166,7 @@ int main(void)
        return 0;
 }
 ```
-<table border="1">
+<table border="0">
 <tr>
     <td align="center">struct</td>
     <td align="center" colspan="20">Student<br/><b>harry</b></td>
@@ -215,7 +215,7 @@ To initialize `harry` with student number `975` and grades of `75.6`, `82.3` and
 struct Student harry = { 975, { 75.6f, 82.3f, 68.9f } };
 ```
 
-<table border="1">
+<table border="0">
 <tr>
     <td align="center">struct</td>
     <td align="center" colspan="20">Student<br/><b>harry</b></td>
@@ -244,7 +244,7 @@ struct Student harry = { 975, { 75.6f, 82.3f, 68.9f } };
 </tr>
 </table>
 
-## MEMBER ACCESS
+## Member Access
 
 To access a member of an object of a structure, we use the dot operator.  Dot notation takes the form:
 
@@ -301,7 +301,7 @@ To access the address of `harry`'s ***third*** grade, we write:
 &harry.grade[2]
 ```
 
-<table border="1">
+<table border="0">
 <tr>
     <td align="center">struct</td>
     <td align="center" colspan="20">Student<br/><b>harry</b></td>
@@ -396,7 +396,7 @@ The table includes:
 
 >Note the breakdown of each object into its members in the head of the table.  We reserve a separate line for the addresses of the different objects:
 
-<table border="1">
+<table border="0">
 <tr>
     <td colspan="2">&nbsp;</td>
     <td align="center" colspan="2">struct<br/>Product</td>
