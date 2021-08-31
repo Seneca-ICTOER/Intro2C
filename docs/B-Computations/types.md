@@ -219,16 +219,17 @@ The C language reserves the following words for its own use:
  while
 ```
 
-For upward compatibility with C++, we avoid using the following C++ reserved words
+For upward compatibility with C++, we avoid using the following C++ reserved words:
 
 ```cpp
- asm              export           private          throw
- bool             false            protected        true
- catch            friend           public           try
- class            mutable          reinterpret_cast typeid
- const_cast       namespace        static_cast      typename
- delete           new              template         using
- dynamic_cast     operator         this             virtual
- explicit                                           wchar_t
+ asm              friend            template
+ bool             mutable           this
+ catch            namespace         throw
+ class            new               true
+ const_cast       operator          try
+ delete           private           typeid
+ dynamic_cast     protected         typename
+ explicit         public            using
+ export           reinterpret_cast  virtual
+ false            static_cast       wchar_t
 ```
-
