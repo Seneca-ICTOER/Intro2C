@@ -158,12 +158,13 @@ We may insert control characters between the `%` and the `conversion character`.
 
 The three control characters are:
 
-* ***\**** suppresses storage of the converted data (discards it without storing it)
+* **\*** suppresses storage of the converted data (discards it without storing it)
 * ***width*** - specifies the maximum number of characters to be interpreted
 * ***size*** - specifies the size of the storage type
 
 For integer values:
-| Size Specifier | Convert to Type|
+
+| Size Specifier | Convert to Type |
 | :--- | :--- |
 | *-none-* | int |
 | **hh** | char |
@@ -172,13 +173,14 @@ For integer values:
 | **ll** | long long |
 
 For floating-point values:
-| Size Specifier | Convert to Type|
+
+| Size Specifier | Convert to Type |
 | :--- | :--- |
 | *-none-* | float |
 | **l** | double |
 | **L** | long double |
 
-A conversion specifier that includes an * does not have a corresponding address in the argument list.  This is an exception to the matching conversion-specifier/argument rule.
+A conversion specifier that includes an **\*** does not have a corresponding address in the argument list.  This is an exception to the matching conversion-specifier/argument rule.
 
 ### Problems with %c (Optional)
 
@@ -284,13 +286,10 @@ The above program produces the following output:
 ```
 Enter an integer in range [3,15] : we34
 **Bad char(s)!**
-
 Enter an integer in range [3,15] : 34.4 
 **Trail char(s)!** 
-
 Enter an integer in range [3,15] : 345
 **Out of range!**
-
 Enter an integer in range [3,15] : 14
 
 Program accepted 14
