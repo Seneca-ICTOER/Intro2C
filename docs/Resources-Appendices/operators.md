@@ -9,7 +9,7 @@
 |`<`&nbsp;&nbsp; `<=`&nbsp;&nbsp; `>`&nbsp;&nbsp; `>=`|left to right|
 |`==`&nbsp;&nbsp; `!=`|left to right|
 |`&&`|left to right|
-|`\|\|`|left to right|
+|<code>&#124;&#124;</code> | left to right |
 |`=`&nbsp;&nbsp;`+=`&nbsp;&nbsp;`-=`&nbsp;&nbsp;`*=`&nbsp;&nbsp; `/=`&nbsp;&nbsp; `%=`|right to left|
 |`?:`|right to left **LOW**|
 |`,`|left to right|
