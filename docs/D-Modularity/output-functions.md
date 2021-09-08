@@ -244,7 +244,7 @@ d|<--           %c
 64|<--          %x
 ```
 
->Note:<br/>
+>**Note**<br/>
 >* `doubles` and `float`s **round** to the requested precision before being displayed;
 >* `double` data may be displayed using `%f` (`printf()` converts float values to doubles for compatibility with legacy programs);
 >* `char`acter data can be displayed in various formats including:
