@@ -54,6 +54,7 @@ sidebar_position: 1
 
 ## Appendices
 
-* [Data Conversions](Resources-Appendices/data-conversions.md)
 * [ASCII Collating Sequence](Resources-Appendices/ascii-collating-sequence.md)
 * [EBCDIC Collating Sequence](Resources-Appendices/ebcdic-collating-sequence.md)
+* [Data Conversions](Resources-Appendices/data-conversions.md)
+* [Operator Precedence](Resources-Appendices/operators.md)
