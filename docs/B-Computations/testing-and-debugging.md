@@ -145,7 +145,7 @@ int main(void)
 
 The flow graph illustrating the above code would look like:
 
-![](/img/image37.png)
+![](https://ict.senecacollege.ca//~ipc144/pages/images/flowg.gif)
 
 ### Test Criteria
 
@@ -264,19 +264,19 @@ The GNU debugger is a command-line debugging tool called gdb that ships with the
 
 To be able to use gdb, we compile our source code with the -g option:
 
-```c
+```bash
 gcc -g myProgram.c
 ```
 
 To debug the executable \(a.out\), we enter:
 
-```c
+```bash
 gdb a.out
 ```
 
 The gdb prompt will appear:
 
-```c
+```bash
 (gdb)
 ```
 
@@ -304,7 +304,7 @@ The `gdb` commands that we may enter at the prompt include:
 
 If our program crashes and produces a core dump, `gdb` can help locate the crash point.  We enter:
 
-```c
+```bash
 gdb a.out core
 ```
 

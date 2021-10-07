@@ -31,19 +31,187 @@ The four most common types of the C language for performing arithmetic calculati
 
 A **`char`** occupies one byte and can store a small integer value, a single character or a single symbol: 
 
-![](/img/image29.png)
+<table border="0">
+<tr><td align="center" colspan="8">char</td></tr>
+<tr><td align="center" colspan="8">1 Byte</td></tr>
+<tr><td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td></tr>
+</table>
+
 
 An **`int`** occupies one word and can store an integer value. In a 32-bit environment, an **`int`** occupies 4 bytes:
 
-![](/img/image32.png)
+<table border="0">
+<tr><td align="center" colspan="32">int (32-bit environment)</td></tr>
+
+<tr><td align="center" colspan="8">1 Byte</td>
+    <td align="center" colspan="8">1 Byte</td>
+    <td align="center" colspan="8">1 Byte</td>
+    <td align="center" colspan="8">1 Byte</td></tr>
+
+<tr><td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td></tr>
+</table>
+
 
 A **`float`** typically occupies 4 bytes and can store a single-precision, floating-point number:
 
-![](/img/image30.png)
+<table border="0">
+<tr><td align="center" colspan="32">float</td></tr>
+
+<tr><td align="center" colspan="8">1 Byte</td>
+    <td align="center" colspan="8">1 Byte</td>
+    <td align="center" colspan="8">1 Byte</td>
+    <td align="center" colspan="8">1 Byte</td></tr>
+
+<tr><td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td></tr>
+</table>
 
 A **`double`** typically occupies 8 bytes and can store a double-precision, floating-point number:
 
-![](/img/image27.png)
+<table border="0">
+<tr><td align="center" colspan="64">double</td></tr>
+
+<tr><td align="center" colspan="8">1 Byte</td>
+    <td align="center" colspan="8">1 Byte</td>
+    <td align="center" colspan="8">1 Byte</td>
+    <td align="center" colspan="8">1 Byte</td>
+    <td align="center" colspan="8">1 Byte</td>
+    <td align="center" colspan="8">1 Byte</td>
+    <td align="center" colspan="8">1 Byte</td>
+    <td align="center" colspan="8">1 Byte</td></tr>
+<tr><td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td></tr>
+</table>
 
 ## Size Specifiers
 
@@ -59,15 +227,152 @@ Specifying the size of an int ensures that the type contains a minimum number of
 
 A **`short int`** \(or simply, a short\) contains at least 16 bits:
 
-![](/img/image14.png)
+<table border="0">
+<tr><td align="center" colspan="16">short</td></tr>
+
+<tr><td align="center" colspan="8">1 Byte</td>
+    <td align="center" colspan="8">1 Byte</td></tr>
+
+<tr><td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td></tr>
+</table>
 
 A **`long int`** \(or simply, a long\) contains at least 32 bits:
 
-![](/img/image19.png)
+<table border="0">
+<tr><td align="center" colspan="32">long</td></tr>
+
+<tr><td align="center" colspan="8">1 Byte</td>
+    <td align="center" colspan="8">1 Byte</td>
+    <td align="center" colspan="8">1 Byte</td>
+    <td align="center" colspan="8">1 Byte</td></tr>
+
+<tr><td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td></tr>
+</table>
 
 A **`long long int`** \(or simply, a long long\) contains at least 64 bits:
 
-![](/img/image31.png)
+<table border="0">
+<tr><td align="center" colspan="64">long long</td></tr>
+
+<tr><td align="center" colspan="8">1 Byte</td>
+    <td align="center" colspan="8">1 Byte</td>
+    <td align="center" colspan="8">1 Byte</td>
+    <td align="center" colspan="8">1 Byte</td>
+    <td align="center" colspan="8">1 Byte</td>
+    <td align="center" colspan="8">1 Byte</td>
+    <td align="center" colspan="8">1 Byte</td>
+    <td align="center" colspan="8">1 Byte</td></tr>
+<tr><td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td></tr>
+</table>
 
 The size of a simple **`int`** is no less than the size of a **`short`**.
 
@@ -75,7 +380,82 @@ The size of a simple **`int`** is no less than the size of a **`short`**.
 
 The size of a **`long double`** depends on the environment and is typically at least 64 bits:
 
-![](/img/image16.png)
+<table border="0">
+<tr><td align="center" colspan="64">long double</td></tr>
+
+<tr><td align="center" colspan="8">1 Byte</td>
+    <td align="center" colspan="8">1 Byte</td>
+    <td align="center" colspan="8">1 Byte</td>
+    <td align="center" colspan="8">1 Byte</td>
+    <td align="center" colspan="8">1 Byte</td>
+    <td align="center" colspan="8">1 Byte</td>
+    <td align="center" colspan="8">1 Byte</td>
+    <td align="center" colspan="8">1 Byte</td></tr>
+<tr><td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td></tr>
+</table>
 
 Specifying the **`long double`** type only ensures that it contains at least as many bits as a **`double`**. The C language does not require a **`long double`** to contain a minimum number of bits.
 
@@ -84,8 +464,6 @@ Specifying the **`long double`** type only ensures that it contains at least as 
 Any type can hold a constant value. A constant value cannot be changed. To qualify a type as holding a constant value we use the keyword const. A type qualified as **`const`** is unmodifiable. That is, if a program instruction attempts to modify a **`const`** qualified type, the compiler will report an error.
 
 ## Representing Values
-
-
 
 Hardware manufacturers distinguish integral types from floating-point types and represent integral data and floating-point data differently.
 
@@ -121,9 +499,55 @@ To obtain the 2's complement of an integer, we
 * flip the bits
 * add one
 
-For example, we represent the integer -92 by$$10100100_2$$ 
+For example, we represent the integer -92 by 10100100<sub>2</sub> 
 
-![](/img/image24.png)
+<table border="0">
+<tr><td align="center">Bit #</td>
+    <td>7</td>
+    <td>6</td>
+    <td>5</td>
+    <td>4</td>
+    <td>3</td>
+    <td>2</td>
+    <td>1</td>
+    <td>0</td></tr>
+<tr><td bgcolor="#ffffcc" align="center">92 =></td>
+    <td bgcolor="#ffffcc">0</td>
+    <td bgcolor="#ffffcc">1</td>
+    <td bgcolor="#ffffcc">0</td>
+    <td bgcolor="#ffffcc">1</td>
+    <td bgcolor="#ffffcc">1</td>
+    <td bgcolor="#ffffcc">1</td>
+    <td bgcolor="#ffffcc">0</td>
+    <td bgcolor="#ffffcc">0</td></tr>
+<tr><td bgcolor="#ffffcc" align="center">Flip Bits</td>
+    <td bgcolor="#ffffcc">1</td>
+    <td bgcolor="#ffffcc">0</td>
+    <td bgcolor="#ffffcc">1</td>
+    <td bgcolor="#ffffcc">0</td>
+    <td bgcolor="#ffffcc">0</td>
+    <td bgcolor="#ffffcc">0</td>
+    <td bgcolor="#ffffcc">1</td>
+    <td bgcolor="#ffffcc">1</td></tr>
+<tr><td bgcolor="#ffffcc" align="center">Add 1</td>
+    <td bgcolor="#ffffcc">0</td>
+    <td bgcolor="#ffffcc">0</td>
+    <td bgcolor="#ffffcc">0</td>
+    <td bgcolor="#ffffcc">0</td>
+    <td bgcolor="#ffffcc">0</td>
+    <td bgcolor="#ffffcc">0</td>
+    <td bgcolor="#ffffcc">0</td>
+    <td bgcolor="#ffffcc">1</td></tr>
+<tr><td align="center">-92 =></td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td></tr>
+</table>
 
 ### Floating-Point Data
 
@@ -131,11 +555,129 @@ Floating-point types store tiny as well as huge values by decomposing the values
 
 The most popular model is the IEEE \(I-triple-E or Institute of Electrical and Electronics Engineers\) Standard 754 for Binary and Floating-Point Arithmetic.  Under IEEE 754, a float has 32 bits, consisting of one sign bit, an 8-bit exponent and a 23-bit significand \(or mantissa\):
 
-![](/img/image17.png)
+<table border="0">
+<tr><td align="center" colspan="32">float</td></tr>
+<tr><td align="center" colspan="8">1 Byte</td>
+    <td align="center" colspan="8">1 Byte</td>
+    <td align="center" colspan="8">1 Byte</td>
+    <td align="center" colspan="8">1 Byte</td></tr>
+<tr><td>s</td>
+    <td align="center" colspan="8">exponent</td>
+    <td align="center" colspan="23">significand</td></tr>
+<tr><td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td></tr>
+</table>
 
 Under IEEE 754, a double occupies 64 bits, has one sign bit, an 11-bit exponent and a 52-bit significand:
 
-![](/img/image15.png)
+<table border="0">
+<tr><td align="center" colspan="64">double</td></tr>
+<tr><td align="center" colspan="8">1 Byte</td>
+    <td align="center" colspan="8">1 Byte</td>
+    <td align="center" colspan="8">1 Byte</td>
+    <td align="center" colspan="8">1 Byte</td>
+    <td align="center" colspan="8">1 Byte</td>
+    <td align="center" colspan="8">1 Byte</td>
+    <td align="center" colspan="8">1 Byte</td>
+    <td align="center" colspan="8">1 Byte</td></tr>
+<tr><td>s</td>
+    <td align="center" colspan="11">exponent</td>
+    <td align="center" colspan="52">significand</td></tr>
+<tr><td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td>
+    <td bgcolor="#ffffcc">&nbsp;</td></tr>
+</table>
 
 Since the number of bits in the significand is limited, the float and double types cannot store all possible floating-point values exactly. That is, the floating-point types store values approximately.
 
@@ -147,13 +689,77 @@ The number of bytes allocated for a type determines the range of values that tha
 
 The ranges of values for the integral types are shown below. Ranges for some types depend on the execution environment:
 
-![](/img/image20.png)
+<table border="0">
+<tr><td align="center">Type</td>
+    <td align="center">Size</td>
+    <td align="center">Min</td>
+    <td align="center">Max</td></tr>
+<tr><td bgcolor="#ffffcc" align="center">char</td>
+    <td bgcolor="#ffffcc" align="center">8 bits</td>
+    <td bgcolor="#ffffcc" align="center">-128</td>
+    <td bgcolor="#ffffcc" align="center">127</td></tr>
+<tr><td bgcolor="#ffffcc" align="center">char</td>
+    <td bgcolor="#ffffcc" align="center">8 bits</td>
+    <td bgcolor="#ffffcc" align="center">0</td>
+    <td bgcolor="#ffffcc" align="center">255</td></tr>
+<tr><td bgcolor="#ffffcc" align="center">short</td>
+    <td bgcolor="#ffffcc" align="center">>= 16 bits</td>
+    <td bgcolor="#ffffcc" align="center">-32,768</td>
+    <td bgcolor="#ffffcc" align="center">32,767</td></tr>
+<tr><td bgcolor="#ffffcc" align="center">int</td>
+    <td bgcolor="#ffffcc" align="center">2 bytes</td>
+    <td bgcolor="#ffffcc" align="center">-32,768</td>
+    <td bgcolor="#ffffcc" align="center">32,767</td></tr>
+<tr><td bgcolor="#ffffcc" align="center">int</td>
+    <td bgcolor="#ffffcc" align="center">4 bytes</td>
+    <td bgcolor="#ffffcc" align="center">-2,147,483,648</td>
+    <td bgcolor="#ffffcc" align="center">2,147,483,647</td></tr>
+<tr><td bgcolor="#ffffcc" align="center">long</td>
+    <td bgcolor="#ffffcc" align="center">>= 32 bits</td>
+    <td bgcolor="#ffffcc" align="center">-2,147,483,648</td>
+    <td bgcolor="#ffffcc" align="center">2,147,483,647</td></tr>
+<tr><td bgcolor="#ffffcc" align="center">long long</td>
+    <td bgcolor="#ffffcc" align="center">>= 64 bits</td>
+    <td bgcolor="#ffffcc" align="center">-9,233,372,036,854,775,808</td>
+    <td bgcolor="#ffffcc" align="center">9,233,372,036,854,775,807</td></tr>
+</table>
 
 ### Floating-Point Types
 
 The limits on a float and double depend on the execution environment:
 
-![](/img/image28.png)
+<table border="0">
+<tr><td align="center">Type</td>
+    <td align="center">Size</td>
+    <td align="center">Significant</td>
+    <td align="center">Min Exponent</td>
+    <td align="center">Max Exponent</td></tr>
+<tr><td bgcolor="#ffffcc" align="center">float</td>
+    <td bgcolor="#ffffcc" align="center">minimum</td>
+    <td bgcolor="#ffffcc" align="center">6</td>
+    <td bgcolor="#ffffcc" align="center">-37</td>
+    <td bgcolor="#ffffcc" align="center">37</td></tr>
+<tr><td bgcolor="#ffffcc" align="center">float</td>
+    <td bgcolor="#ffffcc" align="center">typical</td>
+    <td bgcolor="#ffffcc" align="center">6</td>
+    <td bgcolor="#ffffcc" align="center">-37</td>
+    <td bgcolor="#ffffcc" align="center">37</td></tr>
+<tr><td bgcolor="#ffffcc" align="center">double</td>
+    <td bgcolor="#ffffcc" align="center">minimum</td>
+    <td bgcolor="#ffffcc" align="center">10</td>
+    <td bgcolor="#ffffcc" align="center">-37</td>
+    <td bgcolor="#ffffcc" align="center">37</td></tr>
+<tr><td bgcolor="#ffffcc" align="center">double</td>
+    <td bgcolor="#ffffcc" align="center">typical</td>
+    <td bgcolor="#ffffcc" align="center">15</td>
+    <td bgcolor="#ffffcc" align="center">-307</td>
+    <td bgcolor="#ffffcc" align="center">307</td></tr>
+<tr><td bgcolor="#ffffcc" align="center">long double</td>
+    <td bgcolor="#ffffcc" align="center">typical</td>
+    <td bgcolor="#ffffcc" align="center">15</td>
+    <td bgcolor="#ffffcc" align="center">-307</td>
+    <td bgcolor="#ffffcc" align="center">307</td></tr>
+</table>
 
 Note that both the number of significant digits and the range of the exponent are limited. The limits on the exponent are in base 10.
 
