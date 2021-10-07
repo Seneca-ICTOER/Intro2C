@@ -4,6 +4,8 @@ description: Introduction to C Programming
 
 # IPC144 - Course Notes
 
+Something changed here.
+
 | **Week** | **Topic** |
 | :--- | :--- |
 |1 | [Computers](A-Introduction/computers.md) |
