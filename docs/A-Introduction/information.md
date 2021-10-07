@@ -22,7 +22,7 @@ This chapter defines these numbering systems and their units and describes the m
 
 #### Bits
 
-The most fundamental unit of a modern computer is the binary digit or bit.  A bit is either on or off.  One \(1\) represents on, while zero \(0\) represents off. 
+The most fundamental unit of a modern computer is the binary digit or bit.  A bit is either on or off.  One (1) represents on, while zero (0) represents off. 
 
 Since bits are too numerous to handle individually, modern computers transfer and handle information in larger units.  As programmers, we define some of those units. 
 
@@ -30,21 +30,21 @@ Since bits are too numerous to handle individually, modern computers transfer an
 
 The fundamental addressable unit of RAM is the byte.  One byte consists of 2 nibbles.  Each nibble consists of 4 bits.
 
-![Byte, nibble, and bit breakdown illustration](/img/bytenibbit.jpg)
+![](/img/bytenibbit.jpg)
 
-One byte can store any one of 256 \(28\) possible values in the form of a bit string: 
+One byte can store any one of 256 (2<sup>8</sup>) possible values in the form of a bit string: 
 
 | Bit Value | Decimal Value |
 | :--- | :--- |
-| 00000000 | 0 |
-| 00000001 | 1 |
-| 00000010 | 2 |
-| 00000011 | 3 |
-| 00000100 | 4 |
-| ... | ... |
-| 00111000 | 56 |
-| ... | ... |
-| 11111111 | 255 |
+| 00000000 | <center>0</center> |
+| 00000001 | <center>1</center> |
+| 00000010 | <center>2</center> |
+| 00000011 | <center>3</center> |
+| 00000100 | <center>4</center> |
+| <center>...</center> | <center>...</center> |
+| 00111000 | <center>56</center> |
+| <center>...</center> | <center>...</center> |
+| 11111111 | <center>255</center> |
 
 The bit strings are on the left.  The equivalent decimal values are on the right.  Note that our counting system starts from 0, not from 1.
 
@@ -54,23 +54,23 @@ We call the natural size of the execution environment a word. A word consists of
 
 #### Hexadecimal
 
-The decimal system is not the most convenient numbering system for organizing information.  The hexadecimal system \(base 16\) is much more convenient. 
+The decimal system is not the most convenient numbering system for organizing information.  The hexadecimal system (base 16) is much more convenient. 
 
-Two hexadecimal digits holds the information stored in one byte.  Each digit holds 4 bits of information.  The digit symbols in the hexadecimal number system are {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F}.  The characters A through F denote the values that correspond to the decimal values 10 through 15 respectively.  We use the 0x prefix to identify a number as hexadecimal \(rather than decimal - base 10\).
+Two hexadecimal digits holds the information stored in one byte.  Each digit holds 4 bits of information.  The digit symbols in the hexadecimal number system are {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F}.  The characters A through F denote the values that correspond to the decimal values 10 through 15 respectively.  We use the **0x** prefix to identify a number as hexadecimal (rather than decimal - base 10).
 
 | Bit Value | Hexadecimal Value | Decimal Value |
 | :--- | :--- | :--- |
-| 00000000 | 0x00 | 0 |
-| 00000001 | 0x01 | 1 |
-| 00000010 | 0x02 | 2 |
-| 00000011 | 0x03 | 3 |
-| 00000100 | 0x04 | 4 |
-| ... | ... |  |
-| 00111000 | 0x38 | 56 |
-| ... | ... |  |
-| 11111111 | 0xFF | 255 |
+| 00000000 | <center>0x00</center> | <center>0</center> |
+| 00000001 | <center>0x01</center> | <center>1</center> |
+| 00000010 | <center>0x02</center> | <center>2</center> |
+| 00000011 | <center>0x03</center> | <center>3</center> |
+| 00000100 | <center>0x04</center> | <center>4</center> |
+| <center>...</center> | <center>...</center> |  |
+| 00111000 | <center>0x38</center> | <center>56</center> |
+| <center>...</center> | <center>...</center> |  |
+| 11111111 | <center>0xFF</center> | <center>255</center> |
 
-For example, the hexadecimal value 0x5C is equivalent to the 8-bit value 010111002, which is equivalent to the decimal value 92. 
+For example, the hexadecimal value 0x5C is equivalent to the 8-bit value 01011100<sub>2</sub>, which is equivalent to the decimal value 92. 
 
 To learn how to convert between hexadecimal and binary refer to the chapter entitled [Data Conversions](../Resources-Appendices/data-conversions.md) in the Appendices.
 
@@ -86,7 +86,7 @@ Each byte of RAM has a unique address.  Addressing starts at zero, is sequential
 
 For example, 4 Gigabytes of RAM
 
-* consists of 32 \(= 4 \* 8\) Gigabits
+* consists of 32 (= 4 * 8) Gigabits
 * starts at a low address of 0x00000000
 * ends at a high address of 0xFFFFFFFF
 
@@ -99,22 +99,22 @@ For example, 4 Gigabytes of RAM
 
 The abbreviations for sets of bytes are:
 
-* Kilo or k \(=1024\): 1 Kilobyte = 1024 bytes ~ 103 bytes
-* Mega or M \(=1024k\): 1 Megabyte = 1024 \* 1024 bytes ~ 106 bytes
-* Giga or G \(=1024M\): 1 Gigabyte = 1024 \* 1024 \* 1024 bytes ~ 109 bytes
-* Tera or T \(=1024G\): 1 Terabyte = 1024 \* 1024 \* 1024 \* 1024 bytes ~ 1012 bytes
-* Peta or P \(=1024T\): 1 Petabyte = 1024 \* 1024 \* 1024 \* 1024 \* 1024 bytes ~ 1015 bytes
-* Exa or E \(=1024P\): 1 Exabyte = 1024 \* 1024 \* 1024 \* 1024 \* 1024 \* 1024 bytes ~ 1018 bytes
+* Kilo or k (=1024): 1 Kilobyte = 1024 bytes ~ 10<sup>3</sup> bytes
+* Mega or M (=1024k): 1 Megabyte = 1024 * 1024 bytes ~ 10<sup>6</sup> bytes
+* Giga or G (=1024M): 1 Gigabyte = 1024 * 1024 * 1024 bytes ~ 10<sup>9</sup> bytes
+* Tera or T (=1024G): 1 Terabyte = 1024 * 1024 * 1024 * 1024 bytes ~ 10<sup>12</sup> bytes
+* Peta or P (=1024T): 1 Petabyte = 1024 * 1024 * 1024 * 1024 * 1024 bytes ~ 10<sup>15</sup> bytes
+* Exa or E (=1024P): 1 Exabyte = 1024 * 1024 * 1024 * 1024 * 1024 * 1024 bytes ~ 10<sup>18</sup> bytes
 
-Note that the multiplying factor is 1024, not 1000.  1024 bytes is 210 bytes, which is approximately 103 bytes.
+Note that the multiplying factor is 1024, not 1000.  1024 bytes is 2<sup>10</sup> bytes, which is approximately 10<sup>3</sup> bytes.
 
-### Limit on Addressability \(Optional\)
+### Limit on Addressability (Optional)
 
 The maximum size of the memory that the CPU can access depends on the size of its address registers.  The highest accessible address is the largest address that an address register can hold: 
 
-* 32-bit address registers can address up to 4 GB \(Gigabytes\) \(addresses can range from 0 to 232-1, that is 0 to 4,294,967,295\). 
-* 36-bit address registers can address up to 64 GB \(Gigabytes\) \(addresses can range from 0 to 236-1, that is 0 to 68,719,476,735\). 
-* 64-bit address registers can address up to 16 EB \(Exabytes\) \(addresses can range from 0 to 264-1, that is 0 to 18,446,744,073,709,551,615\). 
+* 32-bit address registers can address up to 4 GB (Gigabytes) (addresses can range from 0 to 2<sup>32</sup>-1, that is 0 to 4,294,967,295). 
+* 36-bit address registers can address up to 64 GB (Gigabytes) (addresses can range from 0 to 2<sup>36</sup>-1, that is 0 to 68,719,476,735). 
+* 64-bit address registers can address up to 16 EB (Exabytes) (addresses can range from 0 to 2<sup>64</sup>-1, that is 0 to 18,446,744,073,709,551,615). 
 
 ### Segmentation Faults
 

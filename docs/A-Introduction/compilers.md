@@ -140,13 +140,13 @@ By default, the cl compiler produces a file named hello.exe.  hello.exe contains
 
 To execute these machine language instructions, enter the command:
 
-```bash
+```
 hello
 ```
 
 The output of the executed binary will display:
 
-```bash
+```
 This is C
 ```
 
@@ -160,7 +160,7 @@ The comments self-document our source code and enhance its readability. Comments
 
 #### Multi-Line Comments
 
-```bash
+```c
 /* My first program
     hello.c             */
 ```
@@ -169,9 +169,8 @@ The comments self-document our source code and enhance its readability. Comments
 
 #### Inline Comments
 
-```bash
+```c
 int main(void)               // the starting point of the program 
-
 ```
 
 **//** indicates that the following characters until the end of the line.

@@ -173,7 +173,7 @@ int main(void)
 </tr>
 <tr>
     <td align="center">address</td>
-    <td colspan="20"><b>2ff2b8c4</b></td>
+    <td align="center" colspan="20"><b>2ff2b8c4</b></td>
 </tr>
 <tr>
     <td align="center">member</td>
@@ -182,8 +182,8 @@ int main(void)
 </tr>
 <tr>
     <td align="center">address</td>
-    <td aligh="left" colspan="4"><b>2ff2b8c4</b></td>
-    <td aligh="left" colspan="16"><b>2ff2b8c8</b></td>
+    <td align="center" colspan="4"><b>2ff2b8c4</b></td>
+    <td align="center" colspan="16"><b>2ff2b8c8</b></td>
 </tr>
 <tr>
     <td align="center">bytes</td>
@@ -222,7 +222,7 @@ struct Student harry = { 975, { 75.6f, 82.3f, 68.9f } };
 </tr>
 <tr>
     <td align="center">address</td>
-    <td colspan="20"><b>2ff2b8c4</b></td>
+    <td align="center" colspan="20"><b>2ff2b8c4</b></td>
 </tr>
 <tr>
     <td align="center">member</td>
@@ -231,8 +231,8 @@ struct Student harry = { 975, { 75.6f, 82.3f, 68.9f } };
 </tr>
 <tr>
     <td align="center">address</td>
-    <td aligh="left" colspan="4"><b>2ff2b8c4</b></td>
-    <td aligh="left" colspan="16"><b>2ff2b8c8</b></td>
+    <td align="center" colspan="4"><b>2ff2b8c4</b></td>
+    <td align="center" colspan="16"><b>2ff2b8c8</b></td>
 </tr>
 <tr>
     <td align="center">value</td>
@@ -308,7 +308,7 @@ To access the address of `harry`'s ***third*** grade, we write:
 </tr>
 <tr>
     <td align="center">address</td>
-    <td colspan="20"><b>&harry</b></td>
+    <td align="center" colspan="20"><b>&harry</b></td>
 </tr>
 <tr>
     <td align="center">member</td>
@@ -317,8 +317,8 @@ To access the address of `harry`'s ***third*** grade, we write:
 </tr>
 <tr>
     <td align="center">address</td>
-    <td aligh="left" colspan="4"><b>&harry.idNum</b></td>
-    <td aligh="left" colspan="16"><b>harry.grade</b></td>
+    <td align="center" colspan="4"><b>&harry.idNum</b></td>
+    <td align="center" colspan="16"><b>harry.grade</b></td>
 </tr>
 <tr>
     <td align="center">value</td>

@@ -123,7 +123,7 @@ const char name[31] = "My name is Arnold";  // null-byte is automatically append
 The C compiler copies the characters in the string literal into the character string and appends the null-byte terminator after the last character copied.
 
 <table border="0">
-<tr><td colspan="18" align="center">char<br/>name</td></tr>
+<tr><td colspan="31" align="center">char<br/>name</td></tr>
 <tr><td>0</td>
     <td>1</td>
     <td>2</td>
@@ -292,7 +292,7 @@ scanf("%s", name);  // <=== User enters: My name is Arnold
 The `scanf` function will stop accepting input after the character `y` and stores the following:
 
 <table border="0">
-<tr><td colspan="18" align="center">char<br/>name</td></tr>
+<tr><td colspan="31" align="center">char<br/>name</td></tr>
 <tr><td>0</td>
     <td>1</td>
     <td>2</td>
@@ -357,7 +357,6 @@ The `scanf` function will stop accepting input after the character `y` and store
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
-    <td>&nbsp;</td>
 </tr>
 </table>
 
@@ -373,7 +372,7 @@ scanf("%10s", name); // <=== User enters: Schwartzenegger
 The `scanf` function will stop accepting input after the character `n` and stores the following:
 
 <table border="0">
-<tr><td colspan="18" align="center">char<br/>name</td></tr>
+<tr><td colspan="31" align="center">char<br/>name</td></tr>
 <tr><td>0</td>
     <td>1</td>
     <td>2</td>
@@ -419,7 +418,6 @@ The `scanf` function will stop accepting input after the character `n` and store
     <td>e</td>
     <td>n</td>
     <td><b>\0</b></td>
-    <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -457,7 +455,7 @@ scanf("%10s", name);  // <=== User enters: '          Schwartzenegger'
 Just as before, the `scanf` function will stop accepting input after the character `n` but will also discard the leading spaces entered and stores the following:
 
 <table border="0">
-<tr><td colspan="18" align="center">char<br/>name</td></tr>
+<tr><td colspan="31" align="center">char<br/>name</td></tr>
 <tr><td>0</td>
     <td>1</td>
     <td>2</td>
@@ -503,7 +501,6 @@ Just as before, the `scanf` function will stop accepting input after the charact
     <td>e</td>
     <td>n</td>
     <td><b>\0</b></td>
-    <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -550,7 +547,7 @@ scanf("%[^\n]", name);  // <=== User enters: My name is Arnold
 The `scanf` function accepts the full line an stores:
 
 <table border="0">
-<tr><td colspan="18" align="center">char<br/>name</td></tr>
+<tr><td colspan="31" align="center">char<br/>name</td></tr>
 <tr><td>0</td>
     <td>1</td>
     <td>2</td>
@@ -628,7 +625,7 @@ scanf("%10[^\n]", name);  // <=== User enters: My name is Arnold
 The `scanf` function will store:
 
 <table border="0">
-<tr><td colspan="18" align="center">char<br/>name</td></tr>
+<tr><td colspan="31" align="center">char<br/>name</td></tr>
 <tr><td>0</td>
     <td>1</td>
     <td>2</td>
@@ -710,7 +707,7 @@ scanf("%10[^\n]", name);  // <=== User enters: '          My name is Arnold'
 The `scanf` function will store:
 
 <table border="0">
-<tr><td colspan="18" align="center">char<br/>name</td></tr>
+<tr><td colspan="31" align="center">char<br/>name</td></tr>
 <tr><td>0</td>
     <td>1</td>
     <td>2</td>
