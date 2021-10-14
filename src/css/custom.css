@@ -22,12 +22,24 @@
   --ifm-code-font-size: 95%;
 }
 
+html[data-theme='dark'] {
+  --ifm-color-primary: #f69993;
+  --ifm-color-primary-dark: #f3776f;
+  --ifm-color-primary-darker: #f1665d;
+  --ifm-color-primary-darkest: #ed3226;
+  --ifm-color-primary-light: #f9bbb7;
+  --ifm-color-primary-lighter: #fbccc9;
+  --ifm-color-primary-lightest: #ffffff;
+}
+
+
 .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.1);
   display: block;
   margin: 0 calc(-1 * var(--ifm-pre-padding));
   padding: 0 var(--ifm-pre-padding);
 }
+
 
 html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
