@@ -5,19 +5,19 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 module.exports = {
   title: 'IPC144 - Course Notes',
   tagline: 'C Programming',
-  url: 'https://camerongray1210.github.io',
+  url: 'https://cghub.ca',
   baseUrl: '/',
   trailingSlash: false,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'camerongray1210', // Usually your GitHub org/user name.
-  projectName: 'IPC144', // Usually your repo name.
+  organizationName: 'Seneca-ICTOER',
+  projectName: 'IPC144',
   themeConfig: {
     navbar: {
       title: 'IPC144',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Seneca College',
         src: 'img/logo.svg',
       },
     },
@@ -34,7 +34,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Seneca College.`,
     },
     prism: {
       theme: lightCodeTheme,
@@ -47,10 +47,8 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-		  routeBasePath: '/',
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
+    		  routeBasePath: '/',
+          editUrl: 'https://github.com/Seneca-ICTOER/IPC144/tree/main',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
