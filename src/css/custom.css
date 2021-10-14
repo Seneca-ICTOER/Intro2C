@@ -12,13 +12,13 @@
  * using the tool at https://docusaurus.io/docs/styling-layout.
  */
 :root {
-  --ifm-color-primary: #da291c;
-  --ifm-color-primary-dark: #c42519;
-  --ifm-color-primary-darker: #b92318;
-  --ifm-color-primary-darkest: #991d14;
-  --ifm-color-primary-light: #e4372b;
-  --ifm-color-primary-lighter: #e54236;
-  --ifm-color-primary-lightest: #e96056;
+  --ifm-color-primary: orange;
+  --ifm-color-primary-dark: orange;
+  --ifm-color-primary-darker: orange;
+  --ifm-color-primary-darkest: orange;
+  --ifm-color-primary-light: orange;
+  --ifm-color-primary-lighter: orange;
+  --ifm-color-primary-lightest: orange;
   --ifm-code-font-size: 95%;
 }
 
