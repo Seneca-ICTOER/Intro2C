@@ -19,6 +19,7 @@ module.exports = {
       logo: {
         alt: 'Seneca College',
         src: 'img/logo.svg',
+        srcDark: 'img/logo-dark.svg',
       },
     },
     footer: {
