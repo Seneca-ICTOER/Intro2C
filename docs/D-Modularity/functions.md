@@ -182,8 +182,11 @@ void countDown(int n)
 }
 ```
 
-> In such cases, the return statement is **optional** and is usually not included.
+:::note 
 
+In such cases, the return statement is **optional** and is usually not included.
+
+:::
 **No Parameters**
 
 A function that does not have to receive any data does not require parameters.  We insert the keyword `void` between the parentheses.  For example:
