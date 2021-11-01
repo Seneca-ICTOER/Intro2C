@@ -107,7 +107,7 @@ A function consists of a header and a body.  The body is the code block that con
 2. the function's identifier
 3. a parentheses-enclosed list of parameters that receive data from the caller
 
-```
+```c
  type identifier(type parameter, ..., type parameter)
  {
 
@@ -155,7 +155,7 @@ int main(void)
 ```
 Outputs the following:
 
-```
+```c
 Enter base : 3
 Enter exponent : 4
 3^4 = 81
@@ -212,7 +212,7 @@ The `main()` function is a function itself.  It is the function to which the ope
 
 A function call transfers control from the caller to function being called.  Once the function being called has executed its instructions, it returns control to the caller.  Execution continues at the point immediately following the call statement.  A function call takes the form:
 
-```
+```c
 identifier(argument, ..., argument)
 ```
 
