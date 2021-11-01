@@ -200,8 +200,11 @@ void alphabet(void)
 }
 ```
 
->Note how the iteration changes `letter` to the next character in the alphabet, assuming the collating sequence arranged them contiguously.
+:::note 
 
+The iteration changes `letter` to the next character in the alphabet, assuming the collating sequence arranged them contiguously.
+
+:::
 **main**
 
 The `main()` function is a function itself.  It is the function to which the operating system transfers control after loading the program into RAM.
@@ -501,8 +504,11 @@ The completed walkthrough table for the power.c program listed above is shown be
 
 </table>
 
->Note that each parameter occupies a memory location that is distinct from any other location in the caller.  For example, the parameter `base` in `power()` occupies a different memory location than the variable `base` in `main()`. 
+:::note
 
+Each parameter occupies a memory location that is distinct from any other location in the caller. For example, the parameter `base` in `power()` occupies a different memory location than the variable `base` in `main()`. 
+
+:::
 ## Validation (optional)
 
 Ensuring that programming assumptions are not breached by the user is part of good program design.  Our function to raise an integer base to the power of an exponent is based on the assumption that the exponent is non-negative.  Accordingly, we need to validate the user input to ensure that our assumption holds.
