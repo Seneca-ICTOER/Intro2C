@@ -377,13 +377,13 @@ The completed walkthrough table for the power.c program listed above is shown be
     <td align="center">result</td>
     <td align="center">i</td></tr>
 
-<tr><td align="center">Address: 100</td>
-    <td align="center">104</td>
-    <td align="center">108</td>
-    <td align="center">10C</td>
-    <td align="center">110</td>
-    <td align="center">114</td>
-    <td align="center">118</td></tr>
+<tr><td align="center">&amp;100</td>
+    <td align="center">&amp;104</td>
+    <td align="center">&amp;108</td>
+    <td align="center">&amp;10C</td>
+    <td align="center">&amp;110</td>
+    <td align="center">&amp;114</td>
+    <td align="center">&amp;118</td></tr>
 
 <tr><td align="center">3</td>
     <td align="center"></td>
