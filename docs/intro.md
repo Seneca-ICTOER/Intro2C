@@ -6,8 +6,6 @@ sidebar_position: 1
 
 # Table of contents
 
-* [Weekly Schedule](weeklyContents.md)
-
 ## Introduction <a id="part-a-introduction"></a>
 
 * [Computers](A-Introduction/computers.md)
