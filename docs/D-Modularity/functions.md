@@ -95,9 +95,9 @@ The C language is a procedural programming language.  It supports modular design
 
 In the example from the introductory chapter on [compilers](../A-Introduction/compilers.md) listed above:
 
-1. the main() function calls the printf() function
-2. the printf() function outputs the string
-3. the printf() function returns control to its caller (main())
+1. the `main()` function calls the `printf()` function
+2. the `printf()` function outputs the string
+3. the `printf()` function returns control to its caller **`main()`**
 
 ### Definition
 
@@ -166,7 +166,8 @@ The first function returns a value of `int` type, while `power` identifies the f
 
 **void Functions**
 
-A function that does not have to return any value has no return type.  We declare its return type as `void` and exclude any expression from the return statement.  For example,
+A function that does not have to return any value has no return type.  We declare its return type as `void` and exclude any expression from the return statement.  
+For example:
 
 ```c
 void countDown(int n)
@@ -209,7 +210,7 @@ The `main()` function is a function itself.  It is the function to which the ope
 
 ### Function Calls
 
-A function call transfers control from the caller to function being called.  Once the function being called has executed its instructions, it returns control to the caller.  Execution continues at the point immediately following the call statement.  A function call takes the form
+A function call transfers control from the caller to function being called.  Once the function being called has executed its instructions, it returns control to the caller.  Execution continues at the point immediately following the call statement.  A function call takes the form:
 
 ```
 identifier(argument, ..., argument)
@@ -223,7 +224,7 @@ An argument may be a constant, a variable, or an expression (with certain except
 
 ### Pass By Value
 
-The C language passes data from a caller to a function by value.  That is, it passes a copy of the value and not the value itself.  The value passed is stored as the inital value is the paramters that corresponds to the argument in the function call. 
+The C language passes data from a caller to a function by value.  That is, it passes a copy of the value and not the value itself.  The value passed is stored as the inital value is the parameters that corresponds to the argument in the function call. 
 
 Each parameter is a variable with its own memory location.  We refer to the mechanism of allocating separate memory locations for parameters and using the arguments in the function call to initialize these parameters as ***pass by value***.  Pass by value facilitates modular design by localizing consequences.  The function being called may change the value of any of its parameters many times, but the values of the corresponding arguments in the caller remain unchanged.  In other words, a function cannot change the value of an argument in the call to the function.  This language feature ensures the variables in the caller are relatively secure. 
 
