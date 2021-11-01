@@ -29,9 +29,9 @@ Modular design identifies the components of a programming project that can be de
 
 int main(void)               // program startup
 {
-        printf("This is C"); // output
+    printf("This is C"); // output
 
-        return 0;            // return to operating system
+    return 0;            // return to operating system
 }
 ```
 
@@ -111,9 +111,9 @@ A function consists of a header and a body.  The body is the code block that con
  type identifier(type parameter, ..., type parameter)
  {
 
-         // function instructions
+    // function instructions
 
-         return x; // x denotes the value returned by this function
+    return x; // x denotes the value returned by this function
  }
  ```
 
@@ -130,27 +130,27 @@ For example:
 
 int power(int base, int exponent)
 {
-        int i, result;
+    int i, result;
 
-        result = 1;
-        for (i = 0; i < exponent; i++) 
-            result = result * base;
+    result = 1;
+    for (i = 0; i < exponent; i++) 
+        result = result * base;
 
-        return result;
+    return result;
 }
 
 int main(void)
 {
-        int base, exp, answer;
+    int base, exp, answer;
 
-        printf("Enter base : ");
-        scanf("%d", &base);
-        printf("Enter exponent : ");
-        scanf("%d", &exp);
+    printf("Enter base : ");
+    scanf("%d", &base);
+    printf("Enter exponent : ");
+    scanf("%d", &exp);
 
-        answer = power(base, exp);
+    answer = power(base, exp);
 
-        printf("%d^%d = %d\n", base, exp, answer);
+    printf("%d^%d = %d\n", base, exp, answer);
 }
 ```
 Outputs the following:
@@ -172,13 +172,13 @@ For example:
 ```c
 void countDown(int n)
 {
-        while (n > 0)
-        {
-                printf("%d ", n);
-                n--;
-        }
+    while (n > 0)
+    {
+        printf("%d ", n);
+        n--;
+    }
 
-        return; // optional
+    return; // optional
 }
 ```
 
@@ -191,12 +191,12 @@ A function that does not have to receive any data does not require parameters.  
 ```c
 void alphabet(void)
 {
-        char letter = 'A';
+    char letter = 'A';
 
-        do {
-                printf("%d ", letter);
-                letter++;
-        } while (letter != 'Z');
+    do {
+            printf("%d ", letter);
+            letter++;
+    } while (letter != 'Z');
 }
 ```
 
@@ -352,6 +352,8 @@ The structure of a walkthrough table for a modular program is a simple extension
 **Example**
 
 The completed walkthrough table for the power.c program listed above is shown below:
+
+* **& represents the address.**
 
 <table border="0">
 
@@ -521,16 +523,16 @@ Let us introduce a function named `getNonNegInt()` that only accepts non negativ
 //
 int getNonNegInt(void)
 {
-        int value;
+    int value;
 
-        do {
-                printf(" Non-negative : ");
-                scanf("%d", &value);
-                if (value < 0)
-                        printf(" * Negative! *\n"); 
-        } while(value <= 0);
+    do {
+            printf(" Non-negative : ");
+            scanf("%d", &value);
+            if (value < 0)
+                    printf(" * Negative! *\n"); 
+    } while(value <= 0);
 
-        return value;
+    return value;
 }
 
 // power returns the value of base raised to 
@@ -541,29 +543,29 @@ int getNonNegInt(void)
 //
 int power(int base, int exponent)
 {
-        int result, i;
+    int result, i;
 
-        result = 1;
-        for (i = 0; i < exponent; i++)
-                result = result * base;
+    result = 1;
+    for (i = 0; i < exponent; i++)
+            result = result * base;
 
-        return result;
+    return result;
 }
 
 int main(void)
 {
-        int base, exp, answer;
+    int base, exp, answer;
 
-        printf("Enter base : ");
-        scanf("%d", &base);
+    printf("Enter base : ");
+    scanf("%d", &base);
 
-        printf("Enter exponent\n");
-        exp = getNonNegInt();
-        answer = power(base, exp);
+    printf("Enter exponent\n");
+    exp = getNonNegInt();
+    answer = power(base, exp);
         
-        printf("%d^%d is %d\n", base, exp, answer);
+    printf("%d^%d is %d\n", base, exp, answer);
 
-        return 0;
+    return 0;
 }
 ```
 ## Walkthrough
