@@ -45,7 +45,7 @@ The module named `hello.c` starts executing at statement `int main(void)`, outpu
 
 We can sub-divide a programming project in different ways.  We select our modules so that each one focuses on a narrower aspect of the project.  Our objective is to define a set of modules that simplifies the complexity of the original problem. 
 
-![](https://ict.senecacollege.ca//~ipc144/pages/images/modules.png)
+![modules](https://ict.senecacollege.ca//~ipc144/pages/images/modules.png)
 
 Some general guidelines for defining a module include:
 
@@ -91,7 +91,7 @@ Consider a module that receives a flag from another module and performs a calcul
 
 The C language is a procedural programming language.  It supports modular design through function syntax.  Functions transfer control between one another.  When a function transfers control to another function, we say that it ***calls*** the other function.  Once the other function completes its task and transfers control to the caller function, we say that that other function ***returns*** control to its ***caller***. 
 
-![](https://ict.senecacollege.ca//~ipc144/pages/images/function.png)
+![function](https://ict.senecacollege.ca//~ipc144/pages/images/function.png)
 
 In the example from the introductory chapter on [compilers](../A-Introduction/compilers.md) listed above:
 
@@ -224,7 +224,7 @@ identifier(argument, ..., argument)
 
 `identifer` specifies the function being called, while `argument` specifies a value being passed to the function being called.
 
-![](https://ict.senecacollege.ca//~ipc144/pages/images/calling.png)
+![calling-functions](https://ict.senecacollege.ca//~ipc144/pages/images/calling.png)
 
 An argument may be a constant, a variable, or an expression (with certain exceptions).  The number of arguments in a function call should match the number of parameters in the function header. 
 
