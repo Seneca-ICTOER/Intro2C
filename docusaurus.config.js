@@ -22,6 +22,9 @@ module.exports = {
         srcDark: 'img/logo-dark.svg',
       },
     },
+    tableOfContents: {
+      maxHeadingLevel: 4,
+    },
     footer: {
       style: 'dark',
       links: [
