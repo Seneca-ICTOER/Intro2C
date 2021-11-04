@@ -57,4 +57,60 @@ module.exports = {
       },
     ],
   ],
+	plugins: [
+		[
+			'@docusaurus/plugin-pwa',
+			{
+				offlineModeActivationStrategies: ['standalone', 'queryString'],
+				pwaHead: [
+					{
+						tagName: 'link',
+						rel: 'icon',
+						href: 'img/pwa/manifest-icon-512.png',
+					},
+					{
+						tagName: 'link',
+						rel: 'manifest',
+						href: '/manifest.json',
+					},
+					{
+						tagName: 'meta',
+						name: 'theme-color',
+						content: '#DA291C',
+					},
+					{
+						tagName: 'meta',
+						name: 'apple-mobile-web-app-capable',
+						content: 'yes',
+					},
+					{
+						tagName: 'meta',
+						name: 'apple-mobile-web-app-status-bar-style',
+						content: '#DA291C',
+					},
+					{
+						tagName: 'link',
+						rel: 'apple-touch-icon',
+						href: 'img/pwa/manifest-icon-192.png',
+					},
+					{
+						tagName: 'link',
+						rel: 'mask-icon',
+						href: 'img/pwa/manifest-icon-512.png',
+						color: '#DA291C',
+					},
+					{
+						tagName: 'meta',
+						name: 'msapplication-TileImage',
+						content: 'img/pwa/manifest-icon-512.png',
+					},
+					{
+						tagName: 'meta',
+						name: 'msapplication-TileColor',
+						content: '#DA291C',
+					},
+				],
+			},
+		],
+	],
 };
