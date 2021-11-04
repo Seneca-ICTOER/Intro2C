@@ -457,7 +457,7 @@ C compilers promote the operand of lower type in an arithmetic or relational exp
 
 ![](/img/image33.png)
 
-#### Example
+**Example**
 
 ```c
  1034 * 10   evaluates to 10340    // an int result

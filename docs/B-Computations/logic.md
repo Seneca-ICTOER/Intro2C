@@ -28,14 +28,14 @@ A structured program consists of sets of simple constructs, each of which has on
 
 The simplest example of a structured construct is a _**sequence**_.  A sequence is either a simple statement or a code block.  A _**code block**_ is a set of statements enclosed in a pair of curly braces to be executed sequentially. 
 
-#### Example Simple Statement
+**Example Simple Statement**
 
 ```text
 // single statement (original)
 printf("I like pizza\n");
 ```
 
-#### Example Code Block
+**Example Code Block**
 
 ```text
 // code block (upgrade)
@@ -252,7 +252,7 @@ The _**conditional expression**_ selection construct _****_is shorthand for the 
 
 If the condition is true, the expression evaluates to the operand between **`?`** and **`:`**.  If the condition is false, the expression evaluates to the operand following **`:`**. 
 
-#### Example
+**Example**
 
 ```c
 int main()
@@ -330,7 +330,7 @@ do {
 } while (condition);
 ```
 
-#### Example
+**Example**
 
 ```c
 slices = 4;
@@ -378,7 +378,7 @@ for (initialization; condition; change)
 }
 ```
 
-#### Example
+**Example**
 
 ```c
 for (slices = 4; slices > 0; --slices)
@@ -395,7 +395,7 @@ Flagging is a method of coding iteration constructs within the single-entry sing
 
 Flags are variables that determine whether an iteration continues or stops.  A flag is either true or false.  Flags helps ensure that no paths cross one another.  By introducing a flag, we avoid the jump and multiple exit, obtain a flow chart where no path crosses any other and hence an improved design.
 
-#### Example
+**Example**
 
 The following code snippet uses a flag to terminate the iteration prematurely.
 
@@ -445,7 +445,7 @@ Enclosing one logic construct within another is called _**nesting**_.
 
 A selection within another selection is called a _**nested selection**_.
 
-#### Example
+**Example**
 
 ```c
 if (grade < 50)

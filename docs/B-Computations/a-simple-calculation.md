@@ -34,7 +34,7 @@ To define a numeric constant in hexadecimal representation, we prefix the value 
 const int x = 0x5C;  // same as     const int x = 92;
 ```
 
-#### Example
+**Example**
 
 To define the constant pi \(π\) to 8 significant digits, we select the float type and write
 
@@ -103,7 +103,7 @@ A more complete table is listed in the chapter entitled [Input and Output](../F-
 
 _**address**_ contains the address of the destination variable.  We use the prefix & to refer to the 'address of' of a variable. 
 
-#### Example \(continued\)
+**Example \(continued\)**
 
 To accept the radius of the circle, we write
 
@@ -179,7 +179,7 @@ C compilers reject statements such as:
 4 = age;  // *** ERROR cannot set 4 to the value in age ***
 ```
 
-#### Example \(continued\)
+**Example \(continued\)**
 
 Adding the statements to store the area in memory yields:
 
@@ -229,7 +229,7 @@ The default number of decimal places displayed by **`%f`** and **`%lf`** is 6.  
 
 expression is a placeholder for the source variable.  The **`printf()`** procedure copies the variable and converts it into the output text. 
 
-#### Example \(completed\)
+**Example \(completed\)**
 
 The complete program for calculating the area of a circle is:
 
