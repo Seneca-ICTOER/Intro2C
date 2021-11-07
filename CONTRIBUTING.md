@@ -60,9 +60,20 @@ This command generates static content in the `build/` directory and can be serve
 ### Deployment
 
 To build and deploy to GitHub Pages, use:
+1. Follow step 1 - 5 in [Docusaurus's Triggering deployment with GitHub Actions](https://docusaurus.io/docs/deployment)
 
+2. Deploy your site to Github Pages, run:
+- For Bash: 
+```console
+   GIT_USER=<GITHUB_USERNAME> yarn deploy 
+```
+- For Windows
 ```console
 GIT_USER=<Your GitHub username> USE_SSH=true yarn deploy
+```
+- For Powershell
+```console
+cmd /C 'set "GIT_USER=<GITHUB_USERNAME>" && yarn deploy'
 ```
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
