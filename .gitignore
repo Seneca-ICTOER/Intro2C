@@ -3,6 +3,7 @@
 
 # Production
 /build
+/hint-report
 
 # Generated files
 .docusaurus
