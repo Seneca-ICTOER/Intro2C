@@ -588,7 +588,7 @@ int main(void)
 }
 ```
 
-### Code Output:
+#### Code Output:
 ```c
 Non-negative : -2 
 * Negative! * //error message from do-while
