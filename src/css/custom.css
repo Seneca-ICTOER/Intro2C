@@ -48,4 +48,9 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 div.mdImg {
   background-color: #ffffff;
   text-align: center;
-} 
+}
+
+img {
+  display: block;
+  margin: auto;
+}
