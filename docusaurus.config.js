@@ -35,6 +35,10 @@ module.exports = {
               label: 'Contents',
               to: '/',
             },
+			{
+			  label: 'Weekly Schedule',
+			  to: '/weeklyContents',
+			},
           ],
         },
       ],
