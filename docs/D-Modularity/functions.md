@@ -587,6 +587,18 @@ int main(void)
     return 0;
 }
 ```
+
+### Code Output:
+```c
+Non-negative : -2 
+* Negative! * //error message from do-while
+Non-negative : 4
+
+Enter base : 3
+Enter exponent //exponent becomes "4"
+
+3^4 is 81
+```
 ## Walkthrough
 
 The table below lists the values of the local variables in this source file at different stages of execution:
@@ -618,18 +630,18 @@ The table below lists the values of the local variables in this source file at d
     <td align="center">i</td>
     <td align="center">value</td></tr>
 
-<tr><td align="center" bgcolor="#FFFF99">?</td>
-    <td align="center" bgcolor="#FFFF99">?</td>
-    <td align="center" bgcolor="#FFFF99">?</td>
+<tr><td align="center">?</td>
+    <td align="center">?</td>
+    <td align="center">?</td>
     <td align="center">&nbsp;</td>
     <td align="center">&nbsp;</td>
     <td align="center">&nbsp;</td>
     <td align="center">&nbsp;</td>
     <td align="center">&nbsp;</td></tr>
 
-<tr><td align="center" bgcolor="#FFFF99">3</td>
-    <td align="center" bgcolor="#FFFF99">?</td>
-    <td align="center" bgcolor="#FFFF99">?</td>
+<tr><td align="center">3</td>
+    <td align="center">?</td>
+    <td align="center">?</td>
     <td align="center">&nbsp;</td>
     <td align="center">&nbsp;</td>
     <td align="center">&nbsp;</td>
@@ -643,7 +655,7 @@ The table below lists the values of the local variables in this source file at d
     <td align="center"></td>
     <td align="center"></td>
     <td align="center"></td>
-    <td align="center" bgcolor="#FFFF99">-2</td></tr>
+    <td align="center">-2</td></tr>
     
 <tr><td align="center">3</td>
     <td align="center">?</td>
@@ -652,11 +664,11 @@ The table below lists the values of the local variables in this source file at d
     <td align="center">&nbsp;</td>
     <td align="center">&nbsp;</td>
     <td align="center">&nbsp;</td>
-    <td align="center" bgcolor="#FFFF99">4</td></tr>
+    <td align="center">4</td></tr>
     
-<tr><td align="center" bgcolor="#FFFF99">3</td>
-    <td align="center" bgcolor="#FFFF99">4</td>
-    <td align="center" bgcolor="#FFFF99">?</td>
+<tr><td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">?</td>
     <td align="center">&nbsp;</td>
     <td align="center">&nbsp;</td>
     <td align="center">&nbsp;</td>
@@ -666,105 +678,105 @@ The table below lists the values of the local variables in this source file at d
 <tr><td align="center">3</td>
     <td align="center">4</td>
     <td align="center">?</td>
-    <td align="center" bgcolor="#FFFF99">3</td>
-    <td align="center" bgcolor="#FFFF99">4</td>
-    <td align="center" bgcolor="#FFFF99">?</td>
-    <td align="center" bgcolor="#FFFF99">?</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">?</td>
+    <td align="center">?</td>
     <td align="center">&nbsp;</td></tr>
 
 <tr><td align="center">3</td>
     <td align="center">4</td>
     <td align="center">?</td>
-    <td align="center" bgcolor="#FFFF99">3</td>
-    <td align="center" bgcolor="#FFFF99">4</td>
-    <td align="center" bgcolor="#FFFF99">1</td>
-    <td align="center" bgcolor="#FFFF99">?</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">1</td>
+    <td align="center">?</td>
     <td align="center">&nbsp;</td></tr>
 
 <tr><td align="center">3</td>
     <td align="center">4</td>
     <td align="center">?</td>
-    <td align="center" bgcolor="#FFFF99">3</td>
-    <td align="center" bgcolor="#FFFF99">4</td>
-    <td align="center" bgcolor="#FFFF99">1</td>
-    <td align="center" bgcolor="#FFFF99">0</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">1</td>
+    <td align="center">0</td>
     <td align="center">&nbsp;</td></tr>
 
 <tr><td align="center">3</td>
     <td align="center">4</td>
     <td align="center">?</td>
-    <td align="center" bgcolor="#FFFF99">3</td>
-    <td align="center" bgcolor="#FFFF99">4</td>
-    <td align="center" bgcolor="#FFFF99">3</td>
-    <td align="center" bgcolor="#FFFF99">0</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">3</td>
+    <td align="center">0</td>
     <td align="center">&nbsp;</td></tr>
 
 <tr><td align="center">3</td>
     <td align="center">4</td>
     <td align="center">?</td>
-    <td align="center" bgcolor="#FFFF99">3</td>
-    <td align="center" bgcolor="#FFFF99">4</td>
-    <td align="center" bgcolor="#FFFF99">3</td>
-    <td align="center" bgcolor="#FFFF99">1</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">3</td>
+    <td align="center">1</td>
     <td align="center">&nbsp;</td></tr>
 
 <tr><td align="center">3</td>
     <td align="center">4</td>
     <td align="center">?</td>
-    <td align="center" bgcolor="#FFFF99">3</td>
-    <td align="center" bgcolor="#FFFF99">4</td>
-    <td align="center" bgcolor="#FFFF99">9</td>
-    <td align="center" bgcolor="#FFFF99">1</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">9</td>
+    <td align="center">1</td>
     <td align="center">&nbsp;</td></tr>
 
 <tr><td align="center">3</td>
     <td align="center">4</td>
     <td align="center">?</td>
-    <td align="center" bgcolor="#FFFF99">3</td>
-    <td align="center" bgcolor="#FFFF99">4</td>
-    <td align="center" bgcolor="#FFFF99">9</td>
-    <td align="center" bgcolor="#FFFF99">2</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">9</td>
+    <td align="center">2</td>
     <td align="center">&nbsp;</td></tr>
 
 <tr><td align="center">3</td>
     <td align="center">4</td>
     <td align="center">?</td>
-    <td align="center" bgcolor="#FFFF99">3</td>
-    <td align="center" bgcolor="#FFFF99">4</td>
-    <td align="center" bgcolor="#FFFF99">27</td>
-    <td align="center" bgcolor="#FFFF99">2</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">27</td>
+    <td align="center">2</td>
     <td align="center">&nbsp;</td></tr>
 
 <tr><td align="center">3</td>
     <td align="center">4</td>
     <td align="center">?</td>
-    <td align="center" bgcolor="#FFFF99">3</td>
-    <td align="center" bgcolor="#FFFF99">4</td>
-    <td align="center" bgcolor="#FFFF99">27</td>
-    <td align="center" bgcolor="#FFFF99">3</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">27</td>
+    <td align="center">3</td>
     <td align="center">&nbsp;</td></tr>
 
 <tr><td align="center">3</td>
     <td align="center">4</td>
     <td align="center">?</td>
-    <td align="center" bgcolor="#FFFF99">3</td>
-    <td align="center" bgcolor="#FFFF99">4</td>
-    <td align="center" bgcolor="#FFFF99">81</td>
-    <td align="center" bgcolor="#FFFF99">3</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">81</td>
+    <td align="center">3</td>
     <td align="center">&nbsp;</td></tr>
 
 <tr><td align="center">3</td>
     <td align="center">4</td>
     <td align="center">?</td>
-    <td align="center" bgcolor="#FFFF99">3</td>
-    <td align="center" bgcolor="#FFFF99">4</td>
-    <td align="center" bgcolor="#FFFF99">81</td>
-    <td align="center" bgcolor="#FFFF99">4</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">81</td>
+    <td align="center">4</td>
     <td align="center">&nbsp;</td></tr>
 
-<tr><td align="center" bgcolor="#FFFF99">3</td>
-    <td align="center" bgcolor="#FFFF99">4</td>
-    <td align="center" bgcolor="#FFFF99">81</td>
+<tr><td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">81</td>
     <td align="center">&nbsp;</td>
     <td align="center">&nbsp;</td>
     <td align="center">&nbsp;</td>
