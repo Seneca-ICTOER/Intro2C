@@ -21,7 +21,7 @@ sidebar_position: 1
 * [Expressions](B-Computations/expressions.md)
 * [Logic](B-Computations/logic.md)
 * [Style Guidelines](B-Computations/style-guidelines.md)
-* [Testing & Debugging](B-Computations/testing-and-debugging.md)
+* [Testing&Debugging](B-Computations/testing-and-debugging.md)
 
 ## Data Structures
 
