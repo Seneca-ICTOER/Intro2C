@@ -45,7 +45,7 @@ The module named `hello.c` starts executing at statement `int main(void)`, outpu
 
 We can sub-divide a programming project in different ways.  We select our modules so that each one focuses on a narrower aspect of the project.  Our objective is to define a set of modules that simplifies the complexity of the original problem. 
 
-<span class="mdImg">
+<span className="mdImg">
 
 ![modules](https://ict.senecacollege.ca//~ipc144/pages/images/modules.png)
 
@@ -95,7 +95,7 @@ Consider a module that receives a flag from another module and performs a calcul
 
 The C language is a procedural programming language.  It supports modular design through function syntax.  Functions transfer control between one another.  When a function transfers control to another function, we say that it ***calls*** the other function.  Once the other function completes its task and transfers control to the caller function, we say that that other function ***returns*** control to its ***caller***. 
 
-<span class="mdImg">
+<span className="mdImg">
 
 ![function](https://ict.senecacollege.ca//~ipc144/pages/images/function.png)
 
@@ -231,7 +231,7 @@ identifier(argument, ..., argument)
 
 `identifer` specifies the function being called, while `argument` specifies a value being passed to the function being called.
 
-<span class="mdImg">
+<span className="mdImg">
 
 ![calling-functions](https://ict.senecacollege.ca//~ipc144/pages/images/calling.png)
 
@@ -266,97 +266,87 @@ The C compiler evaluates the cast (coercion) of 2.5 before passing the value of 
 The structure of a walkthrough table for a modular program is a simple extension of the structure of the walkthrough table shown in the chapter entitled [Testing and Debugging](../B-Computations/testing-and-debugging.md).  The table for a modular program groups the variables under their parent functions.
 
 <table border="0">
-<tr><td align="center" colspan="3">int</td>
-    <td align="center" colspan="3">type</td></tr>
-
-<tr><td align="center" colspan="3">main(void)</td>
-    <td align="center" colspan="3">-- function identifier here --</td></tr>
-
+<thead>
+<tr><td align="center" colSpan="3">int</td>
+<td align="center" colSpan="3">type</td></tr>
+<tr><td align="center" colSpan="3">main(void)</td>
+<td align="center" colSpan="3">--function identifier here--</td></tr>
+</thead>
+<tbody>
 <tr><td align="center">type</td>
-    <td align="center">...</td>
-    <td align="center">type</td>
-    <td align="center">type</td>
-    <td align="center">...</td>
-    <td align="center">type</td></tr>
-
+<td align="center">...</td>
+<td align="center">type</td>
+<td align="center">type</td>
+<td align="center">...</td>
+<td align="center">type</td></tr>
 <tr><td align="center">variable z</td>
-    <td align="center">...</td>
-    <td align="center">variable a</td>
-    <td align="center">variable z</td>
+<td align="center">...</td>
+<td align="center">variable a</td>
+<td align="center">variable z</td>
     <td align="center">...</td>
     <td align="center">variable a</td></tr>
-
 <tr><td align="center">&amp;z</td>
     <td align="center">...</td>
     <td align="center">&amp;a</td>
     <td align="center">&amp;z</td>
     <td align="center">...</td>
     <td align="center">&amp;a</td></tr>
-
-<tr><td colspan="6"></td></tr>
-
+<tr><td colSpan="6"></td></tr>
 <tr><td align="center">initial value</td>
     <td align="center">...</td>
     <td align="center">initial value</td>
     <td align="center">initial value</td>
     <td align="center">...</td>
     <td align="center">initial value</td></tr>
-
 <tr><td align="center">next value</td>
     <td align="center">...</td>
     <td align="center">next value</td>
     <td align="center">next value</td>
     <td align="center">...</td>
     <td align="center">next value</td></tr>
-
 <tr><td align="center">next value</td>
     <td align="center">...</td>
     <td align="center">next value</td>
     <td align="center">next value</td>
     <td align="center">...</td>
     <td align="center">next value</td></tr>
-
 <tr><td align="center">&nbsp;</td>
     <td align="center">&nbsp;</td>
     <td align="center">&nbsp;</td>
     <td align="center">next value</td>
     <td align="center">...</td>
     <td align="center">next value</td></tr>
-
 <tr><td align="center">initial value</td>
     <td align="center">...</td>
     <td align="center">initial value</td>
     <td align="center">initial value</td>
     <td align="center">...</td>
     <td align="center">initial value</td></tr>
-
 <tr><td align="center">next value</td>
     <td align="center">...</td>
     <td align="center">next value</td>
     <td align="center">next value</td>
     <td align="center">...</td>
     <td align="center">next value</td></tr>
-
 <tr><td align="center">next value</td>
     <td align="center">...</td>
     <td align="center">next value</td>
     <td align="center">next value</td>
     <td align="center">...</td>
     <td align="center">next value</td></tr>
-
 <tr><td align="center">&nbsp;</td>
     <td align="center">&nbsp;</td>
     <td align="center">&nbsp;</td>
     <td align="center">next value</td>
     <td align="center">...</td>
     <td align="center">next value</td></tr>
-
 <tr><td align="center">&nbsp;</td>
     <td align="center">&nbsp;</td>
     <td align="center">&nbsp;</td>
     <td align="center">next value</td>
     <td align="center">...</td>
     <td align="center">next value</td></tr>
+</tbody>
 </table>
 
 <hr/>
@@ -372,13 +362,13 @@ The completed walkthrough table for the power.c program listed above is shown be
 * **& represents the address.**
 
 <table border="0">
-
-<tr><td align="center" colspan="3">int</td>
-    <td align="center" colspan="4">int</td></tr>
-
-<tr><td align="center" colspan="3">main(void)</td>
-    <td align="center" colspan="4">power(int base, int exponent)</td></tr>
-
+<thead>
+<tr><td align="center" colSpan="3">int</td>
+    <td align="center" colSpan="4">int</td></tr>
+<tr><td align="center" colSpan="3">main(void)</td>
+    <td align="center" colSpan="4">power(int base, int exponent)</td></tr>
+</thead>
+<tbody>
 <tr><td align="center">int</td>
     <td align="center">int</td>
     <td align="center">int</td>
@@ -386,7 +376,6 @@ The completed walkthrough table for the power.c program listed above is shown be
     <td align="center">int</td>
     <td align="center">int</td>
     <td align="center">int</td></tr>
-
 <tr><td align="center">base</td>
     <td align="center">exp</td>
     <td align="center">answer</td>
@@ -394,7 +383,6 @@ The completed walkthrough table for the power.c program listed above is shown be
     <td align="center">exponent</td>
     <td align="center">result</td>
     <td align="center">i</td></tr>
-
 <tr><td align="center">&amp;100</td>
     <td align="center">&amp;104</td>
     <td align="center">&amp;108</td>
@@ -402,7 +390,6 @@ The completed walkthrough table for the power.c program listed above is shown be
     <td align="center">&amp;110</td>
     <td align="center">&amp;114</td>
     <td align="center">&amp;118</td></tr>
-
 <tr><td align="center">3</td>
     <td align="center"></td>
     <td align="center"></td>
@@ -410,7 +397,6 @@ The completed walkthrough table for the power.c program listed above is shown be
     <td align="center"></td>
     <td align="center"></td>
     <td align="center"></td></tr>
-
 <tr><td align="center">3</td>
     <td align="center">4</td>
     <td align="center"></td>
@@ -418,7 +404,6 @@ The completed walkthrough table for the power.c program listed above is shown be
     <td align="center"></td>
     <td align="center"></td>
     <td align="center"></td></tr>
-
 <tr><td align="center">3</td>
     <td align="center">4</td>
     <td align="center"></td>
@@ -426,7 +411,6 @@ The completed walkthrough table for the power.c program listed above is shown be
     <td align="center">4</td>
     <td align="center"></td>
     <td align="center"></td></tr>
-
 <tr><td align="center">3</td>
     <td align="center">4</td>
     <td align="center"></td>
@@ -434,7 +418,6 @@ The completed walkthrough table for the power.c program listed above is shown be
     <td align="center">4</td>
     <td align="center">1</td>
     <td align="center"></td></tr>
-
 <tr><td align="center">3</td>
     <td align="center">4</td>
     <td align="center"></td>
@@ -442,7 +425,6 @@ The completed walkthrough table for the power.c program listed above is shown be
     <td align="center">4</td>
     <td align="center">1</td>
     <td align="center">0</td></tr>
-
 <tr><td align="center">3</td>
     <td align="center">4</td>
     <td align="center"></td>
@@ -450,7 +432,6 @@ The completed walkthrough table for the power.c program listed above is shown be
     <td align="center">4</td>
     <td align="center">3</td>
     <td align="center">0</td></tr>
-
 <tr><td align="center">3</td>
     <td align="center">4</td>
     <td align="center"></td>
@@ -458,7 +439,6 @@ The completed walkthrough table for the power.c program listed above is shown be
     <td align="center">4</td>
     <td align="center">3</td>
     <td align="center">1</td></tr>
-
 <tr><td align="center">3</td>
     <td align="center">4</td>
     <td align="center"></td>
@@ -466,7 +446,6 @@ The completed walkthrough table for the power.c program listed above is shown be
     <td align="center">4</td>
     <td align="center">9</td>
     <td align="center">1</td></tr>
-
 <tr><td align="center">3</td>
     <td align="center">4</td>
     <td align="center"></td>
@@ -474,7 +453,6 @@ The completed walkthrough table for the power.c program listed above is shown be
     <td align="center">4</td>
     <td align="center">9</td>
     <td align="center">2</td></tr>
-
 <tr><td align="center">3</td>
     <td align="center">4</td>
     <td align="center"></td>
@@ -482,7 +460,6 @@ The completed walkthrough table for the power.c program listed above is shown be
     <td align="center">4</td>
     <td align="center">27</td>
     <td align="center">2</td></tr>
-
 <tr><td align="center">3</td>
     <td align="center">4</td>
     <td align="center"></td>
@@ -490,7 +467,6 @@ The completed walkthrough table for the power.c program listed above is shown be
     <td align="center">4</td>
     <td align="center">27</td>
     <td align="center">3</td></tr>
-
 <tr><td align="center">3</td>
     <td align="center">4</td>
     <td align="center"></td>
@@ -498,7 +474,6 @@ The completed walkthrough table for the power.c program listed above is shown be
     <td align="center">4</td>
     <td align="center">81</td>
     <td align="center">3</td></tr>
-
 <tr><td align="center">3</td>
     <td align="center">4</td>
     <td align="center"></td>
@@ -506,7 +481,6 @@ The completed walkthrough table for the power.c program listed above is shown be
     <td align="center">4</td>
     <td align="center">81</td>
     <td align="center">4</td></tr>
-
 <tr><td align="center">3</td>
     <td align="center">4</td>
     <td align="center">81</td>
@@ -514,7 +488,7 @@ The completed walkthrough table for the power.c program listed above is shown be
     <td align="center"></td>
     <td align="center"></td>
     <td align="center"></td></tr>
-
+</tbody>
 </table>
 
 :::note
@@ -604,14 +578,16 @@ Enter exponent //exponent becomes "4"
 The table below lists the values of the local variables in this source file at different stages of execution:
 
 <table border="0">
-<tr><td align="center" colspan="3">int</td>
-    <td align="center" colspan="4">int</td>
-    <td align="center">int</td> </tr>
-
-<tr><td align="center" colspan="3">main(void)</td>
-    <td align="center" colspan="4">power(int base, int exponent)</td>
-    <td align="center">getNonNegInt(void)</td> </tr>
-
+<thead>
+<tr>
+<td align="center" colSpan="3">int</td>
+<td align="center" colSpan="4">int</td>
+<td align="center">int</td></tr>
+<tr><td align="center" colSpan="3">main(void)</td>
+<td align="center" colSpan="4">power(int base, int exponent)</td>
+<td align="center">getNonNegInt(void)</td></tr>
+</thead>
+<tbody>
 <tr><td align="center">int</td>
     <td align="center">int</td>
     <td align="center">int</td>
@@ -620,7 +596,6 @@ The table below lists the values of the local variables in this source file at d
     <td align="center">int</td>
     <td align="center">int</td>
     <td align="center">int</td></tr>
-
 <tr><td align="center">base</td>
     <td align="center">exp</td>
     <td align="center">answer</td>
@@ -629,7 +604,6 @@ The table below lists the values of the local variables in this source file at d
     <td align="center">result</td>
     <td align="center">i</td>
     <td align="center">value</td></tr>
-
 <tr><td align="center">?</td>
     <td align="center">?</td>
     <td align="center">?</td>
@@ -638,7 +612,6 @@ The table below lists the values of the local variables in this source file at d
     <td align="center">&nbsp;</td>
     <td align="center">&nbsp;</td>
     <td align="center">&nbsp;</td></tr>
-
 <tr><td align="center">3</td>
     <td align="center">?</td>
     <td align="center">?</td>
@@ -647,7 +620,6 @@ The table below lists the values of the local variables in this source file at d
     <td align="center">&nbsp;</td>
     <td align="center">&nbsp;</td>
     <td align="center">&nbsp;</td></tr>
-
 <tr><td align="center">3</td>
     <td align="center">?</td>
     <td align="center">?</td>
@@ -656,7 +628,6 @@ The table below lists the values of the local variables in this source file at d
     <td align="center"></td>
     <td align="center"></td>
     <td align="center">-2</td></tr>
-    
 <tr><td align="center">3</td>
     <td align="center">?</td>
     <td align="center">?</td>
@@ -665,7 +636,6 @@ The table below lists the values of the local variables in this source file at d
     <td align="center">&nbsp;</td>
     <td align="center">&nbsp;</td>
     <td align="center">4</td></tr>
-    
 <tr><td align="center">3</td>
     <td align="center">4</td>
     <td align="center">?</td>
@@ -674,7 +644,6 @@ The table below lists the values of the local variables in this source file at d
     <td align="center">&nbsp;</td>
     <td align="center">&nbsp;</td>
     <td align="center">&nbsp;</td></tr>
-
 <tr><td align="center">3</td>
     <td align="center">4</td>
     <td align="center">?</td>
@@ -683,7 +652,6 @@ The table below lists the values of the local variables in this source file at d
     <td align="center">?</td>
     <td align="center">?</td>
     <td align="center">&nbsp;</td></tr>
-
 <tr><td align="center">3</td>
     <td align="center">4</td>
     <td align="center">?</td>
@@ -692,7 +660,6 @@ The table below lists the values of the local variables in this source file at d
     <td align="center">1</td>
     <td align="center">?</td>
     <td align="center">&nbsp;</td></tr>
-
 <tr><td align="center">3</td>
     <td align="center">4</td>
     <td align="center">?</td>
@@ -701,7 +668,6 @@ The table below lists the values of the local variables in this source file at d
     <td align="center">1</td>
     <td align="center">0</td>
     <td align="center">&nbsp;</td></tr>
-
 <tr><td align="center">3</td>
     <td align="center">4</td>
     <td align="center">?</td>
@@ -710,7 +676,6 @@ The table below lists the values of the local variables in this source file at d
     <td align="center">3</td>
     <td align="center">0</td>
     <td align="center">&nbsp;</td></tr>
-
 <tr><td align="center">3</td>
     <td align="center">4</td>
     <td align="center">?</td>
@@ -719,7 +684,6 @@ The table below lists the values of the local variables in this source file at d
     <td align="center">3</td>
     <td align="center">1</td>
     <td align="center">&nbsp;</td></tr>
-
 <tr><td align="center">3</td>
     <td align="center">4</td>
     <td align="center">?</td>
@@ -728,7 +692,6 @@ The table below lists the values of the local variables in this source file at d
     <td align="center">9</td>
     <td align="center">1</td>
     <td align="center">&nbsp;</td></tr>
-
 <tr><td align="center">3</td>
     <td align="center">4</td>
     <td align="center">?</td>
@@ -737,7 +700,6 @@ The table below lists the values of the local variables in this source file at d
     <td align="center">9</td>
     <td align="center">2</td>
     <td align="center">&nbsp;</td></tr>
-
 <tr><td align="center">3</td>
     <td align="center">4</td>
     <td align="center">?</td>
@@ -746,7 +708,6 @@ The table below lists the values of the local variables in this source file at d
     <td align="center">27</td>
     <td align="center">2</td>
     <td align="center">&nbsp;</td></tr>
-
 <tr><td align="center">3</td>
     <td align="center">4</td>
     <td align="center">?</td>
@@ -755,7 +716,6 @@ The table below lists the values of the local variables in this source file at d
     <td align="center">27</td>
     <td align="center">3</td>
     <td align="center">&nbsp;</td></tr>
-
 <tr><td align="center">3</td>
     <td align="center">4</td>
     <td align="center">?</td>
@@ -764,7 +724,6 @@ The table below lists the values of the local variables in this source file at d
     <td align="center">81</td>
     <td align="center">3</td>
     <td align="center">&nbsp;</td></tr>
-
 <tr><td align="center">3</td>
     <td align="center">4</td>
     <td align="center">?</td>
@@ -773,7 +732,6 @@ The table below lists the values of the local variables in this source file at d
     <td align="center">81</td>
     <td align="center">4</td>
     <td align="center">&nbsp;</td></tr>
-
 <tr><td align="center">3</td>
     <td align="center">4</td>
     <td align="center">81</td>
@@ -782,6 +740,7 @@ The table below lists the values of the local variables in this source file at d
     <td align="center">&nbsp;</td>
     <td align="center">&nbsp;</td>
     <td align="center">&nbsp;</td></tr>
+</tbody>
 </table>
 
 The shaded areas show the stages in their lifetimes at which the variables are visible.  The unshaded areas identify the stages at which the variables are out of scope of the function that has control.  The values marked ? are undefined. 
