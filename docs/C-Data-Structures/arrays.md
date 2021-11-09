@@ -1,5 +1,9 @@
 ---
+id: arrays
+title: Arrays
 sidebar_position: 1
+slug: /C-Data-Structures/arrays
+description: An array is a data structure consisting of an ordered set of elements of common type that are stored contiguously in memory.
 ---
 # Arrays
 
@@ -7,14 +11,14 @@ sidebar_position: 1
 
 After reading this section, you will be able to:
 
-* Design data collections using arrays to manage information efficiently
-* Introduce character strings as terminated collections of byte information
+- Design data collections using arrays to manage information efficiently
+- Introduce character strings as terminated collections of byte information
 
 ## Introduction
 
-Programs can process extremely large amounts of data much faster than well-established manual techniques.  Whether this processing is efficient or not depends in large part on how that data is organized.  For example, large collections of data can be organized in structures if each variable shares the same type with all other variables and the variables are stored contiguously in memory.  Not only can structured data be processed efficiently but the programming of tasks performed on structured data can be simplified considerably.  Instead of coding a separate instruction for each variable, we code the instruction that is common to all variables and apply that instruction in an iteration across the data structure.
+Programs can process extremely large amounts of data much faster than well-established manual techniques.  Whether this processing is efficient or not depends in large part on how that data is organized.  For example, large collections of data can be organized in [structures](../C-Data-Structures/structures "Structures") if each variable shares the same type with all other variables and the variables are stored contiguously in memory.  Not only can structured data be processed efficiently but the programming of tasks performed on structured data can be simplified considerably.  Instead of coding a separate instruction for each variable, we code the instruction that is common to all variables and apply that instruction in an iteration across the data structure.
 
-![](https://ict.senecacollege.ca//~ipc144/pages/images/arrays.png)
+![array](https://ict.senecacollege.ca//~ipc144/pages/images/arrays.png)
 
 The simplest data structure in the C language is a list of variables of the same type.  We call such a list an array and the variables in that array its elements.  We refer to any element by its index. 
 
@@ -24,9 +28,11 @@ This chapter introduces the syntax for defining arrays, initializing them and ac
 
 An array is a data structure consisting of an ordered set of elements of common type that are stored contiguously in memory.  Contiguous storage is storage without any gaps.  An array definition takes the form
 
-**`type identifier [ size ];`**
+```c
+type identifier [ size ];
+```
 
-***type*** is the type of each element, ***identifier*** is the array's name, the brackets ***[ ]*** identify the data structure as an array and size specifies the number of elements in the array. 
+`type` is the type of each element, `identifier` is the array's name, the brackets `[ ]` identify the data structure as an array and `size` specifies the number of elements in the array. 
 
 For example, to define an array of 8 grades, we write:
 
@@ -37,16 +43,21 @@ int grade[8];
 This statement allocates contiguous storage in RAM for an array named grade that consists of 8 int elements.
 
 <table border="0">
-<td align="center" colspan="32">int<br />grade[8]</td>
+<thead>
 <tr>
-<td align="center" colspan="4">4 bytes</td>
-<td align="center" colspan="4">4 bytes</td>
-<td align="center" colspan="4">4 bytes</td>
-<td align="center" colspan="4">4 bytes</td>
-<td align="center" colspan="4">4 bytes</td>
-<td align="center" colspan="4">4 bytes</td>
-<td align="center" colspan="4">4 bytes</td>
-<td align="center" colspan="4">4 bytes</td>
+<td align="center" colSpan="32">int<br />grade[8]</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center" colSpan="4">4 bytes</td>
+<td align="center" colSpan="4">4 bytes</td>
+<td align="center" colSpan="4">4 bytes</td>
+<td align="center" colSpan="4">4 bytes</td>
+<td align="center" colSpan="4">4 bytes</td>
+<td align="center" colSpan="4">4 bytes</td>
+<td align="center" colSpan="4">4 bytes</td>
+<td align="center" colSpan="4">4 bytes</td>
 </tr>
 <tr>
 <td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td>
@@ -58,14 +69,17 @@ This statement allocates contiguous storage in RAM for an array named grade that
 <td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td>
 <td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td><td align="center">&nbsp;</td>
 </tr>
-<tr><td align="center" colspan="4">0</td>
-<td align="center" colspan="4">1</td>
-<td align="center" colspan="4">2</td>
-<td align="center" colspan="4">3</td>
-<td align="center" colspan="4">4</td>
-<td align="center" colspan="4">5</td>
-<td align="center" colspan="4">6</td>
-<td align="center" colspan="4">7</td></tr>
+<tr>
+<td align="center" colSpan="4">0</td>
+<td align="center" colSpan="4">1</td>
+<td align="center" colSpan="4">2</td>
+<td align="center" colSpan="4">3</td>
+<td align="center" colSpan="4">4</td>
+<td align="center" colSpan="4">5</td>
+<td align="center" colSpan="4">6</td>
+<td align="center" colSpan="4">7</td>
+</tr>
+</tbody>
 </table>
 
 We can specify the size of the array using **`#define`** or **`const int`**:
@@ -86,13 +100,17 @@ This coding style facilitates modifiability.  If we change the size, we need to 
 
 ## Elements
 
-Each element has a unique index and holds a single value.  Index numbering starts at 0 and extends to one less than the the number of elements in the array.  To refer to a specific element, we write the array name followed by bracket notation around the element's index.
+Each element has a unique index and holds a single value.  Index numbering starts at 0 and extends to one less than the number of elements in the array.  To refer to a specific element, we write the array name followed by bracket notation around the element's index.
 
-**`identifier[index]`**
+```c
+identifier[index]
+```
 
 For example, to access the first element of grade, we write:
 
-**`grade[0]`**
+```c
+grade[0]
+```
 
 To display all elements of grade, we iterate:
 
@@ -110,7 +128,9 @@ C compilers do not introduce code that checks whether an element's index is with
 
 We can initialize an array when we define it in the same way that we initialize variables.  We suffix the declaration with an assignment operator followed by the set of initial values.  We enclose the values in the set within a pair of braces and separate them with commas.  Initialization takes the form:
 
-**`type identifier[ size ] = { value, ... , value };`**
+```c
+type identifier[ size ] = { value, ... , value };
+```
 
 For example, to initialize grade, we write:
 
@@ -119,10 +139,13 @@ int grade[NGRADES] = {10,9,10,8,7,9,8,10};
 ```
 
 <table border="0">
+<thead>
 <tr>
 <td>Array Identifier</td>
-<td align="center" colspan="8"><b>int</b><br /><b>grade</b></td>
+<td align="center" colSpan="8"><b>int</b><br /><b>grade</b></td>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td>Value</td>
 <td align="center">10</td>
@@ -145,9 +168,10 @@ int grade[NGRADES] = {10,9,10,8,7,9,8,10};
 <td align="center">6</td>
 <td align="center">7</td>
 </tr>
+</tbody>
 </table>
 
-If our initialization fills all elements in the array, C compilers infer the size of the array from the initization set and we do not need to specify the size between the brackets.  We may simply write:
+If our initialization fills all elements in the array, C compilers infer the size of the array from the initialization set and we do not need to specify the size between the brackets.  We may simply write:
 
 ``` c
 int grade[] = {10,9,10,8,7,9,8,10};
@@ -206,15 +230,19 @@ Parallel arrays are simple to process.  For example, once we find the index of t
 
 ## Character Strings
 
-The topic of character strings is covered in depth in the chapter entitled [Character Strings](../F-Refinements/character-strings.md).  The following section introduces this topic at a high level.
+The topic of character strings is covered in depth in the chapter entitled [Character Strings](../F-Refinements/character-strings.md "Character Strings").  The following section introduces this topic at a high level.
 
 ### Introduction
 
 A ***string*** is a `char` array with a special property: a **terminator element** follows the last meaningful character in the string.  We refer to this terminator as the ***null terminator*** and identify it by the escape sequence `'\0'`. 
 
 <table border="0">
-<tr><td align="center" colspan="18">char</td>
+<thead>
+<tr>
+<td align="center" colSpan="18">char</td>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -235,15 +263,20 @@ A ***string*** is a `char` array with a special property: a **terminator element
 <td>&nbsp;</td>
 <td><em><b>\0</b></em></td>
 </tr>
+</tbody>
 </table>
 
-The null terminator has the value 0 on any host platform (in its collating sequence).  All of its bits are 0's.  The null terminator occupies the first position in the [ASCII](../Resources-Appendices/ascii-collating-sequence.md) and [EBCDIC](../Resources-Appendices/ebcdic-collating-sequence.md) collating sequences. 
+The null terminator has the value 0 on any host platform (in its collating sequence).  All of its bits are 0's.  The null terminator occupies the first position in the [ASCII](../Resources-Appendices/ascii-collating-sequence.md "ASCII") and [EBCDIC](../Resources-Appendices/ebcdic-collating-sequence.md "EBCDIC") collating sequences. 
 
 The value of the index identifying the null terminator element is the number of meaningful characters in the string. 
 
 <table border="0">
-<tr><td align="center" colspan="18"><b>char<br />name</b></td>
+<thead>
+<tr>
+<td align="center" colSpan="18"><b>char<br />name</b></td>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td>0</td>
 <td>1</td>
@@ -284,6 +317,7 @@ The value of the index identifying the null terminator element is the number of 
 <td>d</td>
 <td><em><b>\0</b></em></td>
 </tr>
+</tbody>
 </table>
 
 The number of memory locations occupied by a string is one more than the number of meaningful characters in the string.

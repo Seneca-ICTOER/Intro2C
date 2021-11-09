@@ -1,5 +1,5 @@
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require('prism-react-renderer/themes/vsLight');
+const darkCodeTheme = require('prism-react-renderer/themes/vsDark');
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
@@ -35,6 +35,10 @@ module.exports = {
               label: 'Contents',
               to: '/',
             },
+			{
+			  label: 'Weekly Schedule',
+			  to: '/weeklyContents',
+			},
           ],
         },
       ],
@@ -69,7 +73,7 @@ module.exports = {
 					{
 						tagName: 'link',
 						rel: 'icon',
-						href: 'img/pwa/manifest-icon-512.png',
+						href: 'img/pwa/icon-512x512.png',
 					},
 					{
 						tagName: 'link',
@@ -94,18 +98,18 @@ module.exports = {
 					{
 						tagName: 'link',
 						rel: 'apple-touch-icon',
-						href: 'img/pwa/manifest-icon-192.png',
+						href: 'img/pwa/icon-192x192.png',
 					},
 					{
 						tagName: 'link',
 						rel: 'mask-icon',
-						href: 'img/pwa/manifest-icon-512.png',
+						href: 'img/pwa/icon-512x512.png',
 						color: '#DA291C',
 					},
 					{
 						tagName: 'meta',
 						name: 'msapplication-TileImage',
-						content: 'img/pwa/manifest-icon-512.png',
+						content: 'img/pwa/icon-512x512.png',
 					},
 					{
 						tagName: 'meta',
