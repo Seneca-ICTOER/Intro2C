@@ -86,7 +86,7 @@ This coding style facilitates modifiability.  If we change the size, we need to 
 
 ## Elements
 
-Each element has a unique index and holds a single value.  Index numbering starts at 0 and extends to one less than the the number of elements in the array.  To refer to a specific element, we write the array name followed by bracket notation around the element's index.
+Each element has a unique index and holds a single value.  Index numbering starts at 0 and extends to one less than the number of elements in the array.  To refer to a specific element, we write the array name followed by bracket notation around the element's index.
 
 **`identifier[index]`**
 
@@ -147,7 +147,7 @@ int grade[NGRADES] = {10,9,10,8,7,9,8,10};
 </tr>
 </table>
 
-If our initialization fills all elements in the array, C compilers infer the size of the array from the initization set and we do not need to specify the size between the brackets.  We may simply write:
+If our initialization fills all elements in the array, C compilers infer the size of the array from the initialization set and we do not need to specify the size between the brackets.  We may simply write:
 
 ``` c
 int grade[] = {10,9,10,8,7,9,8,10};
