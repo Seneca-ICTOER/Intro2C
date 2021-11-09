@@ -14,7 +14,7 @@ After reading this section, you will be able to:
 
 Programs can process extremely large amounts of data much faster than well-established manual techniques.  Whether this processing is efficient or not depends in large part on how that data is organized.  For example, large collections of data can be organized in structures if each variable shares the same type with all other variables and the variables are stored contiguously in memory.  Not only can structured data be processed efficiently but the programming of tasks performed on structured data can be simplified considerably.  Instead of coding a separate instruction for each variable, we code the instruction that is common to all variables and apply that instruction in an iteration across the data structure.
 
-![](https://ict.senecacollege.ca//~ipc144/pages/images/arrays.png)
+![Values and indexes in an array](https://ict.senecacollege.ca//~ipc144/pages/images/arrays.png)
 
 The simplest data structure in the C language is a list of variables of the same type.  We call such a list an array and the variables in that array its elements.  We refer to any element by its index. 
 
