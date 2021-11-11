@@ -1,6 +1,8 @@
 {
   "index_name": "docusaurus",
-  "start_urls": "https://cghub.ca",
+  "start_urls": ["https://cghub.ca"],
+  "sitemap_urls": ["https://cghub.ca/sitemap.xml"],
+  "sitemap_alternative_links": true,
   "selectors": {
     "lvl0": "#content header h1",
     "lvl1": "#content article h1",
