@@ -1,5 +1,8 @@
 ---
 sidebar_position: 5
+title: "Style-Guidelines"
+id: "style-guidlines"
+slug: "/B-Computations/style-guidelines"
 ---
 
 # Style Guidelines
