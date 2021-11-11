@@ -1,6 +1,6 @@
 {
-  "index_name": "ipc144",
-  "start_urls": "https://localhost:3000",
+  "index_name": "docusaurus",
+  "start_urls": "https://cghub.ca",
   "selectors": {
     "lvl0": "#content header h1",
     "lvl1": "#content article h1",
