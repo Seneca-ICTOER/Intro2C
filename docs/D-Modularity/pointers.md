@@ -265,7 +265,7 @@ The hexadecimal values below the variable identifiers are their addresses in mem
 
 :::note
 
-Note that the addresses of `a` and `b` in `internal_swap()` are different from those in `main()`. 
+The addresses of `a` and `b` in `internal_swap()` are different from those in `main()`. 
 
 :::
 
