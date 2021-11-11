@@ -17,15 +17,15 @@ After reading this section, you will be able to:
 
 A well-written program is a pleasure to read. The coding style is consistent and clear throughout.  The programmer looking for a bug sees a well-defined structure and finds it easy to focus on the portion of the code that is suspect. The programmer looking to upgrade the code sees how and where to incorporate changes. Although several programmers may have contributed to the code throughout its lifetime, the code itself appears to have been written by one programmer.
 
-This chapter describes the coding style used throughout these notes and recommended for an introductory course in programming. This style is based in part on the Linux kernel coding style published at [https://www.kernel.org/doc/html/latest/process/coding-style.html\#codingstyle](https://www.kernel.org/doc/html/latest/process/coding-style.html#codingstyle). Conventions that apply specifically to syntax introduced in subsequent chapters are described in those chapters. 
+This chapter describes the coding style used throughout these notes and recommended for an introductory course in programming. This style is based in part on the [Linux kernel coding style](https://www.kernel.org/doc/html/latest/process/coding-style.html#codingstyle). Conventions that apply specifically to syntax introduced in subsequent chapters are described in those chapters. 
 
 ## Identifiers
 
-All identifiers in a program should be self-descriptive. The reader should not have to search through the code for their meaning. It is better to embed the meaning in the name than to explain it in a comment elsewhere in the code.  By all means, avoid referring the reader to a document external to the code itself. 
+All identifiers in a program should be self-descriptive. The reader should not have to search through the code for their meaning. It is better to embed the meaning in the name, rather than to explain it in a comment elsewhere in the code. By all means, avoid referring the reader to a document external to the code itself. 
 
-A program with short names is easier to read than one with long names. The human eye infers the meaning of a word from just a few letters that make up that word and the context within which the word is used. Reading long identifiers tires the eyes when searching through code. We follow the sophisticated conventions of our own languages and complying with makes our programs all the more readable. Nouns describe objects, verbs describe actions.
+A program with short names is easier to read than one with long names. The human eye infers the meaning of a word from just a few letters that make up that word and the context within which the word is used. Reading long identifiers tires the eyes when searching through code. We follow the sophisticated conventions of our own languages and complying with them makes our programs all the more readable. Nouns describe objects, verbs describe actions.
 
-Notations, such as Hungarian notation, that incorporate the type into the identifier klutter source code unnecessarily. C compilers know the type of each identifier and readers do not need reminders in every place the identifier appears.
+Notations, such as Hungarian notation, that incorporate the type into the identifier will clutter source code unnecessarily. C compilers know the type of each identifier and readers do not need reminders in every place the identifier appears.
 
 When selecting identifiers:
 
@@ -65,12 +65,12 @@ for (i = 0; i < n; i++) {
                                 printf(" %4d", ijk); 
                         else
                                 printf("    ");
-                 }
-                 printf("\n");
-         }
-         printf("\n");
- }
- printf("That's all folks!!!\n");
+                }
+                printf("\n");
+        }
+        printf("\n");
+}
+printf("That's all folks!!!\n");
 ```
 
 Using tabs for indentation rather than spaces enables other programmers to adjust the indentation without difficulty in their own text editors. Using 8 characters per tab position heavily indents code to the far right and identifies code that may be a hog of compute cycles and a likely candidate for refactoring. 
@@ -252,17 +252,17 @@ For example:
 ```c
 const double PI = 3.14159;
 
- int main(void)
- {
-         double radius, area;
+int main(void)
+{
+        double radius, area;
 
-         printf("Enter radius : ");
-         scanf("%lf", &radius);
-         area = PI * radius * radius;
-         printf("The area of your circle is : %lf\n", area); 
+        printf("Enter radius : ");
+        scanf("%lf", &radius);
+        area = PI * radius * radius;
+        printf("The area of your circle is : %lf\n", area); 
 
-         return 0;
- }
+        return 0;
+}
 ```
 
 ### Macro Directive
@@ -280,19 +280,19 @@ The \#define directive instructs the C compiler to substitute every occurence of
 For example,
 
 ```c
- #define PI 3.14159
+#define PI 3.14159
 
- int main(void)
- {
-         double radius, area;
+int main(void)
+{
+        double radius, area;
 
-         printf("Enter radius : ");
-         scanf("%lf", &radius);
-         area = PI * radius * radius;
-         printf("The area of your circle is : %lf\n", area); 
+        printf("Enter radius : ");
+        scanf("%lf", &radius);
+        area = PI * radius * radius;
+        printf("The area of your circle is : %lf\n", area); 
 
-         return 0;
- }
+        return 0;
+}
 ```
 
 ## Miscellaneous
@@ -316,14 +316,14 @@ char c = 10; // ASCII
 * we initialize iteration variables in the context of the iteration:
 
 ```c
- // prefer
- //
- for (i = 0; i < 10; i++)
- 
- // avoid
- //
- i = 0;
- for (; i < 10; i++)
+// prefer
+//
+for (i = 0; i < 10; i++)
+
+// avoid
+//
+i = 0;
+for (; i < 10; i++)
 ```
 
 * we add special comments where code has been fine-tuned for efficient execution
