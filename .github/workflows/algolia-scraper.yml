@@ -9,7 +9,7 @@ on:
 jobs:
   scrape:
     runs-on: ubuntu-latest # specifies the OS image to use for the job
-    steps: - specifies the commands to run # specifies the commands to run
+    steps: # specifies the commands to run
       - name: check out code 🛎
         uses: actions/checkout@v2
       - name: scrape the site 🧽
