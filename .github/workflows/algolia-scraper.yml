@@ -1,24 +1,24 @@
 name: algolia-scraper
 on:
-  push:
+  push: # only run on push events
     branches:
       - main
-  check_suite:
+  check_suite: # only run check suite events
     types: [completed]
-  workflow_dispatch:
+  workflow_dispatch: # only run on workflow dispatch events
 jobs:
   scrape:
-    runs-on: ubuntu-latest
-    steps:
+    runs-on: ubuntu-latest # specifies the OS image to use for the job
+    steps: - specifies the commands to run # specifies the commands to run
       - name: check out code 🛎
         uses: actions/checkout@v2
       - name: scrape the site 🧽
-        env:
-          APPLICATION_ID: ${{ secrets.APPLICATION_ID }}
-          WRITE_API_KEY: ${{ secrets.API_KEY }}
-          SITE_URL: ${{ secrets.SITE_URL }}
-          INDEX_NAME: ${{ secrets.INDEX_NAME }}
+        env: #- specifies the environment variables
+          APPLICATION_ID: ${{ secrets.APPLICATION_ID }} #generated when you create a project on algolia website after you sign up
+          WRITE_API_KEY: ${{ secrets.API_KEY }} #API key be sure to have the right permissions
+          SITE_URL: ${{ secrets.SITE_URL }} #site url
+          INDEX_NAME: ${{ secrets.INDEX_NAME }} #docusaurus or anything if you want ot change it
+          # run: create .env file and run bash script scrape.sh
         run: |
-          cd .algolia
-          touch .env
+          touch .env  
           ./scrape.sh
