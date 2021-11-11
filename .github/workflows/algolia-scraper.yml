@@ -23,9 +23,3 @@ jobs:
           touch .env  
           ./scrape.sh
 
-  # 1 - you would need to sign up on www.aligolia.com and create a project for the purpose of creating index
-  # 2 - add an index_name called "docusaurus" for instance
-  # 3 - you add API_key and give rights for ACLs search, addObject, deleteObject, editSearch
-  # 4 - site_url is the deployed site, but siteindex needs to match to crawl it
-  # 5 -if u look at the pull request ff0a9a5 i have a sample .env file with the variables set.
-
