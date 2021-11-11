@@ -25,6 +25,11 @@ module.exports = {
     tableOfContents: {
       maxHeadingLevel: 4,
     },
+    aloglia: {
+      apiKey: "8a62f30b868fdef1bbe063a2a1b25559",
+      indexName: "docusaurus",
+      appId: "51151f62",
+    },
     footer: {
       style: 'dark',
       links: [
