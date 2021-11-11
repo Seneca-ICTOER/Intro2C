@@ -11,7 +11,7 @@ module.exports = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'Seneca-ICTOER',
+  organizationName: 'trangntt-016',
   projectName: 'IPC144',
   themeConfig: {
     navbar: {
