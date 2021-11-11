@@ -6,11 +6,11 @@ Thanks for your interest in helping us maintain our course notes! We are happy t
 
 These notes are built using [Docusaurus](https://docusaurus.io/), a modern static website generator. To use it, you'll need to have the following installed:
 
-- an [LTS version of node.js](https://nodejs.org/en/), which can be checked by running `node -v`.  Currently that's node.js 14.x, but confirm with the official site.
+- an [LTS version of node.js](https://nodejs.org/en/), which can be checked by running `node -v`. Currently that's node.js 16.x, but confirm with the official site.
 
 - The [yarn](https://classic.yarnpkg.com/en/docs/install#mac-stable) package manager, version >= 1.5 (which can be checked by running `yarn --version`).
 
-- [Visual Studio Code](https://code.visualstudio.com/).  This is not strictly necessary, but we encourage it since we use various extensions to make working on the site easier.
+- [Visual Studio Code](https://code.visualstudio.com/). This is not strictly necessary, but we encourage it since we use various extensions to make working on the site easier.
 
 ## Installation
 
@@ -67,6 +67,7 @@ GIT_USER=<Your GitHub username> USE_SSH=true yarn deploy
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
 
+<<<<<<< HEAD
 ## Miscellanous 
 
 ### Tutorial for Converting Table-like Diagrams into Images
@@ -107,4 +108,35 @@ Tool Recommendation: Firefox Browser (easier to make screenshots)
 
 ```
 !["Alt test for accessibility"](/static/img/name-of-the-image.png)
+=======
+### Search
+
+We use Algolia to build our index. In order to build an index for search:
+
+1. sign up for an account on https://www.algolia.com/users/sign_in
+2. create a project for the purpose of creating the index
+3. add an `INDEX_NAME` called `docusaurus` for instance on same website
+4. You add API_KEY and give rights (`search, addObject, deleteObject, editSearch`) for the key
+5. SITE_URL is the deployed site, but siteindex needs to match it in order crawl it
+6.  If you look at the pull request [ff0a9a5](https://github.com/ycechungAI/IPC144/commit/ff0a9a5d6061a21813490e3329c5934bdc8eaeb1). I have an example of which secret values are needed in scrape.sh
+
+
+##### Important reference websites for next steps
+
+<<<<<<< HEAD
+```text
+https://docsearch.algolia.com/docs/integrations
+https://docusaurus.io/docs/search#using-algolia-docsearch
+https://docusaurus.io/docs/deployment
+https://docsearch.algolia.com/docs/api
+https://github.com/marketplace/actions/algolia-docsearch-action
+>>>>>>> 784784d... added important reference and documentation to search
 ```
+=======
+- [Algolia Integration Docs](https://docsearch.algolia.com/docs/integrations)
+- [Using Algolia Search](https://docusaurus.io/docs/search#using-algolia-docsearch)
+- [Deployment](https://docusaurus.io/docs/deployment)
+- [Algolia API](https://docsearch.algolia.com/docs/api)
+- [Algolia Docsearch-action](https://github.com/marketplace/actions/algolia-docsearch-action)
+
+>>>>>>> 69b56c5... Update CONTRIBUTING.md
