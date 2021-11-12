@@ -41,37 +41,37 @@ Given an unsorted key array, we start our search at the first element and progre
 //
 int find(int skuData[], int skuCount, int findSKU)
 {
-        int i, skuIndex = -1;
+    int i, skuIndex = -1;
 
-        for (i = 0; skuIndex < 0 && i < skuCount; i++)
+    for (i = 0; skuIndex < 0 && i < skuCount; i++)
+    {
+        if (findSKU == skuData[i])
         {
-                if (findSKU == skuData[i])
-                {
-                        skuIndex = i; // save the index
-                }
+            skuIndex = i; // save the index
         }
+    }
 
-        return skuIndex;
+    return skuIndex;
 }
 
 int main(void)
 {
-        int i, searchSKU;
-        int sku[]      = { 2156, 4633, 3122, 5611};
-        double price[] = {12.34, 7.89, 6.56, 9.32};
-        const int itemCount    = 4;
+    int i, searchSKU;
+    int sku[]      = { 2156, 4633, 3122, 5611};
+    double price[] = {12.34, 7.89, 6.56, 9.32};
+    const int itemCount    = 4;
 
-        printf("SKU   : ");
-        scanf("%d", &searchSKU);
+    printf("SKU   : ");
+    scanf("%d", &searchSKU);
 
-        i = find(sku, itemCount, searchSKU);
+    i = find(sku, itemCount, searchSKU);
 
-        if (i >= 0 && i < itemCount)
-                printf("Price : $%0.2lf\n", price[i]); 
-        else
-                printf("%d not in system\n", searchSKU);
+    if (i >= 0 && i < itemCount)
+        printf("Price : $%0.2lf\n", price[i]); 
+    else
+        printf("%d not in system\n", searchSKU);
 
-        return 0;
+    return 0;
 }
 ```
 
