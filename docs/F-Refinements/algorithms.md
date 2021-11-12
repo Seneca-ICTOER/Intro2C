@@ -1,5 +1,9 @@
 ---
+id: algorithms
 sidebar_position: 6
+title: Algorithms
+slug: /refinements/algorithms
+description: An algorithm is the set of rules that define the sequence of operations required to complete the task.
 ---
 # Algorithms
 
@@ -22,7 +26,7 @@ Search algorithms finds the index of one or more array elements that satisfy a s
 
 ### Two Algorithms
 
-**Unsorted Key Array**
+#### Unsorted Key Array
 
 Given an unsorted key array, we start our search at the first element and progress through the array element by element until we find a match.  This algorithm involves an iteration and a selection:
 
@@ -78,10 +82,13 @@ SKU   : 4633
 Price : $7.89 
 ```
  
-> **Note**<br/>
-> The value returned by find() (variable `i`) is validated to ensure that it is within the bounds of the key array (that is, we check that it is not -1 and not more than the number of items in the array). 
+:::note
 
-**Sorted Key Array (Optional)**
+The value returned by `find()` (variable `i`) is validated to ensure that it is within the bounds of the key array (that is, we check that it is not -1 and not more than the number of items in the array). 
+
+:::
+
+#### Sorted Key Array (Optional)
 
 Given a sorted key array, we start our search in the middle of the array and at each step discard the half that doesn't contain the search key.  Although this algorithm is slightly more complicated than the unsorted one, it is significantly faster, which is important with a large number of elements. 
 
@@ -137,14 +144,17 @@ SKU   : 4633
 Price : $7.89 
 ```
 
-> **Note**<br/>
-> The above example using a divide and conquor approach is refered to as a ***binary search***.
+:::tip Note
+
+The above example using a divide and conquer approach is referred to as a ***binary search***.
+
+:::
 
 ## Masking
 
-Masking algorithms distinguish certain array elements from all other elements.  The masking array is a *parallel array* with respect to the other arrays in the set.  The elements of the masking array are *flags* that identify inclusion or exclusion. 
+Masking algorithms distinguish certain array elements from all other elements.  The masking array is a [parallel array](/C-Data-Structures/arrays#parallel-arrays "Parallel Arrays") with respect to the other arrays in the set.  The elements of the masking array are [flags](/B-Computations/logic#flags "Flags") that identify inclusion or exclusion. 
 
-Consider the following program, which calculates the total purchase price for a set of products.  The user enters the sku for each product purchased and the quantity.  Some products attract HST (Harmonized Sales Tax), while others do not.  We store the skus, unit prices and tax status in three parallel arrays.  The tax status array is the masking array.  The user enters 0 to terminate input.
+Consider the following program, which calculates the total purchase price for a set of products.  The user enters the SKU (Stock-Keeping Unit) for each product purchased and the quantity.  Some products attract HST (Harmonized Sales Tax), while others do not.  We store the skus, unit prices and tax status in three parallel arrays.  The tax status array is the masking array.  The user enters 0 to terminate input.
 
 ```c
 // Total Purchase Price
@@ -225,7 +235,7 @@ Total is $65.48
 
 ## Sorting
 
-Sorting algorithms rearrange the elements of an array according to a pre-defined rule.  Typically, this rule is ascending or descending order.  The sorting criterion may be numeric or based upon a collating sequence such as ASCII or EBCDIC.
+Sorting algorithms rearrange the elements of an array according to a pre-defined rule.  Typically, this rule is ascending or descending order.  The sorting criterion may be numeric or based upon a collating sequence such as [ASCII](/Resources-Appendices/ascii-collating-sequence "ASCII Collating Sequence") or [EBCDIC](/Resources-Appendices/ebcdic-collating-sequence "EBCDIC Collating Sequence").
 
 The two simplest algorithms are:
 
@@ -436,8 +446,11 @@ Timmothy
 Zamphire
 ```
 
-> **Note**<br/>
-> NOtice the concatenation of string literals in the format string of the call to `scanf()`.  This lets us set the maximum number of input characters alongside the maximum number of characters in the array of strings at the head of the program code.  The C compiler converts a concatenation of string literals into a single literal removing the intermediate pairs of double quotes; that is, to the compiler `"a""b""c"` is the same as `"abc"`.
+:::note
+
+Notice the concatenation of string literals in the format string of the call to `scanf()`.  This lets us set the maximum number of input characters alongside the maximum number of characters in the array of strings at the head of the program code.  The C compiler converts a concatenation of string literals into a single literal removing the intermediate pairs of double quotes; that is, to the compiler `"a""b""c"` is the same as `"abc"`.
+
+:::
 
 ## Mixing (Optional)
 
