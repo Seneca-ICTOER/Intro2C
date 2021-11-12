@@ -32,7 +32,7 @@ We specify the type of a numeric constants by a suffix, if any, on the value its
 
 ![numeric-constants](/img/image22.png)
 
-To define a numeric constant in hexadecimal representation, we prefix the value with 0x.
+To define a numeric constant in hexadecimal representation, we prefix the value with `0x`.
 
 ```c
 const int x = 0x5C;  // same as     const int x = 92;
@@ -40,7 +40,7 @@ const int x = 0x5C;  // same as     const int x = 92;
 
 **Example**
 
-To define the constant pi \(π\) to 8 significant digits, we select the `float` type and write
+To define the constant `pi` \(π\) to 8 significant digits, we select the `float` type and write
 
 ```c
 int main(void)
@@ -84,7 +84,7 @@ Escape sequences are relatively independent of the execution environment.  Their
 A string literal is a sequence of characters enclosed within a pair of double quotes.  For example,
 
 ```text
- "This is C\n"
+"This is C\n"
 ```
 
 The `\n` character constant adds a new line to the end of the string.
