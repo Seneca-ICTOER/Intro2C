@@ -53,15 +53,15 @@ int main(void)
 }
 ```
 
-The `const` keyword qualifies the value stored in in the 'variable' `pi` as unmodifiable.
+The `const` keyword qualifies the value stored in the 'variable' `pi` as unmodifiable.
 
 ### Character Constants
 
 All character constants are of `char` type.  The ways of defining a character constant include:
 
 * the digit or letter enclosed in single quotes - for example `'A'`
-* the decimal value from the collating sequence - for example `65` for 'A' \(ASCII\)
-* the hexadecimal value from the collating sequence - for example `0x41` for 'A' \(ASCII\)
+* the decimal value from the collating sequence - for example `65` for `'A'` \(ASCII\)
+* the hexadecimal value from the collating sequence - for example `0x41` for `'A'` \(ASCII\)
 
 The single-quotes form is the preferred form, since it is independent of the collating sequence of the execution environment.
 
@@ -175,7 +175,7 @@ The assignment operation stores the value of an expression in the memory locatio
 destination = expression
 ```
 
-_**destination**_ is a placeholder for the destination variable.  _**expression**_ refers to the value to be assigned to the destination variable.  = denotes the 'is assigned from' operation.  We call `=` the assignment operator. 
+_**destination**_ is a placeholder for the destination variable.  _**expression**_ refers to the value to be assigned to the destination variable. `=` denotes the 'is assigned from' operation.  We call `=` the assignment operator. 
 
 :::note
 
@@ -227,7 +227,7 @@ This statement calls the `printf()` procedure, which performs the operation.  We
 
 ### Format
 
-_**format**_ is a string literal describing how to convert data stored in memory into text readable by the user.  _**format**_ contains the conversion specifier and any characters to be output directly.  The conversion specifier begins with a **`%`** symbol and identifies the type of the source variable.  The most common specifiers are listed below.
+_**format**_ is a string literal describing how to convert data stored in memory into text readable by the user.  _**format**_ contains the conversion specifier and any characters to be output directly.  The conversion specifier begins with a `%` symbol and identifies the type of the source variable.  The most common specifiers are listed below.
 
 ![output-conversion-specifiers](/img/image18.png)
 
