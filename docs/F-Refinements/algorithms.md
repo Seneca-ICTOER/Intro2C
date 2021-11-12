@@ -22,7 +22,7 @@ This chapter introduces the implementations of a few more common algorithms.  We
 
 ## Searching
 
-Search algorithms finds the index of one or more array elements that satisfy a specified condition or set of conditions.  These algorithms work with key-value pairs.  Each key is unique while the values are not necessarily unique. 
+Search algorithms find the index of one or more array elements that satisfy a specified condition or set of conditions.  These algorithms work with key-value pairs.  Each key is unique while the values are not necessarily unique. 
 
 ### Two Algorithms
 
