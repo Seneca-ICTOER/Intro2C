@@ -2,7 +2,7 @@
 id: arrays
 title: Arrays
 sidebar_position: 1
-slug: /C-Data-Structures/arrays
+slug: /data-structures/arrays
 description: An array is a data structure consisting of an ordered set of elements of common type that are stored contiguously in memory.
 ---
 # Arrays
@@ -216,7 +216,7 @@ int main(void)
 
 Output of the above program:
 
-```
+```text
   SKU Price 
  2156 $2.34
  4633 $7.89
