@@ -42,11 +42,12 @@ There are well over 2500 programming languages and their number continues to inc
 
 The third, fourth and fifth generation languages are high-level languages.  They exhibit no direct connection to any machine language.  Their instructions are more human-like and less machine-like.  A program written in a high-level language is relatively easy to read and relatively easy to port across different platforms. 
 
-**Note**
+:::note
 
 * [Eric Levenez](http://www.levenez.com/lang/) maintains an up-to-date map of 50 of the more popular languages.
 * [TIOBE Software](http://www.tiobe.com/tpci.htm) tracks the most popular languages and the long-term trends based on world-wide availability of software engineers, courses and third-party vendors as calculated from Google, Bing, Yahoo!, Wikipedia, Amazon, YouTube and Baidu search engines.
 
+:::
 
 ###  Features of C
 
@@ -82,7 +83,7 @@ Compilers can optimize the program instructions that we provide to improve execu
 
 ### Examples
 
-Let us write a program that displays the phrase "This is C" and name our source file `hello.c`.  Source files are written in the C language end with the extension `.c`. 
+Let us write a program that displays the phrase "This is C" and name our source file `hello.c`.  Source files written in the C language end with the extension `.c`. 
 
 Copy and paste the following statements into a txt editor of your choice:
 
@@ -94,9 +95,9 @@ Copy and paste the following statements into a txt editor of your choice:
 
  int main(void)               // the starting point of the program
  {
-         printf("This is C"); // send output to the screen
+    printf("This is C"); // send output to the screen
 
-         return 0;            // return control to the operating system
+    return 0;            // return control to the operating system
  }
 ```
 
@@ -114,7 +115,7 @@ gcc hello.c
 
 ![Gcc compiler](https://ict.senecacollege.ca//~ipc144/pages/images/gcc.png)
 
-By default, the gcc compiler produces an output file named a.out.  a.out contains all of the machine language instructions needed to execute the program. 
+By default, the gcc compiler produces an output file named `a.out`. `a.out` contains all of the machine language instructions needed to execute the program. 
 
 To execute these machine language instructions, enter the command:
 
@@ -138,7 +139,7 @@ cl hello.c
 
 ![cl compiler](https://ict.senecacollege.ca//~ipc144/pages/images/cl.png)
 
-By default, the cl compiler produces a file named hello.exe. hello.exe contains all of the machine language instructions needed to execute the program. 
+By default, the cl compiler produces a file named `hello.exe`. `hello.exe` contains all of the machine language instructions needed to execute the program. 
 
 To execute these machine language instructions, enter the command:
 
@@ -188,7 +189,7 @@ Whitespace enhances program readability, for instance, by displaying the structu
 * form feed
 * comments
 
-We may introduce whitespace anywhere except within an identifier or a pair of double-quotes.  In the sample above, main and printf are identifiers.  The blank spaces within "This is C" are not whitespace but characters within the literal string. 
+We may introduce whitespace anywhere except within an identifier or a pair of double-quotes.  In the sample above, `main` and `printf` are identifiers.  The blank spaces within "This is C" are not whitespace but characters within the literal string. 
 
 We preface our source code with comments to identify the program and provide distinguishing information.
 
@@ -211,7 +212,7 @@ When the users or we load the executable code into RAM \(`a.out` or `hello.exe`\
 
 ### Program Output
 
-The following statement outputs `"This is C"` to the standard output device \(for example, the screen\).
+The following statement outputs "This is C" to the standard output device \(for example, the screen\).
 
 ```c
 printf("This is C");
