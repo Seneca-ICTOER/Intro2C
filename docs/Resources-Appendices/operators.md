@@ -1,5 +1,9 @@
 ---
+id: operator
+title: Operators
 sidebar_position: 4
+slug: /Resources-Appendices/operators
+description: Operator Precedence is the order in which operands are bound to operators.
 ---
 
 # Operator Precedence
@@ -49,17 +53,16 @@ All of these guarantee that expression `a` will be computed before expression `b
 
 In addition, when a function-call takes place all arguments are evaluated before control transfers to the function.
 
-:::note 
+```
 
  5.  a(b) function call
- 
-:::
 
+```
 
 ANSI C++ guarantees that each full expression will be evaluated before going on.
 
-:::note 
+```
 
 6. each full expression
 
-:::
+```
