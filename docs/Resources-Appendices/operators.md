@@ -49,8 +49,22 @@ All of these guarantee that expression `a` will be computed before expression `b
 
 In addition, when a function-call takes place all arguments are evaluated before control transfers to the function.
 
+<<<<<<< HEAD
+
 > 5.  a(b) function call
 
 ANSI C++ guarantees that each full expression will be evaluated before going on.
 
-> 6.  each full expression
+> 6.  # each full expression
+
+```
+5.  a(b)           function call
+```
+
+ANSI C++ guarantees that each full expression will be evaluated before going on.
+
+```
+6.  each full expression
+```
+
+> > > > > > > 3d7776d47c19fe2ef4aa19e030c5fa915c8cb2e4
