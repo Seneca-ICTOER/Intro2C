@@ -42,7 +42,7 @@ The header file that contains the prototypes for these library functions is:
 #include <string.h>
 ```
 
-## String Length
+### String Length
 
 The `strlen()` function returns the number of characters in the character string excluding the [**null terminator byte**](/F-Refinements/character-strings#definition-review "Null Terminator"). That is, `strlen()` returns the index of the **null terminator byte**.
 
@@ -83,7 +83,7 @@ Enter a string   : strlen
 In reverse order : nelrts
 ```
 
-## String Copy
+### String Copy
 
 The `strcpy()` function receives two addresses and copies the string at the second address into the memory locations starting at the first address. `strcpy()` returns the address of the destination string.
 
@@ -138,7 +138,7 @@ Source : this string is too long
 Copy   : ?
 ```
 
-## String Compare
+### String Compare
 
 The `strcmp()` function receives two addresses and compares the string at the first address to the string at the second address.
 
@@ -203,7 +203,7 @@ Enter second string : elephant
 elephants follows elephant
 ```
 
-## String Concatenate
+### String Concatenate
 
 The `strcat()` function receives two addresses and concatenates the string at the second address to the string at the first address. `strcat()` returns the address of the concatenated string.
 
