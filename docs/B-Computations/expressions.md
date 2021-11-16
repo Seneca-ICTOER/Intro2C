@@ -317,10 +317,10 @@ The binary operators yield the same result as in the longhand expressions listed
 
 | Expression | Shorthand | Longhand | Meaning |
 | :--- | :--- | :--- | :--- |
-| ++operand | **`++x`** | **`x = x + 1`** | increment i by 1 |
-| operand++ | **`x++`** | **`x = x + 1`** | increment i by 1 |
-| --operand | **`--x`** | **`x = x - 1`** | decrement i by 1 |
-| operand-- | **`x--`** | **`x = x - 1`** | decrement i by 1 |
+| ++operand | **`++x`** | **`x = x + 1`** | increment i by 1.0 |
+| operand++ | **`x++`** | **`x = x + 1`** | increment i by 1.0 |
+| --operand | **`--x`** | **`x = x - 1`** | decrement i by 1.0 |
+| operand-- | **`x--`** | **`x = x - 1`** | decrement i by 1.0 |
 
 The prefix and postfix operators operate on floating-point operands in the same way as on integral operands.
 
