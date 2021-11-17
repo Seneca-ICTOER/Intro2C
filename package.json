@@ -42,12 +42,8 @@
     ]
   },
   "devDependencies": {
-<<<<<<< HEAD
     "execa": "^5.1.1",
     "mr-pdf": "^1.0.7",
     "wait-on": "^6.0.0"
-=======
-    "docusaurus": "^1.14.7"
->>>>>>> issue-44
   }
 }
