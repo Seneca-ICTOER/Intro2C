@@ -228,8 +228,9 @@ The conversion specifiers in the last **`printf()`** correspond to the arguments
 
 _**deMorgan's law**_ is a handy rule for converting conditions in logical expressions. The law states that:
 
-> The opposite of a compound condition is the compound condition with all sub-conditions reversed, all &&'s changed to \|\|'s and all \|\|'s to &&'s.
-
+:::note
+The opposite of a compound condition is the compound condition with all sub-conditions reversed, all &&'s changed to \|\|'s and all \|\|'s to &&'s.
+:::
 Consider the following definition of an adult:
 
 ```c
