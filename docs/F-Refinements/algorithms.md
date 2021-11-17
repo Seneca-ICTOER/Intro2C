@@ -154,7 +154,7 @@ The above example using a divide and conquer approach is referred to as a ***bin
 
 Masking algorithms distinguish certain array elements from all other elements.  The masking array is a [parallel array](/C-Data-Structures/arrays#parallel-arrays "Parallel Arrays") with respect to the other arrays in the set.  The elements of the masking array are [flags](/B-Computations/logic#flags "Flags") that identify inclusion or exclusion. 
 
-Consider the following program, which calculates the total purchase price for a set of products.  The user enters the SKU (Stock-Keeping Unit) for each product purchased and the quantity.  Some products attract HST (Harmonized Sales Tax), while others do not.  We store the skus, unit prices and tax status in three parallel arrays.  The tax status array is the masking array.  The user enters 0 to terminate input.
+Consider the following program, which calculates the total purchase price for a set of products.  The user enters the SKU (Stock-Keeping Unit) for each product purchased and the quantity.  Some products attract HST (Harmonized Sales Tax), while others do not.  We store the SKUs, unit prices and tax status in three parallel arrays.  The tax status array is the masking array.  The user enters 0 to terminate input.
 
 ```c
 // Total Purchase Price
@@ -456,7 +456,7 @@ Notice the concatenation of string literals in the format string of the call to 
 
 Mixing algorithms have applications in games of chance.  Examples include shuffling the cards in a deck or tumbling numbered balls into a lottery chute.  The algorithm depends on the extent to which we seek to generate a truly fair result. 
 
-Consider the following program, which tumbles 10 balls into a lottery chute.  To simulate mixing, the algorithm picks the index of a reference element, randomly picks the index of another element further along in the array and swap the values stored in the two elements.  This algorithm is attributed to Donald Knuth, a pioneer of computer science.
+Consider the following program, which tumbles 10 balls into a lottery chute.  To simulate mixing, the algorithm picks the index of a reference element, randomly picks the index of another element further along in the array and swaps the values stored in the two elements.  This algorithm is attributed to Donald Knuth, a pioneer of computer science.
 
 ```c
 // Mix Lottery Balls
