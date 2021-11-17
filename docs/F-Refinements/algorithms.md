@@ -1,5 +1,9 @@
 ---
+id: algorithms
 sidebar_position: 6
+title: Algorithms
+slug: /refinements/algorithms
+description: An algorithm is the set of rules that define the sequence of operations required to complete the task.
 ---
 # Algorithms
 
@@ -18,11 +22,11 @@ This chapter introduces the implementations of a few more common algorithms.  We
 
 ## Searching
 
-Search algorithms finds the index of one or more array elements that satisfy a specified condition or set of conditions.  These algorithms work with key-value pairs.  Each key is unique while the values are not necessarily unique. 
+Search algorithms find the index of one or more array elements that satisfy a specified condition or set of conditions.  These algorithms work with key-value pairs.  Each key is unique while the values are not necessarily unique. 
 
 ### Two Algorithms
 
-**Unsorted Key Array**
+#### Unsorted Key Array
 
 Given an unsorted key array, we start our search at the first element and progress through the array element by element until we find a match.  This algorithm involves an iteration and a selection:
 
@@ -37,37 +41,37 @@ Given an unsorted key array, we start our search at the first element and progre
 //
 int find(int skuData[], int skuCount, int findSKU)
 {
-        int i, skuIndex = -1;
+    int i, skuIndex = -1;
 
-        for (i = 0; skuIndex < 0 && i < skuCount; i++)
+    for (i = 0; skuIndex < 0 && i < skuCount; i++)
+    {
+        if (findSKU == skuData[i])
         {
-                if (findSKU == skuData[i])
-                {
-                        skuIndex = i; // save the index
-                }
+            skuIndex = i; // save the index
         }
+    }
 
-        return skuIndex;
+    return skuIndex;
 }
 
 int main(void)
 {
-        int i, searchSKU;
-        int sku[]      = { 2156, 4633, 3122, 5611};
-        double price[] = {12.34, 7.89, 6.56, 9.32};
-        const int itemCount    = 4;
+    int i, searchSKU;
+    int sku[]      = { 2156, 4633, 3122, 5611};
+    double price[] = {12.34, 7.89, 6.56, 9.32};
+    const int itemCount    = 4;
 
-        printf("SKU   : ");
-        scanf("%d", &searchSKU);
+    printf("SKU   : ");
+    scanf("%d", &searchSKU);
 
-        i = find(sku, itemCount, searchSKU);
+    i = find(sku, itemCount, searchSKU);
 
-        if (i >= 0 && i < itemCount)
-                printf("Price : $%0.2lf\n", price[i]); 
-        else
-                printf("%d not in system\n", searchSKU);
+    if (i >= 0 && i < itemCount)
+        printf("Price : $%0.2lf\n", price[i]); 
+    else
+        printf("%d not in system\n", searchSKU);
 
-        return 0;
+    return 0;
 }
 ```
 
@@ -78,10 +82,13 @@ SKU   : 4633
 Price : $7.89 
 ```
  
-> **Note**<br/>
-> The value returned by find() (variable `i`) is validated to ensure that it is within the bounds of the key array (that is, we check that it is not -1 and not more than the number of items in the array). 
+:::note
 
-**Sorted Key Array (Optional)**
+The value returned by `find()` (variable `i`) is validated to ensure that it is within the bounds of the key array (that is, we check that it is not -1 and not more than the number of items in the array). 
+
+:::
+
+#### Sorted Key Array (Optional)
 
 Given a sorted key array, we start our search in the middle of the array and at each step discard the half that doesn't contain the search key.  Although this algorithm is slightly more complicated than the unsorted one, it is significantly faster, which is important with a large number of elements. 
 
@@ -137,14 +144,17 @@ SKU   : 4633
 Price : $7.89 
 ```
 
-> **Note**<br/>
-> The above example using a divide and conquor approach is refered to as a ***binary search***.
+:::tip Note
+
+The above example using a divide and conquer approach is referred to as a ***binary search***.
+
+:::
 
 ## Masking
 
-Masking algorithms distinguish certain array elements from all other elements.  The masking array is a *parallel array* with respect to the other arrays in the set.  The elements of the masking array are *flags* that identify inclusion or exclusion. 
+Masking algorithms distinguish certain array elements from all other elements.  The masking array is a [parallel array](/C-Data-Structures/arrays#parallel-arrays "Parallel Arrays") with respect to the other arrays in the set.  The elements of the masking array are [flags](/B-Computations/logic#flags "Flags") that identify inclusion or exclusion. 
 
-Consider the following program, which calculates the total purchase price for a set of products.  The user enters the sku for each product purchased and the quantity.  Some products attract HST (Harmonized Sales Tax), while others do not.  We store the skus, unit prices and tax status in three parallel arrays.  The tax status array is the masking array.  The user enters 0 to terminate input.
+Consider the following program, which calculates the total purchase price for a set of products.  The user enters the SKU (Stock-Keeping Unit) for each product purchased and the quantity.  Some products attract HST (Harmonized Sales Tax), while others do not.  We store the SKUs, unit prices and tax status in three parallel arrays.  The tax status array is the masking array.  The user enters 0 to terminate input.
 
 ```c
 // Total Purchase Price
@@ -225,7 +235,7 @@ Total is $65.48
 
 ## Sorting
 
-Sorting algorithms rearrange the elements of an array according to a pre-defined rule.  Typically, this rule is ascending or descending order.  The sorting criterion may be numeric or based upon a collating sequence such as ASCII or EBCDIC.
+Sorting algorithms rearrange the elements of an array according to a pre-defined rule.  Typically, this rule is ascending or descending order.  The sorting criterion may be numeric or based upon a collating sequence such as [ASCII](/Resources-Appendices/ascii-collating-sequence "ASCII Collating Sequence") or [EBCDIC](/Resources-Appendices/ebcdic-collating-sequence "EBCDIC Collating Sequence").
 
 The two simplest algorithms are:
 
@@ -436,14 +446,17 @@ Timmothy
 Zamphire
 ```
 
-> **Note**<br/>
-> NOtice the concatenation of string literals in the format string of the call to `scanf()`.  This lets us set the maximum number of input characters alongside the maximum number of characters in the array of strings at the head of the program code.  The C compiler converts a concatenation of string literals into a single literal removing the intermediate pairs of double quotes; that is, to the compiler `"a""b""c"` is the same as `"abc"`.
+:::note
+
+Notice the concatenation of string literals in the format string of the call to `scanf()`.  This lets us set the maximum number of input characters alongside the maximum number of characters in the array of strings at the head of the program code.  The C compiler converts a concatenation of string literals into a single literal removing the intermediate pairs of double quotes; that is, to the compiler `"a""b""c"` is the same as `"abc"`.
+
+:::
 
 ## Mixing (Optional)
 
 Mixing algorithms have applications in games of chance.  Examples include shuffling the cards in a deck or tumbling numbered balls into a lottery chute.  The algorithm depends on the extent to which we seek to generate a truly fair result. 
 
-Consider the following program, which tumbles 10 balls into a lottery chute.  To simulate mixing, the algorithm picks the index of a reference element, randomly picks the index of another element further along in the array and swap the values stored in the two elements.  This algorithm is attributed to Donald Knuth, a pioneer of computer science.
+Consider the following program, which tumbles 10 balls into a lottery chute.  To simulate mixing, the algorithm picks the index of a reference element, randomly picks the index of another element further along in the array and swaps the values stored in the two elements.  This algorithm is attributed to Donald Knuth, a pioneer of computer science.
 
 ```c
 // Mix Lottery Balls
