@@ -1,8 +1,8 @@
 #if the .env file exists, then export the environment variables from it
 #.env file sample:
 #=============================================
-#APPLICATION_ID=6TZGXYS27N
-#API_KEY=51151f6285b830cea1d7e40675f8af8f
+#APPLICATION_ID=<>
+#API_KEY=<>
 #SITE_URL=https://cghub.ca
 #INDEX_NAME=docusaurus
 #=============================================
