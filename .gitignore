@@ -8,7 +8,6 @@
 # Generated files
 .docusaurus
 .cache-loader
-yarn.lock
 
 # helper windows batch scripts
 .bat
