@@ -2,7 +2,7 @@
 id: information
 sidebar_position: 2
 title: Information
-slug: /A-Introduction/information
+slug: /Introduction/information
 description:  The information stored in a computer includes program instructions and program data. 
 ---
 
@@ -34,11 +34,13 @@ Since bits are too numerous to handle individually, modern computers transfer an
 
 The fundamental addressable unit of RAM is the byte.  One byte consists of 2 nibbles.  Each nibble consists of 4 bits.
 
-<div  align="left">
-<img src="../../static/img/bytenibbit.jpg" alt="A bytes tree image" />
-</div>
+<span className="mdImg" align="center" alt="A bytes tree image displays relative sizes of bit, nibble and byte">
 
-<p>{`One byte can store any one of 256 (2`}<sup>{`8`}</sup>{`) possible values in the form of a bit string: `}</p>
+![Bytes](../../static/img/bytenibbit.jpg)
+
+</span>
+
+One byte can store any one of 256 (2<sup>8</sup>) possible values in the form of a bit string: 
 
 
 | Bit Value | Decimal Value |
@@ -85,9 +87,11 @@ To learn how to convert between hexadecimal and binary refer to the chapter enti
 
 The memory model for organizing information stored in RAM is linear.  Any byte in memory is accessible through a map that treats each actual physical memory location as a position in a continuous sequence of locations aligned next to one another.
 
-<div  align="left">
-<img src="../../static/img/memoryModel.png" alt="A memory model image" />
-</div>
+<span className="mdImg" align="center" alt="A memory model image">
+
+![RAM memory model: linearly mapped \(continuous sequence\)](https://ict.senecacollege.ca//~ipc144/pages/images/ram.png)
+
+</span>
 
 ### Addresses
 
@@ -99,9 +103,11 @@ For example, 4 Gigabytes of RAM
 * starts at a low address of 0x00000000
 * ends at a high address of 0xFFFFFFFF
 
-<div  align="left">
-<img src="../../static/img/image21.png" alt="An unique byte address image" />
-</div>
+<span className="mdImg" align="center" alt="An unique byte address image">
+
+![Bytes](../../static/img/image21.png)
+
+</span>
 
 :::note 
 
