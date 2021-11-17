@@ -75,7 +75,7 @@ We use Algolia to build our index. In order to build an index for search:
 1. sign up for an account on https://www.algolia.com/users/sign_in
 2. create a project for the purpose of creating the index
 3. add an `INDEX_NAME` called `docusaurus` for instance on same website
-4. You add API_key and give rights for ACLs search, addObject, deleteObject, editSearch for the key
+4. You add API_KEY and give rights (`search, addObject, deleteObject, editSearch`) for the key
 5. SITE_URL is the deployed site, but siteindex needs to match it in order crawl it
 6. If u look at the pull request ff0a9a5 i have a sample .env file with the variables set.I also have a an example of what values needed as secret in scrape.sh
 ```
