@@ -1,24 +1,24 @@
 name: algolia-scraper
 on:
-# only run on push events
-  push: 
-    branches:
-      - main
-      # only run check suite events
-  check_suite: 
-    types: [completed]
+  push:
+    branches: [main]
     # only run on workflow dispatch events
-  workflow_dispatch: 
+
 jobs:
-  scrape:
-  # specifies the OS image to use for the job
-    runs-on: ubuntu-latest 
+  gh-release:
+    runs-on: ubuntu-latest
     steps: 
-      - name: check out code 🛎
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v
       - name: scrape the site 🧽
-      # specifies the environment variables
-        env: 
+        with:
+          node-version: '16.x'
+          cache: 'yarn'
+      - uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.GH_PAGES_DEPLOY }}
+      - name: build index using scrapper
+        env:
           # generated when you create a project on algolia website after you sign up
           APPLICATION_ID: ${{ secrets.APPLICATION_ID }} 
           # API key be sure to have the right permissions
