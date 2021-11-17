@@ -351,14 +351,14 @@ The C language supports conversions from one type to another. To convert the typ
 
 | **Cast Expression** | **Meaning** |
 | :--- | :--- |
-| \(long double\) operand | long double version of operand |
-| \(double\) operand | double version of operand |
-| \(float\) operand | float version of operand |
-| \(long long\) operand | long long version of operand |
-| \(long\) operand | long version of operand |
-| \(int\) operand | int version of operand |
-| \(short\) operand | short version of operand |
-| \(char\) operand | char version of operand |
+| \(**`long double`**\) operand | **`long double`** version of operand |
+| \(**`double`**\) operand | **`double`** version of operand |
+| \(**`float`**\) operand | **`float`** version of operand |
+| \(**`long long`**\) operand | **`long long`** version of operand |
+| \(**`long`**\) operand | **`long`** version of operand |
+| \(**`int`**\) operand | **`int`** version of operand |
+| \(**`short`**\) operand | **`short`** version of operand |
+| \(**`char`**\) operand | **`char`** version of operand |
 
 Consider the example below. To obtain the number of hours in fractional form, we cast minutes to a **`float`** type and then divide it by 60. The input and output are listed on the right:
 
@@ -391,15 +391,15 @@ The C language using the following ranking:
 
 
 
-| long double | higher |
+| **`long double`** | higher |
 | :--- | :--- |
-| double | ... |
-| float | ... |
-| long long | ... |
-| long | ... |
-| int | ... |
-| short | ... |
-| char | lower |
+| **`double`** | ... |
+| **`float`** | ... |
+| **`long long`** | ... |
+| **`long`** | ... |
+| **`int`** | ... |
+| **`short`** | ... |
+| **`char`** | lower |
 
 There are two distinct kinds of expressions to consider with respect to type coercion:
 
