@@ -1,8 +1,8 @@
 ---
 sidebar_position: 5
-title: "Style-Guidelines"
-id: "style-guidlines"
-slug: "/B-Computations/style-guidelines"
+title: Style Guidelines
+id: style-guidelines
+slug: /computations/style-guidelines
 ---
 
 # Style Guidelines
@@ -17,7 +17,7 @@ After reading this section, you will be able to:
 
 A well-written program is a pleasure to read. The coding style is consistent and clear throughout.  The programmer looking for a bug sees a well-defined structure and finds it easy to focus on the portion of the code that is suspect. The programmer looking to upgrade the code sees how and where to incorporate changes. Although several programmers may have contributed to the code throughout its lifetime, the code itself appears to have been written by one programmer.
 
-This chapter describes the coding style used throughout these notes and recommended for an introductory course in programming. This style is based in part on the [Linux kernel coding style](https://www.kernel.org/doc/html/latest/process/coding-style.html#codingstyle). Conventions that apply specifically to syntax introduced in subsequent chapters are described in those chapters. 
+This chapter describes the coding style used throughout these notes and recommended for an introductory course in programming. This style is based in part on the [Linux kernel coding style](https://www.kernel.org/doc/html/latest/process/coding-style.html#codingstyle/ "Linux kernel coding style"). Conventions that apply specifically to syntax introduced in subsequent chapters are described in those chapters. 
 
 ## Identifiers
 
@@ -275,7 +275,7 @@ A macro directive takes the form
 
 We terminate this directive with an end of line character immediately following value. 
 
-The \#define directive instructs the C compiler to substitute every occurence of SYMBOL with value throughout the code.  Note the absence of a semi-colon at the end of the directive. The substitution is a straightforward search and replace. The value itself may include whitespace. 
+The ```define``` directive instructs the C compiler to substitute every occurrence of SYMBOL with value throughout the code.  Note the absence of a semi-colon at the end of the directive. The substitution is a straightforward search and replace. The value itself may include whitespace. 
 
 For example,
 
