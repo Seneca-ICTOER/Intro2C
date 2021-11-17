@@ -69,7 +69,7 @@ If you are using GitHub pages for hosting, this command is a convenient way to b
 
 ### Search
 
-To build index for search
+We use Algolia to build our index. In order to build an index for search:
 
 ```text
 1. you would need to sign up an account on https://www.algolia.com/users/sign_in
