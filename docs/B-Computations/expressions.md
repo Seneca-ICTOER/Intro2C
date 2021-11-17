@@ -2,7 +2,7 @@
 id: expressions
 title: Expressions
 sidebar_position: 3
-slug: /computations/expressions
+slug: /B-computations/expressions
 description: Code various expressions that apply operations on operands of program type
 ---
 
