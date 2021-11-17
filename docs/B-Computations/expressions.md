@@ -22,7 +22,7 @@ The ALU evaluates the simplest of instructions on integer values: for instance, 
 
 The ALU receives the expression's operator from the Control Unit, applies that operator to integer values stored in the CPU's registers and places the result in one of the CPU's registers. The FPA does the same but for floating-point values.
 
-![](https://ict.senecacollege.ca//~ipc144/pages/images/alu.png)
+![Diagram of relationship between ALU and FPA](https://ict.senecacollege.ca//~ipc144/pages/images/alu.png)
 
 The expressions that the ALU can process on integer types are:
 
@@ -455,7 +455,7 @@ If the left operand in an assignment expression is of a lower type than the righ
 
 C compilers promote the operand of lower type in an arithmetic or relational expression to an operand of the higher type before evaluating the expression.  The table below lists the type of the promoted operand.
 
-![](/img/image33.png)
+![Table of type promotion from left operand to right operand](/img/image33.png)
 
 **Example**
 
