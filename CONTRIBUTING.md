@@ -72,7 +72,7 @@ If you are using GitHub pages for hosting, this command is a convenient way to b
 We use Algolia to build our index. In order to build an index for search:
 
 ```text
-1. you would need to sign up an account on https://www.algolia.com/users/sign_in
+1. sign up for an account on https://www.algolia.com/users/sign_in
 2. create a project for the purpose of creating index
 3. add an INDEX_NAME called "docusaurus" for instance on same website
 4. You add API_key and give rights for ACLs search, addObject, deleteObject, editSearch for the key
