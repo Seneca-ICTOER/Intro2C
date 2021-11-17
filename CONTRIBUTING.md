@@ -82,10 +82,9 @@ To build index for search
 
 Important reference websites for next steps
 
-```text
-https://docsearch.algolia.com/docs/integrations
-https://docusaurus.io/docs/search#using-algolia-docsearch
-https://docusaurus.io/docs/deployment
-https://docsearch.algolia.com/docs/api
-https://github.com/marketplace/actions/algolia-docsearch-action
-```
+- [Algolia Integration Docs](https://docsearch.algolia.com/docs/integrations)
+- [Using Algolia Search](https://docusaurus.io/docs/search#using-algolia-docsearch)
+- [Deployment](https://docusaurus.io/docs/deployment)
+- [Algolia API](https://docsearch.algolia.com/docs/api)
+- [Algolia Docsearch-action](https://github.com/marketplace/actions/algolia-docsearch-action)
+
