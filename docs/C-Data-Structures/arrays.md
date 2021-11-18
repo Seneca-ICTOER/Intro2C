@@ -16,7 +16,7 @@ After reading this section, you will be able to:
 
 ## Introduction
 
-Programs can process extremely large amounts of data much faster than well-established manual techniques.  Whether this processing is efficient or not depends in large part on how that data is organized.  For example, large collections of data can be organized in [structures](../C-Data-Structures/structures "Structures") if each variable shares the same type with all other variables and the variables are stored contiguously in memory.  Not only can structured data be processed efficiently but the programming of tasks performed on structured data can be simplified considerably.  Instead of coding a separate instruction for each variable, we code the instruction that is common to all variables and apply that instruction in an iteration across the data structure.
+Programs can process extremely large amounts of data much faster than well-established manual techniques.  Whether this processing is efficient or not depends in large part on how that data is organized.  For example, large collections of data can be organized in [structures](/C-Data-Structures/structures "Structures") if each variable shares the same type with all other variables and the variables are stored contiguously in memory.  Not only can structured data be processed efficiently but the programming of tasks performed on structured data can be simplified considerably.  Instead of coding a separate instruction for each variable, we code the instruction that is common to all variables and apply that instruction in an iteration across the data structure.
 
 ![array](/img/arrays/array.png "Array")
 
@@ -161,7 +161,7 @@ Parallel arrays are simple to process.  For example, once we find the index of t
 
 ## Character Strings
 
-The topic of character strings is covered in depth in the chapter entitled [Character Strings](../F-Refinements/character-strings.md "Character Strings").  The following section introduces this topic at a high level.
+The topic of character strings is covered in depth in the chapter entitled [Character Strings](/F-Refinements/character-strings.md "Character Strings").  The following section introduces this topic at a high level.
 
 ### Introduction
 
@@ -169,7 +169,7 @@ A ***string*** is a `char` array with a special property: a **terminator element
 
 ![array with null terminator](/img/arrays/array-with-null-terminator.png "Array with Null Terminator")
 
-The null terminator has the value 0 on any host platform (in its collating sequence).  All of its bits are 0's.  The null terminator occupies the first position in the [ASCII](../Resources-Appendices/ascii-collating-sequence.md "ASCII") and [EBCDIC](../Resources-Appendices/ebcdic-collating-sequence.md "EBCDIC") collating sequences. 
+The null terminator has the value 0 on any host platform (in its collating sequence).  All of its bits are 0's.  The null terminator occupies the first position in the [ASCII](/Resources-Appendices/ascii-collating-sequence.md "ASCII") and [EBCDIC](/Resources-Appendices/ebcdic-collating-sequence.md "EBCDIC") collating sequences. 
 
 The value of the index identifying the null terminator element is the number of meaningful characters in the string. 
 
