@@ -290,7 +290,7 @@ When we start gdb, our program pauses.  This is our first opportunity to set bre
 
 The `gdb` commands that we may enter at the prompt include:
 
- * **`list`** - lists the 10 lines of source code in the vicinity of where execution has stopped.  Each call advances the current line by 10
+* **`list`** - lists the 10 lines of source code in the vicinity of where execution has stopped.  Each call advances the current line by 10
 * **`list m, n`** - where m and n are line numbers - lists lines m through n inclusive of the source code.  This call advances the current line to n+1
 * **`break n`** - where n is a line number - sets a breakpoint at line number n
 * **`clear n`** - where n is a line number - clears any breakpoint or trace at line number n
