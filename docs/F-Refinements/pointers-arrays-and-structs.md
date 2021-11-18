@@ -1,5 +1,9 @@
 ---
+id: pointers-arrays-and-structs
+title: Pointers, Arrays and Structs
 sidebar_position: 4
+slug: /F-Refinements/pointers-arrays-and-structs
+description: A breakdown on the use of pointers, arrays and structures in C
 ---
 # Pointers, Arrays and Structs
 
@@ -14,10 +18,10 @@ After reading this section, you will be able to:
 
 A distinguishing feature of the C programming language is its direct access to primary memory.  The core language defines a separate pointer type for each primitive type and C compilers accept pointer types for each derived type.  This enables programmers to store the address of any type - primitive or derived - in a pointer variable.  The pointer types corresponding to the primitive types are:
 
-* char*
-* int*
-* float*
-* double*
+- `char*`
+- `int*`
+- `float*`
+- `double*`
 
 The type of a pointer variable determines the number of bytes to interpret when converting into a data type the bit string in primary memory that starts at the specified address. 
 
@@ -30,7 +34,7 @@ This chapter examines this relationship between pointers, arrays and structures 
 
 We can model RAM as a linear map and use addresses on this map to identify bytes of information stored within memory.  For instance, in 512Mb of RAM, the address 0 identifies the first byte, the address 1 identifies the second byte and address 512Mb-1 identifies the last byte. 
 
-![](https://ict.senecacollege.ca//~ipc144/pages/images/memory%20map.png)
+![Representation of RAM](https://ict.senecacollege.ca//~ipc144/pages/images/memory%20map.png)
 
 ### Pointers
 
@@ -88,7 +92,7 @@ int i = 3;
 a[i] = 5.4; // store 5.4 in memory location 3 x 8 bytes 
             // beyond the address of a  
 ```                       
-For example, if the address of `a` is ***0x4e55a00*** the address of `a[i]` is ***0x4e55a18***. 
+For example, if the address of `a` is `0x4e55a00` the address of `a[i]` is `0x4e55a18`. 
 
 We can store the address of an array in a separate pointer:
 
@@ -100,8 +104,9 @@ p[i] = 5.4;    // store 5.4 in memory location 3 x 8 bytes
                // beyond the address of a  
 ```
 
-><u>Note</u><br/>
-> `a` and `p` are interchangeable. `p` may also be used as an array!
+:::note
+`a` and `p` are interchangeable. `p` may also be used as an array!
+:::
 
 ## Equivalence
 
@@ -109,7 +114,7 @@ p[i] = 5.4;    // store 5.4 in memory location 3 x 8 bytes
 
 A function parameter that receives the *address of an array* is a **pointer**.  In a function header, *array and pointer* notations are **equivalent**:
 
-```
+```c
 type identifier(type identifier[])
 type identifier(type *identifier)
 ```
@@ -121,7 +126,9 @@ void foo(int a[])  // These two function prototypes are
 void foo(int *b)   // equivalent and translate to the same thing!
 ``` 
 
->If parameter `b` from the second function prototype example above points to an array, it can be used to refer to specific array elements using standard array syntax: `b[i]`
+:::note
+If parameter `b` from the second function prototype example above points to an array, it can be used to refer to specific array elements using standard array syntax: `b[i]`
+:::
 
 ### Passing a Part of an Array
 
@@ -164,9 +171,9 @@ The above program produces the following output:
 5611
 ```
 
-Caution
-
+:::caution
 The syntactic equivalence between pointer parameters and array names does not extend to the definition of an array.  We cannot replace the definition of an array with a pointer definition.  An array definition allocates the stated number of memory locations for all of the elements in the array.  A pointer definition **allocates only one memory location to hold a single address**. 
+:::
 
 ### Pointer Arithmetic (Optional)
 
@@ -207,8 +214,9 @@ p++;         // increment the pointer to point to the next element in memory
 *p = 3;      // stores 3 in a[2] 
 ```
 
->**Caution**<br/>
-> Although a pointer can be incremented, **an array name cannot**.  This is because a pointer is a variable, while an array name is not a variable; that is, not a region of memory distinct from the array. 
+:::caution
+Although a pointer can be incremented, **an array name cannot**.  This is because a pointer is a variable, while an array name is not a variable; that is, not a region of memory distinct from the array. 
+:::
 
 ## Array of Structures
 
@@ -291,8 +299,9 @@ struct Section
 };
 ```
 
-> **IMPORTANT**<br/>
-> A structure *type* may **NOT** contain an object of its **own type** (see below example).
+:::important
+A structure *type* may **NOT** contain an object of its **own type** (see below example).
+:::
 
 ```c
 // A derrived type is not allowed to have its own type as a member!
@@ -389,5 +398,7 @@ Grade 3 : 7
 
 The array is stored in the ***stack*** segment of RAM **alongside the local variables**.
 
-> **!!! PORTABILITY ALERT !!!**<br/>
+:::important
+**!!! PORTABILITY ALERT !!!**<br/>
 The Linux `gcc` compiler accepts variable length arrays, while the Windows `cl` compiler ***does not*** (the Windows compiler implements remenants of the older 1990 standard, which does not include variable-length arrays.  For more on the language standard, see the chapter entitled [Portability](../F-Refinements/portability.md)).
+:::
