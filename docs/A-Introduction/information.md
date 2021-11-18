@@ -1,9 +1,9 @@
 ---
 id: information
-sidebar_position: 2
 title: Information
-slug: /Introduction/information
-description:  The information stored in a computer includes program instructions and program data. 
+sidebar_position: 2
+slug: /introduction/information
+description: The information stored in a computer includes program instructions and program data. 
 ---
 
 # Information
