@@ -170,7 +170,7 @@ The above program produces the following output:
 
 ### Reference Example
 
-The following program produces the output listed on the right for the ASCII collating sequence:
+The following program produces the output listed on the right for the [ASCII collating sequence](../Resources-Appendices/ascii-collating-sequence.md):
 
 ```c
 // Playing with output formatting
