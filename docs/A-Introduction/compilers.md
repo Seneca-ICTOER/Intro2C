@@ -2,7 +2,7 @@
 id: compilers
 title: Compilers
 sidebar_position: 3
-slug: /A-Introduction/compilers
+slug: /introduction/compilers
 description:  Describe the generations of programming languages, key features of the C language and the C compilers 
 ---
 
@@ -20,7 +20,7 @@ After reading this section, you will be able to:
 
 ## Introduction
 
-We transform the program instructions and program data into the bits and bytes that a computer understands using a compiler.  We write the instructions and provide the data in a programming language that the complier understands. 
+We transform the program instructions and program data into the bits and bytes that a computer understands using a compiler.  We write the instructions and provide the data in a programming language that the compiler understands. 
 
 Programming languages demand completeness and greater precision than human languages.  The ultimate interpreter of any computer program is the hardware.  Hardware cannot interpret intent or nuance, and we need to provide much more detail in our instructions than we do in casual conversations amongst ourselves.  In this sense, programming is a more arduous task than writing a formal report that someone else will read. 
 
@@ -44,8 +44,8 @@ The third, fourth and fifth generation languages are high-level languages.  They
 
 :::note
 
-* [Eric Levenez](http://www.levenez.com/lang/) maintains an up-to-date map of 50 of the more popular languages.
-* [TIOBE Software](http://www.tiobe.com/tpci.htm) tracks the most popular languages and the long-term trends based on world-wide availability of software engineers, courses and third-party vendors as calculated from Google, Bing, Yahoo!, Wikipedia, Amazon, YouTube and Baidu search engines.
+* [Eric Levenez](http://www.levenez.com/lang/ "Computer languages history") maintains an up-to-date map of 50 of the more popular languages.
+* [TIOBE Software](http://www.tiobe.com/tpci.htm "TIOBE Index for November 2021") tracks the most popular languages and the long-term trends based on world-wide availability of software engineers, courses and third-party vendors as calculated from Google, Bing, Yahoo!, Wikipedia, Amazon, YouTube and Baidu search engines.
 
 :::
 
@@ -66,7 +66,7 @@ C serves as an excellent, first programming language for several reasons:
 C programs execute quickly.  Comparative times for a standard test \(Sieve of Eratosthenes\) are:
 
 | Language | Time to Run |
-| :--- | :--- |
+| ---- | ---- |
 | Assembler | 0.18 seconds |
 | C | 2.7 seconds |
 | Basic | 10 seconds |
@@ -159,7 +159,7 @@ The source code listed above includes syntax found in the source code for nearly
 
 ### Documentation
 
-The [comments](/B-Computations/style-guidelines#comments) self-document our source code and enhance its readability. Comments are important in the writing of any program. C supports two styles: multi-line and inline. C compilers ignore all comments.
+The [comments](/B-Computations/style-guidelines#comments "Style guidelines about comments in C") self-document our source code and enhance its readability. Comments are important in the writing of any program. C supports two styles: multi-line and inline. C compilers ignore all comments.
 
 #### Multi-Line Comments
 
