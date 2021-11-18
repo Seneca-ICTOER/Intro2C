@@ -19,7 +19,10 @@ After reading this section, you will be able to:
 
 A typed programming language uses a type system to interpret the bit streams in memory.  C is a typed programming language.  A type is the rule that defines how to store values in memory and which operations are admissible on those values.  A type defines the number of bytes available for storing values and hence the range of possible values.  We use different types to store different information.  The relation between types and raw memory is illustrated in the figure below.
 
+<span align="center">
+
 ![Representation of memory allocation for basic types](/img/types.png)
+</span>
 
 This chapter describes the four most common types in the C language and the ranges of values that these types allow.  This chapter concludes by describing how to allocate memory for variables by identifying their contents using a type.   
 
