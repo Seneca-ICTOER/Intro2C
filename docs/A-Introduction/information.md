@@ -99,7 +99,7 @@ Each byte of RAM has a unique address.  Addressing starts at zero, is sequential
 
 For example, 4 Gigabytes of RAM
 
-* consists of 32 (= 4 * 8) Gigabits
+* consists of 32 (= 4 \* 8) Gigabits
 * starts at a low address of 0x00000000
 * ends at a high address of 0xFFFFFFFF
 
@@ -120,11 +120,11 @@ Each byte, and not each bit, has its own address. We say that RAM is byte-addres
 The abbreviations for sets of bytes are:
 
 * Kilo or k (=1024): 1 Kilobyte = 1024 bytes ~ 10<sup>3</sup> bytes
-* Mega or M (=1024k): 1 Megabyte = 1024 * 1024 bytes ~ 10<sup>6</sup> bytes
-* Giga or G (=1024M): 1 Gigabyte = 1024 * 1024 * 1024 bytes ~ 10<sup>9</sup> bytes
-* Tera or T (=1024G): 1 Terabyte = 1024 * 1024 * 1024 * 1024 bytes ~ 10<sup>12</sup> bytes
-* Peta or P (=1024T): 1 Petabyte = 1024 * 1024 * 1024 * 1024 * 1024 bytes ~ 10<sup>15</sup> bytes
-* Exa or E (=1024P): 1 Exabyte = 1024 * 1024 * 1024 * 1024 * 1024 * 1024 bytes ~ 10<sup>18</sup> bytes
+* Mega or M (=1024k): 1 Megabyte = 1024 \* 1024 bytes ~ 10<sup>6</sup> bytes
+* Giga or G (=1024M): 1 Gigabyte = 1024 \* 1024 \* 1024 bytes ~ 10<sup>9</sup> bytes
+* Tera or T (=1024G): 1 Terabyte = 1024 \* 1024 \* 1024 \* 1024 bytes ~ 10<sup>12</sup> bytes
+* Peta or P (=1024T): 1 Petabyte = 1024 \* 1024 \* 1024 \* 1024 \* 1024 bytes ~ 10<sup>15</sup> bytes
+* Exa or E (=1024P): 1 Exabyte = 1024 \* 1024 \* 1024 \* 1024 \* 1024 \* 1024 bytes ~ 10<sup>18</sup> bytes
 
 Note that the multiplying factor is 1024, not 1000.  1024 bytes is 2<sup>10</sup> bytes, which is approximately 10<sup>3</sup> bytes.
 
