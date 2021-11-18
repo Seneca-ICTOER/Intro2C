@@ -1,5 +1,6 @@
 ---
 sidebar_position: 4
+title: Input Functions
 ---
 # Input Functions
 
@@ -11,16 +12,20 @@ After reading this section, you will be able to:
 
 ## Introduction
 
-Some programming languages leave input and output support to the libraries developed for the languages.  For instance, the core C language does not include input and output specifications.  These facilities are available in a set of functions, which are defined in the stdio module.  This module ships with the C compiler.  Its name stands for standard input and output.  Typically, standard input refers to the system keyboard and standard output refers to the system display.  The system header file that contains the prototypes for the functions in this module is `<stdio.h>`. 
+Some programming languages leave input and output support to the libraries developed for the languages.  For instance, the core C language does not include input and output specifications.  These facilities are available in a set of functions, which are defined in the `stdio` module.  This module ships with the C compiler.  Its name stands for standard input and output.  Typically, standard input refers to the system keyboard and standard output refers to the system display.  The system header file that contains the prototypes for the functions in this module is `<stdio.h>`. 
 
-This chapter describes some of the input facilities supported by the stdio module, introduces buffered input, describes two library functions that accept formatted and unformatted buffered input and demonstrates how to validate user input. 
+This chapter describes some of the input facilities supported by the `stdio` module, introduces buffered input, describes two library functions that accept formatted and unformatted buffered input and demonstrates how to validate user input. 
 
 
 ## Buffered Input
 
 A buffer is a small region of memory that holds data temporarily and provides intermediate storage between a device and a program.  The system stores each keystroke in the input buffer, without passing it to the program.  The user can edit their data before submitting it to the program.  only by pressing the \n key, the user signals the program to start extracting data from the buffer.  The program then only retrieves the data that it needs and leaves the rest in the buffer for future retrievals.  The figure below illustrates the buffered input process.
 
-![](https://ict.senecacollege.ca//~ipc144/pages/images/buffer.png)
+<div class="mdImg">
+
+![Input buffer diagram](https://ict.senecacollege.ca//~ipc144/pages/images/buffer.png)
+
+</div>
 
 Two functions accept buffered input from the keyboard (the standard input device):
 
@@ -29,11 +34,15 @@ Two functions accept buffered input from the keyboard (the standard input device
 
 ## Unformatted Input
 
-The function getchar() retrieves the next unread character from the input buffer. 
+The function `getchar()` retrieves the next unread character from the input buffer. 
 
-![](https://ict.senecacollege.ca//~ipc144/pages/images/getchar.png)
+<div class="mdImg">
 
-The prototype for getchar() is
+![getchar() diagram](https://ict.senecacollege.ca//~ipc144/pages/images/getchar.png)
+
+</div>
+
+The prototype for `getchar()` is
 
 ```c
 int getchar(void);
@@ -43,7 +52,7 @@ int getchar(void);
 * the character code for the retrieved character
 * EOF 
 
-The character code is the code from the collating sequence of the host computer.  You can find the ASCII collating sequence [here](../Resources-Appendices/ascii-collating-sequence.md).  If the next character in the buffer waiting to be read is `'j'` and the collating sequence is ASCII, then the value returned by `getchar()` is 106. 
+The character code is the code from the [collating sequence](../Resources-Appendices/ascii-collating-sequence.md) of the host computer.  If the next character in the buffer waiting to be read is `'j'` and the collating sequence is ASCII, then the value returned by `getchar()` is 106. 
 
 `EOF` is the symbolic name for end of data.  It is assigned the value -1 in the `<stdio.h>` system header file.  On Windows systems, the user enters the end of data character by pressing `Ctrl-Z`; on UNIX systems, by pressing `Ctrl-D`. 
 
@@ -56,8 +65,8 @@ To synchronize user input with program execution the buffer should be empty.  Th
 //
 void clear(void)
 {
-        while (getchar() != '\n')
-                ;  // empty statement intentional 
+	while (getchar() != '\n')
+		;  // empty statement intentional 
 }
 ```
 
@@ -72,9 +81,9 @@ To pause execution at a selected point in a program, consider the following func
 //
 void pause_(void)
 {
-        printf("Press enter to continue ...");
-        while (getchar() != '\n')
-                ;  // empty statement intentional 
+	printf("Press enter to continue ...");
+	while (getchar() != '\n')
+		;  // empty statement intentional 
 }
 ```
 
@@ -84,7 +93,11 @@ This function will not return control to the caller until the user has pressed `
 
 The `scanf()` function retrieves the next set of unread characters from the input buffer and translates them according to the conversion(s) specified in the format string.  `scanf()` extracts only as many characters as required to satisfy the specified conversion(s).
 
-![](https://ict.senecacollege.ca//~ipc144/pages/images/scanf.png)
+<div class="mdImg">
+
+![scanf() diagram](https://ict.senecacollege.ca//~ipc144/pages/images/scanf.png)
+
+</div>
 
 The prototype for scanf() is:
 
@@ -128,13 +141,13 @@ The following program converts two input fields into data values of int type and
 
 int main(void)
 {
-        int items;
-        float price;
+	int items;
+	float price;
 
-        printf("Enter items, price : "); 
-        scanf("%d%f", &items, &price);
-        
-        return 0;
+	printf("Enter items, price : "); 
+	scanf("%d%f", &items, &price);
+
+	return 0;
 }
 ```
 
@@ -158,7 +171,7 @@ We may insert control characters between the `%` and the `conversion character`.
 
 The three control characters are:
 
-* **\*** suppresses storage of the converted data (discards it without storing it)
+* **\*** - suppresses storage of the converted data (discards it without storing it)
 * ***width*** - specifies the maximum number of characters to be interpreted
 * ***size*** - specifies the size of the storage type
 
@@ -184,7 +197,7 @@ A conversion specifier that includes an **\*** does not have a corresponding add
 
 ### Problems with %c (Optional)
 
-Because `scanf()` only extracts the characters that it needs from the input buffer, problems arise with `%c` conversions.  If you encounter such difficulty see the section with this title in the chapter entitled [More Input and Output](../F-Refinements/more-input-and-output.md). 
+Because `scanf()` only extracts the characters that it needs from the input buffer, problems arise with `%c` conversions.  If you encounter such difficulty, see the section with this title in the chapter entitled [More Input and Output](../F-Refinements/more-input-and-output.md). 
 
 ### Plain Characters (Optional)
 
@@ -199,7 +212,6 @@ To input `%` as a plain character (and distinguish it from the symbol identifyin
 * 0 indicates that `scanf()` did not fill any address
 * 1 indicates that `scanf()` filled the first address successfully
 * 2 indicates that `scanf()` filled the first and second addresses successfully
-* ...
 * `EOF` indicates that `scanf()` did not fill any address **AND** encountered an end of data character
 
 The return code from `scanf()` does not reflect success of **%\*** conversions or any successful reading of plain characters in the format string.
@@ -232,12 +244,12 @@ void clear(void);
 
 int main(void)
 {
-        int input;
+	int input;
 
-        input = getInt(MIN, MAX);
-        printf("\nProgram accepted %d\n", input);
+	input = getInt(MIN, MAX);
+	printf("\nProgram accepted %d\n", input);
 
-        return 0;
+	return 0;
 }
 
 // getInt accepts an int between min and max
@@ -245,40 +257,40 @@ int main(void)
 //
 int getInt(int min, int max)
 {
-        int value, keeptrying = 1, rc;
-        char after;
+	int value, keeptrying = 1, rc;
+	char after;
 
-        do {
-                printf("Enter an integer in range [%d,%d] : ", min, max);
-                rc = scanf("%d%c", &value, &after);
+	do {
+		printf("Enter an integer in range [%d,%d] : ", min, max);
+		rc = scanf("%d%c", &value, &after);
 
-                if (rc == 0)
-                {
-                        printf("**Bad char(s)!**\n");
-                        clear();
-                } 
-                else if (after != '\n')
-                {
-                        printf("**Trail char(s)!**\n"); 
-                        clear();
-                }
-                else if (value < min || value > max)
-                {
-                        printf("**Out of range!**\n");
-                }
-                else
-                        keeptrying = 0;
-        } while (keeptrying == 1);
+		if (rc == 0)
+		{
+			printf("**Bad char(s)!**\n");
+			clear();
+		} 
+		else if (after != '\n')
+		{
+			printf("**Trail char(s)!**\n"); 
+			clear();
+		}
+		else if (value < min || value > max)
+		{
+			printf("**Out of range!**\n");
+		}
+		else
+			keeptrying = 0;
+	} while (keeptrying == 1);
 
-        return value;
+	return value;
 }
 
 // clear empties the input buffer 
 //
 void clear(void)
 {
-        while (getchar() != '\n')
-                ;  // empty statement intentional 
+	while (getchar() != '\n')
+		;  // empty statement intentional 
 }
 ```
 The above program produces the following output:
