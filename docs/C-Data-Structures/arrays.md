@@ -115,7 +115,7 @@ grade[0]
 To display all elements of grade, we iterate:
 
 ```c
-for (i = 0; i < NGRADES; i++) {
+for (int i = 0; i < NGRADES; i++) {
 	printf("%d" , grade[i]);
 }
 ```
