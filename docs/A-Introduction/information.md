@@ -1,5 +1,9 @@
 ---
+id: information
+title: Information
 sidebar_position: 2
+slug: /introduction/information
+description: The information stored in a computer includes program instructions and program data. 
 ---
 
 # Information
@@ -30,9 +34,14 @@ Since bits are too numerous to handle individually, modern computers transfer an
 
 The fundamental addressable unit of RAM is the byte.  One byte consists of 2 nibbles.  Each nibble consists of 4 bits.
 
-![](/img/bytenibbit.jpg)
+<span className="mdImg" align="center" alt="A bytes tree image displays relative sizes of bit, nibble and byte">
+
+![Bytes](../../static/img/bytenibbit.jpg)
+
+</span>
 
 One byte can store any one of 256 (2<sup>8</sup>) possible values in the form of a bit string: 
+
 
 | Bit Value | Decimal Value |
 | :--- | :--- |
@@ -78,7 +87,11 @@ To learn how to convert between hexadecimal and binary refer to the chapter enti
 
 The memory model for organizing information stored in RAM is linear.  Any byte in memory is accessible through a map that treats each actual physical memory location as a position in a continuous sequence of locations aligned next to one another.
 
+<span className="mdImg" align="center" alt="A memory model image">
+
 ![RAM memory model: linearly mapped \(continuous sequence\)](https://ict.senecacollege.ca//~ipc144/pages/images/ram.png)
+
+</span>
 
 ### Addresses
 
@@ -86,25 +99,32 @@ Each byte of RAM has a unique address.  Addressing starts at zero, is sequential
 
 For example, 4 Gigabytes of RAM
 
-* consists of 32 (= 4 * 8) Gigabits
+* consists of 32 (= 4 \* 8) Gigabits
 * starts at a low address of 0x00000000
 * ends at a high address of 0xFFFFFFFF
 
-![](/img/image21.png)
+<span className="mdImg" align="center" alt="An unique byte address image">
 
->**Note** that each byte, and not each bit, has its own address. We say that RAM is byte-addressable.
+![Bytes](../../static/img/image21.png)
 
+</span>
+
+:::note 
+
+Each byte, and not each bit, has its own address. We say that RAM is byte-addressable.
+
+:::
 
 ### Sets of Bytes
 
 The abbreviations for sets of bytes are:
 
 * Kilo or k (=1024): 1 Kilobyte = 1024 bytes ~ 10<sup>3</sup> bytes
-* Mega or M (=1024k): 1 Megabyte = 1024 * 1024 bytes ~ 10<sup>6</sup> bytes
-* Giga or G (=1024M): 1 Gigabyte = 1024 * 1024 * 1024 bytes ~ 10<sup>9</sup> bytes
-* Tera or T (=1024G): 1 Terabyte = 1024 * 1024 * 1024 * 1024 bytes ~ 10<sup>12</sup> bytes
-* Peta or P (=1024T): 1 Petabyte = 1024 * 1024 * 1024 * 1024 * 1024 bytes ~ 10<sup>15</sup> bytes
-* Exa or E (=1024P): 1 Exabyte = 1024 * 1024 * 1024 * 1024 * 1024 * 1024 bytes ~ 10<sup>18</sup> bytes
+* Mega or M (=1024k): 1 Megabyte = 1024 \* 1024 bytes ~ 10<sup>6</sup> bytes
+* Giga or G (=1024M): 1 Gigabyte = 1024 \* 1024 \* 1024 bytes ~ 10<sup>9</sup> bytes
+* Tera or T (=1024G): 1 Terabyte = 1024 \* 1024 \* 1024 \* 1024 bytes ~ 10<sup>12</sup> bytes
+* Peta or P (=1024T): 1 Petabyte = 1024 \* 1024 \* 1024 \* 1024 \* 1024 bytes ~ 10<sup>15</sup> bytes
+* Exa or E (=1024P): 1 Exabyte = 1024 \* 1024 \* 1024 \* 1024 \* 1024 \* 1024 bytes ~ 10<sup>18</sup> bytes
 
 Note that the multiplying factor is 1024, not 1000.  1024 bytes is 2<sup>10</sup> bytes, which is approximately 10<sup>3</sup> bytes.
 
