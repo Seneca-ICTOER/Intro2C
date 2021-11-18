@@ -31,9 +31,9 @@ When selecting identifiers:
 
 * adopt self-descriptive names, adding comments only if clarification is necessary
 * prefer nouns for variable identifiers
-* keep variable identifiers short - 'tmp' rather than 'temporary', 'no' rather than 'number'
+* keep variable identifiers short - ```,tmp```, rather than ```,temporary```, ```,no```, rather than ```,number```,
 * avoid cryptic identifiers - use just enough letters for the eye to infer the meaning from the context but no less
-* keep the identifiers of counters very short - use 'i' rather than 'loop\_counter', 'n' or 'no' rather than 'numberOfTheIteration' - follow mathematical conventions
+* keep the identifiers of counters very short - use ```,i```, rather than ```,loop\_counter```,, ```,n```, or ```,no```, rather than ```,numberOfTheIteration```, - follow mathematical conventions
 * avoid decorating the identifier with Hungarian or similar notations
 
 ## Layout
