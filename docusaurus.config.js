@@ -3,19 +3,11 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-<<<<<<< HEAD
   title: 'IPC144 - Course Notes',
   tagline: 'C Programming',
   url: 'https://ipc144.sdds.ca',
   baseUrl: '/',
-=======
-  title: "IPC144 - Course Notes",
-  tagline: "C Programming",
-  url: "https://github.ca",
-  baseUrl: "/",
->>>>>>> ec3ec30... Update docusaurus.config.js
-  trailingSlash: false,
-  onBrokenLinks: "throw",
+  onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
   organizationName: "Seneca-ICTOER",
