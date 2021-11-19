@@ -6,7 +6,7 @@ Thanks for your interest in helping us maintain our course notes! We are happy t
 
 These notes are built using [Docusaurus](https://docusaurus.io/), a modern static website generator. To use it, you'll need to have the following installed:
 
-- an [LTS version of node.js](https://nodejs.org/en/), which can be checked by running `node -v`. Currently that's node.js 14.x, but confirm with the official site.
+- an [LTS version of node.js](https://nodejs.org/en/), which can be checked by running `node -v`. Currently that's node.js 16.x, but confirm with the official site.
 
 - The [yarn](https://classic.yarnpkg.com/en/docs/install#mac-stable) package manager, version >= 1.5 (which can be checked by running `yarn --version`).
 
@@ -71,16 +71,15 @@ If you are using GitHub pages for hosting, this command is a convenient way to b
 
 We use Algolia to build our index. In order to build an index for search:
 
-```text
 1. sign up for an account on https://www.algolia.com/users/sign_in
 2. create a project for the purpose of creating the index
 3. add an `INDEX_NAME` called `docusaurus` for instance on same website
 4. You add API_KEY and give rights (`search, addObject, deleteObject, editSearch`) for the key
 5. SITE_URL is the deployed site, but siteindex needs to match it in order crawl it
 6.  If you look at the pull request [ff0a9a5](https://github.com/ycechungAI/IPC144/commit/ff0a9a5d6061a21813490e3329c5934bdc8eaeb1). I have an example of which secret values are needed in scrape.sh
-```
 
-Important reference websites for next steps
+
+##### Important reference websites for next steps
 
 - [Algolia Integration Docs](https://docsearch.algolia.com/docs/integrations)
 - [Using Algolia Search](https://docusaurus.io/docs/search#using-algolia-docsearch)
