@@ -1,5 +1,9 @@
 ---
+id: two-dimensional-arrays
+title: Two-Dimensional Arrays
 sidebar_position: 5
+slug: /refinements/two-dimensional-arrays
+description: This chapter describes the use of two-dimensional arrays
 ---
 # Two-Dimensional Arrays
 
@@ -20,7 +24,7 @@ This chapter introduces two-dimensional arrays, describing their `syntax` and th
 
 A table is a useful analogy for describing a two-dimensional array. An entry in a table is identified by its row and column positions. Consider the row and column indices in the figure below. `The first index` refers to the `row` and `the second index` refers to the `column`.
 
-![2dArrayExample](https://ict.senecacollege.ca//~ipc144/pages/images/2d%20array.png)
+![5x5_2DArrayExample](https://ict.senecacollege.ca//~ipc144/pages/images/2d%20array.png)
 
 To **identify an element** of a two-dimensional array we use `two pairs of brackets`. The index within the `left pair` identifies the `row`, while the index within the `right pair` identifies the `column`: 
 
@@ -84,7 +88,7 @@ a[2][0] a[2][1] a[2][2] a[2][3] a[2][4]
 a[3][0] a[3][1] a[3][2] a[3][3] a[3][4] 
 ```
 
-> **Warning**
+> **⚠ WARNING:**
 > Some programming languages store two-dimensional arrays in column-major order!
 
 ### Passing to a Function
@@ -213,7 +217,7 @@ To declare an array of `5` **names** with each name holding up to `30` **charact
 char name[5][31];
 ```
 
->**Note**
+>**📓 Note**
 >The number of names (`[5]`) precedes the maximum number of characters in a name (`[31]`).
 
 **Initialization**
@@ -282,7 +286,7 @@ for (i = 0; i < 5; i++){
 }
 ```
 
-> **Reminder**
+> **💁 Reminder**
 > The space in the format string skips leading whitespace before accepting the string.
 
 * **Output**
