@@ -3,10 +3,10 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: "IPC144 - Course Notes",
-  tagline: "C Programming",
-  url: "https://github.ca",
-  baseUrl: "/",
+  title: 'IPC144 - Course Notes',
+  tagline: 'C Programming',
+  url: 'https://ipc144.sdds.ca',
+  baseUrl: '/',
   trailingSlash: false,
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
