@@ -5,7 +5,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 module.exports = {
   title: 'IPC144 - Course Notes',
   tagline: 'C Programming',
-  url: 'https://cghub.ca',
+  url: 'https://ipc144.sdds.ca',
   baseUrl: '/',
   trailingSlash: false,
   onBrokenLinks: 'throw',
