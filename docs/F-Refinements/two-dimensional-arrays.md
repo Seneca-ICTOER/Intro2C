@@ -217,7 +217,7 @@ To declare an array of `5` **names** with each name holding up to `30` **charact
 char name[5][31];
 ```
 
->**📓 Note**
+>**📓 Note:**
 >The number of names (`[5]`) precedes the maximum number of characters in a name (`[31]`).
 
 **Initialization**
@@ -286,7 +286,7 @@ for (i = 0; i < 5; i++){
 }
 ```
 
-> **💁 Reminder**
+> **💁 Reminder:**
 > The space in the format string skips leading whitespace before accepting the string.
 
 * **Output**
