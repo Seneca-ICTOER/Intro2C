@@ -126,12 +126,16 @@ Tool Recommendation: Firefox Browser (easier to make screenshots)
 We use Algolia to build our index. In order to build an index for search:
 
 1. sign up for an account on https://www.algolia.com/users/sign_in
-2. create a project for the purpose of creating the index
-3. add an `INDEX_NAME` called `docusaurus` for instance on same website
-4. You add API_KEY and give rights (`search, addObject, deleteObject, editSearch`) for the key
-5. SITE_URL is the deployed site, but siteindex needs to match it in order crawl it
-6.  If you look at the pull request [ff0a9a5](https://github.com/ycechungAI/IPC144/commit/ff0a9a5d6061a21813490e3329c5934bdc8eaeb1). I have an example of which secret values are needed in scrape.sh
-
+2. APPLICATION_ID set to your Algolia Application ID
+3. Under settings, click on Application to create an application for your project
+3. create a project for the purpose of creating the index
+4. The API_KEY is your Search-Only API Key
+5. Application ID is listed upder the application API keys page
+6. add an `INDEX_NAME` called `docusaurus` for instance on same website
+7. You add API_KEY and give rights (`search, addObject, deleteObject, editSearch`) for the key
+8. SITE_URL is the deployed site, but siteindex needs to match it in order crawl it
+9.  If you look at the pull request [ff0a9a5](https://github.com/ycechungAI/IPC144/commit/ff0a9a5d6061a21813490e3329c5934bdc8eaeb1). I have an example of which secret values are needed in scrape.sh
+10. prepare a dataset and upload sample data set.
 
 ##### Important reference websites for next steps
 
