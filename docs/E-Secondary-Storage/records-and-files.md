@@ -22,7 +22,7 @@ This chapter describes how to identify records and fields in a text file and how
 
 A **record** occupies a single line in a text file and holds all of the data associated with one chunk of information.  The record is a sequence of characters that ends with a record delimiter.  The typical record delimiter is the newline character (`\n`). 
 
-![Each records end with a record delimiter.](https://ict.senecacollege.ca//~ipc144/pages/images/records.png)
+![Each record ends with a record delimiter.](../../img/records-files/records.png)
 
 Consider a text file named `produce.txt` containing information about items of produce in a grocery store.  Each record consists of the **SKU** for a product and its **unit price**.
 
@@ -81,7 +81,7 @@ Since this program determines the number of records in the file by counting the 
 
 A **field** holds one element of information within a single record.  We separate adjacent fields within a record by a **field delimiter**. 
 
-![Multiple fields are separated by a field delimiter.](https://ict.senecacollege.ca//~ipc144/pages/images/fields.png)
+![Multiple fields are separated by a field delimiter.](../../img/records-files/fields.png)
 
 Consider the file named `produce.txt` (see above).  Each record contains two fields: the first field holds the **SKU** and the second field holds the **unit price**.  The field delimiter is a blank character. 
 
@@ -135,7 +135,7 @@ SKU       Price
 
 A **table** is a set of records in which each record contains the same number of fields.
 
-![Table contains many records that holds the same number of fields.](https://ict.senecacollege.ca//~ipc144/pages/images/tables.png)
+![Table contains many records that holds the same number of fields.](../../img/records-files/tables.png)
 
 :::warning
 If one of the fields in a record is a character field, the blank character might not be suitable as a field delimiter and we select a special character for that purpose. 
