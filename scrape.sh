@@ -3,7 +3,7 @@
 #=============================================
 #APPLICATION_ID=<>
 #API_KEY=<>
-#SITE_URL=https://cghub.ca
+#SITE_URL=https://ipc144.sdds.ca
 #INDEX_NAME=docusaurus
 #=============================================
 if [ -f .env ]; then
