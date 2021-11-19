@@ -89,13 +89,9 @@ The memory model for organizing information stored in RAM is linear.  Any byte i
 
 <span className="mdImg" align="center" alt="A memory model image">
 
-<<<<<<< HEAD
 ![RAM memory model](../../static/img/ram.png)
 
 </span>
-=======
-![RAM memory model: linearly mapped \(continuous sequence\)](https://ict.senecacollege.ca//~ipc144/pages/images/ram.png)
->>>>>>> 705bb0e158abb10f96f5787c507f94dc013b050b
 
 </span>
 
@@ -131,15 +127,12 @@ The abbreviations for sets of bytes are:
 * Tera or T (=1024G): 1 Terabyte = 1024 \* 1024 \* 1024 \* 1024 bytes ~ 10<sup>12</sup> bytes
 * Peta or P (=1024T): 1 Petabyte = 1024 \* 1024 \* 1024 \* 1024 \* 1024 bytes ~ 10<sup>15</sup> bytes
 * Exa or E (=1024P): 1 Exabyte = 1024 \* 1024 \* 1024 \* 1024 \* 1024 \* 1024 bytes ~ 10<sup>18</sup> bytes
-<<<<<<< HEAD
 
 :::note
 
 The multiplying factor is 1024, not 1000.  1024 bytes is 2<sup>10</sup> bytes, which is approximately 10<sup>3</sup> bytes.
 
 :::
-=======
->>>>>>> 705bb0e158abb10f96f5787c507f94dc013b050b
 
 
 ### Limit on Addressability (Optional)
