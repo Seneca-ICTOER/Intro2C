@@ -17,6 +17,6 @@ fi
 # the container will run the bash script that will run the scraper
 # The scraper will run in the background, and the container will exit.
 sudo docker run \
-        -it --env-file=.env -e "CONFIG=$(cat ./config.json | jq -r tostring)" \
+        -it --env-file=.env -e "CONFIG=$(cat ./algolia-config.json | jq -r tostring)" \
         algolia/docsearch-scraper
 
