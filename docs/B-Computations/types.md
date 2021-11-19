@@ -776,7 +776,7 @@ We store program data in variables  A declaration associates a program variable 
 In C, a declaration takes the form:
 
 ```c
- [const] type identifier [= initial value];
+[const] type identifier [= initial value];
 ```
 
 The brackets denote an optional part of the syntax. 
@@ -786,10 +786,10 @@ We select a meaningful name for the identifier and optionally set the variable's
 For example:
 
 ```c
- char  children;
- int   nPages;
- float cashFare;
- const double pi = 3.14159265;
+char  children;
+int   nPages;
+float cashFare;
+const double pi = 3.14159265;
 ```
 
 ### Multiple Declarations
@@ -799,10 +799,10 @@ We may group the identifiers of variables that share the same type within a sing
 For example,
 
 ```c
- char   children, digit;
- int    nPages, nBooks, nRooms;
- float  cashFare, height, weight;
- double loan, mortgage;
+char   children, digit;
+int    nPages, nBooks, nRooms;
+float  cashFare, height, weight;
+double loan, mortgage;
 ```
 
 ### Naming Conventions
@@ -811,7 +811,7 @@ We may select any identifier for a variable that satisfies the following naming 
 
 * starts with a letter or an underscore \(`_`\)
 * contains any combination of letters, digits and underscores \(`_`\)
-* contains less than 32 characters \(some compilers allow more, others do not\) 
+* contains less than 32 characters \(some compilers allow more, others do not\)
 * is not be a [C reserved word](#reserved-words)
 
 ### Reserved Words
@@ -819,16 +819,16 @@ We may select any identifier for a variable that satisfies the following naming 
 The C language reserves the following words for its own use:
 
 ```c
- auto       _Bool      break     case
- char       _Complex   const     continue
- default    restrict   do        double
- else       enum       extern    float
- for        goto       if        _Imaginary
- inline     int        long      register
- return     short      signed    sizeof
- static     struct     switch    typedef
- union      unsigned   void      volatile
- while
+auto       _Bool      break     case
+char       _Complex   const     continue
+default    restrict   do        double
+else       enum       extern    float
+for        goto       if        _Imaginary
+inline     int        long      register
+return     short      signed    sizeof
+static     struct     switch    typedef
+union      unsigned   void      volatile
+while
 ```
 
 For upward compatibility with C++, we avoid using the following C++ reserved words:
