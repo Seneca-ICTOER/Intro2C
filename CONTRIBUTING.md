@@ -67,7 +67,7 @@ GIT_USER=<Your GitHub username> USE_SSH=true yarn deploy
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
 
-<<<<<<< HEAD
+
 ## Miscellanous 
 
 ### Tutorial for Converting Table-like Diagrams into Images
@@ -108,7 +108,7 @@ Tool Recommendation: Firefox Browser (easier to make screenshots)
 
 ```
 !["Alt test for accessibility"](/static/img/name-of-the-image.png)
-=======
+
 ### Search
 
 We use Algolia to build our index. In order to build an index for search:
@@ -123,20 +123,9 @@ We use Algolia to build our index. In order to build an index for search:
 
 ##### Important reference websites for next steps
 
-<<<<<<< HEAD
-```text
-https://docsearch.algolia.com/docs/integrations
-https://docusaurus.io/docs/search#using-algolia-docsearch
-https://docusaurus.io/docs/deployment
-https://docsearch.algolia.com/docs/api
-https://github.com/marketplace/actions/algolia-docsearch-action
->>>>>>> 784784d... added important reference and documentation to search
-```
-=======
 - [Algolia Integration Docs](https://docsearch.algolia.com/docs/integrations)
 - [Using Algolia Search](https://docusaurus.io/docs/search#using-algolia-docsearch)
 - [Deployment](https://docusaurus.io/docs/deployment)
 - [Algolia API](https://docsearch.algolia.com/docs/api)
 - [Algolia Docsearch-action](https://github.com/marketplace/actions/algolia-docsearch-action)
 
->>>>>>> 69b56c5... Update CONTRIBUTING.md
