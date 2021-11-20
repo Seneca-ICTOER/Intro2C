@@ -18,7 +18,7 @@ After reading this section, you will be able to:
 
 A complete programming language includes facilities to implement sequential constructs, in which one statement follows another and the statements are executed in order, and two other constructs, which represent modifications of sequential constructs.  Selection constructs represent different paths through the set of instructions.  Iteration constructs represent repetition of the same set of instructions until a specified condition has been met.  The three classes of constructs required to complete a programming language are illustrated in the figure below.
 
-![Diagrams of three classes of constructs](https://ict.senecacollege.ca//~ipc144/pages/images/constructs.png)
+![Diagrams of three classes of constructs](../../static/img/constructs.png)
 
 Since programmers who maintain application software are typically not those who develop that software originally and the maintenance programmers may change throughout the lifetime of a software application, it is critical that the software is not only readable but also easy to upgrade and maintain.  The principles of structured programming, which were developed in the 1960s, provide important coding guidelines that respect this objective.
 
@@ -28,7 +28,7 @@ This chapter introduces the selection and iteration constructs supported by the 
 
 A structured program consists of sets of simple constructs, each of which has one entry point and one exit point. Any programmer may replace one construct with an upgraded construct without affecting the other constructs in the program or introducing errors \("bugs"\). 
 
-![Diagram of a complete program consisting of multiple replaceable constructs](https://ict.senecacollege.ca//~ipc144/pages/images/structured.png)
+![Diagram of a complete program consisting of multiple replaceable constructs](../../static/img/structured.png)
 
 The simplest example of a structured construct is a _**sequence**_. A sequence is either a simple statement or a code block. A _**code block**_ is a set of statements enclosed in a pair of curly braces to be executed sequentially. 
 
@@ -73,7 +73,7 @@ _**Pseudo-code**_ is a set of shorthand notes in a human \(non-programming\) lan
 
 A _**flow chart**_ is a set of conventional symbols connected by arrows that illustrate the flow of control through a programming solution.  Popular sets of symbols for sequences, selections and iterations are shown below:
 
-![Popular symbols for sequence, selection, and iteration constructs](https://ict.senecacollege.ca//~ipc144/pages/images/flowChart.png)
+![Popular symbols for sequence, selection, and iteration constructs](../../static/img/flowChart.png)
 
 Usage of these sets with the C language is illustrated below.
 
@@ -87,7 +87,7 @@ The C language supports three selection constructs:
 
 The flow charts for these three constructs are shown below:
 
-![Flow charts of the three selection constructs](https://ict.senecacollege.ca//~ipc144/pages/images/selection.png)
+![Flow charts of the three selection constructs](../../static/img/selection.png)
 
 ### Optional Path
 
@@ -287,7 +287,7 @@ The C language supports three iteration constructs:
 
 Three instructions control the execution of an iteration: an initialization, a test condition, a change statement. The test condition may be simple or compound.  The flow charts for the three constructs are shown below.
 
-![Flow charts of the three iteration constructs](https://ict.senecacollege.ca//~ipc144/pages/images/iteration.png)
+![Flow charts of the three iteration constructs](../../static/img/iteration.png)
 
 If the change statement is missing or if the test condition is always satisfied, the iteration continues without terminating and the program can never terminate.  We say that such an iteration is an infinite loop. 
 
@@ -395,7 +395,7 @@ for (slices = 4; slices > 0; --slices)
 
 Flagging is a method of coding iteration constructs within the single-entry single-exit rule of structured programming.  Consider the flow-chart on the left side in the figure below. This design contains a path that crosses another path. 
 
-![Spaghetti code versus Structured code flow charts](https://ict.senecacollege.ca//~ipc144/pages/images/flags.png)
+![Spaghetti code versus Structured code flow charts](../../static/img/flags.png)
 
 
 Flags are variables that determine whether an iteration continues or stops. A flag is either true or false. Flags helps ensure that no paths cross one another.  By introducing a flag, we avoid the jump and multiple exit, obtain a flow chart where no path crosses any other and hence an improved design.
