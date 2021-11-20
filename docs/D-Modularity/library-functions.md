@@ -143,14 +143,14 @@ The following program outputs a different set of 10 pseudo-random numbers with e
 ```c
 #include <stdlib.h>
 #include <stdio.h>
-#include <time.h> // ...prototype for time(NULL)...
+#include <time.h> // prototype for time(NULL)
 
 int main(void)
 {
         int i;
 
-        srand(time(NULL)); // ...will set a unique seed for each run of the program...
-        for (i = 0; i < 10 ; i++) // ...iterate with “i” as index...
+        srand(time(NULL)); // will set a unique seed for each run of the program
+        for (i = 0; i < 10 ; i++) // iterate with “i” as index
                 printf("Random number %d is %d\n", i+1, rand()); 
 
         return 0;
