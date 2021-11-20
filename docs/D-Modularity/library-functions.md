@@ -1,5 +1,9 @@
 ---
+id: library-functions
+title: Library Functions
 sidebar_position: 6
+slug: /D-Modularity/library-functions
+description: This chapter describes how to use library functions that include functions for mathematical calculations, generation of random events and manipulation and analysis of character data. To access any function within any library we simply include the appropriate header file for that library and call the function in our source code. 
 ---
 # Library Functions
 
@@ -11,7 +15,7 @@ After reading this section, you will be able to:
 
 ## Introduction
 
-The standard libraries that support programming languages perform many common tasks.  C compilers ship with the libraries that include functions for mathematical calculations, generation of random events and manipulation and analysis of character data.  To access any function within any library we simply include the appropriate header file for that libray and call the function in our source code. 
+The standard libraries that support programming languages perform many common tasks.  C compilers ship with the libraries that include functions for mathematical calculations, generation of random events and manipulation and analysis of character data.  To access any function within any library we simply include the appropriate header file for that library and call the function in our source code. 
 
 This chapter introduces some of the more common functions in the libraries that ship with C compilers.  The [GNU Documentation](http://www.gnu.org/software/libc/manual/html_node/index.html) includes a comprehensive description of each function in each library.
 
@@ -63,7 +67,7 @@ The above program produces the following output:
 
 ### Random Numbers
 
-`rand()` returns a pseudo-random integer in the range `0` to `RAND_MAX`.  `RAND_MAX` is implementation dependent but **no less** than `32767`.  The prototype for `rand()` is:
+`rand()` returns a pseudo-random integer in the range `0` to `RAND_MAX`.  `RAND_MAX` is implementation-dependent but **no less** than `32767`.  The prototype for `rand()` is:
 
 ```c
 int rand(void);
@@ -146,7 +150,7 @@ int main(void)
         int i;
 
         srand(time(NULL)); // will set a unique seed for each run of the program
-        for (i = 0; i < 10 ; i++)
+        for (i = 0; i < 10 ; i++) // iterate with “i” as index
                 printf("Random number %d is %d\n", i+1, rand()); 
 
         return 0;
@@ -155,7 +159,7 @@ int main(void)
 
 ### math (Optional)
 
-The math library contains many functions that perform mathematical calculations.  Their prototypes are listed in `<math.h>`.  To compile a program that uses one of these function with the gcc compiler, we add the -lm option to the command line:
+The math library contains many functions that perform mathematical calculations.  Their prototypes are listed in `<math.h>`.  To compile a program that uses one of these functions with the gcc compiler, we add the -lm option to the command line:
 
 ```
 gcc myProgram.c -lm
@@ -429,7 +433,7 @@ Value of x is 1.0001000050
 
 > Note, the cast to a `double` forces floating-point division.
 
-## CHARACTER
+## Character
 
 The `ctype` library contains functions for character manipulation and analysis.  Their prototypes are listed in `<ctype.h>`. 
 
@@ -437,7 +441,7 @@ The `ctype` library contains functions for character manipulation and analysis. 
 
 **tolower**
 
-`tolower()` returns the lower case of the character received, if possible; otherwise the character received unchanged.  The prototype is:
+`tolower()` returns the lower case of the character received, if possible; otherwise, the character received unchanged.  The prototype is:
 
 ```c
 int tolower(int);
@@ -447,7 +451,7 @@ For example, `tolower('D')` returns `'d'`, while `tolower(';')` returns `';'`.
 
 **toupper**
 
-`toupper()` returns the upper case of the character received, if possible; otherwise the character received unchanged.  The prototype is:
+`toupper()` returns the upper case of the character received, if possible; otherwise, the character received unchanged.  The prototype is:
 
 ```c
 int toupper(int);
