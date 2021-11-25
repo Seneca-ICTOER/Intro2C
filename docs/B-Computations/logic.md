@@ -1,5 +1,9 @@
 ---
+id: logic
+title: Logic
 sidebar_position: 4
+slug: /computations/logic
+description: Selection constructs represent different paths through the set of instructions
 ---
 
 # Logic
@@ -14,7 +18,7 @@ After reading this section, you will be able to:
 
 A complete programming language includes facilities to implement sequential constructs, in which one statement follows another and the statements are executed in order, and two other constructs, which represent modifications of sequential constructs.  Selection constructs represent different paths through the set of instructions.  Iteration constructs represent repetition of the same set of instructions until a specified condition has been met.  The three classes of constructs required to complete a programming language are illustrated in the figure below.
 
-![](https://ict.senecacollege.ca//~ipc144/pages/images/constructs.png)
+![Diagrams of three classes of constructs](../../static/img/constructs.png)
 
 Since programmers who maintain application software are typically not those who develop that software originally and the maintenance programmers may change throughout the lifetime of a software application, it is critical that the software is not only readable but also easy to upgrade and maintain.  The principles of structured programming, which were developed in the 1960s, provide important coding guidelines that respect this objective.
 
@@ -22,11 +26,11 @@ This chapter introduces the selection and iteration constructs supported by the 
 
 ## Structured Programming
 
-A structured program consists of sets of simple constructs, each of which has one entry point and one exit point.  Any programmer may replace one construct with an upgraded construct without affecting the other constructs in the program or introducing errors \("bugs"\). 
+A structured program consists of sets of simple constructs, each of which has one entry point and one exit point. Any programmer may replace one construct with an upgraded construct without affecting the other constructs in the program or introducing errors \("bugs"\). 
 
-![](https://ict.senecacollege.ca//~ipc144/pages/images/structured.png)
+![Diagram of a complete program consisting of multiple replaceable constructs](../../static/img/structured.png)
 
-The simplest example of a structured construct is a _**sequence**_.  A sequence is either a simple statement or a code block.  A _**code block**_ is a set of statements enclosed in a pair of curly braces to be executed sequentially. 
+The simplest example of a structured construct is a _**sequence**_. A sequence is either a simple statement or a code block. A _**code block**_ is a set of statements enclosed in a pair of curly braces to be executed sequentially. 
 
 **Example Simple Statement**
 
@@ -49,7 +53,7 @@ Unlike a single statement, a C code block does not require a terminating semi-co
 
 ## Preliminary Design
 
-During the design stage of a programming solution, it is helpful to outline the steps involved.  Well-established techniques include:
+During the design stage of a programming solution, it is helpful to outline the steps involved. Well-established techniques include:
 
 * pseudo-coding
 * flow charting
@@ -69,7 +73,7 @@ _**Pseudo-code**_ is a set of shorthand notes in a human \(non-programming\) lan
 
 A _**flow chart**_ is a set of conventional symbols connected by arrows that illustrate the flow of control through a programming solution.  Popular sets of symbols for sequences, selections and iterations are shown below:
 
-![](https://ict.senecacollege.ca//~ipc144/pages/images/flowChart.png)
+![Popular symbols for sequence, selection, and iteration constructs](../../static/img/flowChart.png)
 
 Usage of these sets with the C language is illustrated below.
 
@@ -83,7 +87,7 @@ The C language supports three selection constructs:
 
 The flow charts for these three constructs are shown below:
 
-![](https://ict.senecacollege.ca//~ipc144/pages/images/selection.png)
+![Flow charts of the three selection constructs](../../static/img/selection.png)
 
 ### Optional Path
 
@@ -94,7 +98,7 @@ The simplest selection construct executes a sequence only if a certain condition
     sequence
 ```
 
-Parentheses enclose the condition, which may be a relational expression or a logical expression.  The sequence may be a single statement or a code block. 
+Parentheses enclose the condition, which may be a relational expression or a logical expression. The sequence may be a single statement or a code block. 
 
 #### Single Statement
 
@@ -113,7 +117,7 @@ if (likePizza == 1)
 }
 ```
 
-The program executes the sequence only if _**`likePizza`**_ is equal to 1. Otherwise, the program bypasses the sequence altogether.
+The program executes the sequence only if _**`likePizza`**_ is equal to `1`. Otherwise, the program bypasses the sequence altogether.
 
 ### Alternative Paths
 
@@ -121,7 +125,7 @@ The C language supports two ways of describing alternative paths: an binary sele
 
 #### Binary Selection
 
-The binary selection construct executes one of a set of alternative sequences.  This construct takes the form
+The binary selection construct executes one of a set of alternative sequences. This construct takes the form
 
 ```c
  if (condition)
@@ -130,7 +134,7 @@ The binary selection construct executes one of a set of alternative sequences.  
     sequence
 ```
 
-Parentheses enclose the condition, which may be a relational expression or a logical expression.  The sequences may be _**single statements**_ or _**code blocks**_.  The program executes the sequence following the if only if the condition is true.  The program executes the sequence following the _**else**_ only if the condition is false. 
+Parentheses enclose the condition, which may be a relational expression or a logical expression. The sequences may be _**single statements**_ or _**code blocks**_. The program executes the sequence following the if only if the condition is true. The program executes the sequence following the _**else**_ only if the condition is false. 
 
 #### Single Statement
 
@@ -168,11 +172,11 @@ For three alternative paths, we append an _**if else**_ construct to the _**else
     sequence
 ```
 
-If the first condition is true, the program skips the second and third sequences.  If the first condition is false, the program skips the first sequence and evaluates the second condition.  The program executes the second sequence only if the first condition is false and the second condition is true.  The program executes the third sequence and skips the first two only if both conditions are false.
+If the first condition is true, the program skips the second and third sequences. If the first condition is false, the program skips the first sequence and evaluates the second condition. The program executes the second sequence only if the first condition is false and the second condition is true. The program executes the third sequence and skips the first two only if both conditions are false.
 
 #### Compound Conditions
 
-The condition in a selection construct may be a _**compound**_ condition.  A compound condition takes the form of a logical expression \(see the section on _**Logical Expressions**_ in the chapter on [Expressions](expressions.md)\). 
+The condition in a selection construct may be a _**compound**_ condition. A compound condition takes the form of a logical expression \(see the section on _**Logical Expressions**_ in the chapter on [Expressions](expressions.md)\). 
 
 ```c
 if (age > 12 && age < 16)
@@ -205,13 +209,13 @@ default:
 }
 ```
 
-If the condition matches a constant, the program executes the sequence associated with the case for that constant.  The break; statement transfers control to the closing brace of the switch construct.  Braces around the statements between case labels are unnecessary. 
+If the condition matches a constant, the program executes the sequence associated with the case for that constant. The break; statement transfers control to the closing brace of the switch construct.  Braces around the statements between case labels are unnecessary. 
 
 If a break statement is missing for a particular case, control flows through to the subsequent case and the program executes the sequence under that case as well. 
 
-The program executes the sequence following default only if the condition does not match any of the case constants.  The **`default`** case is optional and this keyword may be omitted. 
+The program executes the sequence following default only if the condition does not match any of the case constants. The **`default`** case is optional and this keyword may be omitted. 
 
-For example, the following code snippet compares the value of choice to **`'A'`** or **`'a'`**, **`'B'`** or **`'b'`**, and **`'C'`** or **`'c'`** until successful.  If unsuccessful, the code snippet executes the statements under **`default`**. 
+For example, the following code snippet compares the value of choice to **`'A'`** or **`'a'`**, **`'B'`** or **`'b'`**, and **`'C'`** or **`'c'`** until successful. If unsuccessful, the code snippet executes the statements under **`default`**. 
 
 ```c
 char choice;
@@ -244,13 +248,13 @@ printf("%c costs %.2lf\n", choice, cost);
 
 ### Conditional Expression
 
-The _**conditional expression**_ selection construct _****_is shorthand for the _**alternative path**_ construct.  This ternary expression combines a condition and two sub-expressions using the **`? :`** operators:
+The _**conditional expression**_ selection construct is shorthand for the _**alternative path**_ construct. This ternary expression combines a condition and two sub-expressions using the **`? :`** operators:
 
 ```c
  condition ? operand : operand
 ```
 
-If the condition is true, the expression evaluates to the operand between **`?`** and **`:`**.  If the condition is false, the expression evaluates to the operand following **`:`**. 
+If the condition is true, the expression evaluates to the operand between **`?`** and **`:`**. If the condition is false, the expression evaluates to the operand following **`:`**. 
 
 **Example**
 
@@ -281,15 +285,15 @@ The C language supports three iteration constructs:
 * do while
 * for
 
-Three instructions control the execution of an iteration: an initialization, a test condition, a change statement.  The test condition may be simple or compound.  The flow charts for the three constructs are shown below.
+Three instructions control the execution of an iteration: an initialization, a test condition, a change statement. The test condition may be simple or compound.  The flow charts for the three constructs are shown below.
 
-![](https://ict.senecacollege.ca//~ipc144/pages/images/iteration.png)
+![Flow charts of the three iteration constructs](../../static/img/iteration.png)
 
 If the change statement is missing or if the test condition is always satisfied, the iteration continues without terminating and the program can never terminate.  We say that such an iteration is an infinite loop. 
 
 ### while
 
-The _**while**_ construct executes its sequence as long as the test condition is true.  This construct takes the form:
+The _**while**_ construct executes its sequence as long as the test condition is true. This construct takes the form:
 
 ```c
 while (condition)
@@ -389,11 +393,12 @@ for (slices = 4; slices > 0; --slices)
 
 ## Flags
 
-Flagging is a method of coding iteration constructs within the single-entry single-exit rule of structured programming.  Consider the flow-chart on the left side in the figure below.  This design contains a path that crosses another path. 
+Flagging is a method of coding iteration constructs within the single-entry single-exit rule of structured programming.  Consider the flow-chart on the left side in the figure below. This design contains a path that crosses another path. 
 
-![](https://ict.senecacollege.ca//~ipc144/pages/images/flags.png)
+![Spaghetti code versus Structured code flow charts](../../static/img/flags.png)
 
-Flags are variables that determine whether an iteration continues or stops.  A flag is either true or false.  Flags helps ensure that no paths cross one another.  By introducing a flag, we avoid the jump and multiple exit, obtain a flow chart where no path crosses any other and hence an improved design.
+
+Flags are variables that determine whether an iteration continues or stops. A flag is either true or false. Flags helps ensure that no paths cross one another.  By introducing a flag, we avoid the jump and multiple exit, obtain a flow chart where no path crosses any other and hence an improved design.
 
 **Example**
 
@@ -429,7 +434,7 @@ Enter integer (0 to stop) 0
 Total = 74
 ```
 
-The test condition is compound due to the evaluation of the flag.  If **`done == 1`**, the iteration stops. 
+The test condition is compound due to the evaluation of the flag. If **`done == 1`**, the iteration stops. 
 
 ### Avoid Jumps \(Optional\)
 
@@ -461,7 +466,7 @@ else
 
 ### Dangling Else
 
-An ambiguity arises in a _**nested if else**_ construct that contains an optional sequence \(_**if**_\).  Consider the following code snippet:
+An ambiguity arises in a _**nested if else**_ construct that contains an optional sequence \(_**if**_\). Consider the following code snippet:
 
 ```c
 if (grade < 50)

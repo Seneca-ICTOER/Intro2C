@@ -1,5 +1,8 @@
 ---
+id: character-strings
 sidebar_position: 1
+title: Character Strings
+description: Understand and learn how to stream data using standard library functions.
 ---
 # Character Strings (C string)
 
@@ -12,13 +15,13 @@ After reading this section, you will be able to:
 
 ## Introduction
 
-Although some original programming languages focused on processing numerical information, most languages include extensive features for processing textual data.  Textual data involves sets of characters and these sets are often referred to as character strings.  The C language libraries provide facilities for processing character strings, treated as arrays of characters with a special delimiter. 
+Although some original programming languages focused on processing numerical information, most languages include extensive features for processing textual data.  Textual data involves sets of characters. These sets are often referred to as character strings.  The C language libraries provide facilities for processing character strings, treated as arrays of characters with a special delimiter. 
 
-This chapter introduces these C-style strings, highlights their distinguishing feature and notes the advantage of using strings to pass textual data from one function to another.  This chapter include the conversion specifiers for input and output of character strings.
+This chapter introduces these C-style strings, highlights their distinguishing feature, and notes the advantage of using character strings to pass textual data from one function to another.  This chapter includes the conversion specifiers for the input and output of character strings.
 
 ## Definition (review)
 
-A string is a `char` array with a special property: a terminator element follows the last ***meaningful character*** in the string.  We refer to this terminator as the **null terminator** and identify it by the escape sequence `'\0'`. 
+A string is a `char` array with a special property which is a terminator element that follows the last ***meaningful character*** in the string.  We refer to this terminator as the **null terminator** and identify it by the escape sequence `'\0'`. 
 
 <table border="0">
 <tr><td colspan="18" align="center">char</td></tr>
@@ -39,16 +42,16 @@ A string is a `char` array with a special property: a terminator element follows
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
-    <td>\0</td>
+    <td><strong>\0</strong></td>
 </tr>
 </table>
 
 > <u>Term Definition</u><br/>
 > The term "Meaningful Characters" in these notes refers to the actual data content you want to manage in the C string character array.
 
-The **null terminator** has the integral value of `0` on any host platform (in its collating sequence).  All of its bits are 0's.  The null terminator occupies the first position in the [ASCII](../Resources-Appendices/ascii-collating-sequence) and [EBCDIC](../Resources-Appendices/ebcdic-collating-sequence). 
+The **null terminator** has the integral value of `0` on any host platform (in its collating sequence).  All of its bits are 0's.  The null terminator occupies the first position in the [ASCII](../Resources-Appendices/ascii-collating-sequence.md) and [EBCDIC](../Resources-Appendices/ebcdic-collating-sequence.md). 
 
-The index identifying the null terminator element is the same as the number of meaningful characters in the string. 
+The index identifying the null terminator element is the same as the number of meaningful characters in the string (including spaces between words). 
 
 <table border="0">
 <tr><td colspan="18" align="center">char<br/>name</td></tr>
@@ -69,7 +72,7 @@ The index identifying the null terminator element is the same as the number of m
     <td>14</td>
     <td>15</td>
     <td>16</td>
-    <td><b>17</b></td>
+    <td><strong>17</strong></td>
 </tr>
 <tr><td>M</td>
     <td>y</td>
@@ -88,12 +91,12 @@ The index identifying the null terminator element is the same as the number of m
     <td>o</td>
     <td>l</td>
     <td>d</td>
-    <td><b>\0</b></td>
+    <td><strong>\0</strong></td>
 </tr>
 </table>
 
 > <u>HINT</u><br/>
-> The number of memory locations (`char` **array size**) occupied by a C string is one more than the number of meaningful characters in the string.
+> The number of memory locations occupied by a C string (`char`) is one more than the number of meaningful characters in the string so as to hold the null terminator. 
 
 ### Allocating Memory
 
@@ -120,7 +123,7 @@ For a more compact form we enclosed the list of meaningful characters in double 
 const char name[31] = "My name is Arnold";  // null-byte is automatically appended
 ```
 
-The C compiler copies the characters in the string literal into the character string and appends the null-byte terminator after the last character copied.
+The C compiler copies the characters in the string literal into the character string and appends the null-byte terminator after the last copied character.
 
 <table border="0">
 <tr><td colspan="31" align="center">char<br/>name</td></tr>
@@ -141,7 +144,7 @@ The C compiler copies the characters in the string literal into the character st
     <td>14</td>
     <td>15</td>
     <td>16</td>
-    <td><b>17</b></td>
+    <td><strong>17</strong></td>
     <td>18</td>
     <td>19</td>
     <td>20</td>
@@ -174,20 +177,20 @@ The C compiler copies the characters in the string literal into the character st
     <td>o</td>
     <td>l</td>
     <td>d</td>
-    <td><b>\0</b></td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
+    <td><strong>\0</strong></td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
 </tr>
 </table>
 
@@ -202,22 +205,22 @@ Arrays of numbers require a separate variable to hold the number of elements tha
 The following program displays the string stored in name[31] character by character:
 
 ```c
-// Iterations on Strings
+// Iterations on character strings
 // string_iterations.c
 
 #include <stdio.h>
 
 int main(void)
 {
-        int i;
-        const char name[31] = "My name is Arnold"; 
+    int i;
+    const char name[31] = "My name is Arnold"; 
 
-        for (i = 0; name[i] != '\0'; i++)
-                printf("%c", name[i]);
+    for (i = 0; name[i] != '\0'; i++)
+        printf("%c", name[i]);
 
-        putchar('\n');
+    putchar('\n');
 
-        return 0;
+    return 0;
 }
 ```
 
@@ -240,21 +243,21 @@ void print(const char name[]);
 
 int main(void)
 {
-        int i;
-        const char name[31] = "My name is Arnold"; 
+    int i;
+    const char name[31] = "My name is Arnold"; 
 
-        print(name);
-        return 0;
+    print(name);
+    return 0;
 }
 
 void print(const char name[])
 {
-        int i;
+    int i;
 
-        for (i = 0; name[i] != '\0'; i++)
-                printf("%c", name[i]);
+    for (i = 0; name[i] != '\0'; i++)
+        printf("%c", name[i]);
 
-        putchar('\n');
+    putchar('\n');
 }
 ```
 
@@ -289,13 +292,13 @@ char name[31];
 scanf("%s", name);  // <=== User enters: My name is Arnold
 ```
 
-The `scanf` function will stop accepting input after the character `y` and stores the following:
+The `scanf()` function will stop accepting input after the character `y` and stores the following:
 
 <table border="0">
 <tr><td colspan="31" align="center">char<br/>name</td></tr>
 <tr><td>0</td>
     <td>1</td>
-    <td>2</td>
+    <td><strong>2</strong><td>
     <td>3</td>
     <td>4</td>
     <td>5</td>
@@ -310,7 +313,7 @@ The `scanf` function will stop accepting input after the character `y` and store
     <td>14</td>
     <td>15</td>
     <td>16</td>
-    <td><b>17</b></td>
+    <td>17</td>
     <td>18</td>
     <td>19</td>
     <td>20</td>
@@ -328,7 +331,7 @@ The `scanf` function will stop accepting input after the character `y` and store
 </tr>
 <tr><td>M</td>
     <td>y</td>
-    <td><b>\0</b></td>
+    <td><strong>\0</strong></td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -369,7 +372,7 @@ char name[31];
 scanf("%10s", name); // <=== User enters: Schwartzenegger
 ```
 
-The `scanf` function will stop accepting input after the character `n` and stores the following:
+The `scanf()` function will stop accepting input after the character `n` and stores the following:
 
 <table border="0">
 <tr><td colspan="31" align="center">char<br/>name</td></tr>
@@ -383,14 +386,14 @@ The `scanf` function will stop accepting input after the character `n` and store
     <td>7</td>
     <td>8</td>
     <td>9</td>
-    <td>10</td>
+    <td><strong>10</strong><td>
     <td>11</td>
     <td>12</td>
     <td>13</td>
     <td>14</td>
     <td>15</td>
     <td>16</td>
-    <td><b>17</b></td>
+    <td>17</td>
     <td>18</td>
     <td>19</td>
     <td>20</td>
@@ -417,7 +420,7 @@ The `scanf` function will stop accepting input after the character `n` and store
     <td>z</td>
     <td>e</td>
     <td>n</td>
-    <td><b>\0</b></td>
+    <td><strong>\0</strong></td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -441,7 +444,7 @@ The `scanf` function will stop accepting input after the character `n` and store
 </tr>
 </table>
 
-By specifying the maximum number of characters to be read at less than 31, we ensure that scanf() does not exceed the memory allocated for the string.
+By specifying the maximum number of characters to be read at less than 31, we ensure that `scanf()` does not exceed the memory allocated for the string.
 
 `%s` discards all leading whitespace characters.
 
@@ -452,7 +455,7 @@ char name[31];
 scanf("%10s", name);  // <=== User enters: '          Schwartzenegger'
 ```
 
-Just as before, the `scanf` function will stop accepting input after the character `n` but will also discard the leading spaces entered and stores the following:
+Just as before, the `scanf()` function will stop accepting input after the character `n` but will also discard the leading spaces entered and stores the following:
 
 <table border="0">
 <tr><td colspan="31" align="center">char<br/>name</td></tr>
@@ -466,14 +469,14 @@ Just as before, the `scanf` function will stop accepting input after the charact
     <td>7</td>
     <td>8</td>
     <td>9</td>
-    <td>10</td>
+    <td><strong>10</strong><td>
     <td>11</td>
     <td>12</td>
     <td>13</td>
     <td>14</td>
     <td>15</td>
     <td>16</td>
-    <td><b>17</b></td>
+    <td>17</td>
     <td>18</td>
     <td>19</td>
     <td>20</td>
@@ -500,7 +503,7 @@ Just as before, the `scanf` function will stop accepting input after the charact
     <td>z</td>
     <td>e</td>
     <td>n</td>
-    <td><b>\0</b></td>
+    <td><strong>\0</strong></td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -524,7 +527,7 @@ Just as before, the `scanf` function will stop accepting input after the charact
 </tr>
 </table>
 
-Because `%s` discards ***leading whitespace***, it cannot accept an empty string; that is, `%s` does not treat a `'\n'` in an otherwise empty input buffer as an empty string.  If the buffer only contains `'\n'`, `scanf("%10s", name)` discards the `'\n'` and waits for non-whitespace input followed by another `'\n'`.
+Because `%s` discards ***leading whitespace***, it cannot accept an empty string; that is, `%s` does treat a `'\n'` in an empty input buffer as an empty string.  If the buffer only contains `'\n'`, `scanf("%10s", name)` discards the `'\n'` and waits for non-whitespace input followed by another `'\n'`.
 
 ### %[]
 
@@ -535,7 +538,7 @@ For example, the `%[^\n]` conversion specifier:
 * reads all characters until the newline ('\n')
 * stores the characters read in the char array identified by the corresponding argument
 * stores the null terminator in the char array after accepting the last character
-* leaves the delimiting character (here, '\n') in the input buffer
+* leaves the delimiting character (`'\n'`) in the input buffer
 
 For example:
 
@@ -544,7 +547,7 @@ char name[31];
 scanf("%[^\n]", name);  // <=== User enters: My name is Arnold
 ```
 
-The `scanf` function accepts the full line an stores:
+The `scanf()` function accepts the full line an stores:
 
 <table border="0">
 <tr><td colspan="31" align="center">char<br/>name</td></tr>
@@ -565,7 +568,7 @@ The `scanf` function accepts the full line an stores:
     <td>14</td>
     <td>15</td>
     <td>16</td>
-    <td><b>17</b></td>
+    <td><strong>17</strong></td>
     <td>18</td>
     <td>19</td>
     <td>20</td>
@@ -598,7 +601,7 @@ The `scanf` function accepts the full line an stores:
     <td>o</td>
     <td>l</td>
     <td>d</td>
-    <td><b>\0</b></td>
+    <td><strong>\0</strong></td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -615,14 +618,14 @@ The `scanf` function accepts the full line an stores:
 </tr>
 </table>
 
-A qualifier on this conversion specifier before the opening bracket limits the number of characters accepted.  For instance, %10[^\n] reads no more than 10 characters: 
+A qualifier on this conversion specifier before the opening bracket limits the number of characters accepted.  For instance,`%10[^\n]` reads no more than 10 characters: 
 
 ```c
 char name[31];
 scanf("%10[^\n]", name);  // <=== User enters: My name is Arnold
 ```
 
-The `scanf` function will store:
+The `scanf()` function will store:
 
 <table border="0">
 <tr><td colspan="31" align="center">char<br/>name</td></tr>
@@ -636,14 +639,14 @@ The `scanf` function will store:
     <td>7</td>
     <td>8</td>
     <td>9</td>
-    <td>10</td>
+    <td><strong>10</strong></td>
     <td>11</td>
     <td>12</td>
     <td>13</td>
     <td>14</td>
     <td>15</td>
     <td>16</td>
-    <td><b>17</b></td>
+    <td>17</td>
     <td>18</td>
     <td>19</td>
     <td>20</td>
@@ -669,7 +672,7 @@ The `scanf` function will store:
     <td>&nbsp;</td>
     <td>i</td>
     <td>s</td>
-    <td><b>\0</b></td>
+    <td><strong>\0</strong></td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -704,7 +707,7 @@ char name[31];
 scanf("%10[^\n]", name);  // <=== User enters: '          My name is Arnold'
 ```
 
-The `scanf` function will store:
+The `scanf()` function will store:
 
 <table border="0">
 <tr><td colspan="31" align="center">char<br/>name</td></tr>
@@ -718,14 +721,14 @@ The `scanf` function will store:
     <td>7</td>
     <td>8</td>
     <td>9</td>
-    <td>10</td>
+    <td><strong>10</strong></td>
     <td>11</td>
     <td>12</td>
     <td>13</td>
     <td>14</td>
     <td>15</td>
     <td>16</td>
-    <td><b>17</b></td>
+    <td>17</td>
     <td>18</td>
     <td>19</td>
     <td>20</td>
@@ -751,7 +754,7 @@ The `scanf` function will store:
     <td>&nbsp;</td>
     <td>i</td>
     <td>s</td>
-    <td><b>\0</b></td>
+    <td><strong>\0</strong></td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -775,9 +778,10 @@ The `scanf` function will store:
 </tr>
 </table>
 
+
 **Caution**
 
-Because `%[ ]` ignores leading whitespace, it cannot accept an empty string; that is, `%[^\n]` does not treat a `'\n'` in an otherwise empty input buffer as an empty string.  If the input buffer only contains `'\n'`, `scanf("%[^\n]", name)`, unlike `%s`, returns `0` and leaves `name` unchanged.
+Because `%[ ]` ignores leading whitespace, it cannot accept an empty string; that is, `%[^\n]` does treat a `'\n'` in an empty input buffer as an empty string.  If the input buffer only contains `'\n'`, `scanf("%[^\n]", name)`, unlike `%s`, returns `0` and leaves `name` unchanged.
 
 Example:
 
@@ -799,24 +803,24 @@ The following program reads and displays this data:
 
 int main(void)
 {
-        FILE *fp = NULL;
-        char phrase[61];
+    FILE *fp = NULL;
+    char phrase[61];
 
-        fp = fopen("spring.dat","r");
+    fp = fopen("spring.dat","r");
 
-        if (fp != NULL)
-        {
-                while (fscanf(fp, "%60[^\n]%*c", phrase) != EOF)
-                        printf("%s\n", phrase);
+    if (fp != NULL)
+    {
+        while (fscanf(fp, "%60[^\n]%*c", phrase) != EOF)
+        printf("%s\n", phrase);
                 
-                fclose(fp);
-        } 
-        else
-        {
-                printf("Failed to open file\n"); 
-        }
+        fclose(fp);
+    } 
+    else
+    {
+        printf("Failed to open file\n"); 
+    }
 
-        return 0;
+    return 0;
 }
 ```
 
@@ -832,7 +836,7 @@ Large Skateboards
 
 ### Formatted Output
 
-The `printf()` and `fprintf()` library functions support the `%s` conversion specifier for character string output.  The corresponding argument is the **address** of the character string or string literal.  Under this specifier `printf()` displays all of the characters from the address provided up to but **excluding** the null terminator byte.  For example:
+The `printf()` and `fprintf()` library functions support the `%s` conversion specifier for character string output.  The corresponding argument is the **address** of the character string or strings literal.  Under this specifier `printf()` displays all of the characters from the address provided up to but **excluding** the null terminator byte.  For example:
 
 ```c
 // Displaying Strings
@@ -842,11 +846,11 @@ The `printf()` and `fprintf()` library functions support the `%s` conversion spe
 
 int main(void)
 {
-        const char name[31] = "My name is Arnold"; 
+    const char name[31] = "My name is Arnold"; 
 
-        printf("%s\n", name);
+    printf("%s\n", name);
 
-        return 0;
+    return 0;
 }
 ```
 
@@ -864,22 +868,22 @@ My name is Arnold
 
 int main(void)
 {
-        FILE *fp = NULL;
-        const char phrase[] = "My name is Arnold";
+    FILE *fp = NULL;
+    const char phrase[] = "My name is Arnold";
 
-        fp = fopen("alpha.txt","w");
+    fp = fopen("alpha.txt","w");
 
-        if (fp != NULL) 
-        {
-                fprintf(fp, "%s\n", phrase);
-                fclose(fp);
-        } 
-        else 
-        {
-                printf("Failed to open file\n"); 
-        }
+    if (fp != NULL) 
+    {
+        fprintf(fp, "%s\n", phrase);
+        fclose(fp);
+    } 
+    else 
+    {
+        printf("Failed to open file\n"); 
+    }
 
-        return 0;
+    return 0;
 }
 ```
 
@@ -914,11 +918,11 @@ The parameter receives the address of the character string to be displayed.  For
 
 int main(void)
 {
-        const char name[31] = "My name is Arnold"; 
+    const char name[31] = "My name is Arnold"; 
 
-        puts(name);
+    puts(name);
 
-        return 0;
+    return 0;
 }
 ```
 
