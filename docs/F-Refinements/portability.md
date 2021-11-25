@@ -184,8 +184,8 @@ lint.c(11) : warning C4244: '=' : conversion from 'int' to 'char', possible loss
 
 You can find documentation on lint code checkers at
 
-- [`Lint`](http://www.unix.com/man-page/FreeBSD/1/lint/ "Linux and UNIX Man Pages")
-- [`LCLint/Splint`](http://lclint.cs.virginia.edu/ "Official page for the Splint tool")
+- [`Lint`](http://www.unix.com/man-page/FreeBSD/1/lint/ 'Linux and UNIX Man Pages')
+- [`LCLint/Splint`](http://lclint.cs.virginia.edu/ 'Official page for the Splint tool')
 
 ## Guidelines (Optional)
 

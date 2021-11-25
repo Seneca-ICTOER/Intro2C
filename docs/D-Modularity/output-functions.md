@@ -12,7 +12,7 @@ desctiption: This chapter on output functions is about invoking standard library
 
 After reading this section, you will be able to:
 
-* Invoke standard library procedures to stream data to users
+- Invoke standard library procedures to stream data to users
 
 ## Introduction
 
@@ -30,14 +30,14 @@ Output buffering lets a program continue executing without having to wait for th
 
 The output buffer flushes if:
 
-* it is full
-* it receives a newline (`\n`) character
-* the program terminates
+- it is full
+- it receives a newline (`\n`) character
+- the program terminates
 
 Two functions in the `stdio` module that send characters to the output buffer are
 
-* `putchar()` - unformatted
-* `printf()` - formatted
+- `putchar()` - unformatted
+- `printf()` - formatted
 
 ## Unformatted Output
 
@@ -79,32 +79,35 @@ The `printf()` function sends data to the output buffer under format control and
 ![formatted output - printf](https://ict.senecacollege.ca//~ipc144/pages/images/printf.png)
 
 The prototype for the `printf()` function is:
+
 ```c
 int printf(format, argument, ... );
 ```
 
-***format*** is a set of characters enclosed in double-quotes that may consist of any combination of plain characters and conversion specifiers. The function sends the plain characters as is to the buffer and uses the conversion specifiers to translate each value passed as an argument in the function call. The ellipsis indicates that the number of arguments can vary. Each conversion specifier corresponds to one argument.
+**_format_** is a set of characters enclosed in double-quotes that may consist of any combination of plain characters and conversion specifiers. The function sends the plain characters as is to the buffer and uses the conversion specifiers to translate each value passed as an argument in the function call. The ellipsis indicates that the number of arguments can vary. Each conversion specifier corresponds to one argument.
 
 ### Conversion Specifiers
 
-A conversion specifier begins with a `%` symbol and ends with a ***conversion character***. The conversion character defines the formatting as listed in the table below:
+A conversion specifier begins with a `%` symbol and ends with a **_conversion character_**. The conversion character defines the formatting as listed in the table below:
 
-| Specifier | Format As      | User With Type ...                | Common(*) |
-| :---      | :---           | :---                              | :---      |
-| %c        | character      | char                              | *         |
-| %d        | decimal        | char, int, short, long, long long | *         |
-| %o        | octal          | char, int, short, long, long long |           |
-| %x        | hexadecimal    | char, int, short, long, long long |           |
-| %f        | floating-point | float, double, long double        | *         |
-| %g        | general        | float, double, long double        |           |
-| %e        | exponential    | float, double, long double        |           |
+| Specifier | Format As      | User With Type ...                | Common(\*) |
+| :-------- | :------------- | :-------------------------------- | :--------- |
+| %c        | character      | char                              | \*         |
+| %d        | decimal        | char, int, short, long, long long | \*         |
+| %o        | octal          | char, int, short, long, long long |            |
+| %x        | hexadecimal    | char, int, short, long, long long |            |
+| %f        | floating-point | float, double, long double        | \*         |
+| %g        | general        | float, double, long double        |            |
+| %e        | exponential    | float, double, long double        |            |
 
 For example:
+
 ```c
 int i = 15;
 float x = 3.141593f;
 printf("i is %d; x is %f\n", i, x);
-```  
+```
+
 The above code snippet produces the following output:
 
 ```
@@ -121,18 +124,18 @@ We refine the output by inserting control characters between the `%` symbol and 
 
 The five control characters are:
 
-1. ***flags***
-    - Prescribes left justification of the converted value in its field
-    - 0 pads the field width with leading zeros
-2. ***width***  sets the minimum field width within which to format the value (overriding with a wider field only if necessary). Pads the converted value on the left (or right, for left alignment). The padding character is space or 0 if the padding flag is on
-3. ***`.`***  separates the field's width from the field's precision
-4. ***precision*** sets the number of digits to be printed after the decimal point for `f` conversions and the minimum number of digits to be printed for an integer (adding leading zeros if necessary). A value of `0` suppresses the printing of the decimal point in an `f` conversion
-5. ***size*** identifies the size of the type being output
+1. **_flags_**
+   - Prescribes left justification of the converted value in its field
+   - 0 pads the field width with leading zeros
+2. **_width_** sets the minimum field width within which to format the value (overriding with a wider field only if necessary). Pads the converted value on the left (or right, for left alignment). The padding character is space or 0 if the padding flag is on
+3. **_`.`_** separates the field's width from the field's precision
+4. **_precision_** sets the number of digits to be printed after the decimal point for `f` conversions and the minimum number of digits to be printed for an integer (adding leading zeros if necessary). A value of `0` suppresses the printing of the decimal point in an `f` conversion
+5. **_size_** identifies the size of the type being output
 
 **Integral values**
 
 | Size Specifier | User with Type |
-| :---           | :---           |
+| :------------- | :------------- |
 | none           | int            |
 | hh             | char           |
 | h              | short          |
@@ -142,7 +145,7 @@ The five control characters are:
 **Floating-point values**
 
 | Size Specifier | User with Type |
-| :---           | :---           |
+| :------------- | :------------- |
 | none           | float          |
 | l              | double         |
 | L              | long double    |
@@ -160,11 +163,11 @@ int main(void)
     printf("\\ \' \" %%\n");
     return 0;
 }
-```  
+```
 
 The above program produces the following output:
-  
-```  
+
+```
  \ ' " %
 ```
 
@@ -202,7 +205,7 @@ int main(void)
     printf("%lf|<-- %%lf\n",4321.9876546);
     printf("%10.3lf|<--  %%10.3lf\n",4321.9876);
     printf("%010.3lf|<--  %%010.3lf\n",4321.9876);
-    printf("%-10.3lf|<--  %%-10.3lf\n",4321.9876); 
+    printf("%-10.3lf|<--  %%-10.3lf\n",4321.9876);
     /* characters */
     printf("\n* chars *\n");
     printf("00000000011\n");
@@ -217,7 +220,7 @@ int main(void)
 
 The above program produces the following output:
 
-```  
+```
 * ints *
 00000000011
 12345678901
@@ -239,7 +242,7 @@ The above program produces the following output:
 ------------------------
 4321.987655|<-- %lf
 4321.988|<--  %10.3lf
-004321.988|<--  %010.3lf 
+004321.988|<--  %010.3lf
 4321.988  |<--  %-10.3lf
 
 * chars *
@@ -251,10 +254,11 @@ d|<--           %c
 64|<--          %x
 ```
 
->**Note**<br/>
->* `doubles` and `floats` **round** to the requested precision before being displayed
->* `double` data may be displayed using `%f` (`printf()` converts float values to doubles for compatibility with legacy programs)
->* `char`acter data can be displayed in various formats including:
+> **Note**<br/>
+>
+> - `doubles` and `floats` **round** to the requested precision before being displayed
+> - `double` data may be displayed using `%f` (`printf()` converts float values to doubles for compatibility with legacy programs)
+> - `char`acter data can be displayed in various formats including:
 >   - character
 >   - decimal
 >   - hexadecimal
