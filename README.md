@@ -15,11 +15,8 @@
 |10|<ul><li>[Text Files](docs/E-Secondary-Storage/text-files.md)</li><li>[Records and Fields](docs/E-Secondary-Storage/records-and-files.md)</li></ul>|
 |11|<ul><li>[More Input and Output](docs/F-Refinements/more-input-and-output.md)</li><li>[Pointers Arrays Structures](docs/F-Refinements/pointers-arrays-and-structs.md)</li></ul>|
 |12|<ul><li>[Two-Dimensional Arrays](docs/F-Refinements/two-dimensional-arrays.md)</li><li>[Algorithms](docs/F-Refinements/algorithms.md)</li></ul>|
-|13|<ul><li>[Portability](docs/F-Refinements/portability.md)</li></ul>|z
+|13|<ul><li>[Portability](docs/F-Refinements/portability.md)</li></ul>|
 
 _School of Software Design and Data Science \(SDDS\)_
 
 _Seneca College of Applied Arts and Technology_
-
-\_\_
-

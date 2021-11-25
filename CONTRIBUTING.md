@@ -60,9 +60,62 @@ This command generates static content in the `build/` directory and can be serve
 ### Deployment
 
 To build and deploy to GitHub Pages, use:
+1. Follow step 1 - 5 in [Docusaurus's Triggering deployment with GitHub Actions](https://docusaurus.io/docs/deployment)
 
+2. Deploy your site to Github Pages, run:
+- For Bash: 
+```console
+   GIT_USER=<GITHUB_USERNAME> yarn deploy 
+```
+- For Windows
 ```console
 GIT_USER=<Your GitHub username> USE_SSH=true yarn deploy
 ```
+- For Powershell
+```console
+cmd /C 'set "GIT_USER=<GITHUB_USERNAME>" && yarn deploy'
+```
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+
+## Miscellanous 
+
+### Tutorial for Converting Table-like Diagrams into Images
+
+To prevent table diagrams overflowing (and having the horizontal scrollbar on narrower viewports),
+we use a simple technique to convert them to images. This allows us to have responsive diagrams 
+with less effort and minimizes HTML syntax on our pages.
+
+Tool Recommendation: Firefox Browser (easier to make screenshots)
+
+1. Run the app (`npm run start`)
+
+2. Go to the browser
+
+3. Go where the table you want to convert is
+
+4. Right click, select "Take Screenshot"
+
+![](/img/take-screenshot.png)
+
+5. Select an area that encloses the whole table
+
+![](/img/click-to-select-region.png)
+
+6. Make any adjustments necessary when cropping (avoid having unnecessary space)
+
+7. Click Download
+
+![](/img/download-selected-region.png)
+
+8. Save image to the `/static/img` folder in the IPC144 repo
+
+9. This is how it should end up looking like:
+
+![](/img/result-of-converted-table.png)
+
+10. Use markdown to place the image wherever you need:
+
+```
+!["Alt test for accessibility"](/static/img/name-of-the-image.png)
+```

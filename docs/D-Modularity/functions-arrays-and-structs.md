@@ -1,5 +1,9 @@
 ---
+id: functions-arrays-and-structs
+title: Functions, Arrays and Structs
 sidebar_position: 3
+slug: /D-Modularity/functions-arrays-and-structs
+description: This chapter describes how to identify a function type, describes the different scopes within a program, describes the passing of arrays and structures to a function, lists style guidelines for function coding and provides a sample walkthrough with functions, pointers and structures.
 ---
 # Functions, Arrays and Structs
 
@@ -16,21 +20,21 @@ After reading this section, you will be able to:
 
 Procedural programming scopes information.  Scoping is an essential feature of modular design.  A complete program consists of a variety of scopes.  Each module limits the visibility of the program data and instructions in that module.  Each code block limits the visibility of the data in that block. 
 
-![](https://ict.senecacollege.ca//~ipc144/pages/images/scope.png)
+![Hierarchical view of global, function and block scope](../../static/img/scope.png)
 
 This chapter describes how to identify a function type, describes the different scopes within a program, describes the passing of arrays and structures to a function, lists style guidelines for function coding and provides a sample walkthrough with functions, pointers and structures. 
 
 ## Prototypes
 
-A function prototype identifies a function type.  It provides the information that the compiler requires to validate a function call.  The prototype is similar to the function header.  A prototype takes the following form
+A function prototype identifies a function type. It provides the information that the compiler requires to validate a function call. The prototype is similar to the function header. A prototype takes the following form
 
-```
+```c
 type identifier(type [parameter], ..., type [parameter]);
 ```
 
-A prototype ends with a semi-colon and may exclude the parameter identifiers.  The identifier, the return type, and the parameter types are sufficient to validate a function call.  The parameter types determine any coercion that may be necessary in passing values to the function. 
+A prototype ends with a semi-colon and may exclude the parameter identifiers. The identifier, the return type, and the parameter types are sufficient to validate a function call. The parameter types determine any coercion that may be necessary in passing values to the function. 
 
-For example, the prototype for our power() function in the chapter entitled [Functions](../D-Modularity/functions.md) is
+For example, the prototype for our power() function in the chapter entitled [Functions](../D-Modularity/functions.md) is:
 
 ```c
 int power(int, int);
@@ -80,9 +84,9 @@ The compiler interprets the call to `power()` in the `main()` function as a vali
 
 ### include
 
-We can define a function used by our host application in a file separate from the source file of our application.  If we do, we also store its prototype in a separate file called a header file.  Typically, this header file has the extension .h.  We insert the contents of the header file into the source file of our application using a `#include` directive. 
+We can define a function used by our host application in a file separate from the source file of our application. If we do, we also store its prototype in a separate file called a header file. Typically, this header file has the extension `.h`. We insert the contents of the header file into the source file of our application using a `#include` directive. 
 
-The `#include` directive takes either of two forms
+The `#include` directive takes either of two forms:
 
 ```c
 #include <filename>  // filename is in the system directories 
@@ -157,6 +161,7 @@ int power(int base, int exponent)
         return result;
 }
 ```
+
 ## Scope
 
 The scope of a program identifier determines its visibility.  Its scope depends on where we have placed its definition.  A program variable may have
@@ -170,7 +175,7 @@ The scope of a program identifier determines its visibility.  Its scope depends 
 
 A variable **declared outside all function definitions** has *global scope*.  We call such a variable a *global variable*.  Any program instruction can access a global variable.  The compiler allocates memory for a global variable alongside the string literals at startup and releases that memory at termination; that is, after the having executed the `return` statement of `main()`. 
 
-Global variables introduce a high degree of coupling.  For instance, if we change the name of the variable in its definition, we need to change it in all function that reference that variable.  Because of this high degree of coupling, we avoid global variable altogether.  Their presence complicates maintainability: if 1000s functions reference the variable, changing its name proves to be a nightmare. 
+Global variables introduce a high degree of coupling.  For instance, if we change the name of the variable in its definition, we need to change it in all functions that reference that variable.  Because of this high degree of coupling, we avoid global variables altogether.  Their presence complicates maintainability: if 1000s of functions reference the variable, changing its name proves to be a nightmare. 
 
 ### Function Scope
 
@@ -221,7 +226,7 @@ int main(void)
 
 The program above will produce the following output:
 
-```
+```text
 4 3 2 1 6
 ```
 
@@ -239,7 +244,7 @@ The name of an array without the brackets holds the address of the start of the 
 
 To grant a function access to an array, we pass the array's address as an argument in the function call.  The call takes the form
 
-```
+```c
 function_identifier(array_identifier, ... )
 ```
 
@@ -265,17 +270,18 @@ int main(void)
         return 0;
 }
 ```
+
 ### Parameters
 
 A function header that receives an array's address takes the form:
 
-```
+```c
 type function_identifier(type array_identifier[], ... )
 ```
 
 or
 
-```
+```c
 type function_identifier(type *array_identifier, ... )
 ```
 
@@ -289,7 +295,9 @@ void display(int g[], int n)
                printf("%d ", g[i]); 
 }
 ```
+
 OR:
+
 ```c
 // array using * (pointer)
 void display(int *g, int n)
@@ -305,13 +313,13 @@ Because we have passed the address of the array and not a copy of all of its ele
 
 To prevent a function from changing any element of an array identified by a function parameter, we qualify the parameter as `const`.  The function header takes the form:
 
-```
+```c
 type function_identifier(const type array_identifier[], ... )
 ```
 
 OR:
 
-```
+```c
 type function_identifier(const type *array_identifier, ... )
 ```
 
@@ -325,7 +333,9 @@ void display(const int g[], int n)
                printf("%d ", g[i]); 
 }
 ```
+
 OR:
+
 ```c
 // array using * (pointer)
 void display(const int *g, int n)
@@ -345,7 +355,7 @@ We can pass an object of structure type to a function in either of two ways:
 * pass by address
 * Pass By Value
 
-Consider the following program.  Note that the Student structure includes a member that identifies the number of grades filled.  We pass `harry` as a single argument to `display()` and access its member within the function:
+Consider the following program.  Note that the `Student` structure includes a member that identifies the number of grades filled.  We pass `harry` as a single argument to `display()` and access its member within the function:
 
 ```c
 // Passing a structure to a function
@@ -381,7 +391,7 @@ void display(const struct Student st)
 
 The above program produces the following output:
 
-```
+```text
 Grades for 975 
 75.6
 82.3
@@ -392,7 +402,7 @@ The declaration of `Student` precedes the prototype for `display()`.  The compil
 
 The C compiler passes objects of structure type by value.  It copies the value of the argument in the function call into the parameter, as its initial value.  Any change within the function affects only the copy and not the original value.
 
-In the following example, the data stored in harry does not change after the function `set()` returns control to `main()`:
+In the following example, the data stored in `harry` does not change after the function `set()` returns control to `main()`:
 
 ```c
 // Pass by Value
@@ -436,7 +446,7 @@ void display(const struct Student st)
 
 The above program produces the following output:
 
-```
+```text
 Grades for 975 
 50.0
 50.0
@@ -445,24 +455,26 @@ Grades for 975
 The values in the original object, its copy and the local object are shown in the table below:
 
 <table border="0">
-<tr><td align="center">int<br/>main()</td>
-    <td align="center" colspan="2">void<br/>set()</td> </tr>
-
-<tr><td align="center">struct Student<br/>harry</td>
-    <td align="center">struct Student<br/>st</td> 
-    <td align="center">struct Student<br/>harry</td> </tr>
+<thead>
+<tr><td align="center"><code>int main()</code></td>
+    <td align="center" colSpan="2"><code>void set()</code></td></tr>
+<tr><td align="center"><code>struct Student harry</code></td>
+    <td align="center"><code>struct Student st</code></td> 
+    <td align="center"><code>struct Student harry</code></td></tr>
+</thead>
+<tbody>
+<tr><td align="center" bgcolor="#FFFF99">975 2 50.0f 50.0f</td>
+    <td align="center" bgcolor="#FFFF99">975 2 50.0f 50.0f</td>
+    <td bgcolor="#FFFF99">&nbsp;</td></tr>
 
 <tr><td align="center" bgcolor="#FFFF99">975 2 50.0f 50.0f</td>
     <td align="center" bgcolor="#FFFF99">975 2 50.0f 50.0f</td>
-    <td bgcolor="#FFFF99">&nbsp;</td> </tr>
-
-<tr><td align="center" bgcolor="#FFFF99">975 2 50.0f 50.0f</td>
-    <td align="center" bgcolor="#FFFF99">975 2 50.0f 50.0f</td>
-    <td align="center" bgcolor="#FFFF99">306 2 78.9f 91.6f</td> </tr>
+    <td align="center" bgcolor="#FFFF99">306 2 78.9f 91.6f</td></tr>
 
 <tr><td align="center" bgcolor="#FFFF99">975 2 50.0f 50.0f</td>
     <td align="center" bgcolor="#FFFF99">306 2 78.9f 91.6f</td>
-    <td align="center" bgcolor="#FFFF99">306 2 78.9f 91.6f</td> </tr>
+    <td align="center" bgcolor="#FFFF99">306 2 78.9f 91.6f</td></tr>
+</tbody>
 </table>
 
 ### Copying
@@ -473,7 +485,7 @@ The C compiler performs member-by-member copying automatically whenever we:
 * assign an object to an existing object
 * initialize a new object using an existing object
 * return an object by value
-* Pass By Address
+* pass by address
 
 To change the data within an original object passed to the `set()` function, we require the address of the original object.  In the call to `set()` we pass its address.  `set()` receives this address in its pointer parameter.
 
@@ -521,7 +533,7 @@ void display(const struct Student st)
 
 The above program produces the following output:
 
-```
+```text
 Grades for 306 
 78.9
 91.6
@@ -530,34 +542,37 @@ Grades for 306
 The values in the original object and the local object are shown in the table below:
 
 <table border="0">
-<tr><td align="center">int<br/>main()</td>
-    <td align="center">void<br/>set()</td>
-    <td align="center">void<br/>display()</td> </tr>
+<thead>
+<tr><td align="center"><code>int main()</code></td>
+<td align="center" colSpan="2"><code>void set()</code></td>
+<td align="center"><code>void display()</code></td></tr>
 
-<tr><td align="center">struct Student<br/>harry</td>
-    <td align="center">struct Student *<br/>st</td>
-    <td align="center">struct Student<br/>harry</td>
-    <td align="center">struct Student<br/>st</td> </tr>
-
+<tr><td align="center"><code>struct Student harry</code></td>
+<td align="center"><code>struct Student *st</code></td>
+<td align="center"><code>struct Student harry</code></td>
+<td align="center"><code>struct Student st</code></td></tr>
+</thead>
+<tbody>
 <tr><td align="center">Address:<br/>22ff2b8d4</td>
 <td align="center">&nbsp;<br/>22ff2b8ec</td>
 <td align="center">&nbsp;<br/>22ff2b8f0</td>
-<td align="center">&nbsp;<br/>22ff2b908</td> </tr>
+<td align="center">&nbsp;<br/>22ff2b908</td></tr>
 
 <tr><td align="center" bgcolor="#FFFF99">975 2 50.0f 50.0f</td>
     <td align="center" bgcolor="#FFFF99">&nbsp;</td>
     <td align="center" bgcolor="#FFFF99">&nbsp;</td>
-    <td align="center" bgcolor="#FFFF99">&nbsp;</td> </tr>
+    <td align="center" bgcolor="#FFFF99">&nbsp;</td></tr>
 
 <tr><td align="center" bgcolor="#FFFF99">306 2 78.9f 91.6f</td>
 <td align="center" bgcolor="#FFFF99">2ff2b8d4</td>
 <td align="center" bgcolor="#FFFF99">306 2 78.9f 91.6f</td>
-<td align="center" bgcolor="#FFFF99">&nbsp;</td> </tr>
+<td align="center" bgcolor="#FFFF99">&nbsp;</td></tr>
 
 <tr><td align="center" bgcolor="#FFFF99">306 2 78.9f 91.6f</td>
 <td align="center" bgcolor="#FFFF99">&nbsp;</td>
 <td align="center" bgcolor="#FFFF99">&nbsp;</td>
-<td align="center" bgcolor="#FFFF99">306 2 78.9f 91.6f</td> </tr>
+<td align="center" bgcolor="#FFFF99">306 2 78.9f 91.6f</td></tr>
+</tbody>
 </table>
 
 ### Efficiency
@@ -608,7 +623,7 @@ void display(const struct Student* st)
 
 The above program produces the following output:
 
-```
+```text
 Grades for 306 
 78.9
 91.6
@@ -621,37 +636,40 @@ If we **pass by address** with no intention of changing that object within the f
 The values in the original object and the local object are shown in the table below:
 
 <table border="0">
-<tr><td align="center">int<br/>main()</td>
-    <td align="center">void<br/>set()</td>
-    <td align="center">void<br/>display()</td> </tr>
+<thead>
+<tr><td align="center"><code>int main()</code></td>
+    <td align="center" colSpan="2"><code>void set()</code></td>
+    <td align="center"><code>void display()</code></td></tr>
 
-<tr><td align="center">struct Student<br/>harry</td>
-    <td align="center">struct Student *<br/>st</td>
-    <td align="center">struct Student<br/>harry</td>
-    <td align="center">const struct Student *<br/>st</td> </tr>
-
+<tr><td align="center"><code>struct Student harry</code></td>
+    <td align="center"><code>struct Student *st</code></td>
+    <td align="center"><code>struct Student harry</code></td>
+    <td align="center"><code>const struct Student *st</code></td></tr>
+</thead>
+<tbody>
 <tr><td align="center">Address:<br/>22ff2b8d4</td>
 <td align="center">&nbsp;<br/>22ff2b8ec</td>
 <td align="center">&nbsp;<br/>22ff2b8f0</td>
-<td align="center">&nbsp;<br/>22ff2b908</td> </tr>
+<td align="center">&nbsp;<br/>22ff2b908</td></tr>
 
 <tr><td align="center" bgcolor="#FFFF99">975 2 50.0f 50.0f</td>
     <td align="center" bgcolor="#FFFF99">&nbsp;</td>
     <td align="center" bgcolor="#FFFF99">&nbsp;</td>
-    <td align="center" bgcolor="#FFFF99">&nbsp;</td> </tr>
+    <td align="center" bgcolor="#FFFF99">&nbsp;</td></tr>
 
 <tr><td align="center" bgcolor="#FFFF99">306 2 78.9f 91.6f</td>
 <td align="center" bgcolor="#FFFF99">2ff2b8d4</td>
 <td align="center" bgcolor="#FFFF99">306 2 78.9f 91.6f</td>
-<td align="center" bgcolor="#FFFF99">&nbsp;</td> </tr>
+<td align="center" bgcolor="#FFFF99">&nbsp;</td></tr>
 
 <tr><td align="center" bgcolor="#FFFF99">306 2 78.9f 91.6f</td>
 <td align="center" bgcolor="#FFFF99">&nbsp;</td>
 <td align="center" bgcolor="#FFFF99">&nbsp;</td>
-<td align="center" bgcolor="#FFFF99">2ff2b8d4</td> </tr>
+<td align="center" bgcolor="#FFFF99">2ff2b8d4</td></tr>
+</tbody>
 </table>
 
-333 Arrow Notation
+### Arrow Notation
 
 The syntax `(*s).no` is awkward to read.  ***Arrow notation*** provides cleaner alternative.  It takes the form:
 
@@ -705,7 +723,7 @@ void display(const struct Student* st)
 
 The above program produces the following output:
 
-```
+```text
 Grades for 306 
 78.9
 91.6
@@ -813,37 +831,40 @@ The table includes:
 * the type of each member
 * the name of each member
 
->Note the breakdown of each object into its members in the head of the table.  We reserve a separate line for the addresses that are pointed to:
-
+:::note
+The breakdown of each object into its members in the head of the table.  We reserve a separate line for the addresses that are pointed to:
+:::
 <table border="0">
-<tr><td align="center" colspan="4">int</td>
-    <td align="center" colspan="2">void</td>
-    <td align="center" colspan="4">struct A</td> </tr>
+<thead>
+<tr><td align="center" colSpan="4"><code>int</code></td>
+    <td align="center" colSpan="2"><code>void</code></td>
+    <td align="center" colSpan="4"><code>struct A</code></td></tr>
 
-<tr><td align="center" colspan="4">main()</td>
-<td align="center" colspan="2">foo()</td>
-<td align="center" colspan="4">goo()</td> </tr>
+<tr><td align="center" colSpan="4"><code>main()</code></td>
+<td align="center" colSpan="2"><code>foo()</code></td>
+<td align="center" colSpan="4"><code>goo()</code></td></tr>
 
-<tr><td align="center" colspan="2">struct A</td>
-    <td align="center" colspan="2">struct A</td>
-    <td align="center">struct A *</td>
+<tr><td align="center" colSpan="2"><code>struct A</code></td>
+    <td align="center" colSpan="2"><code>struct A</code></td>
+    <td align="center"><code>struct A*</code></td>
     <td align="center">&nbsp;</td>
-    <td align="center" colspan="2">struct A</td>
-    <td align="center" colspan="2">struct A</td> </tr>
-
-<tr><td align="center" colspan="2">a</td>
-    <td align="center" colspan="2">b</td>
+    <td align="center" colSpan="2"><code>struct A</code></td>
+    <td align="center" colSpan="2"><code>struct A</code></td></tr>
+</thead>
+<tbody>
+<tr><td align="center" colSpan="2">a</td>
+    <td align="center" colSpan="2">b</td>
     <td align="center">c</td>
     <td align="center">&nbsp;</td>
-    <td align="center" colspan="2">d</td>
-    <td align="center" colspan="2">e</td> </tr>
+    <td align="center" colSpan="2">d</td>
+    <td align="center" colSpan="2">e</td></tr>
 
-<tr><td align="center" colspan="2">Address:<br/>1000</td>
-    <td align="center" colspan="2">&nbsp;<br/>100C</td>
+<tr><td align="center" colSpan="2">Address:<br/>1000</td>
+    <td align="center" colSpan="2">&nbsp;<br/>100C</td>
     <td align="center">&nbsp;<br/>1018</td>
     <td align="center">&nbsp;<br/>101C</td>
-    <td align="center" colspan="2">&nbsp;<br/>1020</td>
-    <td align="center" colspan="2">&nbsp;<br/>102C</td> </tr>
+    <td align="center" colSpan="2">&nbsp;<br/>1020</td>
+    <td align="center" colSpan="2">&nbsp;<br/>102C</td></tr>
 
 <tr><td align="center">int</td>
     <td align="center">double</td>
@@ -854,7 +875,18 @@ The table includes:
     <td align="center">int</td>
     <td align="center">double</td>
     <td align="center">int</td>
-    <td align="center">double</td> </tr>
+    <td align="center">double</td></tr>
+
+<tr><td align="center">x</td>
+    <td align="center">r</td>
+    <td align="center">x</td>
+    <td align="center">r</td>
+    <td align="center">&nbsp;</td>
+    <td align="center">i</td>
+    <td align="center">x</td>
+    <td align="center">r</td>
+    <td align="center">x</td>
+    <td align="center">r</td></tr>
 
 <tr><td bgcolor="#FFFF99">&nbsp;</td>
     <td bgcolor="#FFFF99">&nbsp;</td>
@@ -865,7 +897,7 @@ The table includes:
     <td bgcolor="#FFFF99">&nbsp;</td>
     <td bgcolor="#FFFF99">&nbsp;</td>
     <td bgcolor="#FFFF99">&nbsp;</td>
-    <td bgcolor="#FFFF99">&nbsp;</td> </tr>
+    <td bgcolor="#FFFF99">&nbsp;</td></tr>
 
 <tr><td bgcolor="#FFFF99">&nbsp;</td>
     <td bgcolor="#FFFF99">&nbsp;</td>
@@ -876,7 +908,7 @@ The table includes:
     <td bgcolor="#FFFF99">&nbsp;</td>
     <td bgcolor="#FFFF99">&nbsp;</td>
     <td bgcolor="#FFFF99">&nbsp;</td>
-    <td bgcolor="#FFFF99">&nbsp;</td> </tr>
+    <td bgcolor="#FFFF99">&nbsp;</td></tr>
 
 <tr><td bgcolor="#FFFF99">&nbsp;</td>
     <td bgcolor="#FFFF99">&nbsp;</td>
@@ -887,7 +919,7 @@ The table includes:
     <td bgcolor="#FFFF99">&nbsp;</td>
     <td bgcolor="#FFFF99">&nbsp;</td>
     <td bgcolor="#FFFF99">&nbsp;</td>
-    <td bgcolor="#FFFF99">&nbsp;</td> </tr>
+    <td bgcolor="#FFFF99">&nbsp;</td></tr>
 
 <tr><td bgcolor="#FFFF99">&nbsp;</td>
     <td bgcolor="#FFFF99">&nbsp;</td>
@@ -898,7 +930,7 @@ The table includes:
     <td bgcolor="#FFFF99">&nbsp;</td>
     <td bgcolor="#FFFF99">&nbsp;</td>
     <td bgcolor="#FFFF99">&nbsp;</td>
-    <td bgcolor="#FFFF99">&nbsp;</td> </tr>
+    <td bgcolor="#FFFF99">&nbsp;</td></tr>
 
 <tr><td bgcolor="#FFFF99">&nbsp;</td>
     <td bgcolor="#FFFF99">&nbsp;</td>
@@ -909,10 +941,6 @@ The table includes:
     <td bgcolor="#FFFF99">&nbsp;</td>
     <td bgcolor="#FFFF99">&nbsp;</td>
     <td bgcolor="#FFFF99">&nbsp;</td>
-    <td bgcolor="#FFFF99">&nbsp;</td> </tr>
+    <td bgcolor="#FFFF99">&nbsp;</td></tr>
+</tbody>
 </table>
-
-Output:<br/><br/>
-<hr/><br/>
-<hr/><br/>
-<hr/><br/>

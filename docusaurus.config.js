@@ -5,10 +5,10 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 module.exports = {
   title: 'IPC144 - Course Notes',
   tagline: 'C Programming',
-  url: 'https://cghub.ca',
+  url: 'https://ipc144.sdds.ca',
   baseUrl: '/',
   trailingSlash: false,
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'Seneca-ICTOER',
@@ -35,6 +35,10 @@ module.exports = {
               label: 'Contents',
               to: '/',
             },
+			{
+			  label: 'Weekly Schedule',
+			  to: '/weeklyContents',
+			},
           ],
         },
       ],
@@ -69,7 +73,7 @@ module.exports = {
 					{
 						tagName: 'link',
 						rel: 'icon',
-						href: 'img/pwa/manifest-icon-512.png',
+						href: 'img/pwa/icon-512x512.png',
 					},
 					{
 						tagName: 'link',
@@ -94,18 +98,18 @@ module.exports = {
 					{
 						tagName: 'link',
 						rel: 'apple-touch-icon',
-						href: 'img/pwa/manifest-icon-192.png',
+						href: 'img/pwa/icon-192x192.png',
 					},
 					{
 						tagName: 'link',
 						rel: 'mask-icon',
-						href: 'img/pwa/manifest-icon-512.png',
+						href: 'img/pwa/icon-512x512.png',
 						color: '#DA291C',
 					},
 					{
 						tagName: 'meta',
 						name: 'msapplication-TileImage',
-						content: 'img/pwa/manifest-icon-512.png',
+						content: 'img/pwa/icon-512x512.png',
 					},
 					{
 						tagName: 'meta',

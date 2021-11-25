@@ -1,5 +1,9 @@
 ---
+id: expressions
+title: Expressions
 sidebar_position: 3
+slug: /B-computations/expressions
+description: Code various expressions that apply operations on operands of program type
 ---
 
 # Expressions
@@ -22,7 +26,7 @@ The ALU evaluates the simplest of instructions on integer values: for instance, 
 
 The ALU receives the expression's operator from the Control Unit, applies that operator to integer values stored in the CPU's registers and places the result in one of the CPU's registers. The FPA does the same but for floating-point values.
 
-![](https://ict.senecacollege.ca//~ipc144/pages/images/alu.png)
+![Diagram of relationship between ALU and FPA](https://ict.senecacollege.ca//~ipc144/pages/images/alu.png)
 
 The expressions that the ALU can process on integer types are:
 
@@ -228,8 +232,9 @@ The conversion specifiers in the last **`printf()`** correspond to the arguments
 
 _**deMorgan's law**_ is a handy rule for converting conditions in logical expressions. The law states that:
 
-> The opposite of a compound condition is the compound condition with all sub-conditions reversed, all &&'s changed to \|\|'s and all \|\|'s to &&'s.
-
+:::note
+The opposite of a compound condition is the compound condition with all sub-conditions reversed, all &&'s changed to \|\|'s and all \|\|'s to &&'s.
+:::
 Consider the following definition of an adult:
 
 ```c
@@ -322,7 +327,7 @@ The binary operators yield the same result as in the longhand expressions listed
 | --operand | **`--x`** | **`x = x - 1`** | decrement i by 1.0 |
 | operand-- | **`x--`** | **`x = x - 1`** | decrement i by 1.0 |
 
-The prefix and postfix operators operate on floating-point operands in the same way on integral operands.
+The prefix and postfix operators operate on floating-point operands in the same way as on integral operands.
 
 ### Ambiguities
 
@@ -350,14 +355,14 @@ The C language supports conversions from one type to another. To convert the typ
 
 | **Cast Expression** | **Meaning** |
 | :--- | :--- |
-| \(long double\) operand | long double version of operand |
-| \(double\) operand | double version of operand |
-| \(float\) operand | float version of operand |
-| \(long long\) operand | long long version of operand |
-| \(long\) operand | long version of operand |
-| \(int\) operand | int version of operand |
-| \(short\) operand | short version of operand |
-| \(char\) operand | char version of operand |
+| \(**`long double`**\) operand | **`long double`** version of operand |
+| \(**`double`**\) operand | **`double`** version of operand |
+| \(**`float`**\) operand | **`float`** version of operand |
+| \(**`long long`**\) operand | **`long long`** version of operand |
+| \(**`long`**\) operand | **`long`** version of operand |
+| \(**`int`**\) operand | **`int`** version of operand |
+| \(**`short`**\) operand | **`short`** version of operand |
+| \(**`char`**\) operand | **`char`** version of operand |
 
 Consider the example below. To obtain the number of hours in fractional form, we cast minutes to a **`float`** type and then divide it by 60. The input and output are listed on the right:
 
@@ -390,15 +395,15 @@ The C language using the following ranking:
 
 
 
-| long double | higher |
+| **`long double`** | higher |
 | :--- | :--- |
-| double | ... |
-| float | ... |
-| long long | ... |
-| long | ... |
-| int | ... |
-| short | ... |
-| char | lower |
+| **`double`** | ... |
+| **`float`** | ... |
+| **`long long`** | ... |
+| **`long`** | ... |
+| **`int`** | ... |
+| **`short`** | ... |
+| **`char`** | lower |
 
 There are two distinct kinds of expressions to consider with respect to type coercion:
 
@@ -455,7 +460,7 @@ If the left operand in an assignment expression is of a lower type than the righ
 
 C compilers promote the operand of lower type in an arithmetic or relational expression to an operand of the higher type before evaluating the expression.  The table below lists the type of the promoted operand.
 
-![](/img/image33.png)
+![Table of type promotion from left operand to right operand](/img/image33.png)
 
 **Example**
 
