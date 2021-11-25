@@ -34,7 +34,7 @@ This chapter examines this relationship between pointers, arrays and structures 
 
 We can model RAM as a linear map and use addresses on this map to identify bytes of information stored within memory.  For instance, in 512Mb of RAM, the address 0 identifies the first byte, the address 1 identifies the second byte and address 512Mb-1 identifies the last byte. 
 
-![Representation of RAM](https://ict.senecacollege.ca//~ipc144/pages/images/memory%20map.png)
+![Representation of RAM](../../static/img/memorymap.png)
 
 ### Pointers
 
@@ -172,7 +172,7 @@ The above program produces the following output:
 ```
 
 :::caution
-The syntactic equivalence between pointer parameters and array names does not extend to the definition of an array.  We cannot replace the definition of an array with a pointer definition.  An array definition allocates the stated number of memory locations for all of the elements in the array.  A pointer definition **allocates only one memory location to hold a single address**. 
+The syntactic equivalence between pointer parameters and array names does not extend to the definition of an array. We cannot replace the definition of an array with a pointer definition.  An array definition allocates the stated number of memory locations for all of the elements in the array. A pointer definition **allocates only one memory location to hold a single address**. 
 :::
 
 ### Pointer Arithmetic (Optional)
@@ -231,7 +231,7 @@ struct Student s[40];
 The subscripting rules for arrays apply equally to primitive types and structure types:
 
 * ***element indexing*** is 0-based - the first element is `s[0]`
-* `s[i]` refers to the i+1-th element of the array
+* `s[i]` refers to the `i+1-th` element of the array
 * the ***name of the array alone*** refers to the **address** of its first element - the address `s` is the **same** as the address `&s[0]`
 
 ### Tabular Data
