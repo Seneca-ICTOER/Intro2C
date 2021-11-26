@@ -4,24 +4,25 @@ sidebar_position: 1
 title: Character Strings
 description: Understand and learn how to stream data using standard library functions.
 ---
+
 # Character Strings (C string)
 
 ## Learning Outcomes
 
 After reading this section, you will be able to:
 
-* Design data collections using arrays to manage information efficiently
-* Stream data using standard library functions to interact with users
+- Design data collections using arrays to manage information efficiently
+- Stream data using standard library functions to interact with users
 
 ## Introduction
 
-Although some original programming languages focused on processing numerical information, most languages include extensive features for processing textual data.  Textual data involves sets of characters. These sets are often referred to as character strings.  The C language libraries provide facilities for processing character strings, treated as arrays of characters with a special delimiter. 
+Although some original programming languages focused on processing numerical information, most languages include extensive features for processing textual data. Textual data involves sets of characters. These sets are often referred to as character strings. The C language libraries provide facilities for processing character strings, treated as arrays of characters with a special delimiter.
 
-This chapter introduces these C-style strings, highlights their distinguishing feature, and notes the advantage of using character strings to pass textual data from one function to another.  This chapter includes the conversion specifiers for the input and output of character strings.
+This chapter introduces these C-style strings, highlights their distinguishing feature, and notes the advantage of using character strings to pass textual data from one function to another. This chapter includes the conversion specifiers for the input and output of character strings.
 
 ## Definition (review)
 
-A string is a `char` array with a special property which is a terminator element that follows the last ***meaningful character*** in the string.  We refer to this terminator as the **null terminator** and identify it by the escape sequence `'\0'`. 
+A string is a `char` array with a special property which is a terminator element that follows the last **_meaningful character_** in the string. We refer to this terminator as the **null terminator** and identify it by the escape sequence `'\0'`.
 
 <table border="0">
 <tr><td colspan="18" align="center">char</td></tr>
@@ -49,9 +50,9 @@ A string is a `char` array with a special property which is a terminator element
 > <u>Term Definition</u><br/>
 > The term "Meaningful Characters" in these notes refers to the actual data content you want to manage in the C string character array.
 
-The **null terminator** has the integral value of `0` on any host platform (in its collating sequence).  All of its bits are 0's.  The null terminator occupies the first position in the [ASCII](../Resources-Appendices/ascii-collating-sequence.md) and [EBCDIC](../Resources-Appendices/ebcdic-collating-sequence.md). 
+The **null terminator** has the integral value of `0` on any host platform (in its collating sequence). All of its bits are 0's. The null terminator occupies the first position in the [ASCII](../Resources-Appendices/ascii-collating-sequence.md) and [EBCDIC](../Resources-Appendices/ebcdic-collating-sequence.md).
 
-The index identifying the null terminator element is the same as the number of meaningful characters in the string (including spaces between words). 
+The index identifying the null terminator element is the same as the number of meaningful characters in the string (including spaces between words).
 
 <table border="0">
 <tr><td colspan="18" align="center">char<br/>name</td></tr>
@@ -96,11 +97,11 @@ The index identifying the null terminator element is the same as the number of m
 </table>
 
 > <u>HINT</u><br/>
-> The number of memory locations occupied by a C string (`char`) is one more than the number of meaningful characters in the string so as to hold the null terminator. 
+> The number of memory locations occupied by a C string (`char`) is one more than the number of meaningful characters in the string so as to hold the null terminator.
 
 ### Allocating Memory
 
-We allocate memory for a C string in the same way that we allocate memory for an array.  Since the **null terminator** is one of the elements in the array, we must allocate memory for one extra character than the number of meaningful characters. 
+We allocate memory for a C string in the same way that we allocate memory for an array. Since the **null terminator** is one of the elements in the array, we must allocate memory for one extra character than the number of meaningful characters.
 
 For example, to allocate memory for a string with up to `30` meaningful characters, we write:
 
@@ -113,11 +114,11 @@ char name[31]; // 30 chars plus 1 char for the null terminator byte
 To initialize a string at the time of memory allocation, we follow the definition with the assignment operator and the set of initial characters enclosed in braces.
 
 ```c
-const char name[31] = {'M','y',' ','n','a','m','e',' ','i','s',' ', 
+const char name[31] = {'M','y',' ','n','a','m','e',' ','i','s',' ',
                        'A','r','n','o','l','d','\0'};
 ```
 
-For a more compact form we enclosed the list of meaningful characters in double quotes. 
+For a more compact form we enclosed the list of meaningful characters in double quotes.
 
 ```c
 const char name[31] = "My name is Arnold";  // null-byte is automatically appended
@@ -194,11 +195,11 @@ The C compiler copies the characters in the string literal into the character st
 </tr>
 </table>
 
-Since the number of initializers (18) is less than the number of elements (31) available, the compiler fills the uninitialized elements with 0's. 
+Since the number of initializers (18) is less than the number of elements (31) available, the compiler fills the uninitialized elements with 0's.
 
 ## String Handling
 
-Arrays of numbers require a separate variable to hold the number of elements that are filled.  Unlike arrays of numbers, character strings do not require a separate variable for sizing.  In iterations on the characters in a string, we check for the presence of the null terminator in our test conditions. 
+Arrays of numbers require a separate variable to hold the number of elements that are filled. Unlike arrays of numbers, character strings do not require a separate variable for sizing. In iterations on the characters in a string, we check for the presence of the null terminator in our test conditions.
 
 ### Iterations
 
@@ -213,7 +214,7 @@ The following program displays the string stored in name[31] character by charac
 int main(void)
 {
     int i;
-    const char name[31] = "My name is Arnold"; 
+    const char name[31] = "My name is Arnold";
 
     for (i = 0; name[i] != '\0'; i++)
         printf("%c", name[i]);
@@ -232,7 +233,7 @@ My name is Arnold
 
 ### Functions
 
-Using a character string instead of an array of characters with a separate sizing variable achieves a more compact argument list for function calls.  For example:
+Using a character string instead of an array of characters with a separate sizing variable achieves a more compact argument list for function calls. For example:
 
 ```c
 // Strings To Functions
@@ -244,7 +245,7 @@ void print(const char name[]);
 int main(void)
 {
     int i;
-    const char name[31] = "My name is Arnold"; 
+    const char name[31] = "My name is Arnold";
 
     print(name);
     return 0;
@@ -269,21 +270,21 @@ My name is Arnold
 
 ## Formatted String Input
 
-The `scanf()` and `fscanf()` library functions support conversion specifiers particularly designed for character string input.  These specifiers are:
+The `scanf()` and `fscanf()` library functions support conversion specifiers particularly designed for character string input. These specifiers are:
 
-* `%s`  - whitespace delimited set
-* `%[]` - rule delimited set
+- `%s` - whitespace delimited set
+- `%[]` - rule delimited set
 
-The corresponding argument for these specifiers is the address of the string to be populated from the input stream. 
+The corresponding argument for these specifiers is the address of the string to be populated from the input stream.
 
 ### %s
 
 The `%s` conversion specifier
 
-* reads all characters ***until*** the first whitespace character
-* stores the characters read in the char array identified by the corresponding argument
-* stores the null terminator in the char array after accepting the last character
-* leaves the delimiting whitespace character and any subsequent characters in the input buffer
+- reads all characters **_until_** the first whitespace character
+- stores the characters read in the char array identified by the corresponding argument
+- stores the null terminator in the char array after accepting the last character
+- leaves the delimiting whitespace character and any subsequent characters in the input buffer
 
 For example:
 
@@ -298,7 +299,7 @@ The `scanf()` function will stop accepting input after the character `y` and sto
 <tr><td colspan="31" align="center">char<br/>name</td></tr>
 <tr><td>0</td>
     <td>1</td>
-    <td><strong>2</strong><td>
+    <td><strong>2</strong></td>
     <td>3</td>
     <td>4</td>
     <td>5</td>
@@ -365,7 +366,7 @@ The `scanf()` function will stop accepting input after the character `y` and sto
 
 The characters `' name is Arnold'` remain in the input buffer.
 
-A qualifier on the conversion specifier limits the number of characters accepted.  For instance, %10s reads no more than 10 characters:
+A qualifier on the conversion specifier limits the number of characters accepted. For instance, %10s reads no more than 10 characters:
 
 ```c
 char name[31];
@@ -386,7 +387,7 @@ The `scanf()` function will stop accepting input after the character `n` and sto
     <td>7</td>
     <td>8</td>
     <td>9</td>
-    <td><strong>10</strong><td>
+    <td><strong>10</strong></td>
     <td>11</td>
     <td>12</td>
     <td>13</td>
@@ -469,7 +470,7 @@ Just as before, the `scanf()` function will stop accepting input after the chara
     <td>7</td>
     <td>8</td>
     <td>9</td>
-    <td><strong>10</strong><td>
+    <td><strong>10</strong></td>
     <td>11</td>
     <td>12</td>
     <td>13</td>
@@ -527,18 +528,18 @@ Just as before, the `scanf()` function will stop accepting input after the chara
 </tr>
 </table>
 
-Because `%s` discards ***leading whitespace***, it cannot accept an empty string; that is, `%s` does treat a `'\n'` in an empty input buffer as an empty string.  If the buffer only contains `'\n'`, `scanf("%10s", name)` discards the `'\n'` and waits for non-whitespace input followed by another `'\n'`.
+Because `%s` discards **_leading whitespace_**, it cannot accept an empty string; that is, `%s` does treat a `'\n'` in an empty input buffer as an empty string. If the buffer only contains `'\n'`, `scanf("%10s", name)` discards the `'\n'` and waits for non-whitespace input followed by another `'\n'`.
 
 ### %[]
 
-The `%[]` conversion specifier accepts input consisting only of a set of pre-selected characters.  The brackets contain the admissible and/or inadmissible characters.  The symbol `^` prefaces the list of **inadmissible** characters.  The symbol `-` identifies a range of characters in an **inclusive** set. 
+The `%[]` conversion specifier accepts input consisting only of a set of pre-selected characters. The brackets contain the admissible and/or inadmissible characters. The symbol `^` prefaces the list of **inadmissible** characters. The symbol `-` identifies a range of characters in an **inclusive** set.
 
 For example, the `%[^\n]` conversion specifier:
 
-* reads all characters until the newline ('\n')
-* stores the characters read in the char array identified by the corresponding argument
-* stores the null terminator in the char array after accepting the last character
-* leaves the delimiting character (`'\n'`) in the input buffer
+- reads all characters until the newline ('\n')
+- stores the characters read in the char array identified by the corresponding argument
+- stores the null terminator in the char array after accepting the last character
+- leaves the delimiting character (`'\n'`) in the input buffer
 
 For example:
 
@@ -618,7 +619,7 @@ The `scanf()` function accepts the full line an stores:
 </tr>
 </table>
 
-A qualifier on this conversion specifier before the opening bracket limits the number of characters accepted.  For instance,`%10[^\n]` reads no more than 10 characters: 
+A qualifier on this conversion specifier before the opening bracket limits the number of characters accepted. For instance,`%10[^\n]` reads no more than 10 characters:
 
 ```c
 char name[31];
@@ -778,10 +779,9 @@ The `scanf()` function will store:
 </tr>
 </table>
 
-
 **Caution**
 
-Because `%[ ]` ignores leading whitespace, it cannot accept an empty string; that is, `%[^\n]` does treat a `'\n'` in an empty input buffer as an empty string.  If the input buffer only contains `'\n'`, `scanf("%[^\n]", name)`, unlike `%s`, returns `0` and leaves `name` unchanged.
+Because `%[ ]` ignores leading whitespace, it cannot accept an empty string; that is, `%[^\n]` does treat a `'\n'` in an empty input buffer as an empty string. If the input buffer only contains `'\n'`, `scanf("%[^\n]", name)`, unlike `%s`, returns `0` and leaves `name` unchanged.
 
 Example:
 
@@ -812,12 +812,12 @@ int main(void)
     {
         while (fscanf(fp, "%60[^\n]%*c", phrase) != EOF)
         printf("%s\n", phrase);
-                
+
         fclose(fp);
-    } 
+    }
     else
     {
-        printf("Failed to open file\n"); 
+        printf("Failed to open file\n");
     }
 
     return 0;
@@ -836,7 +836,7 @@ Large Skateboards
 
 ### Formatted Output
 
-The `printf()` and `fprintf()` library functions support the `%s` conversion specifier for character string output.  The corresponding argument is the **address** of the character string or strings literal.  Under this specifier `printf()` displays all of the characters from the address provided up to but **excluding** the null terminator byte.  For example:
+The `printf()` and `fprintf()` library functions support the `%s` conversion specifier for character string output. The corresponding argument is the **address** of the character string or strings literal. Under this specifier `printf()` displays all of the characters from the address provided up to but **excluding** the null terminator byte. For example:
 
 ```c
 // Displaying Strings
@@ -846,7 +846,7 @@ The `printf()` and `fprintf()` library functions support the `%s` conversion spe
 
 int main(void)
 {
-    const char name[31] = "My name is Arnold"; 
+    const char name[31] = "My name is Arnold";
 
     printf("%s\n", name);
 
@@ -873,14 +873,14 @@ int main(void)
 
     fp = fopen("alpha.txt","w");
 
-    if (fp != NULL) 
+    if (fp != NULL)
     {
         fprintf(fp, "%s\n", phrase);
         fclose(fp);
-    } 
-    else 
+    }
+    else
     {
-        printf("Failed to open file\n"); 
+        printf("Failed to open file\n");
     }
 
     return 0;
@@ -891,14 +891,14 @@ int main(void)
 
 Qualifiers on the `%s` specifier add detail control:
 
-* `%20s` displays a string **right**-justified in a field of **20**
-* `%-20s` displays a string **left**-justified in a field of **20**
-* `%20.10s` displays the ***first*** **10** characters of a string **right**-justified in a field of **20**
-* `%-20.10s` displays the ***first*** **10** characters of a string **left**-justified in a field of **20**
+- `%20s` displays a string **right**-justified in a field of **20**
+- `%-20s` displays a string **left**-justified in a field of **20**
+- `%20.10s` displays the **_first_** **10** characters of a string **right**-justified in a field of **20**
+- `%-20.10s` displays the **_first_** **10** characters of a string **left**-justified in a field of **20**
 
 ### Unformatted Output
 
-The `puts()` and `fputs()` library functions output a character string to the standard or specified output device respectively. 
+The `puts()` and `fputs()` library functions output a character string to the standard or specified output device respectively.
 
 **puts**
 
@@ -908,7 +908,7 @@ The prototype for puts() is:
 int puts(const char *);
 ```
 
-The parameter receives the address of the character string to be displayed.  For example:
+The parameter receives the address of the character string to be displayed. For example:
 
 ```c
 // Displaying Lines
@@ -918,7 +918,7 @@ The parameter receives the address of the character string to be displayed.  For
 
 int main(void)
 {
-    const char name[31] = "My name is Arnold"; 
+    const char name[31] = "My name is Arnold";
 
     puts(name);
 
@@ -934,11 +934,10 @@ My name is Arnold
 
 **fputs**
 
-`fputs()` writes a null-terminated string to a file.  The prototype for `fputs()` is:
+`fputs()` writes a null-terminated string to a file. The prototype for `fputs()` is:
 
 ```c
 int fputs(const char *str, FILE *fp);
 ```
 
-`str` receives the address of the string to be written and `fp` receives the address of the `FILE` object.  `fputs()` returns a non-negative value if successful; `EOF` in the event of an error.
-
+`str` receives the address of the string to be written and `fp` receives the address of the `FILE` object. `fputs()` returns a non-negative value if successful; `EOF` in the event of an error.

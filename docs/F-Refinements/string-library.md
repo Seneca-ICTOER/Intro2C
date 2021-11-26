@@ -17,7 +17,7 @@ After reading this section, you will be able to:
 
 ## Introduction
 
-The standard library that ships with [C compilers](/A-Introduction/compilers#the-c-compiler "C compiler") and processes [character strings](/F-Refinements/character-strings "Character Strings") is called the string library. The functions in this library perform fundamental operations on character strings, which include copying one string to another, adding one string to another and comparing one string to another.
+The standard library that ships with [C compilers](/A-Introduction/compilers#the-c-compiler 'C compiler') and processes [character strings](/F-Refinements/character-strings 'Character Strings') is called the string library. The functions in this library perform fundamental operations on character strings, which include copying one string to another, adding one string to another and comparing one string to another.
 
 This chapter describes four library functions that operate on character strings: determining the length, copying one to another, comparing one to another and concatenating one to another.
 
@@ -44,7 +44,7 @@ The header file that contains the prototypes for these library functions is:
 
 ### String Length
 
-The `strlen()` function returns the number of characters in the character string excluding the [**null terminator byte**](/F-Refinements/character-strings#definition-review "Null Terminator"). That is, `strlen()` returns the index of the **null terminator byte**.
+The `strlen()` function returns the number of characters in the character string excluding the [**null terminator byte**](/F-Refinements/character-strings#definition-review 'Null Terminator'). That is, `strlen()` returns the index of the **null terminator byte**.
 
 The following program finds the length of the input string and reverses its contents:
 

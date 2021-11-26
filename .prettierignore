@@ -1,0 +1,17 @@
+# Dependencies
+/node_modules
+package.json
+package-lock.json
+yarn.lock
+
+# Production
+/build
+
+# Generated files
+.docusaurus
+.cache-loader
+
+# Misc
+/static
+CNAME
+vercel.json
