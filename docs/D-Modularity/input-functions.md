@@ -21,7 +21,7 @@ This chapter describes some of the input facilities supported by the `stdio` mod
 
 A buffer is a small region of memory that holds data temporarily and provides intermediate storage between a device and a program. The system stores each keystroke in the input buffer, without passing it to the program. The user can edit their data before submitting it to the program. only by pressing the \n key, the user signals the program to start extracting data from the buffer. The program then only retrieves the data that it needs and leaves the rest in the buffer for future retrievals. The figure below illustrates the buffered input process.
 
-<div class="mdImg">
+<div className="mdImg">
 
 ![Input buffer diagram](https://ict.senecacollege.ca//~ipc144/pages/images/buffer.png)
 
@@ -36,7 +36,7 @@ Two functions accept buffered input from the keyboard (the standard input device
 
 The function `getchar()` retrieves the next unread character from the input buffer.
 
-<div class="mdImg">
+<div className="mdImg">
 
 ![getchar() diagram](https://ict.senecacollege.ca//~ipc144/pages/images/getchar.png)
 
@@ -94,7 +94,7 @@ This function will not return control to the caller until the user has pressed `
 
 The `scanf()` function retrieves the next set of unread characters from the input buffer and translates them according to the conversion(s) specified in the format string. `scanf()` extracts only as many characters as required to satisfy the specified conversion(s).
 
-<div class="mdImg">
+<div className="mdImg">
 
 ![scanf() diagram](https://ict.senecacollege.ca//~ipc144/pages/images/scanf.png)
 
