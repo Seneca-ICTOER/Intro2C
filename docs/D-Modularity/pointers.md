@@ -201,65 +201,78 @@ Although `internal_swap()` does exchange the values in variables `a` and `b`, th
 The walkthrough table shows how the changes remain completely within `internal_swap()` function scope:
 
 <table border="0">
-<tr><td align="center" colspan="3"><code>void</code></td>
-    <td align="center" colspan="2"><code>int</code></td> </tr>
-
-<tr><td align="center" colspan="3"><code>local_swap(int a, int b)</code></td>
-    <td align="center" colspan="2"><code>main(void)</code></td> </tr>
-
-<tr><td align="center"><code>int</code></td>
-    <td align="center"><code>int</code></td>
-    <td align="center"><code>int</code></td>
-    <td align="center"><code>int</code></td>
-    <td align="center"><code>int</code></td> </tr>
-
-<tr><td align="center"><code>a</code></td>
-    <td align="center"><code>b</code></td>
-    <td align="center"><code>c</code></td>
-    <td align="center"><code>a</code></td>
-    <td align="center"><code>b</code></td> </tr>
-
-<tr><td align="center"><code>0x0012FF78</code></td>
-    <td align="center"><code>0x0012FF7C</code></td>
-    <td align="center"><code>0x0012FF6C</code></td>
-    <td align="center"><code>0x0012FF88</code></td>
-    <td align="center"><code>0x0012FF84</code></td> </tr>
-
-<tr><td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td align="center"><code>5</code></td>
-    <td align="center"><code>6</code></td> </tr>
-
-<tr><td align="center"><code>5</code></td>
-    <td align="center"><code>6</code></td>
-    <td align="center">?</td>
-    <td align="center"><code>5</code></td>
-    <td align="center"><code>6</code></td> </tr>
-
-<tr><td align="center"><code>5</code></td>
-    <td align="center"><code>6</code></td>
-    <td align="center"><code>5</code></td>
-    <td align="center"><code>5</code></td>
-    <td align="center"><code>6</code></td> </tr>
-
-<tr><td align="center"><code>6</code></td>
-    <td align="center"><code>6</code></td>
-    <td align="center"><code>5</code></td>
-    <td align="center"><code>5</code></td>
-    <td align="center"><code>6</code></td> </tr>
-
-<tr><td align="center"><code>6</code></td>
-    <td align="center"><code>5</code></td>
-    <td align="center"><code>5</code></td>
-    <td align="center"><code>5</code></td>
-    <td align="center"><code>6</code></td> </tr>
-
-<tr><td align="center"><code>6</code></td>
-    <td align="center"><code>5</code></td>
-    <td align="center"><code>5</code></td>
-    <td align="center"><code>5</code></td>
-    <td align="center"><code>6</code></td> </tr>
+    <tbody>
+        <tr>
+            <td align="center" colSpan="3"><code>void</code></td>
+            <td align="center" colSpan="2"><code>int</code></td> 
+        </tr>
+        <tr>
+            <td align="center" colSpan="3"><code>local_swap(int a, int b)</code></td>
+            <td align="center" colSpan="2"><code>main(void)</code></td> 
+        </tr>
+        <tr>
+            <td align="center"><code>int</code></td>
+            <td align="center"><code>int</code></td>
+            <td align="center"><code>int</code></td>
+            <td align="center"><code>int</code></td>
+            <td align="center"><code>int</code></td>
+        </tr>
+        <tr>
+            <td align="center"><code>a</code></td>
+            <td align="center"><code>b</code></td>
+            <td align="center"><code>c</code></td>
+            <td align="center"><code>a</code></td>
+            <td align="center"><code>b</code></td>
+        </tr>
+        <tr>
+            <td align="center"><code>0x0012FF78</code></td>
+            <td align="center"><code>0x0012FF7C</code></td>
+            <td align="center"><code>0x0012FF6C</code></td>
+            <td align="center"><code>0x0012FF88</code></td>
+            <td align="center"><code>0x0012FF84</code></td>    
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td align="center"><code>5</code></td>
+            <td align="center"><code>6</code></td>
+        </tr>
+        <tr><td align="center"><code>5</code></td>
+            <td align="center"><code>6</code></td>
+            <td align="center">?</td>
+            <td align="center"><code>5</code></td>
+            <td align="center"><code>6</code></td>
+        </tr>
+        <tr>
+            <td align="center"><code>5</code></td>
+            <td align="center"><code>6</code></td>
+            <td align="center"><code>5</code></td>
+            <td align="center"><code>5</code></td>
+            <td align="center"><code>6</code></td>
+        </tr>
+        <tr>
+            <td align="center"><code>6</code></td>
+            <td align="center"><code>6</code></td>
+            <td align="center"><code>5</code></td>
+            <td align="center"><code>5</code></td>
+            <td align="center"><code>6</code></td>
+        </tr>
+        <tr>
+            <td align="center"><code>6</code></td>
+            <td align="center"><code>5</code></td>
+            <td align="center"><code>5</code></td>
+            <td align="center"><code>5</code></td>
+            <td align="center"><code>6</code></td>
+        </tr>
+        <tr>
+            <td align="center"><code>6</code></td>
+            <td align="center"><code>5</code></td>
+            <td align="center"><code>5</code></td>
+            <td align="center"><code>5</code></td>
+            <td align="center"><code>6</code></td>
+        </tr>
+    </tbody>
 </table>
 
 The hexadecimal values below the variable identifiers are their addresses in memory.
@@ -328,129 +341,156 @@ b is 5
 The walkthrough table shows how the changes carry over to `main()`:
 
 <table border="0">
-<tr><td align="center" colspan="3"><code>void</code></td>
-    <td align="center" colspan="2"><code>int</code></td> </tr>
-
-<tr><td align="center" colspan="3"><code>swap(int *p, int *q)</code></td>
-    <td align="center" colspan="2"><code>main(void)</code></td> </tr>
-
-<tr><td align="center"><code>int *</code></td>
-    <td align="center"><code>int *</code></td>
-    <td align="center"><code>int</code></td>
-    <td align="center"><code>int</code></td>
-    <td align="center"><code>int</code></td> </tr>
-
-<tr><td align="center"><code>p</code></td>
-    <td align="center"><code>q</code></td>
-    <td align="center"><code>c</code></td>
-    <td align="center"><code>a</code></td>
-    <td align="center"><code>b</code></td> </tr>
-
-<tr><td align="center"><code>0x0012FF78</code></td>
-    <td align="center"><code>0x0012FF7C</code></td>
-    <td align="center"><code>0x0012FF6C</code></td>
-    <td align="center"><code>0x0012FF88</code></td>
-    <td align="center"><code>0x0012FF84</code></td> </tr>
-
-<tr><td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td align="center"><code>5</code></td>
-    <td align="center"><code>6</code></td> </tr>
-
-<tr><td align="center"><code>0x0012FF88</code></td>
-    <td align="center"><code>0x0012FF84</code></td>
-    <td align="center">?</td>
-    <td align="center"><code>5</code></td>
-    <td align="center"><code>6</code></td> </tr>
-
-<tr><td align="center"><code>0x0012FF88</code></td>
-    <td align="center"><code>0x0012FF84</code></td>
-    <td align="center"><code>5</code></td>
-    <td align="center"><code>5</code></td>
-    <td align="center"><code>6</code></td> </tr>
-
-<tr><td align="center"><code>0x0012FF88</code></td>
-    <td align="center"><code>0x0012FF84</code></td>
-    <td align="center"><code>5</code></td>
-    <td align="center"><code>6</code></td>
-    <td align="center"><code>6</code></td> </tr>
-
-<tr><td align="center"><code>0x0012FF88</code></td>
-    <td align="center"><code>0x0012FF84</code></td>
-    <td align="center"><code>5</code></td>
-    <td align="center"><code>6</code></td>
-    <td align="center"><code>5</code></td> </tr>
-
-<tr><td align="center"><code>0x0012FF88</code></td>
-    <td align="center"><code>0x0012FF84</code></td>
-    <td align="center"><code>5</code></td>
-    <td align="center"><code>6</code></td>
-    <td align="center"><code>5</code></td> </tr>
+    <tbody>
+        <tr>
+            <td align="center" colSpan="3"><code>void</code></td>
+            <td align="center" colSpan="2"><code>int</code></td>
+        </tr>
+        <tr><td align="center" colSpan="3"><code>swap(int *p, int *q)</code></td>
+            <td align="center" colSpan="2"><code>main(void)</code></td>
+        </tr>
+        <tr>
+            <td align="center"><code>int *</code></td>
+            <td align="center"><code>int *</code></td>
+            <td align="center"><code>int</code></td>
+            <td align="center"><code>int</code></td>
+            <td align="center"><code>int</code></td>
+        </tr>
+        <tr>
+            <td align="center"><code>p</code></td>
+            <td align="center"><code>q</code></td>
+            <td align="center"><code>c</code></td>
+            <td align="center"><code>a</code></td>
+            <td align="center"><code>b</code></td>
+        </tr>
+        <tr>
+            <td align="center"><code>0x0012FF78</code></td>
+            <td align="center"><code>0x0012FF7C</code></td>
+            <td align="center"><code>0x0012FF6C</code></td>
+            <td align="center"><code>0x0012FF88</code></td>
+            <td align="center"><code>0x0012FF84</code></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td align="center"><code>5</code></td>
+            <td align="center"><code>6</code></td>
+        </tr>
+        <tr>
+            <td align="center"><code>0x0012FF88</code></td>
+            <td align="center"><code>0x0012FF84</code></td>
+            <td align="center">?</td>
+            <td align="center"><code>5</code></td>
+            <td align="center"><code>6</code></td>
+        </tr>
+        <tr>
+            <td align="center"><code>0x0012FF88</code></td>
+            <td align="center"><code>0x0012FF84</code></td>
+            <td align="center"><code>5</code></td>
+            <td align="center"><code>5</code></td>
+            <td align="center"><code>6</code></td>
+        </tr>
+        <tr>
+            <td align="center"><code>0x0012FF88</code></td>
+            <td align="center"><code>0x0012FF84</code></td>
+            <td align="center"><code>5</code></td>
+            <td align="center"><code>6</code></td>
+            <td align="center"><code>6</code></td>
+        </tr>
+        <tr>
+            <td align="center"><code>0x0012FF88</code></td>
+            <td align="center"><code>0x0012FF84</code></td>
+            <td align="center"><code>5</code></td>
+            <td align="center"><code>6</code></td>
+            <td align="center"><code>5</code></td>
+        </tr>
+        <tr>
+            <td align="center"><code>0x0012FF88</code></td>
+            <td align="center"><code>0x0012FF84</code></td>
+            <td align="center"><code>5</code></td>
+            <td align="center"><code>6</code></td>
+            <td align="center"><code>5</code></td>
+        </tr>
+    </tbody>
 </table>
 
 Some programmers prefer symbolic notation instead of address values. For example, they use the symbol `main::a` to refer to the local variable `a` in the function `main()`. A walkthrough table using symbolic notation looks something like this:
 
 <table border="0">
-<tr><td align="center" colspan="3"><code>void</code></td>
-    <td align="center" colspan="2"><code>int</code></td> </tr>
-
-<tr><td align="center" colspan="3"><code>swap(int *p, int *q)</code></td>
-    <td align="center" colspan="2"><code>main(void)</code></td> </tr>
-
-<tr><td align="center"><code>int *</code></td>
-    <td align="center"><code>int *</code></td>
-    <td align="center"><code>int</code></td>
-    <td align="center"><code>int</code></td>
-    <td align="center"><code>int</code></td> </tr>
-
-<tr><td align="center"><code>p</code></td>
-    <td align="center"><code>q</code></td>
-    <td align="center"><code>c</code></td>
-    <td align="center"><code>a</code></td>
-    <td align="center"><code>b</code></td> </tr>
-
-<tr><td align="center"><code>0x0012FF78</code></td>
-    <td align="center"><code>0x0012FF7C</code></td>
-    <td align="center"><code>0x0012FF6C</code></td>
-    <td align="center"><code>0x0012FF88</code></td>
-    <td align="center"><code>0x0012FF84</code></td> </tr>
-
-<tr><td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td align="center"><code>5</code></td>
-    <td align="center"><code>6</code></td> </tr>
-
-<tr><td align="center"><code>main::a</code></td>
-    <td align="center"><code>main::b</code></td>
-    <td align="center">?</td>
-    <td align="center"><code>5</code></td>
-    <td align="center"><code>6</code></td> </tr>
-
-<tr><td align="center"><code>main::a</code></td>
-    <td align="center"><code>main::b</code></td>
-    <td align="center"><code>5</code></td>
-    <td align="center"><code>5</code></td>
-    <td align="center"><code>6</code></td> </tr>
-
-<tr><td align="center"><code>main::a</code></td>
-    <td align="center"><code>main::b</code></td>
-    <td align="center"><code>5</code></td>
-    <td align="center"><code>6</code></td>
-    <td align="center"><code>6</code></td> </tr>
-
-<tr><td align="center"><code>main::a</code></td>
-    <td align="center"><code>main::b</code></td>
-    <td align="center"><code>5</code></td>
-    <td align="center"><code>6</code></td>
-    <td align="center"><code>5</code></td> </tr>
-
-<tr><td align="center"><code>main::a</code></td>
-    <td align="center"><code>main::b</code></td>
-    <td align="center"><code>5</code></td>
-    <td align="center"><code>6</code></td>
-    <td align="center"><code>5</code></td> </tr>
+    <tbody>
+        <tr>
+            <td align="center" colSpan="3"><code>void</code></td>
+            <td align="center" colSpan="2"><code>int</code></td>
+        </tr>
+        <tr>
+            <td align="center" colSpan="3"><code>swap(int *p, int *q)</code></td>
+            <td align="center" colSpan="2"><code>main(void)</code></td>
+        </tr>
+        <tr>
+            <td align="center"><code>int *</code></td>
+            <td align="center"><code>int *</code></td>
+            <td align="center"><code>int</code></td>
+            <td align="center"><code>int</code></td>
+            <td align="center"><code>int</code></td>
+        </tr>
+        <tr>
+            <td align="center"><code>p</code></td>
+            <td align="center"><code>q</code></td>
+            <td align="center"><code>c</code></td>
+            <td align="center"><code>a</code></td>
+            <td align="center"><code>b</code></td>
+        </tr>
+        <tr>
+            <td align="center"><code>0x0012FF78</code></td>
+            <td align="center"><code>0x0012FF7C</code></td>
+            <td align="center"><code>0x0012FF6C</code></td>
+            <td align="center"><code>0x0012FF88</code></td>
+            <td align="center"><code>0x0012FF84</code></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td align="center"><code>5</code></td>
+            <td align="center"><code>6</code></td>
+        </tr>
+        <tr>
+            <td align="center"><code>main::a</code></td>
+            <td align="center"><code>main::b</code></td>
+            <td align="center">?</td>
+            <td align="center"><code>5</code></td>
+            <td align="center"><code>6</code></td>
+        </tr>
+        <tr>
+            <td align="center"><code>main::a</code></td>
+            <td align="center"><code>main::b</code></td>
+            <td align="center"><code>5</code></td>
+            <td align="center"><code>5</code></td>
+            <td align="center"><code>6</code></td>
+        </tr>
+        <tr>
+            <td align="center"><code>main::a</code></td>
+            <td align="center"><code>main::b</code></td>
+            <td align="center"><code>5</code></td>
+            <td align="center"><code>6</code></td>
+            <td align="center"><code>6</code></td>
+        </tr>
+        <tr>
+            <td align="center"><code>main::a</code></td>
+            <td align="center"><code>main::b</code></td>
+            <td align="center"><code>5</code></td>
+            <td align="center"><code>6</code></td>
+            <td align="center"><code>5</code></td>
+        </tr>
+        <tr>
+            <td align="center"><code>main::a</code></td>
+            <td align="center"><code>main::b</code></td>
+            <td align="center"><code>5</code></td>
+            <td align="center"><code>6</code></td>
+            <td align="center"><code>5</code></td>
+        </tr>
+    </tbody>
 </table>
 
 ## Multiple Return Values

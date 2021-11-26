@@ -46,7 +46,7 @@ The module named `hello.c` starts executing at statement `int main(void)`, outpu
 
 We can sub-divide a programming project in different ways. We select our modules so that each one focuses on a narrower aspect of the project. Our objective is to define a set of modules that simplifies the complexity of the original problem.
 
-<div class="mdImg">
+<div className="mdImg">
 
 ![modules](https://ict.senecacollege.ca//~ipc144/pages/images/modules.png)
 
@@ -96,7 +96,7 @@ Consider a module that receives a flag from another module and performs a calcul
 
 The C language is a procedural programming language. It supports modular design through function syntax. Functions transfer control between one another. When a function transfers control to another function, we say that it **_calls_** the other function. Once the other function completes its task and transfers control to the caller function, we say that that other function **_returns_** control to its **_caller_**.
 
-<div class="mdImg">
+<div className="mdImg">
 
 ![function](https://ict.senecacollege.ca//~ipc144/pages/images/function.png)
 
@@ -234,7 +234,7 @@ identifier(argument, ..., argument)
 
 `identifer` specifies the function being called, while `argument` specifies a value being passed to the function being called.
 
-<div class="mdImg">
+<div className="mdImg">
 
 ![calling-functions](https://ict.senecacollege.ca//~ipc144/pages/images/calling.png)
 
@@ -567,7 +567,7 @@ int main(void)
 }
 ```
 
-#### Code Output:
+#### Code Output
 
 ```c
 Non-negative : -2
