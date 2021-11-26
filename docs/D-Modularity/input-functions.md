@@ -23,7 +23,7 @@ A buffer is a small region of memory that holds data temporarily and provides in
 
 <div class="mdImg">
 
-![Input buffer diagram](https://ict.senecacollege.ca//~ipc144/pages/images/buffer.png)
+![Input buffer diagram](/img/buffer.png)
 
 </div>
 
@@ -38,7 +38,7 @@ The function `getchar()` retrieves the next unread character from the input buff
 
 <div class="mdImg">
 
-![getchar() diagram](https://ict.senecacollege.ca//~ipc144/pages/images/getchar.png)
+![getchar() diagram](/img/getchar.png)
 
 </div>
 
@@ -96,7 +96,7 @@ The `scanf()` function retrieves the next set of unread characters from the inpu
 
 <div class="mdImg">
 
-![scanf() diagram](https://ict.senecacollege.ca//~ipc144/pages/images/scanf.png)
+![scanf() diagram](/img/scanf.png)
 
 </div>
 

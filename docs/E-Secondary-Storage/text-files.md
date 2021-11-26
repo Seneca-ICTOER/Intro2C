@@ -20,7 +20,7 @@ This chapter describes how to connect a program to a file, how to store informat
 
 A _file_ is a named area of secondary storage. The file may be fragmented; that is, it may consist of several parts stored at different non-contiguous locations in secondary memory. A file does not necessarily occupy contiguous space on the storage device.
 
-![](https://ict.senecacollege.ca//~ipc144/pages/images/files.png)
+![files](/img/files.png)
 
 The byte is the fundamental storage unit of a file. The distinguishing feature of a file is its end-of-file mark. We refer to this mark as `EOF`. `EOF` typically has the value -1.
 
@@ -49,7 +49,7 @@ The most common way to access data in a text file is sequentially, byte by byte.
 
 A C program connects to a file through an object of `FILE` type. The object holds information about the file and keeps track of the next position to be accessed. We use a library function to retrieve the address of the file object, store that address in a pointer and subsequently access the file through that pointer.
 
-![](https://ict.senecacollege.ca//~ipc144/pages/images/fopen.png)
+![fopen](/img/fopen.png)
 
 Allocating a pointer to a `FILE` object takes the form:
 

@@ -28,7 +28,7 @@ Dennis Ritchie created the C language between 1969 and 1973, while working at AT
 
 Since then, the C language has undergone three 'standard' definitions: one in 1989, one in 1999 and the latest in 2011.
 
-![Evolution of the C standard over the years](https://ict.senecacollege.ca//~ipc144/pages/images/standards.png)
+![Evolution of the C standard over the years](/img/standards.png)
 
 ### C89
 

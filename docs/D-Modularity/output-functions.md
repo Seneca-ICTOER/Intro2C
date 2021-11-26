@@ -24,7 +24,7 @@ This chapter describes two functions in the `stdio` module that provide formatte
 
 Standard output is line buffered. A program outputs its data to a buffer. That buffer empties to the standard output device separately. When it empties, we say that the buffer flushes.
 
-![buffering](https://ict.senecacollege.ca//~ipc144/pages/images/bufferout.png)
+![buffering](/img/bufferout.png)
 
 Output buffering lets a program continue executing without having to wait for the output device to finish displaying the characters it has received.
 
@@ -43,7 +43,7 @@ Two functions in the `stdio` module that send characters to the output buffer ar
 
 The `putchar()` function sends a single character to the output buffer. We pass the character as an argument to this function. The function returns the character sent or `EOF` if an error occurs.
 
-![unformatted output - putchar](https://ict.senecacollege.ca//~ipc144/pages/images/putchar.png)
+![unformatted output - putchar](/img/putchar.png)
 
 The prototype for `putchar()` is:
 
@@ -76,7 +76,7 @@ a
 
 The `printf()` function sends data to the output buffer under format control and returns the number of characters sent.
 
-![formatted output - printf](https://ict.senecacollege.ca//~ipc144/pages/images/printf.png)
+![formatted output - printf](/img/printf.png)
 
 The prototype for the `printf()` function is:
 

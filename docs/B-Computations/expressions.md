@@ -26,7 +26,7 @@ The ALU evaluates the simplest of instructions on integer values: for instance, 
 
 The ALU receives the expression's operator from the Control Unit, applies that operator to integer values stored in the CPU's registers and places the result in one of the CPU's registers. The FPA does the same but for floating-point values.
 
-![Diagram of relationship between ALU and FPA](https://ict.senecacollege.ca//~ipc144/pages/images/alu.png)
+![Diagram of relationship between ALU and FPA](/img/alu.png)
 
 The expressions that the ALU can process on integer types are:
 

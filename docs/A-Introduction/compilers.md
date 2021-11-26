@@ -24,7 +24,7 @@ We transform the program instructions and program data into the bits and bytes t
 
 Programming languages demand completeness and greater precision than human languages. The ultimate interpreter of any computer program is the hardware. Hardware cannot interpret intent or nuance, and we need to provide much more detail in our instructions than we do in casual conversations amongst ourselves. In this sense, programming is a more arduous task than writing a formal report that someone else will read.
 
-!["Human languages, Programming languages and machine languages" ](https://ict.senecacollege.ca//~ipc144/pages/images/languages.png)
+!["Human languages, Programming languages and machine languages" ](/img/languages.png)
 
 This chapter describes the generations of programming languages, identifies some key features of the C language, describes the compilers that we use to convert programs written in C into binary instructions that hardware can execute and explains the basic syntax found in any C program.
 
@@ -77,7 +77,7 @@ A C compiler is an operating system program that converts C language statements 
 
 To run our program, we direct the operating system to load the binary code into RAM and start executing that code. The user of our program provides input while that code is executing and receives output from it.
 
-![Compiling and executing processes](https://ict.senecacollege.ca//~ipc144/pages/images/compiler.png)
+![Compiling and executing processes](/img/compiler.png)
 
 Compilers can optimize the program instructions that we provide to improve execution times.
 
@@ -113,7 +113,7 @@ To create a binary code version of our source code, enter the following command:
 gcc hello.c
 ```
 
-![Gcc compiler](https://ict.senecacollege.ca//~ipc144/pages/images/gcc.png)
+![Gcc compiler](/img/gcc.png)
 
 By default, the gcc compiler produces an output file named `a.out`. `a.out` contains all of the machine language instructions needed to execute the program.
 
@@ -137,7 +137,7 @@ The C compiler that runs on Windows platforms is called cl. To access this compi
 cl hello.c
 ```
 
-![cl compiler](https://ict.senecacollege.ca//~ipc144/pages/images/cl.png)
+![cl compiler](/img/cl.png)
 
 By default, the cl compiler produces a file named `hello.exe`. `hello.exe` contains all of the machine language instructions needed to execute the program.
 

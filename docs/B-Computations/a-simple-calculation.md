@@ -16,7 +16,7 @@ description: Create a computer program to solve a basic programming task
 
 Application programs receive input from the user, convert that input into output and display the output to the user. The user enters the input through a keyboard or similar device and receives converted output through a monitor or similar device. Program instructions store the input data in RAM, retrieve that input data from RAM, convert it using the ALU and FPA in the CPU and store the result in RAM as illustrated in the figure below.
 
-![calculation](https://ict.senecacollege.ca//~ipc144/pages/images/calculation.png)
+![calculation](/img/calculation.png)
 
 A program that directs these operations consists of both program variables and program instructions that operate on data stored in those variables.
 
