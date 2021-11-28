@@ -40,7 +40,9 @@ module.exports = {
               to: '/weeklyContents',
             },
             {
-              html: `<a href='#' id='pwa-button' class='footer__link-item' hidden>Install as an App</a>`,
+              html: `
+                <a href='/static/Seneca-IPC144.pdf' id='pwa-button' class='footer__link-item' download='Seneca-IPC144.pdf'>Download</a>
+              `,
             },
           ],
         },

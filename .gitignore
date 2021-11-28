@@ -1,6 +1,7 @@
 # Dependencies
 /node_modules
 
+
 # Production
 /build
 
@@ -26,3 +27,4 @@ publish.bat
 
 # intellij configs
 .idea
+.vscode
