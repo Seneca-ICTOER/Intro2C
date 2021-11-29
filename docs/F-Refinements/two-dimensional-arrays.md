@@ -25,7 +25,7 @@ This chapter introduces two-dimensional arrays, describing their `syntax` and th
 
 A table is a useful analogy for describing a two-dimensional array. An entry in a table is identified by its row and column positions. Consider the row and column indices in the figure below. `The first index` refers to the `row` and `the second index` refers to the `column`.
 
-![5x5_2DArrayExample](https://cdn.discordapp.com/attachments/353432193730871296/911315058041171988/table_any.png)
+![5x5_2DArrayExample](/img/2dArray.png)
 
 To **identify an element** of a two-dimensional array we use `two pairs of brackets`. The index within the `left pair` identifies the `row`, while the index within the `right pair` identifies the `column`:
 

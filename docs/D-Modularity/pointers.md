@@ -497,7 +497,7 @@ Some programmers prefer symbolic notation instead of address values. For example
 
 C function syntax only allows for the `return` of a single value. If program design requires a function that returns more than one value, we do so through **_parameter pointers_** that hold the addresses of the variables that receive the multiple return values.
 
-![Function passing several memory addresses to another function](https://ict.senecacollege.ca//~ipc144/pages/images/multiple.png)
+![Function passing several memory addresses to another function](/img/multiple.png)
 
 The following program converts day of year to month and day of month by calling function `day_to_dm()`:
 

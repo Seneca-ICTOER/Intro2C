@@ -36,7 +36,7 @@ The fundamental addressable unit of RAM is the byte. One byte consists of 2 nibb
 
 <span className="mdImg" align="center" alt="A bytes tree image displays relative sizes of bit, nibble and byte">
 
-![Bytes](../../static/img/bytenibbit.jpg)
+![Bytes](/img/bytenibbit.jpg)
 
 </span>
 
@@ -88,7 +88,7 @@ The memory model for organizing information stored in RAM is linear. Any byte in
 
 <span className="mdImg" align="center" alt="A memory model image">
 
-![RAM memory model](../../static/img/ram.png)
+![RAM memory model](/img/ram.png)
 
 </span>
 
@@ -104,7 +104,7 @@ For example, 4 Gigabytes of RAM
 
 <span className="mdImg" align="center" alt="An unique byte address image">
 
-![Bytes](../../static/img/image21.png)
+![Bytes](/img/image21.png)
 
 </span>
 

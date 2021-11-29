@@ -21,7 +21,7 @@ After reading this section, you will be able to:
 
 Procedural programming scopes information. Scoping is an essential feature of modular design. A complete program consists of a variety of scopes. Each module limits the visibility of the program data and instructions in that module. Each code block limits the visibility of the data in that block.
 
-![Hierarchical view of global, function and block scope](../../static/img/scope.png)
+![Hierarchical view of global, function and block scope](/img/scope.png)
 
 This chapter describes how to identify a function type, describes the different scopes within a program, describes the passing of arrays and structures to a function, lists style guidelines for function coding and provides a sample walkthrough with functions, pointers and structures.
 

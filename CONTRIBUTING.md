@@ -103,26 +103,26 @@ Tool Recommendation: Firefox Browser (easier to make screenshots)
 
 4. Right click, select "Take Screenshot"
 
-![](/img/take-screenshot.png)
+![](static/img/take-screenshot.png)
 
 5. Select an area that encloses the whole table
 
-![](/img/click-to-select-region.png)
+![](static/img/click-to-select-region.png)
 
 6. Make any adjustments necessary when cropping (avoid having unnecessary space)
 
 7. Click Download
 
-![](/img/download-selected-region.png)
+![](static/img/download-selected-region.png)
 
 8. Save image to the `/static/img` folder in the IPC144 repo
 
 9. This is how it should end up looking like:
 
-![](/img/result-of-converted-table.png)
+![](static/img/result-of-converted-table.png)
 
 10. Use markdown to place the image wherever you need:
 
 ```
-!["Alt test for accessibility"](/static/img/name-of-the-image.png)
+!["Alt test for accessibility"](/img/name-of-the-image.png)
 ```

@@ -149,7 +149,7 @@ int main(void)
 
 The flow graph illustrating the above code would look like:
 
-![The flow graph of the code above](https://ict.senecacollege.ca//~ipc144/pages/images/flowg.gif)
+![The flow graph of the code above](/img/flowg.gif)
 
 ### Test Criteria
 
@@ -345,7 +345,7 @@ The record of changes lists all changes that have occurred in RAM during the exe
 
 When the operating system loads a program into RAM, the program instructions occupy one part of memory while the program variables occupy another part. The operating system transfers control to the program's first instruction. The program executes one instruction at a time until it returns control to the operating system. Some instructions accept input from the user, some change the values stored in the program variables, and others send output to the user.
 
-![Memory occupation of Operating System, program instructions, variables in RAM](https://ict.senecacollege.ca//~ipc144/pages/images/walkthrough.png)
+![Memory occupation of Operating System, program instructions, variables in RAM](/img/walkthrough.png)
 
 To track each change in RAM, we construct a table of the program variables. We list their identifiers and their types across its top line and enter their values in the rows below. We insert mock addresses below the identifiers, picking convenient address values; the actual addresses do not matter here. In other words, our walkthrough table is a simplified representation of RAM throughout the program's lifetime.
 

@@ -48,7 +48,7 @@ We can sub-divide a programming project in different ways. We select our modules
 
 <div className="mdImg">
 
-![modules](https://ict.senecacollege.ca//~ipc144/pages/images/modules.png)
+![modules](/img/modules.png)
 
 </div>
 
@@ -98,7 +98,7 @@ The C language is a procedural programming language. It supports modular design 
 
 <div className="mdImg">
 
-![function](https://ict.senecacollege.ca//~ipc144/pages/images/function.png)
+![function](/img/function.png)
 
 </div>
 In the example from the introductory chapter on [compilers](../A-Introduction/compilers.md) listed above:
@@ -236,7 +236,7 @@ identifier(argument, ..., argument)
 
 <div className="mdImg">
 
-![calling-functions](https://ict.senecacollege.ca//~ipc144/pages/images/calling.png)
+![calling-functions](/img/calling.png)
 
 </div>
 An argument may be a constant, a variable, or an expression (with certain exceptions).  The number of arguments in a function call should match the number of parameters in the function header.

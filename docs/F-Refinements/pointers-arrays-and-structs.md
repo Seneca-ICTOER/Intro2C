@@ -34,7 +34,7 @@ This chapter examines this relationship between pointers, arrays and structures 
 
 We can model RAM as a linear map and use addresses on this map to identify bytes of information stored within memory. For instance, in 512Mb of RAM, the address 0 identifies the first byte, the address 1 identifies the second byte and address 512Mb-1 identifies the last byte.
 
-![Representation of RAM](../../static/img/memorymap.png)
+![Representation of RAM](/img/memory-map.png)
 
 ### Pointers
 
