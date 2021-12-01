@@ -39,6 +39,9 @@ module.exports = {
               label: 'Weekly Schedule',
               to: '/weeklyContents',
             },
+            {
+              html: `<a href='#' id='pwa-button' class='footer__link-item' hidden>Add to Home Screen</a>`,
+            },
           ],
         },
       ],
@@ -64,6 +67,7 @@ module.exports = {
       },
     ],
   ],
+  clientModules: [require.resolve('./pwaCustomButton.js')],
   plugins: [
     [
       '@docusaurus/plugin-pwa',
