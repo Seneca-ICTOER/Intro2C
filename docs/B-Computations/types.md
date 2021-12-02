@@ -150,7 +150,7 @@ A **`float`** typically occupies 4 bytes and can store a single-precision, float
 
 A **`double`** typically occupies 8 bytes and can store a double-precision, floating-point number:
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1960 165">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1960 165" style={{maxWidth:'100%'}}>
     <foreignObject x="0" y="0" width="100%" height="100%">
         <body xmlns="http://www.w3.org/1999/xhtml">
             <table border="0">
@@ -324,7 +324,7 @@ A **`long int`** \(or simply, a `long`\) contains at least 32 bits:
 
 A **`long long int`** \(or simply, a `long long`\) contains at least 64 bits:
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1960 165">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1960 165" style={{maxWidth:'100%'}}>
     <foreignObject x="0" y="0" width="100%" height="100%">
         <body xmlns="http://www.w3.org/1999/xhtml">
             <table border="0">
@@ -412,7 +412,7 @@ The size of a simple **`int`** is no less than the size of a **`short`**.
 
 The size of a **`long double`** depends on the environment and is typically at least 64 bits:
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1960 165">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1960 165" style={{maxWidth:'100%'}}>
     <foreignObject x="0" y="0" width="100%" height="100%">
         <body xmlns="http://www.w3.org/1999/xhtml">
             <table border="0">
@@ -592,7 +592,7 @@ Floating-point types store tiny as well as huge values by decomposing the values
 
 The most popular model is the IEEE \(I-triple-E or Institute of Electrical and Electronics Engineers\) Standard 754 for Binary and Floating-Point Arithmetic. Under IEEE 754, a float has 32 bits, consisting of one sign bit, an 8-bit exponent and a 23-bit significand \(or mantissa\):
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 220">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 220" style={{maxWidth:'100%'}}>
     <foreignObject x="0" y="0" width="100%" height="100%">
         <body xmlns="http://www.w3.org/1999/xhtml">
             <table border="0">
@@ -643,7 +643,7 @@ The most popular model is the IEEE \(I-triple-E or Institute of Electrical and E
 
 Under IEEE 754, a double occupies 64 bits, has one sign bit, an 11-bit exponent and a 52-bit significand:
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1960 220">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1960 220" style={{maxWidth:'100%'}}>
     <foreignObject x="0" y="0" width="100%" height="100%">
         <body xmlns="http://www.w3.org/1999/xhtml">
             <table border="0">
