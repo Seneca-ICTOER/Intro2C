@@ -19,10 +19,7 @@ After reading this section, you will be able to:
 
 A typed programming language uses a type system to interpret the bit streams in memory. C is a typed programming language. A type is the rule that defines how to store values in memory and which operations are admissible on those values. A type defines the number of bytes available for storing values and hence the range of possible values. We use different types to store different information. The relation between types and raw memory is illustrated in the figure below.
 
-<span align="center">
-
 ![Representation of memory allocation for basic types](/img/types.png)
-</span>
 
 This chapter describes the four most common types in the C language and the ranges of values that these types allow. This chapter concludes by describing how to allocate memory for variables by identifying their contents using a type.
 
@@ -512,17 +509,17 @@ Hardware manufacturers distinguish integral types from floating-point types and 
 
 ### Integral Types
 
-C stores the `char` and `int` data in equivalent binary form. Binary form represents the value stored exactly. To learn how to convert between decimal and binary representation refer to the appendix entitled [Data Conversions](../Resources-Appendices/data-conversions.md). 
+C stores the `char` and `int` data in equivalent binary form. Binary form represents the value stored exactly. To learn how to convert between decimal and binary representation refer to the appendix entitled [Data Conversions](../Resources-Appendices/data-conversions.md).
 
 ### Characters and Symbols
 
 C stores characters and symbols in `char` types. Since characters and symbols have no intrinsic binary representation, the host platform provides the collating sequence for associating each character and symbol with a unique integer value. C stores the integer value from this sequence as the representative of the character or symbol.
 
-The two popular collating sequences are ASCII and EBCDIC. ASCII is more popular. [ASCII](../Resources-Appendices/ascii-collating-sequence.md) represents the letter A by the bit pattern 010000012, that is the hexadecimal value 0x41, that is the decimal value 65. [EBCDIC](../Resources-Appendices/ebcdic-collating-sequence.md) represents the letter A by the bit pattern 110000012, that is the hexadecimal value 0xC1, that is the decimal value 193. 
+The two popular collating sequences are ASCII and EBCDIC. ASCII is more popular. [ASCII](../Resources-Appendices/ascii-collating-sequence.md) represents the letter A by the bit pattern 010000012, that is the hexadecimal value 0x41, that is the decimal value 65. [EBCDIC](../Resources-Appendices/ebcdic-collating-sequence.md) represents the letter A by the bit pattern 110000012, that is the hexadecimal value 0xC1, that is the decimal value 193.
 
-ASCII and EBCDIC are not compatible. The symbol order in ASCII differs from that in EBCDIC. In ASCII, the digits precede the letters, while in EBCDIC, the letters precede the digits. If we sort symbolic information that contains digits and letters, we will obtain different results under each sequence. 
+ASCII and EBCDIC are not compatible. The symbol order in ASCII differs from that in EBCDIC. In ASCII, the digits precede the letters, while in EBCDIC, the letters precede the digits. If we sort symbolic information that contains digits and letters, we will obtain different results under each sequence.
 
-Neither ASCII nor EBCDIC contain enough values to represent most of the characters and symbols in the world languages. The Unicode standard, which is compatible with ASCII, provides a much more comprehensive collating system. We use the ASCII collating sequence throughout these notes. 
+Neither ASCII nor EBCDIC contain enough values to represent most of the characters and symbols in the world languages. The Unicode standard, which is compatible with ASCII, provides a much more comprehensive collating system. We use the ASCII collating sequence throughout these notes.
 
 ### Negative Values \(Optional\)
 
@@ -532,14 +529,14 @@ There are three schemes for storing negative integers:
 * 1's complement notation
 * sign magnitude notation
 
-All three represent non-negative values identically. Under the 2's complement rule, there is only one representation of 0 and separate addition and subtraction circuits in the ALU are unnecessary. 
+All three represent non-negative values identically. Under the 2's complement rule, there is only one representation of 0 and separate addition and subtraction circuits in the ALU are unnecessary.
 
 To obtain the 2's complement of an integer, we
 
 * flip the bits
 * add one
 
-For example, we represent the integer -92 by 10100100<sub>2</sub> 
+For example, we represent the integer -92 by 10100100<sub>2</sub>
 
 <table border="0">
 <tr><td>Bit #</td>
@@ -591,7 +588,7 @@ For example, we represent the integer -92 by 10100100<sub>2</sub>
 
 ### Floating-Point Data
 
-Floating-point types store tiny as well as huge values by decomposing the values into three distinct components: a sign, an exponent and a significand. The C language leaves the implementation details to the hardware manufacturer. 
+Floating-point types store tiny as well as huge values by decomposing the values into three distinct components: a sign, an exponent and a significand. The C language leaves the implementation details to the hardware manufacturer.
 
 The most popular model is the IEEE \(I-triple-E or Institute of Electrical and Electronics Engineers\) Standard 754 for Binary and Floating-Point Arithmetic. Under IEEE 754, a float has 32 bits, consisting of one sign bit, an 8-bit exponent and a 23-bit significand \(or mantissa\):
 
@@ -776,7 +773,7 @@ We store program data in variables  A declaration associates a program variable 
 In C, a declaration takes the form:
 
 ```c
-[const] type identifier [= initial value];
+ [const] type identifier [= initial value];
 ```
 
 The brackets denote an optional part of the syntax. 
@@ -786,10 +783,10 @@ We select a meaningful name for the identifier and optionally set the variable's
 For example:
 
 ```c
-char  children;
-int   nPages;
-float cashFare;
-const double pi = 3.14159265;
+ char  children;
+ int   nPages;
+ float cashFare;
+ const double pi = 3.14159265;
 ```
 
 ### Multiple Declarations
@@ -799,10 +796,10 @@ We may group the identifiers of variables that share the same type within a sing
 For example,
 
 ```c
-char   children, digit;
-int    nPages, nBooks, nRooms;
-float  cashFare, height, weight;
-double loan, mortgage;
+ char   children, digit;
+ int    nPages, nBooks, nRooms;
+ float  cashFare, height, weight;
+ double loan, mortgage;
 ```
 
 ### Naming Conventions
@@ -819,16 +816,16 @@ We may select any identifier for a variable that satisfies the following naming 
 The C language reserves the following words for its own use:
 
 ```c
-auto       _Bool      break     case
-char       _Complex   const     continue
-default    restrict   do        double
-else       enum       extern    float
-for        goto       if        _Imaginary
-inline     int        long      register
-return     short      signed    sizeof
-static     struct     switch    typedef
-union      unsigned   void      volatile
-while
+ auto       _Bool      break     case
+ char       _Complex   const     continue
+ default    restrict   do        double
+ else       enum       extern    float
+ for        goto       if        _Imaginary
+ inline     int        long      register
+ return     short      signed    sizeof
+ static     struct     switch    typedef
+ union      unsigned   void      volatile
+ while
 ```
 
 For upward compatibility with C++, we avoid using the following C++ reserved words:
