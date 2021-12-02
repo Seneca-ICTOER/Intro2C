@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for your interest in helping us maintain our course notes! We are happy to consider contributions from faculty and students to help make these notes easier to use and improve their correctness.
+Thanks for your interest in helping us maintain our course notes. We are happy to consider contributions from faculty and students to help make these notes easier to use and improve their correctness.
 
 ## Requirements
 
