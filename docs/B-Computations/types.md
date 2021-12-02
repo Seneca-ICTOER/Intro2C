@@ -12,8 +12,8 @@ description: This chapter describes the basic types in C, how they differ in mem
 
 After reading this section, you will be able to:
 
-* Select appropriate types for storing program variables and constants
-* Describe the internal representations defined by different types
+- Select appropriate types for storing program variables and constants
+- Describe the internal representations defined by different types
 
 ## Introduction
 
@@ -23,6 +23,7 @@ A typed programming language uses a type system to interpret the bit streams in 
 
 This chapter describes the four most common types in the C language and the ranges of values that these types allow. This chapter concludes by describing how to allocate memory for variables by identifying their contents using a type.
 
+This chapter describes the four most common types in the C language and the ranges of values that these types allow. This chapter concludes by describing how to allocate memory for variables by identifying their contents using a type.
 
 ## Arithmetic Types
 
@@ -525,16 +526,16 @@ Neither ASCII nor EBCDIC contain enough values to represent most of the characte
 
 There are three schemes for storing negative integers:
 
-* 2's complement notation \(most popular\)
-* 1's complement notation
-* sign magnitude notation
+- 2's complement notation \(most popular\)
+- 1's complement notation
+- sign magnitude notation
 
 All three represent non-negative values identically. Under the 2's complement rule, there is only one representation of 0 and separate addition and subtraction circuits in the ALU are unnecessary.
 
 To obtain the 2's complement of an integer, we
 
-* flip the bits
-* add one
+- flip the bits
+- add one
 
 For example, we represent the integer -92 by 10100100<sub>2</sub>
 
@@ -776,7 +777,7 @@ In C, a declaration takes the form:
  [const] type identifier [= initial value];
 ```
 
-The brackets denote an optional part of the syntax. 
+The brackets denote an optional part of the syntax.
 
 We select a meaningful name for the identifier and optionally set the variable's initial value. We conclude the declaration with a semi-colon, making it a complete statement. 
 
@@ -791,7 +792,7 @@ For example:
 
 ### Multiple Declarations
 
-We may group the identifiers of variables that share the same type within a single declaration by separating the identifiers by commas. 
+We may group the identifiers of variables that share the same type within a single declaration by separating the identifiers by commas.
 
 For example,
 
