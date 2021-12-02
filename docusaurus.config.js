@@ -40,7 +40,7 @@ module.exports = {
               to: '/weeklyContents',
             },
             {
-              html: `<a href='#' id='pwa-button' class='footer__link-item' hidden>Add to Home Screen</a>`,
+              html: `<a href='#' id='pwa-button' class='footer__link-item' hidden>Install as an App</a>`,
             },
           ],
         },
