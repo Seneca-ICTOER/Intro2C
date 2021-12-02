@@ -1,5 +1,8 @@
 ---
+id: text-files
+title: Text Files
 sidebar_position: 1
+description: Stream data using standard library functions to access persistent text.
 ---
 
 # Text Files
@@ -8,11 +11,11 @@ sidebar_position: 1
 
 After reading this section, you will be able to:
 
-- Stream data using standard library functions to access persistent text
+- Stream data using [standard library functions](../D-Modularity/library-functions.md 'Library Functions') to access persistent text
 
 ## Introduction
 
-Secondary storage retains its information when a computer is turned off and provides a mechanism for holding information beyond the execution of a program. Information in secondary storage can be accessed later by the same or a different program. This information resides in secondary memory in the form of files.
+Secondary storage retains its [information](../A-Introduction/information 'Information') when a computer is turned off and provides a mechanism for holding information beyond the execution of a program. Information in secondary storage can be accessed later by the same or a different program. This information resides in secondary memory in the form of files.
 
 This chapter describes how to connect a program to a file, how to store information in that file and how to retrieve that information.
 
@@ -20,9 +23,9 @@ This chapter describes how to connect a program to a file, how to store informat
 
 A _file_ is a named area of secondary storage. The file may be fragmented; that is, it may consist of several parts stored at different non-contiguous locations in secondary memory. A file does not necessarily occupy contiguous space on the storage device.
 
-![files](/img/files.png)
+![Non-Contiguous File Diagram](/img/files.png)
 
-The byte is the fundamental storage unit of a file. The distinguishing feature of a file is its end-of-file mark. We refer to this mark as `EOF`. `EOF` typically has the value -1.
+The byte is the fundamental storage unit of a file. The distinguishing feature of a file is the end-of-file mark. We refer to this mark as `EOF`. `EOF` typically has the value -1.
 
 ### Text Format
 
@@ -31,7 +34,7 @@ A file holds information in either of two formats:
 - text - readable and editable data
 - binary - executable program code (beyond the scope of these notes)
 
-Data stored in text format is suitable for displaying and modifying through a text editor. Files stored in text format are portable across platforms that share the same character set. A common standard is the [IEC/ISO 646-1083 Invariant Code Set](http://en.wikipedia.org/wiki/ISO/IEC_646#Codepage_layout), which consists of:
+Data stored in text format is suitable for displaying and modifying through a text editor. Files stored in text format are portable across platforms that share the same character set. A common standard is the [IEC/ISO 646-1083 Invariant Code Set](http://en.wikipedia.org/wiki/ISO/IEC_646#Codepage_layout 'IEC/ISO 646-1083 Invariant Code Set'), which consists of:
 
 - 52 upper and lower case alphabetic characters: A, B, ..., Z, a, b, ..., z
 - 10 digits: 0, 1, ..., 9
@@ -39,7 +42,9 @@ Data stored in text format is suitable for displaying and modifying through a te
 - null, line feed, carriage return, horizontal tab, vertical tab and form feed: \0, \l, \n, \t, \v, \f
 - 29 graphic characters: ! # % ^ & \* ( \_ ) - + = ~ [ ] ' | \ ; : " { } , . < > / ?
 
-> Note that this set excludes the $ and \` characters. The encoding for characters like $ and \` does not produce the same characters on all platforms (for more details see [National Variants](http://en.wikipedia.org/wiki/ISO/IEC_646#National_variants)).
+:::note
+This set excludes the $ and \` characters. The encoding for characters like $ and \` does not produce the same characters on all platforms (for more details see [National Variants](http://en.wikipedia.org/wiki/ISO/IEC_646#National_variants 'National Variants')).
+:::
 
 **Sequential Access**
 
@@ -47,9 +52,9 @@ The most common way to access data in a text file is sequentially, byte by byte.
 
 ## Connection
 
-A C program connects to a file through an object of `FILE` type. The object holds information about the file and keeps track of the next position to be accessed. We use a library function to retrieve the address of the file object, store that address in a pointer and subsequently access the file through that pointer.
+A C program connects to a file through an object of `FILE` type. The object holds information about the file and keeps track of the next position to be accessed. We use a library function to retrieve the address of the file object, store that address in a [pointer](../D-Modularity/pointers 'Pointers') and subsequently access the file through that pointer.
 
-![fopen](/img/fopen.png)
+![File object and pointer diagram](/img/fopen.png)
 
 Allocating a pointer to a `FILE` object takes the form:
 
@@ -57,9 +62,9 @@ Allocating a pointer to a `FILE` object takes the form:
 FILE *identifier;
 ```
 
-Where `FILE` is the type of the FILE object and identifer is the name of the pointer to the `FILE` object. We call this pointer a handle to the object.
+Where `FILE` is the type of the FILE object and identifier is the name of the pointer to the `FILE` object. We call this pointer a handle to the object.
 
-The structure type `FILE` is declared in the `<stdio.h>` header file. To allocate memory for a `FILE` pointer, we write:
+The [structure](../C-Data-Structures/structures 'Structures') type `FILE` is declared in the `<stdio.h>` header file. To allocate memory for a `FILE` pointer, we write:
 
 ```c
  #include <stdio.h>
@@ -69,7 +74,9 @@ The structure type `FILE` is declared in the `<stdio.h>` header file. To allocat
 
 We initialize the pointer `fp` to `NULL` as a precaution against premature dereferencing. If our program accesses data at `fp` before the connection to the file is open, our program may generate a **segmentation fault**.
 
-> NULL is defined in the `<stdio.h>` header file
+:::note
+NULL is defined in the `<stdio.h>` header file
+:::
 
 ### Opening a File
 
@@ -181,7 +188,7 @@ The C library functions for communicating with an open file include:
 int fprintf(FILE *, const char [], ...);
 ```
 
-The first parameter receives the address of the `FILE` object. The second parameter receives the address of the string literal that specifies the format. This literal may contain text to be written directly to the file as well as conversion specifiers, if any, to be applied to the data values supplied as arguments.
+The first parameter receives the address of the `FILE` object. The second parameter receives the address of the string literal that specifies the format. This literal may contain text to be written directly to the file as well as [conversion specifiers](../F-Refinements/character-strings#formatted-string-input 'Formatted String Input'), if any, to be applied to the data values supplied as arguments.
 
 For example:
 
@@ -284,7 +291,7 @@ The C library functions for managing the state of a `FILE` object include:
 
 ### Rewind
 
-`rewind()` resets the record pointer in the `FILE` object the first byte in a file. The next byte to be accessed by the object will be the first byte in the file.
+`rewind()` resets the record pointer in the `FILE` object to the first byte in a file. The next byte to be accessed by the object will be the first byte in the file.
 
 In other words, to jump to the beginning of a file, instead of disconnecting and re-connecting it, we simply rewind the file. The prototype for this library function is
 
@@ -353,7 +360,7 @@ If the next byte to be read is the end-of-file mark, but the caller has not yet 
 
 ## Comparison
 
-The library functions for communicating with files share many common properties with the functions for communicating with users directly. The functions belong to the same library, follow the same rules for format control and share a common syntax.
+The [library functions](../D-Modularity/library-functions.md 'Library Functions') for communicating with files share many common properties with the functions for communicating with users directly. The functions belong to the same library, follow the same rules for format control and share a common syntax.
 
 | Return Type | Standard I/O  | File I/O           | Notes                                                                             |
 | :---------- | :------------ | :----------------- | :-------------------------------------------------------------------------------- |
