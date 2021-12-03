@@ -2,7 +2,6 @@
 id: more-input-and-output
 title: More Input and Output
 sidebar_position: 3
-slug: /refinements/more-input-and-output
 description: More on the standard input and output library
 ---
 

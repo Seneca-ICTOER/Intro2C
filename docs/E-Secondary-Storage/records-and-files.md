@@ -2,7 +2,6 @@
 id: records-and-files
 title: Records and Files
 sidebar_position: 2
-slug: /secondary-storage/records-and-files
 ---
 
 # Records and Files

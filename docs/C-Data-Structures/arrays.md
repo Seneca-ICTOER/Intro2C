@@ -2,7 +2,6 @@
 id: arrays
 title: Arrays
 sidebar_position: 1
-slug: /data-structures/arrays
 description: An array is a data structure consisting of an ordered set of elements of common type that are stored contiguously in memory.
 ---
 

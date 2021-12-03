@@ -2,7 +2,6 @@
 sidebar_position: 5
 title: Output Functions
 id: output-functions
-slug: modularity/output-functions
 desctiption: This chapter on output functions is about invoking standard library procedures to stream data to users
 ---
 

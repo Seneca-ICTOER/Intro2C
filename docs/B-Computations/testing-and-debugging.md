@@ -2,7 +2,6 @@
 sidebar_position: 6
 id: testing-and-debugging
 title: Testing & Debugging
-slug: /computations/testing-and-debugging
 description: Introduction to testing and debugging in C Language
 ---
 

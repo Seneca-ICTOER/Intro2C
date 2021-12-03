@@ -2,7 +2,6 @@
 id: two-dimensional-arrays
 title: Two-Dimensional Arrays
 sidebar_position: 5
-slug: /refinements/two-dimensional-arrays
 description: This chapter describes the use of two-dimensional arrays
 ---
 

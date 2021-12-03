@@ -2,7 +2,6 @@
 id: portability
 title: Portability
 sidebar_position: 7
-slug: /refinements/portability
 description: This chapter describes the portability in C language
 ---
 

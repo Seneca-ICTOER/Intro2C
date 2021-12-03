@@ -2,7 +2,6 @@
 sidebar_position: 5
 title: Style Guidelines
 id: style-guidelines
-slug: /computations/style-guidelines
 ---
 
 # Style Guidelines

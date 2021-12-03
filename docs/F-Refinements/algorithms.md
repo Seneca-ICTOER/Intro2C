@@ -2,7 +2,6 @@
 id: algorithms
 sidebar_position: 6
 title: Algorithms
-slug: /refinements/algorithms
 description: An algorithm is the set of rules that define the sequence of operations required to complete the task.
 ---
 

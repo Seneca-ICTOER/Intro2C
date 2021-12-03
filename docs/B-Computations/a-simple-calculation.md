@@ -2,7 +2,6 @@
 id: a-simple-calculation
 title: A Simple Calculation
 sidebar_position: 2
-slug: /computations/a-simple-calculation
 description: Create a computer program to solve a basic programming task
 ---
 

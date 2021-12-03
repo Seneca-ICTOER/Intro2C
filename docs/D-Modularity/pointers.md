@@ -2,7 +2,6 @@
 id: pointers
 title: Pointers
 sidebar_position: 2
-slug: /modularity/pointers
 description: A variable that holds an address is called a pointer.
 ---
 

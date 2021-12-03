@@ -2,7 +2,6 @@
 id: library-functions
 title: Library Functions
 sidebar_position: 6
-slug: /D-Modularity/library-functions
 description: This chapter describes how to use library functions that include functions for mathematical calculations, generation of random events and manipulation and analysis of character data. To access any function within any library we simply include the appropriate header file for that library and call the function in our source code.
 ---
 
