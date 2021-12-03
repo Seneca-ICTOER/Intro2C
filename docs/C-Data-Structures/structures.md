@@ -2,7 +2,6 @@
 id: structures
 title: Structures
 sidebar_position: 2
-slug: /data-structures/structures
 description: A structure type is a collection of not necessarily identical types.
 ---
 

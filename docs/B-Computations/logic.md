@@ -2,7 +2,6 @@
 id: logic
 title: Logic
 sidebar_position: 4
-slug: /computations/logic
 description: Selection constructs represent different paths through the set of instructions
 ---
 

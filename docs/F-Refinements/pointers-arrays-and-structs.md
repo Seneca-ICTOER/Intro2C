@@ -2,7 +2,6 @@
 id: pointers-arrays-and-structs
 title: Pointers, Arrays and Structs
 sidebar_position: 4
-slug: /F-Refinements/pointers-arrays-and-structs
 description: A breakdown on the use of pointers, arrays and structures in C
 ---
 

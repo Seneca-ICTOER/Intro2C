@@ -2,7 +2,6 @@
 id: string-library
 title: String Library
 sidebar_position: 2
-slug: /refinements/string-library
 description: String library is a standard library to process character strings
 ---
 
