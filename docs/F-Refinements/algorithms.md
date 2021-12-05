@@ -2,33 +2,33 @@
 id: algorithms
 sidebar_position: 6
 title: Algorithms
-slug: /refinements/algorithms
 description: An algorithm is the set of rules that define the sequence of operations required to complete the task.
 ---
+
 # Algorithms
 
 ## Learning Outcomes
 
 After reading this section, you will be able to:
 
-* Design procedures using selection and iteration constructs to solve a programming task
-* Design data collections using arrays to manage information efficiently
+- Design procedures using selection and iteration constructs to solve a programming task
+- Design data collections using arrays to manage information efficiently
 
 ## Introduction
 
-The central aspect of solving a programming task is the design of an appropriate algorithm.  An algorithm is the set of rules that define the sequence of operations required to complete the task.  Examples of tasks that require algorithms include finding the elements in a list satisfying a specified condition, sorting the elements of a list in a specified order and mixing the elements of a list.  The design of an algorithm typically involves selections and iterations; in some cases, nested selections and nested iterations.  Often, there is more than one algorithm that solves the programming task.  Different algorithms exhibit different efficiencies. 
+The central aspect of solving a programming task is the design of an appropriate algorithm. An algorithm is the set of rules that define the sequence of operations required to complete the task. Examples of tasks that require algorithms include finding the elements in a list satisfying a specified condition, sorting the elements of a list in a specified order and mixing the elements of a list. The design of an algorithm typically involves selections and iterations; in some cases, nested selections and nested iterations. Often, there is more than one algorithm that solves the programming task. Different algorithms exhibit different efficiencies.
 
-This chapter introduces the implementations of a few more common algorithms.  We implement them in function form for use as black boxes in other applications. 
+This chapter introduces the implementations of a few more common algorithms. We implement them in function form for use as black boxes in other applications.
 
 ## Searching
 
-Search algorithms find the index of one or more array elements that satisfy a specified condition or set of conditions.  These algorithms work with key-value pairs.  Each key is unique while the values are not necessarily unique. 
+Search algorithms find the index of one or more array elements that satisfy a specified condition or set of conditions. These algorithms work with key-value pairs. Each key is unique while the values are not necessarily unique.
 
 ### Two Algorithms
 
 #### Unsorted Key Array
 
-Given an unsorted key array, we start our search at the first element and progress through the array element by element until we find a match.  This algorithm involves an iteration and a selection:
+Given an unsorted key array, we start our search at the first element and progress through the array element by element until we find a match. This algorithm involves an iteration and a selection:
 
 ```c
 // Find Unit Price
@@ -67,7 +67,7 @@ int main(void)
     i = find(sku, itemCount, searchSKU);
 
     if (i >= 0 && i < itemCount)
-        printf("Price : $%0.2lf\n", price[i]); 
+        printf("Price : $%0.2lf\n", price[i]);
     else
         printf("%d not in system\n", searchSKU);
 
@@ -79,18 +79,18 @@ The above program produces the following output:
 
 ```
 SKU   : 4633
-Price : $7.89 
+Price : $7.89
 ```
- 
+
 :::note
 
-The value returned by `find()` (variable `i`) is validated to ensure that it is within the bounds of the key array (that is, we check that it is not -1 and not more than the number of items in the array). 
+The value returned by `find()` (variable `i`) is validated to ensure that it is within the bounds of the key array (that is, we check that it is not -1 and not more than the number of items in the array).
 
 :::
 
 #### Sorted Key Array (Optional)
 
-Given a sorted key array, we start our search in the middle of the array and at each step discard the half that doesn't contain the search key.  Although this algorithm is slightly more complicated than the unsorted one, it is significantly faster, which is important with a large number of elements. 
+Given a sorted key array, we start our search in the middle of the array and at each step discard the half that doesn't contain the search key. Although this algorithm is slightly more complicated than the unsorted one, it is significantly faster, which is important with a large number of elements.
 
 ```c
 // Find Unit Price - Sorted Keys Ascending Order
@@ -99,7 +99,7 @@ Given a sorted key array, we start our search in the middle of the array and at 
 #include <stdio.h>
 
 // find_ascend returns the index of the first element
-// in ascending order skuData[n] that contains the value 'findSKU' 
+// in ascending order skuData[n] that contains the value 'findSKU'
 // returns -1 if not found
 //
 int find_ascend(int skuData[], int skuCount, int findSKU)
@@ -141,20 +141,20 @@ int main(void)
 
 ```
 SKU   : 4633
-Price : $7.89 
+Price : $7.89
 ```
 
 :::tip Note
 
-The above example using a divide and conquer approach is referred to as a ***binary search***.
+The above example using a divide and conquer approach is referred to as a **_binary search_**.
 
 :::
 
 ## Masking
 
-Masking algorithms distinguish certain array elements from all other elements.  The masking array is a [parallel array](/C-Data-Structures/arrays#parallel-arrays "Parallel Arrays") with respect to the other arrays in the set.  The elements of the masking array are [flags](/B-Computations/logic#flags "Flags") that identify inclusion or exclusion. 
+Masking algorithms distinguish certain array elements from all other elements. The masking array is a [parallel array](/C-Data-Structures/arrays#parallel-arrays 'Parallel Arrays') with respect to the other arrays in the set. The elements of the masking array are [flags](/B-Computations/logic#flags 'Flags') that identify inclusion or exclusion.
 
-Consider the following program, which calculates the total purchase price for a set of products.  The user enters the SKU (Stock-Keeping Unit) for each product purchased and the quantity.  Some products attract HST (Harmonized Sales Tax), while others do not.  We store the SKUs, unit prices and tax status in three parallel arrays.  The tax status array is the masking array.  The user enters 0 to terminate input.
+Consider the following program, which calculates the total purchase price for a set of products. The user enters the SKU (Stock-Keeping Unit) for each product purchased and the quantity. Some products attract HST (Harmonized Sales Tax), while others do not. We store the SKUs, unit prices and tax status in three parallel arrays. The tax status array is the masking array. The user enters 0 to terminate input.
 
 ```c
 // Total Purchase Price
@@ -205,7 +205,7 @@ int main(void)
                 else
                     sum += quantity * price[i];
             }
-            else 
+            else
             {
                 printf("%d not in system\n", searchSKU);
             }
@@ -235,18 +235,18 @@ Total is $65.48
 
 ## Sorting
 
-Sorting algorithms rearrange the elements of an array according to a pre-defined rule.  Typically, this rule is ascending or descending order.  The sorting criterion may be numeric or based upon a collating sequence such as [ASCII](/Resources-Appendices/ascii-collating-sequence "ASCII Collating Sequence") or [EBCDIC](/Resources-Appendices/ebcdic-collating-sequence "EBCDIC Collating Sequence").
+Sorting algorithms rearrange the elements of an array according to a pre-defined rule. Typically, this rule is ascending or descending order. The sorting criterion may be numeric or based upon a collating sequence such as [ASCII](/Resources-Appendices/ascii-collating-sequence 'ASCII Collating Sequence') or [EBCDIC](/Resources-Appendices/ebcdic-collating-sequence 'EBCDIC Collating Sequence').
 
 The two simplest algorithms are:
 
-* selection sort
-* bubble sort
+- selection sort
+- bubble sort
 
 ### Selection Sort
 
-A selection sort selects a reference element and steps through the rest of the elements looking for any one with a value that does not meet the test condition.  If found, the algorithm swaps that element with the reference element. 
+A selection sort selects a reference element and steps through the rest of the elements looking for any one with a value that does not meet the test condition. If found, the algorithm swaps that element with the reference element.
 
-The following program sorts the array in ascending order.  Starting with the first element in the array, it picks the first unsorted element as the reference element, swaps it with the smallest element in the unsorted part of the array, and iterates until it reaches the last element in the array.
+The following program sorts the array in ascending order. Starting with the first element in the array, it picks the first unsorted element as the reference element, swaps it with the smallest element in the unsorted part of the array, and iterates until it reaches the last element in the array.
 
 ```c
 // Selection Sort
@@ -261,7 +261,7 @@ void selectSort(int data[], int itemCount)
     int i, j, minIdx;
     int temp;
 
-    for (i = 0; i < itemCount; i++) 
+    for (i = 0; i < itemCount; i++)
     {
         minIdx = i;
 
@@ -303,12 +303,12 @@ The above program produces the following output:
   2156
   3122
   4633
-  5611 
+  5611
 ```
 
 ### Bubble Sort
 
-A bubble sort moves through the array element by element swapping elements if the next one does not satisfy the sort condition.  The algorithm repeats this process for each unsorted subset of the array starting with the first element.  The algorithm moves elements to their terminal positions just like bubbles rising through a liquid - hence the name bubble sort.
+A bubble sort moves through the array element by element swapping elements if the next one does not satisfy the sort condition. The algorithm repeats this process for each unsorted subset of the array starting with the first element. The algorithm moves elements to their terminal positions just like bubbles rising through a liquid - hence the name bubble sort.
 
 ```c
 // Bubble Sort
@@ -316,7 +316,7 @@ A bubble sort moves through the array element by element swapping elements if th
 
 #include <stdio.h>
 
-// bubbleSort sorts the elements of a[skuCount] in ascending order 
+// bubbleSort sorts the elements of a[skuCount] in ascending order
 //
 void bubbleSort(int data[], int itemCount)
 {
@@ -325,7 +325,7 @@ void bubbleSort(int data[], int itemCount)
 
     for (i = itemCount - 1; i > 0; i--)
     {
-        for (j = 0; j < i; j++) 
+        for (j = 0; j < i; j++)
         {
             if (data[j] > data[j + 1])
             {
@@ -351,13 +351,14 @@ int main(void)
     return 0;
 }
 ```
+
 The above program produces the following output:
 
 ```
   2156
   3122
   4633
-  5611 
+  5611
 ```
 
 ### Sorting Strings (Optional)
@@ -388,7 +389,7 @@ int main(void)
     do {
         printf("Name-%d: ", i + 1);
         scanf(" %"FMT_NAME_LEN"[^\n]", name[i]);
-    
+
         keepgoing = strcmp(name[i], "^") != 0;
         i++;
     } while (keepgoing == 1 && i < MAX_NAMES);
@@ -408,16 +409,16 @@ int main(void)
     return 0;
 }
 
-// bubbleSort sorts the elements of names[size] in ascending order 
+// bubbleSort sorts the elements of names[size] in ascending order
 //
 void bubble(char names[][MAX_NAME_LEN + 1], int size)
 {
     int i, j;
     char temp[MAX_NAME_LEN + 1];
 
-    for (i = size - 1; i > 0; i--) 
+    for (i = size - 1; i > 0; i--)
     {
-        for (j = 0; j < i; j++) 
+        for (j = 0; j < i; j++)
         {
             if (strcmp(names[j], names[j + 1]) > 0)
             {
@@ -429,6 +430,7 @@ void bubble(char names[][MAX_NAME_LEN + 1], int size)
     }
 }
 ```
+
 The below output is a sample execution of the above program:
 
 ```
@@ -448,15 +450,15 @@ Zamphire
 
 :::note
 
-Notice the concatenation of string literals in the format string of the call to `scanf()`.  This lets us set the maximum number of input characters alongside the maximum number of characters in the array of strings at the head of the program code.  The C compiler converts a concatenation of string literals into a single literal removing the intermediate pairs of double quotes; that is, to the compiler `"a""b""c"` is the same as `"abc"`.
+Notice the concatenation of string literals in the format string of the call to `scanf()`. This lets us set the maximum number of input characters alongside the maximum number of characters in the array of strings at the head of the program code. The C compiler converts a concatenation of string literals into a single literal removing the intermediate pairs of double quotes; that is, to the compiler `"a""b""c"` is the same as `"abc"`.
 
 :::
 
 ## Mixing (Optional)
 
-Mixing algorithms have applications in games of chance.  Examples include shuffling the cards in a deck or tumbling numbered balls into a lottery chute.  The algorithm depends on the extent to which we seek to generate a truly fair result. 
+Mixing algorithms have applications in games of chance. Examples include shuffling the cards in a deck or tumbling numbered balls into a lottery chute. The algorithm depends on the extent to which we seek to generate a truly fair result.
 
-Consider the following program, which tumbles 10 balls into a lottery chute.  To simulate mixing, the algorithm picks the index of a reference element, randomly picks the index of another element further along in the array and swaps the values stored in the two elements.  This algorithm is attributed to Donald Knuth, a pioneer of computer science.
+Consider the following program, which tumbles 10 balls into a lottery chute. To simulate mixing, the algorithm picks the index of a reference element, randomly picks the index of another element further along in the array and swaps the values stored in the two elements. This algorithm is attributed to Donald Knuth, a pioneer of computer science.
 
 ```c
 // Mix Lottery Balls
@@ -468,7 +470,7 @@ Consider the following program, which tumbles 10 balls into a lottery chute.  To
 
 #define BALL_COUNT 10
 
-// mix mixes the elements in data[arraySize] randomly 
+// mix mixes the elements in data[arraySize] randomly
 //
 void shuffle(int data[], int arraySize)
 {
@@ -476,7 +478,7 @@ void shuffle(int data[], int arraySize)
 
     remainingItems = arraySize;
 
-    for (i = 0; i < arraySize; i++) 
+    for (i = 0; i < arraySize; i++)
     {
         j = i + rand() % remainingItems;
 
@@ -495,10 +497,10 @@ int main(void)
 
     for (i = 0; i < BALL_COUNT; i++)
         ball[i] = i + 1;
-    
+
     srand(time(NULL));
     shuffle(ball, BALL_COUNT);
-    
+
     for (i = 0; i < BALL_COUNT; i++)
         printf("%2d\n", ball[i]);
 
