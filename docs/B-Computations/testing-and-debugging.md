@@ -1,7 +1,7 @@
 ---
-sidebar_position: 6
 id: testing-and-debugging
 title: Testing & Debugging
+sidebar_position: 6
 description: Introduction to testing and debugging in C Language
 ---
 

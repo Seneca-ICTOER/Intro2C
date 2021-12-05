@@ -2,7 +2,7 @@
 id: functions-arrays-and-structs
 title: Functions, Arrays and Structs
 sidebar_position: 3
-description: This chapter describes how to identify a function type, describes the different scopes within a program, describes the passing of arrays and structures to a function, lists style guidelines for function coding and provides a sample walkthrough with functions, pointers and structures.
+description: Describe identify a function type, the different scopes within a program, the passing of arrays and structures to a function, and list-style guidelines
 ---
 
 # Functions, Arrays and Structs

@@ -1,5 +1,8 @@
 ---
+id: ebcdic-collating-sequence
+title: EBCDIC Collating Sequence
 sidebar_position: 2
+description: The EBCDIC collation sequence is the order in which characters are defined in EBCDIC
 ---
 
 # EBCDIC Collating Sequence

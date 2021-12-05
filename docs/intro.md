@@ -1,7 +1,8 @@
 ---
 id: intro
-slug: /
+title: Table of contents
 sidebar_position: 1
+description: Contents of Programming Computers Using C
 ---
 
 # Table of contents

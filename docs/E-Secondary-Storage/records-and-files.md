@@ -2,6 +2,7 @@
 id: records-and-files
 title: Records and Files
 sidebar_position: 2
+description: Stream data using standard library functions to access persistent text
 ---
 
 # Records and Files

@@ -1,5 +1,8 @@
 ---
+id: functions
+title: Functions
 sidebar_position: 1
+description: Introduction to the principles of modular design and describe the syntax for defining a module
 ---
 
 # Functions

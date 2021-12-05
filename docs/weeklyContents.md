@@ -1,6 +1,8 @@
 ---
-description: Introduction to C Programming
+id: weeklyContents
+title: Weekly Schedule
 sidebar_position: 1
+description: Introduction to C Programming
 ---
 
 # Weekly Schedule

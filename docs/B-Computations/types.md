@@ -1,5 +1,8 @@
 ---
+id: types
+title: Types
 sidebar_position: 1
+description: Appropriate types for storing program variables and constants and describe the internal representations
 ---
 
 # Types

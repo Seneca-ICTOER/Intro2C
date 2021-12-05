@@ -1,5 +1,8 @@
 ---
+id: data-conversions
+title: Data Conversions
 sidebar_position: 3
+description: Describes how to convert across binary, hexadecimal and decimal representations and shows what a trivially simple program looks like in binary and hexadecimal representations
 ---
 
 # Data Conversions

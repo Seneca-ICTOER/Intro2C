@@ -2,7 +2,7 @@
 id: operators
 title: Operators
 sidebar_position: 4
-description: Operator Precedence is the order in which operands are bound to operators.
+description: Operator Precedence is the order in which operands are bound to operators
 ---
 
 # Operator Precedence

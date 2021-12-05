@@ -2,7 +2,7 @@
 id: portability
 title: Portability
 sidebar_position: 7
-description: This chapter describes the portability in C language
+description: Introduction to some coding guidelines and describes utilities available for analyzing the degree of portability
 ---
 
 # Portability

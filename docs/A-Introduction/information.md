@@ -2,7 +2,7 @@
 id: information
 title: Information
 sidebar_position: 2
-description: The information stored in a computer includes program instructions and program data.
+description: The information stored in a computer includes program instructions and program data
 ---
 
 # Information

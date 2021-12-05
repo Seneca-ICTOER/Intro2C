@@ -1,5 +1,8 @@
 ---
+id: text-files
+title: Text Files
 sidebar_position: 1
+description: Describe how to connect a program to a file, save information in that file, and get that information
 ---
 
 # Text Files

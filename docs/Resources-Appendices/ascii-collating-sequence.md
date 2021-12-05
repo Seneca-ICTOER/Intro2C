@@ -1,5 +1,8 @@
 ---
+id: ascii-collating-sequence
+title: ASCII Collating Sequence
 sidebar_position: 1
+description: The character encoding sequence compatible with Unicode
 ---
 
 # ASCII Collating Sequence
