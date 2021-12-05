@@ -45,6 +45,10 @@ If you want to make a change, please use the following GitHub workflow:
 1. [create a Pull Request](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) on GitHub
 1. add a description about what you changed and anything the maintainers need to know
 
+## Standardize frontmatter
+
+Markdown documents can use the Markdown FrontMatter metadata fields, enclosed by a line --- on either side. We use `id`, `title`, `sidebar_position`, and `description`. However, we do NOT use `slug` for it.
+
 ## Releases
 
 ### Build
