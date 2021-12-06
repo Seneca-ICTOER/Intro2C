@@ -2,6 +2,7 @@
 id: intro
 title: Table of contents
 sidebar_position: 1
+slug: /
 description: Contents of Programming Computers Using C
 ---
 
