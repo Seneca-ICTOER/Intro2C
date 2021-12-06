@@ -38,6 +38,7 @@ If you want to make a change, please use the following GitHub workflow:
 1. clone your forked repo to your local machine, `git clone https://github.com/{your username}/IPC144`
 1. create a new branch off of the `main` branch, `git checkout -b {new branch name} main`
 1. make your changes and save
+1. check it builds successfully, `yarn build`
 1. check to see which files have changed, `git status`
 1. stage these changed files in git, `git add file1 file2 ...`
 1. commit your changes, `git commit -m "Made the following changes..."`
