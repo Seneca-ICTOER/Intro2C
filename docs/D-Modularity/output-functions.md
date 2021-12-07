@@ -2,7 +2,7 @@
 id: output-functions
 title: Output Functions
 sidebar_position: 5
-desctiption: Describe invoking standard library procedures to stream data to users
+description: Describes how to invoke invoking standard library procedures to stream data to users
 ---
 
 # Output Functions

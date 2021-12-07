@@ -2,7 +2,7 @@
 id: computers
 title: Computers
 sidebar_position: 1
-description: Describe the major components of a modern computer and the software that controls them
+description: Describes the major components of a modern computer and the software that controls them
 ---
 
 # Computers

@@ -2,7 +2,7 @@
 id: input-functions
 title: Input Functions
 sidebar_position: 4
-description: Describe invoking standard library procedures to stream data from users
+description: Describes how to invoke invoking standard library procedures to stream data from users
 ---
 
 # Input Functions

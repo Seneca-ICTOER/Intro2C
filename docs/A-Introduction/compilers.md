@@ -2,7 +2,7 @@
 id: compilers
 title: Compilers
 sidebar_position: 3
-description: Describe the generations of programming languages, key features of the C language and the C compilers
+description: Describes the generations of programming languages, key features of the C language and the C compilers
 ---
 
 # Compilers

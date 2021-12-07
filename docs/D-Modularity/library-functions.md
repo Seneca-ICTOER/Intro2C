@@ -2,7 +2,7 @@
 id: library-functions
 title: Library Functions
 sidebar_position: 6
-description: Describe library functions that include functions for mathematical calculations, generation of random events and manipulation and analysis of character data
+description: Describes library functions that include functions for mathematical calculations, generation of random events and manipulation and analysis of character data
 ---
 
 # Library Functions
