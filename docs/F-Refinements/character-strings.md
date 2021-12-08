@@ -24,10 +24,10 @@ This chapter introduces these C-style strings, highlights their distinguishing f
 
 A string is a `char` array with a special property which is a terminator element that follows the last **_meaningful character_** in the string. We refer to this terminator as the **null terminator** and identify it by the escape sequence `'\0'`.
 
-<table border="0">
+<table>
     <tbody>
         <tr>
-            <td colSpan="18" align="center">char</td>
+            <td colSpan="18">char</td>
         </tr>
         <tr>
             <td>&nbsp;</td>
@@ -59,10 +59,10 @@ The **null terminator** has the integral value of `0` on any host platform (in i
 
 The index identifying the null terminator element is the same as the number of meaningful characters in the string (including spaces between words).
 
-<table border="0">
+<table>
     <tbody>
         <tr>
-            <td colSpan="18" align="center">char<br/>name</td>
+            <td colSpan="18">char<br/>name</td>
         </tr>
         <tr>
             <td>0</td>
@@ -137,10 +137,10 @@ const char name[31] = "My name is Arnold";  // null-byte is automatically append
 
 The C compiler copies the characters in the string literal into the character string and appends the null-byte terminator after the last copied character.
 
-<table border="0">
+<table>
     <tbody>
         <tr>
-            <td colSpan="31" align="center">char<br/>name</td>
+            <td colSpan="31">char<br/>name</td>
         </tr>
         <tr>
             <td>0</td>
@@ -311,10 +311,10 @@ scanf("%s", name);  // <=== User enters: My name is Arnold
 
 The `scanf()` function will stop accepting input after the character `y` and stores the following:
 
-<table border="0">
+<table>
     <tbody>
         <tr>
-            <td colSpan="31" align="center">char<br/>name</td>
+            <td colSpan="31">char<br/>name</td>
         </tr>
         <tr>
             <td>0</td>
@@ -396,10 +396,10 @@ scanf("%10s", name); // <=== User enters: Schwartzenegger
 
 The `scanf()` function will stop accepting input after the character `n` and stores the following:
 
-<table border="0">
+<table>
     <tbody>
         <tr>
-            <td colSpan="31" align="center">char<br/>name</td>
+            <td colSpan="31">char<br/>name</td>
         </tr>
         <tr>
             <td>0</td>
@@ -483,10 +483,10 @@ scanf("%10s", name);  // <=== User enters: '          Schwartzenegger'
 
 Just as before, the `scanf()` function will stop accepting input after the character `n` but will also discard the leading spaces entered and stores the following:
 
-<table border="0">
+<table>
     <tbody>
         <tr>
-            <td colSpan="31" align="center">char<br/>name</td>
+            <td colSpan="31">char<br/>name</td>
         </tr>
         <tr>
             <td>0</td>
@@ -579,10 +579,10 @@ scanf("%[^\n]", name);  // <=== User enters: My name is Arnold
 
 The `scanf()` function accepts the full line an stores:
 
-<table border="0">
+<table>
     <tbody>
         <tr>
-            <td colSpan="31" align="center">char<br/>name</td>
+            <td colSpan="31">char<br/>name</td>
         </tr>
         <tr>
             <td>0</td>
@@ -662,10 +662,10 @@ scanf("%10[^\n]", name);  // <=== User enters: My name is Arnold
 
 The `scanf()` function will store:
 
-<table border="0">
+<table>
     <tbody>
         <tr>
-            <td colSpan="31" align="center">char<br/>name</td>
+            <td colSpan="31">char<br/>name</td>
         </tr>
         <tr>
             <td>0</td>
@@ -749,10 +749,10 @@ scanf("%10[^\n]", name);  // <=== User enters: '          My name is Arnold'
 
 The `scanf()` function will store:
 
-<table border="0">
+<table>
     <tbody>
         <tr>
-            <td colSpan="31" align="center">char<br/>name</td>
+            <td colSpan="31">char<br/>name</td>
         </tr>
         <tr>
             <td>0</td>

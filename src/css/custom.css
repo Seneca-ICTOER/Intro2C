@@ -43,12 +43,18 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-div.mdImg {
-  background-color: #ffffff;
+td {
   text-align: center;
 }
 
-img {
-  display: block;
-  margin: auto;
+tr.highlight td {
+  background-color: rgb(255, 255, 224);
+}
+
+html[data-theme='dark'] tr.highlight td {
+  background-color: rgb(72, 77, 91);
+}
+
+html[data-theme='dark'] p img {
+  background-color: rgb(255, 255, 255);
 }
