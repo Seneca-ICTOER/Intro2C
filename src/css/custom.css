@@ -52,3 +52,9 @@ img {
   display: block;
   margin: auto;
 }
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
