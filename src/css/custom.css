@@ -47,12 +47,12 @@ td {
   text-align: center;
 }
 
-tr.highlight td {
-  background-color: rgb(255, 255, 224);
+.highlight {
+  background-color: rgb(255, 255, 224) !important;
 }
 
-html[data-theme='dark'] tr.highlight td {
-  background-color: rgb(72, 77, 91);
+html[data-theme='dark'] .highlight {
+  background-color: rgb(72, 77, 91) !important;
 }
 
 html[data-theme='dark'] p img {
