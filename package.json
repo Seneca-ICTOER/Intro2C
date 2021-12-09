@@ -28,7 +28,9 @@
     "@mdx-js/react": "^1.6.21",
     "@svgr/webpack": "^5.5.0",
     "clsx": "^1.1.1",
+    "docusaurus-lunr-search": "^2.1.15",
     "file-loader": "^6.2.0",
+    "hogan.js": "^3.0.2",
     "prism-react-renderer": "^1.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -48,10 +50,10 @@
   },
   "devDependencies": {
     "execa": "^5.1.1",
-    "mr-pdf": "^1.0.7",
-    "wait-on": "^6.0.0",
     "husky": "^7.0.0",
+    "mr-pdf": "^1.0.7",
     "prettier": "^2.4.1",
-    "pretty-quick": "^3.1.1"
+    "pretty-quick": "^3.1.1",
+    "wait-on": "^6.0.0"
   }
 }

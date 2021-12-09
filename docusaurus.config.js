@@ -123,5 +123,12 @@ module.exports = {
         ],
       },
     ],
+    [
+      require.resolve('docusaurus-lunr-search'),
+      {
+        languages: ['en'],
+        indexBaseUrl: true,
+      },
+    ],
   ],
 };

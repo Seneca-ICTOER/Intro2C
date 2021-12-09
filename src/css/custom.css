@@ -58,3 +58,7 @@ table {
   margin-right: auto;
   width: fit-content;
 }
+
+.navbar__search {
+  margin-left: 1rem;
+}
