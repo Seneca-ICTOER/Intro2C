@@ -40,7 +40,7 @@ In 1945, John von Neumann, noting that instructions are pieces of information ju
 
 The figure below shows the components of a stored-program computer. They include a central processing unit \(CPU\), a clock, primary memory and a set of devices. Buses interconnect these components and are part of the motherboard. The CPU, primary memory and a clock are also part of the motherboard. The clock controls the rate at which the CPU executes the instructions.
 
-![Diagram of components in a computer](/img/hardware.png)
+![Diagram of components in a computer](/img/svg/hardware.svg)
 
 ### Primary Memory
 
@@ -60,7 +60,7 @@ The CPU is the work-horse of any modern computer. The CPU executes program instr
 - an arithmetic and logic unit \(ALU\)
 - a floating-point accelerator \(FPA\)
 
-![Diagram of CPU components](/img/cpu.png)
+![Diagram of CPU components](/img/svg/cpu.svg)
 
 Registers are the CPU's internal memory. They hold the data used by the ALU and FPA and any new data that the ALU and FPA produce. Register data is volatile: we lose the contents of each register as soon as we turn off power.
 
@@ -92,7 +92,7 @@ An application program transforms raw data from the user \(the input\) into equi
 
 As application developers, we focus on input and output processing and transformation of input data into output data. The figure below relates this focus to the software that we code.
 
-![Diagram of user-software interaction](/img/software.png)
+![Diagram of user-software interaction](/img/svg/software.svg)
 
 ## Outline
 
