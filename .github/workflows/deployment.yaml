@@ -26,9 +26,6 @@ jobs:
           ssh-private-key: ${{ secrets.GH_PAGES_DEPLOY }}
       - name: Generate Seneca-IPC144.pdf
         run: |
-          chmod +x ./convert-to-pdf.sh
-          git add .
-          git commit -m "grant executable permission ./convert-to-pdf.sh"
           yarn serve-convert
           mv ./Seneca-IPC144.pdf ./static
       - name: Release to GitHub Pages
