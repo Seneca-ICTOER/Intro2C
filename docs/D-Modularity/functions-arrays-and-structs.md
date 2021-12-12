@@ -454,26 +454,26 @@ Grades for 975
 
 The values in the original object, its copy and the local object are shown in the table below:
 
-<table border="0">
+<table>
 <thead>
-<tr><td align="center"><code>int main()</code></td>
-    <td align="center" colSpan="2"><code>void set()</code></td></tr>
-<tr><td align="center"><code>struct Student harry</code></td>
-    <td align="center"><code>struct Student st</code></td> 
-    <td align="center"><code>struct Student harry</code></td></tr>
+<tr><td><code>int main()</code></td>
+    <td colSpan="2"><code>void set()</code></td></tr>
+<tr><td><code>struct Student harry</code></td>
+    <td><code>struct Student st</code></td> 
+    <td><code>struct Student harry</code></td></tr>
 </thead>
 <tbody>
-<tr><td align="center" bgcolor="#FFFF99">975 2 50.0f 50.0f</td>
-    <td align="center" bgcolor="#FFFF99">975 2 50.0f 50.0f</td>
-    <td bgcolor="#FFFF99">&nbsp;</td></tr>
+<tr className="highlight"><td>975 2 50.0f 50.0f</td>
+    <td>975 2 50.0f 50.0f</td>
+    <td>&nbsp;</td></tr>
 
-<tr><td align="center" bgcolor="#FFFF99">975 2 50.0f 50.0f</td>
-    <td align="center" bgcolor="#FFFF99">975 2 50.0f 50.0f</td>
-    <td align="center" bgcolor="#FFFF99">306 2 78.9f 91.6f</td></tr>
+<tr className="highlight"><td>975 2 50.0f 50.0f</td>
+    <td>975 2 50.0f 50.0f</td>
+    <td>306 2 78.9f 91.6f</td></tr>
 
-<tr><td align="center" bgcolor="#FFFF99">975 2 50.0f 50.0f</td>
-    <td align="center" bgcolor="#FFFF99">306 2 78.9f 91.6f</td>
-    <td align="center" bgcolor="#FFFF99">306 2 78.9f 91.6f</td></tr>
+<tr className="highlight"><td>975 2 50.0f 50.0f</td>
+    <td>306 2 78.9f 91.6f</td>
+    <td>306 2 78.9f 91.6f</td></tr>
 </tbody>
 </table>
 
@@ -541,37 +541,37 @@ Grades for 306
 
 The values in the original object and the local object are shown in the table below:
 
-<table border="0">
+<table>
 <thead>
-<tr><td align="center"><code>int main()</code></td>
-<td align="center" colSpan="2"><code>void set()</code></td>
-<td align="center"><code>void display()</code></td></tr>
+<tr><td><code>int main()</code></td>
+<td colSpan="2"><code>void set()</code></td>
+<td><code>void display()</code></td></tr>
 
-<tr><td align="center"><code>struct Student harry</code></td>
-<td align="center"><code>struct Student *st</code></td>
-<td align="center"><code>struct Student harry</code></td>
-<td align="center"><code>struct Student st</code></td></tr>
+<tr><td><code>struct Student harry</code></td>
+<td><code>struct Student *st</code></td>
+<td><code>struct Student harry</code></td>
+<td><code>struct Student st</code></td></tr>
 </thead>
 <tbody>
-<tr><td align="center">Address:<br/>22ff2b8d4</td>
-<td align="center">&nbsp;<br/>22ff2b8ec</td>
-<td align="center">&nbsp;<br/>22ff2b8f0</td>
-<td align="center">&nbsp;<br/>22ff2b908</td></tr>
+<tr><td>Address:<br/>22ff2b8d4</td>
+<td>&nbsp;<br/>22ff2b8ec</td>
+<td>&nbsp;<br/>22ff2b8f0</td>
+<td>&nbsp;<br/>22ff2b908</td></tr>
 
-<tr><td align="center" bgcolor="#FFFF99">975 2 50.0f 50.0f</td>
-    <td align="center" bgcolor="#FFFF99">&nbsp;</td>
-    <td align="center" bgcolor="#FFFF99">&nbsp;</td>
-    <td align="center" bgcolor="#FFFF99">&nbsp;</td></tr>
+<tr className="highlight"><td>975 2 50.0f 50.0f</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td></tr>
 
-<tr><td align="center" bgcolor="#FFFF99">306 2 78.9f 91.6f</td>
-<td align="center" bgcolor="#FFFF99">2ff2b8d4</td>
-<td align="center" bgcolor="#FFFF99">306 2 78.9f 91.6f</td>
-<td align="center" bgcolor="#FFFF99">&nbsp;</td></tr>
+<tr className="highlight"><td>306 2 78.9f 91.6f</td>
+<td>2ff2b8d4</td>
+<td>306 2 78.9f 91.6f</td>
+<td>&nbsp;</td></tr>
 
-<tr><td align="center" bgcolor="#FFFF99">306 2 78.9f 91.6f</td>
-<td align="center" bgcolor="#FFFF99">&nbsp;</td>
-<td align="center" bgcolor="#FFFF99">&nbsp;</td>
-<td align="center" bgcolor="#FFFF99">306 2 78.9f 91.6f</td></tr>
+<tr className="highlight"><td>306 2 78.9f 91.6f</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>306 2 78.9f 91.6f</td></tr>
 </tbody>
 </table>
 
@@ -635,37 +635,37 @@ If we **pass by address** with no intention of changing that object within the f
 
 The values in the original object and the local object are shown in the table below:
 
-<table border="0">
+<table>
 <thead>
-<tr><td align="center"><code>int main()</code></td>
-    <td align="center" colSpan="2"><code>void set()</code></td>
-    <td align="center"><code>void display()</code></td></tr>
+<tr><td><code>int main()</code></td>
+    <td colSpan="2"><code>void set()</code></td>
+    <td><code>void display()</code></td></tr>
 
-<tr><td align="center"><code>struct Student harry</code></td>
-    <td align="center"><code>struct Student *st</code></td>
-    <td align="center"><code>struct Student harry</code></td>
-    <td align="center"><code>const struct Student *st</code></td></tr>
+<tr><td><code>struct Student harry</code></td>
+    <td><code>struct Student *st</code></td>
+    <td><code>struct Student harry</code></td>
+    <td><code>const struct Student *st</code></td></tr>
 </thead>
 <tbody>
-<tr><td align="center">Address:<br/>22ff2b8d4</td>
-<td align="center">&nbsp;<br/>22ff2b8ec</td>
-<td align="center">&nbsp;<br/>22ff2b8f0</td>
-<td align="center">&nbsp;<br/>22ff2b908</td></tr>
+<tr><td>Address:<br/>22ff2b8d4</td>
+<td>&nbsp;<br/>22ff2b8ec</td>
+<td>&nbsp;<br/>22ff2b8f0</td>
+<td>&nbsp;<br/>22ff2b908</td></tr>
 
-<tr><td align="center" bgcolor="#FFFF99">975 2 50.0f 50.0f</td>
-    <td align="center" bgcolor="#FFFF99">&nbsp;</td>
-    <td align="center" bgcolor="#FFFF99">&nbsp;</td>
-    <td align="center" bgcolor="#FFFF99">&nbsp;</td></tr>
+<tr className="highlight"><td>975 2 50.0f 50.0f</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td></tr>
 
-<tr><td align="center" bgcolor="#FFFF99">306 2 78.9f 91.6f</td>
-<td align="center" bgcolor="#FFFF99">2ff2b8d4</td>
-<td align="center" bgcolor="#FFFF99">306 2 78.9f 91.6f</td>
-<td align="center" bgcolor="#FFFF99">&nbsp;</td></tr>
+<tr className="highlight"><td>306 2 78.9f 91.6f</td>
+<td>2ff2b8d4</td>
+<td>306 2 78.9f 91.6f</td>
+<td>&nbsp;</td></tr>
 
-<tr><td align="center" bgcolor="#FFFF99">306 2 78.9f 91.6f</td>
-<td align="center" bgcolor="#FFFF99">&nbsp;</td>
-<td align="center" bgcolor="#FFFF99">&nbsp;</td>
-<td align="center" bgcolor="#FFFF99">2ff2b8d4</td></tr>
+<tr className="highlight"><td>306 2 78.9f 91.6f</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>2ff2b8d4</td></tr>
 </tbody>
 </table>
 
@@ -835,113 +835,113 @@ The table includes:
 The breakdown of each object into its members in the head of the table. We reserve a separate line for the addresses that are pointed to:
 :::
 
-<table border="0">
+<table>
 <thead>
-<tr><td align="center" colSpan="4"><code>int</code></td>
-    <td align="center" colSpan="2"><code>void</code></td>
-    <td align="center" colSpan="4"><code>struct A</code></td></tr>
+<tr><td colSpan="4"><code>int</code></td>
+    <td colSpan="2"><code>void</code></td>
+    <td colSpan="4"><code>struct A</code></td></tr>
 
-<tr><td align="center" colSpan="4"><code>main()</code></td>
-<td align="center" colSpan="2"><code>foo()</code></td>
-<td align="center" colSpan="4"><code>goo()</code></td></tr>
+<tr><td colSpan="4"><code>main()</code></td>
+<td colSpan="2"><code>foo()</code></td>
+<td colSpan="4"><code>goo()</code></td></tr>
 
-<tr><td align="center" colSpan="2"><code>struct A</code></td>
-    <td align="center" colSpan="2"><code>struct A</code></td>
-    <td align="center"><code>struct A*</code></td>
-    <td align="center">&nbsp;</td>
-    <td align="center" colSpan="2"><code>struct A</code></td>
-    <td align="center" colSpan="2"><code>struct A</code></td></tr>
+<tr><td colSpan="2"><code>struct A</code></td>
+    <td colSpan="2"><code>struct A</code></td>
+    <td><code>struct A*</code></td>
+    <td>&nbsp;</td>
+    <td colSpan="2"><code>struct A</code></td>
+    <td colSpan="2"><code>struct A</code></td></tr>
 </thead>
 <tbody>
-<tr><td align="center" colSpan="2">a</td>
-    <td align="center" colSpan="2">b</td>
-    <td align="center">c</td>
-    <td align="center">&nbsp;</td>
-    <td align="center" colSpan="2">d</td>
-    <td align="center" colSpan="2">e</td></tr>
+<tr><td colSpan="2">a</td>
+    <td colSpan="2">b</td>
+    <td>c</td>
+    <td>&nbsp;</td>
+    <td colSpan="2">d</td>
+    <td colSpan="2">e</td></tr>
 
-<tr><td align="center" colSpan="2">Address:<br/>1000</td>
-    <td align="center" colSpan="2">&nbsp;<br/>100C</td>
-    <td align="center">&nbsp;<br/>1018</td>
-    <td align="center">&nbsp;<br/>101C</td>
-    <td align="center" colSpan="2">&nbsp;<br/>1020</td>
-    <td align="center" colSpan="2">&nbsp;<br/>102C</td></tr>
+<tr><td colSpan="2">Address:<br/>1000</td>
+    <td colSpan="2">&nbsp;<br/>100C</td>
+    <td>&nbsp;<br/>1018</td>
+    <td>&nbsp;<br/>101C</td>
+    <td colSpan="2">&nbsp;<br/>1020</td>
+    <td colSpan="2">&nbsp;<br/>102C</td></tr>
 
-<tr><td align="center">int</td>
-    <td align="center">double</td>
-    <td align="center">int</td>
-    <td align="center">double</td>
-    <td align="center">&nbsp;</td>
-    <td align="center">int</td>
-    <td align="center">int</td>
-    <td align="center">double</td>
-    <td align="center">int</td>
-    <td align="center">double</td></tr>
+<tr><td>int</td>
+    <td>double</td>
+    <td>int</td>
+    <td>double</td>
+    <td>&nbsp;</td>
+    <td>int</td>
+    <td>int</td>
+    <td>double</td>
+    <td>int</td>
+    <td>double</td></tr>
 
-<tr><td align="center">x</td>
-    <td align="center">r</td>
-    <td align="center">x</td>
-    <td align="center">r</td>
-    <td align="center">&nbsp;</td>
-    <td align="center">i</td>
-    <td align="center">x</td>
-    <td align="center">r</td>
-    <td align="center">x</td>
-    <td align="center">r</td></tr>
+<tr><td>x</td>
+    <td>r</td>
+    <td>x</td>
+    <td>r</td>
+    <td>&nbsp;</td>
+    <td>i</td>
+    <td>x</td>
+    <td>r</td>
+    <td>x</td>
+    <td>r</td></tr>
 
-<tr><td bgcolor="#FFFF99">&nbsp;</td>
-    <td bgcolor="#FFFF99">&nbsp;</td>
-    <td bgcolor="#FFFF99">&nbsp;</td>
-    <td bgcolor="#FFFF99">&nbsp;</td>
-    <td align="center" bgcolor="#FFFF99">1000</td>
-    <td bgcolor="#FFFF99">&nbsp;</td>
-    <td bgcolor="#FFFF99">&nbsp;</td>
-    <td bgcolor="#FFFF99">&nbsp;</td>
-    <td bgcolor="#FFFF99">&nbsp;</td>
-    <td bgcolor="#FFFF99">&nbsp;</td></tr>
+<tr className="highlight"><td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>1000</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td></tr>
 
-<tr><td bgcolor="#FFFF99">&nbsp;</td>
-    <td bgcolor="#FFFF99">&nbsp;</td>
-    <td bgcolor="#FFFF99">&nbsp;</td>
-    <td bgcolor="#FFFF99">&nbsp;</td>
-    <td align="center" bgcolor="#FFFF99">1000</td>
-    <td bgcolor="#FFFF99">&nbsp;</td>
-    <td bgcolor="#FFFF99">&nbsp;</td>
-    <td bgcolor="#FFFF99">&nbsp;</td>
-    <td bgcolor="#FFFF99">&nbsp;</td>
-    <td bgcolor="#FFFF99">&nbsp;</td></tr>
+<tr className="highlight"><td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>1000</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td></tr>
 
-<tr><td bgcolor="#FFFF99">&nbsp;</td>
-    <td bgcolor="#FFFF99">&nbsp;</td>
-    <td bgcolor="#FFFF99">&nbsp;</td>
-    <td bgcolor="#FFFF99">&nbsp;</td>
-    <td align="center" bgcolor="#FFFF99">1000</td>
-    <td bgcolor="#FFFF99">&nbsp;</td>
-    <td bgcolor="#FFFF99">&nbsp;</td>
-    <td bgcolor="#FFFF99">&nbsp;</td>
-    <td bgcolor="#FFFF99">&nbsp;</td>
-    <td bgcolor="#FFFF99">&nbsp;</td></tr>
+<tr className="highlight"><td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>1000</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td></tr>
 
-<tr><td bgcolor="#FFFF99">&nbsp;</td>
-    <td bgcolor="#FFFF99">&nbsp;</td>
-    <td bgcolor="#FFFF99">&nbsp;</td>
-    <td bgcolor="#FFFF99">&nbsp;</td>
-    <td align="center" bgcolor="#FFFF99">1000</td>
-    <td bgcolor="#FFFF99">&nbsp;</td>
-    <td bgcolor="#FFFF99">&nbsp;</td>
-    <td bgcolor="#FFFF99">&nbsp;</td>
-    <td bgcolor="#FFFF99">&nbsp;</td>
-    <td bgcolor="#FFFF99">&nbsp;</td></tr>
+<tr className="highlight"><td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>1000</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td></tr>
 
-<tr><td bgcolor="#FFFF99">&nbsp;</td>
-    <td bgcolor="#FFFF99">&nbsp;</td>
-    <td bgcolor="#FFFF99">&nbsp;</td>
-    <td bgcolor="#FFFF99">&nbsp;</td>
-    <td align="center" bgcolor="#FFFF99">1000</td>
-    <td bgcolor="#FFFF99">&nbsp;</td>
-    <td bgcolor="#FFFF99">&nbsp;</td>
-    <td bgcolor="#FFFF99">&nbsp;</td>
-    <td bgcolor="#FFFF99">&nbsp;</td>
-    <td bgcolor="#FFFF99">&nbsp;</td></tr>
+<tr className="highlight"><td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>1000</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td></tr>
 </tbody>
 </table>

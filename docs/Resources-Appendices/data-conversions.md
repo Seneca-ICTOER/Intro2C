@@ -38,54 +38,54 @@ To convert a binary number to its hexadecimal equivalent, we:
 
 Consider the 8-bit number **01011100<sub>2</sub>**:
 
-<table border="0">
+<table>
     <tbody>
         <tr>
             <td>Nibble #</td>
-            <td colSpan="4" align="center">1</td>
-            <td colSpan="4" align="center">0</td>
+            <td colSpan="4">1</td>
+            <td colSpan="4">0</td>
         </tr>
         <tr>
             <td>Bit #</td>
-            <td align="center">7</td>
-            <td align="center">6</td>
-            <td align="center">5</td>
-            <td align="center">4</td>
-            <td align="center">3</td>
-            <td align="center">2</td>
-            <td align="center">1</td>
-            <td align="center">0</td>
+            <td>7</td>
+            <td>6</td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>0</td>
         </tr>
         <tr>
             <td>Multiplier</td>
-            <td align="center">8</td>
-            <td align="center">4</td>
-            <td align="center">2</td>
-            <td align="center">1</td>
-            <td align="center">8</td>
-            <td align="center">4</td>
-            <td align="center">2</td>
-            <td align="center">1</td>
+            <td>8</td>
+            <td>4</td>
+            <td>2</td>
+            <td>1</td>
+            <td>8</td>
+            <td>4</td>
+            <td>2</td>
+            <td>1</td>
         </tr>
         <tr>
             <td>Contents</td>
-            <td align="center">0</td>
-            <td align="center">1</td>
-            <td align="center">0</td>
-            <td align="center">1</td>
-            <td align="center">1</td>
-            <td align="center">1</td>
-            <td align="center">0</td>
-            <td align="center">0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
         </tr>
         <tr>
             <td>Nibble Values</td>
-            <td colSpan="4" align="center">0*8 + 1*4 + 0*2 + 1*1 = 0x5</td>
-            <td colSpan="4" align="center">1*8 + 1*4 + 0*2 + 1*0 = 0xC</td>
+            <td colSpan="4">0*8 + 1*4 + 0*2 + 1*1 = 0x5</td>
+            <td colSpan="4">1*8 + 1*4 + 0*2 + 1*0 = 0xC</td>
         </tr>
         <tr>
             <td>Byte Value</td>
-            <td colSpan="8" align="center">0x5C</td>
+            <td colSpan="8">0x5C</td>
         </tr>
     </tbody>
 </table>
@@ -113,49 +113,49 @@ Consider the hexadecimal number **0x5C**:
 - Take the result (0x1), divide it by 2 and put the remainder (1) in bit 6
 - Take the result (0x0), divide it by 2 and put the remainder (0) in bit 7
 
-<table border="0">
+<table>
     <tbody>
         <tr>
-            <td align="center">Bit#</td>
-            <td align="center">7</td>
-            <td align="center">6</td>
-            <td align="center">5</td>
-            <td align="center">4</td>
-            <td align="center">3</td>
-            <td align="center">2</td>
-            <td align="center">1</td>
-            <td align="center">0</td>
+            <td>Bit#</td>
+            <td>7</td>
+            <td>6</td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>0</td>
         </tr>
         <tr>
-            <td align="center">Byte Value</td>
-            <td colSpan="8" align="center">0x5C</td>
+            <td>Byte Value</td>
+            <td colSpan="8">0x5C</td>
         </tr>
         <tr>
-            <td align="center">Nibble Values</td>
-            <td colSpan="4" align="center">0x5</td>
-            <td colSpan="4" align="center">0xC</td>
+            <td>Nibble Values</td>
+            <td colSpan="4">0x5</td>
+            <td colSpan="4">0xC</td>
         </tr>
         <tr>
-            <td align="center">Divide by 2</td>
-            <td align="center">0</td>
-            <td align="center">0</td>
-            <td align="center">1</td>
-            <td align="center">2</td>
-            <td align="center">0</td>
-            <td align="center">1</td>
-            <td align="center">3</td>
-            <td align="center">6</td>
+            <td>Divide by 2</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>0</td>
+            <td>1</td>
+            <td>3</td>
+            <td>6</td>
         </tr>
         <tr>
-            <td align="center">Bit Values</td>
-            <td align="center">0</td>
-            <td align="center">1</td>
-            <td align="center">0</td>
-            <td align="center">1</td>
-            <td align="center">1</td>
-            <td align="center">1</td>
-            <td align="center">0</td>
-            <td align="center">0</td>
+            <td>Bit Values</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
         </tr>
     </tbody>
 </table>
@@ -182,40 +182,40 @@ Consider the value **92**:
 - Take the result (**1**), divide it by 2 and store the remainder (**1**) in bit 6
 - Take the result (**0**), divide it by 2 and store the remainder (**0**) in bit 7
 
-<table border="0">
+<table>
     <tbody>
         <tr>
-            <td align="center">Bit#</td>
-            <td align="center">7</td>
-            <td align="center">6</td>
-            <td align="center">5</td>
-            <td align="center">4</td>
-            <td align="center">3</td>
-            <td align="center">2</td>
-            <td align="center">1</td>
-            <td align="center">0</td>
+            <td>Bit#</td>
+            <td>7</td>
+            <td>6</td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>0</td>
         </tr>
         <tr>
-            <td align="center">Value</td>
-            <td align="center">0</td>
-            <td align="center">1</td>
-            <td align="center">2</td>
-            <td align="center">5</td>
-            <td align="center">11</td>
-            <td align="center">23</td>
-            <td align="center">46</td>
-            <td align="center">92</td>
+            <td>Value</td>
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>5</td>
+            <td>11</td>
+            <td>23</td>
+            <td>46</td>
+            <td>92</td>
         </tr>
         <tr>
-            <td align="center">Bit Values</td>
-            <td align="center">0</td>
-            <td align="center">1</td>
-            <td align="center">0</td>
-            <td align="center">1</td>
-            <td align="center">1</td>
-            <td align="center">1</td>
-            <td align="center">0</td>
-            <td align="center">0</td>
+            <td>Bit Values</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
         </tr>
     </tbody>
 </table>
@@ -226,55 +226,55 @@ To convert a binary number into its decimal equivalent, we multiply the value in
 
 Consider the 8-bit binary number **01011100<sub>2</sub>**:
 
-<table border="0">
+<table>
     <tbody>
         <tr>
-            <td align="center">Bit #</td>
-            <td align="center">7</td>
-            <td align="center">6</td>
-            <td align="center">5</td>
-            <td align="center">4</td>
-            <td align="center">3</td>
-            <td align="center">2</td>
-            <td align="center">1</td>
-            <td align="center">0</td>
+            <td>Bit #</td>
+            <td>7</td>
+            <td>6</td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>0</td>
         </tr>
         <tr>
-            <td align="center">Power of 2</td>
-            <td align="center">7</td>
-            <td align="center">6</td>
-            <td align="center">5</td>
-            <td align="center">4</td>
-            <td align="center">3</td>
-            <td align="center">2</td>
-            <td align="center">1</td>
-            <td align="center">0</td>
+            <td>Power of 2</td>
+            <td>7</td>
+            <td>6</td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>0</td>
         </tr>
         <tr>
-            <td align="center">Bit Values</td>
-            <td align="center">0</td>
-            <td align="center">1</td>
-            <td align="center">0</td>
-            <td align="center">1</td>
-            <td align="center">1</td>
-            <td align="center">1</td>
-            <td align="center">0</td>
-            <td align="center">0</td>
+            <td>Bit Values</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
         </tr>
         <tr>
-            <td align="center">Multiplier</td>
-            <td align="center">128</td>
-            <td align="center">64</td>
-            <td align="center">32</td>
-            <td align="center">16</td>
-            <td align="center">8</td>
-            <td align="center">4</td>
-            <td align="center">2</td>
-            <td align="center">1</td>
+            <td>Multiplier</td>
+            <td>128</td>
+            <td>64</td>
+            <td>32</td>
+            <td>16</td>
+            <td>8</td>
+            <td>4</td>
+            <td>2</td>
+            <td>1</td>
         </tr>
         <tr>
-            <td align="center">Byte Value</td>
-            <td colSpan="8" align="center">0*128 + 1*64 + 0*32 + 1*16 + 1*8 + 1*4 + 0*2 + 0*1 = 92</td>
+            <td>Byte Value</td>
+            <td colSpan="8">0*128 + 1*64 + 0*32 + 1*16 + 1*8 + 1*4 + 0*2 + 0*1 = 92</td>
         </tr>
     </tbody>
 </table>
