@@ -1,5 +1,8 @@
 ---
+id: data-conversions
+title: Data Conversions
 sidebar_position: 3
+description: Convert between binary, hexadecimal and decimal notations.
 ---
 
 # Data Conversions
@@ -8,8 +11,8 @@ sidebar_position: 3
 
 After reading this section, you will be able to:
 
-- How to convert between binary and hexadecimal notation
-- How to convert between binary and decimal notation
+- Convert between binary and hexadecimal notation
+- Convert between binary and decimal notation
 
 ## Introduction
 
@@ -280,7 +283,7 @@ Consider the 8-bit binary number **01011100<sub>2</sub>**:
 
 A program instruction consists of an operation and possibly some operands. Each instruction performs an operation on its operands or on values stored in operand addresses. The addresses are either register names or addresses in primary memory.
 
-![instruction](/img/instruction.png)
+![Program Instruction Diagram](/img/instruction.png)
 
 The set of instructions in binary on a Windows 7 machine for a program that displays the phrase "This is C" looks like:
 
@@ -385,6 +388,6 @@ To quit the debug program, we enter:
 
 The `debug` program uses an operating system program called an **_assembler_** to convert our assembly language instructions into binary information as shown in the figure below:
 
-![assembler](/img/assembler.png)
+![Assembler Diagram](/img/assembler.png)
 
 We call the binary result **_machine language_**.
