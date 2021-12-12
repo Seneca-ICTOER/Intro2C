@@ -2,7 +2,6 @@
 id: types
 sidebar_position: 1
 title: Types
-slug: /computations/types
 description: This chapter describes the basic types in C, how they differ in memory size, and how they can be used to declare variables
 ---
 
