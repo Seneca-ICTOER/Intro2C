@@ -2,7 +2,7 @@
 sidebar_position: 5
 title: Output Functions
 id: output-functions
-desctiption: This chapter on output functions is about invoking standard library procedures to stream data to users
+description: This chapter on output functions is about invoking standard library procedures to stream data to users
 ---
 
 # Output Functions
@@ -253,14 +253,16 @@ d|<--           %c
 64|<--          %x
 ```
 
-> **Note**<br/>
->
-> - `doubles` and `floats` **round** to the requested precision before being displayed
-> - `double` data may be displayed using `%f` (`printf()` converts float values to doubles for compatibility with legacy programs)
-> - `char`acter data can be displayed in various formats including:
->   - character
->   - decimal
->   - hexadecimal
+:::note
+
+- `doubles` and `floats` **round** to the requested precision before being displayed
+- `double` data may be displayed using `%f` (`printf()` converts float values to doubles for compatibility with legacy programs)
+- `char`acter data can be displayed in various formats including:
+  - character
+  - decimal
+  - hexadecimal
+
+:::
 
 ### Portability Note (Optional)
 
