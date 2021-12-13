@@ -366,7 +366,8 @@ The conversion specifiers include:
 - `%n` does not output any characters but instead returns the number of characters processed so far.
 - **_Scientific_** (`%e` `%E`) refers to output in mantissa/exponent form `d.dddEdd` (for example, `0.123e3`, which stands for `0.123 x 103` or `123.0`).
 - **_General_** (`%g` `%G`) refers to output in the shortest form possible; decimal or mantissa/exponent (for example, `0.123e-5` rather than `0.00000123` and `3.1` rather than `0.31e1`).
-  :::
+
+:::
 
 ### Conversion Control
 
