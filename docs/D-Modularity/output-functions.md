@@ -1,8 +1,8 @@
 ---
-sidebar_position: 5
-title: Output Functions
 id: output-functions
-description: This chapter on output functions is about invoking standard library procedures to stream data to users
+title: Output Functions
+sidebar_position: 5
+description: Describes how to invoke standard library procedures to stream data to users
 ---
 
 # Output Functions

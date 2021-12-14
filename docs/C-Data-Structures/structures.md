@@ -2,7 +2,7 @@
 id: structures
 title: Structures
 sidebar_position: 2
-description: A structure type is a collection of not necessarily identical types.
+description: A structure type is a collection of not necessarily identical types
 ---
 
 # Structures

@@ -1,7 +1,8 @@
 ---
-sidebar_position: 5
-title: Style Guidelines
 id: style-guidelines
+title: Style Guidelines
+sidebar_position: 5
+description: Self-document programs using comments and descriptive identifiers
 ---
 
 # Style Guidelines

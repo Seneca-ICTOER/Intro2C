@@ -2,7 +2,7 @@
 id: text-files
 title: Text Files
 sidebar_position: 1
-description: Stream data using standard library functions to access persistent text.
+description: Describes how to open a text file for reading data into a program, writing data out to a file, and appending data to a file
 ---
 
 # Text Files

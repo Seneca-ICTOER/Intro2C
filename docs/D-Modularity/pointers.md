@@ -2,7 +2,7 @@
 id: pointers
 title: Pointers
 sidebar_position: 2
-description: A variable that holds an address is called a pointer.
+description: A variable that holds an address is called a pointer
 ---
 
 # Pointers

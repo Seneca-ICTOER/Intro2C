@@ -1,8 +1,8 @@
 ---
 id: character-strings
-sidebar_position: 1
 title: Character Strings
-description: Understand and learn how to stream data using standard library functions.
+sidebar_position: 1
+description: A more in-depth look at C-string composition with complementing standard input and output techniques
 ---
 
 # Character Strings (C string)
