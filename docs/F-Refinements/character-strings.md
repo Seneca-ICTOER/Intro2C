@@ -52,8 +52,11 @@ A string is a `char` array with a special property which is a terminator element
     </tbody>
 </table>
 
-> <u>Term Definition</u><br/>
-> The term "Meaningful Characters" in these notes refers to the actual data content you want to manage in the C string character array.
+:::info Term Definition
+
+The term "Meaningful Characters" in these notes refers to the actual data content you want to manage in the C string character array.
+
+:::
 
 The **null terminator** has the integral value of `0` on any host platform (in its collating sequence). All of its bits are 0's. The null terminator occupies the first position in the [ASCII](../Resources-Appendices/ascii-collating-sequence.md) and [EBCDIC](../Resources-Appendices/ebcdic-collating-sequence.md).
 
@@ -107,8 +110,11 @@ The index identifying the null terminator element is the same as the number of m
     </tbody>
 </table>
 
-> <u>HINT</u><br/>
-> The number of memory locations occupied by a C string (`char`) is one more than the number of meaningful characters in the string so as to hold the null terminator.
+:::tip Hint
+
+The number of memory locations occupied by a C string (`char`) is one more than the number of meaningful characters in the string so as to hold the null terminator.
+
+:::
 
 ### Allocating Memory
 

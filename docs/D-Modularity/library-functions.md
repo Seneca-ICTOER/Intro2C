@@ -431,7 +431,11 @@ Process time is 0.040 secs
 Value of x is 1.0001000050
 ```
 
-> Note, the cast to a `double` forces floating-point division.
+:::note
+
+The cast to a `double` forces floating-point division.
+
+:::
 
 ## Character
 

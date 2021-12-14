@@ -253,14 +253,16 @@ d|<--           %c
 64|<--          %x
 ```
 
-> **Note**<br/>
->
-> - `doubles` and `floats` **round** to the requested precision before being displayed
-> - `double` data may be displayed using `%f` (`printf()` converts float values to doubles for compatibility with legacy programs)
-> - `char`acter data can be displayed in various formats including:
->   - character
->   - decimal
->   - hexadecimal
+:::note
+
+- `doubles` and `floats` **round** to the requested precision before being displayed
+- `double` data may be displayed using `%f` (`printf()` converts float values to doubles for compatibility with legacy programs)
+- `char`acter data can be displayed in various formats including:
+  - character
+  - decimal
+  - hexadecimal
+
+:::
 
 ### Portability Note (Optional)
 
