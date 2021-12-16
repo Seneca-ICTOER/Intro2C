@@ -1,8 +1,8 @@
 ---
 id: types
-title: Types
 sidebar_position: 1
-description: Appropriate types for storing program variables and constants and describe the internal representations
+title: Types
+description: This chapter describes the basic types in C, how they differ in memory size, and how they can be used to declare variables
 ---
 
 # Types
@@ -18,7 +18,9 @@ After reading this section, you will be able to:
 
 A typed programming language uses a type system to interpret the bit streams in memory. C is a typed programming language. A type is the rule that defines how to store values in memory and which operations are admissible on those values. A type defines the number of bytes available for storing values and hence the range of possible values. We use different types to store different information. The relation between types and raw memory is illustrated in the figure below.
 
-![types](/img/types.png)
+![Representation of memory allocation for basic types](/img/types.png)
+
+This chapter describes the four most common types in the C language and the ranges of values that these types allow. This chapter concludes by describing how to allocate memory for variables by identifying their contents using a type.
 
 This chapter describes the four most common types in the C language and the ranges of values that these types allow. This chapter concludes by describing how to allocate memory for variables by identifying their contents using a type.
 
@@ -26,33 +28,33 @@ This chapter describes the four most common types in the C language and the rang
 
 The four most common types of the C language for performing arithmetic calculations are:
 
-- char
-- int
-- float
-- double
+- `char`
+- `int`
+- `float`
+- `double`
 
 A **`char`** occupies one byte and can store a small integer value, a single character or a single symbol:
 
-<table>
-    <tbody>
-        <tr>
-            <td colSpan="8">char</td>
-        </tr>
-        <tr>
-            <td colSpan="8">1 Byte</td>
-        </tr>
-        <tr className="highlight">
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-    </tbody>
-</table>
+  <table>
+      <tbody>
+          <tr>
+              <td colSpan="8">char</td>
+          </tr>
+          <tr>
+              <td colSpan="8">1 Byte</td>
+          </tr>
+          <tr className="highlight">
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+          </tr>
+      </tbody>
+  </table>
 
 An **`int`** occupies one word and can store an integer value. In a 32-bit environment, an **`int`** occupies 4 bytes:
 
@@ -157,272 +159,261 @@ A **`float`** typically occupies 4 bytes and can store a single-precision, float
 A **`double`** typically occupies 8 bytes and can store a double-precision, floating-point number:
 
 <table>
-    <tbody>
-        <tr>
-            <td colSpan="64">double</td>
-        </tr>
-        <tr>
-            <td colSpan="8">1 Byte</td>
-            <td colSpan="8">1 Byte</td>
-            <td colSpan="8">1 Byte</td>
-            <td colSpan="8">1 Byte</td>
-            <td colSpan="8">1 Byte</td>
-            <td colSpan="8">1 Byte</td>
-            <td colSpan="8">1 Byte</td>
-            <td colSpan="8">1 Byte</td>
-        </tr>
-        <tr className="highlight">
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-    </tbody>
+<tbody>
+    <tr>
+        <td colSpan="64">double</td>
+    </tr>
+    <tr>
+        <td colSpan="8">1 Byte</td>
+        <td colSpan="8">1 Byte</td>
+        <td colSpan="8">1 Byte</td>
+        <td colSpan="8">1 Byte</td>
+        <td colSpan="8">1 Byte</td>
+        <td colSpan="8">1 Byte</td>
+        <td colSpan="8">1 Byte</td>
+        <td colSpan="8">1 Byte</td>
+    </tr>
+    <tr className="highlight">
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+</tbody>
 </table>
 
 ## Size Specifiers
 
 Size specifiers adjust the size of the **`int`** and **`double`** types.
 
-### _int_ Type Size Specifiers
+### `int` Type Size Specifiers
 
 Specifying the size of an int ensures that the type contains a minimum number of bits. The three specifiers are:
 
-- short
-- long
-- long long
+- `short`
+- `long`
+- `long long`
 
-A **`short int`** \(or simply, a short\) contains at least 16 bits:
+A **`short int`** \(or simply, a `short`\) contains at least 16 bits:
 
-<table>
-    <tbody>
-        <tr>
-            <td colSpan="16">short</td>
-        </tr>
-        <tr>
-            <td colSpan="8">1 Byte</td>
-            <td colSpan="8">1 Byte</td>
-        </tr>
-        <tr className="highlight">
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-    </tbody>
+<table >
+<tr>
+    <td colSpan="16">short</td>
+</tr>
+<tr>
+    <td colSpan="8">1 Byte</td>
+    <td colSpan="8">1 Byte</td>
+</tr>
+<tr className="highlight">
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+</tr>
 </table>
 
-A **`long int`** \(or simply, a long\) contains at least 32 bits:
+A **`long int`** \(or simply, a `long`\) contains at least 32 bits:
 
-<table>
-    <tbody>
-        <tr>
-            <td colSpan="32">long</td>
-        </tr>
-        <tr>
-            <td colSpan="8">1 Byte</td>
-            <td colSpan="8">1 Byte</td>
-            <td colSpan="8">1 Byte</td>
-            <td colSpan="8">1 Byte</td>
-        </tr>
-        <tr className="highlight">
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-    </tbody>
+<table >
+    <tr><td colspan="32"><code>long</code></td></tr>
+    <tr><td colspan="8">1 Byte</td>
+        <td colspan="8">1 Byte</td>
+        <td colspan="8">1 Byte</td>
+        <td colspan="8">1 Byte</td></tr>
+    <tr className="highlight">
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td></tr>
 </table>
 
-A **`long long int`** \(or simply, a long long\) contains at least 64 bits:
+A **`long long int`** \(or simply, a `long long`\) contains at least 64 bits:
 
-<table>
-    <tbody>
-        <tr>
-            <td colSpan="64">long long</td>
-        </tr>
-        <tr>
-            <td colSpan="8">1 Byte</td>
-            <td colSpan="8">1 Byte</td>
-            <td colSpan="8">1 Byte</td>
-            <td colSpan="8">1 Byte</td>
-            <td colSpan="8">1 Byte</td>
-            <td colSpan="8">1 Byte</td>
-            <td colSpan="8">1 Byte</td>
-            <td colSpan="8">1 Byte</td>
-        </tr>
-        <tr className="highlight">
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-    </tbody>
+<table >
+  <tr>
+      <td colSpan="64">long long</td>
+  </tr>
+  <tr>
+      <td colSpan="8">1 Byte</td>
+      <td colSpan="8">1 Byte</td>
+      <td colSpan="8">1 Byte</td>
+      <td colSpan="8">1 Byte</td>
+      <td colSpan="8">1 Byte</td>
+      <td colSpan="8">1 Byte</td>
+      <td colSpan="8">1 Byte</td>
+      <td colSpan="8">1 Byte</td>
+  </tr>
+  <tr className="highlight">
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+  </tr>
 </table>
 
 The size of a simple **`int`** is no less than the size of a **`short`**.
 
-### _double_ Type Size Specifier
+### `double` Type Size Specifier
 
 The size of a **`long double`** depends on the environment and is typically at least 64 bits:
 
@@ -512,7 +503,7 @@ The size of a **`long double`** depends on the environment and is typically at l
 
 Specifying the **`long double`** type only ensures that it contains at least as many bits as a **`double`**. The C language does not require a **`long double`** to contain a minimum number of bits.
 
-## const Qualifier
+## `const` Qualifier
 
 Any type can hold a constant value. A constant value cannot be changed. To qualify a type as holding a constant value we use the keyword const. A type qualified as **`const`** is unmodifiable. That is, if a program instruction attempts to modify a **`const`** qualified type, the compiler will report an error.
 
@@ -520,16 +511,16 @@ Any type can hold a constant value. A constant value cannot be changed. To quali
 
 Hardware manufacturers distinguish integral types from floating-point types and represent integral data and floating-point data differently.
 
-- integral types: **`char int`**
-- floating-point types: **`float double`**
+- integral types: **`char` `int`**
+- floating-point types: **`float` `double`**
 
 ### Integral Types
 
-C stores the char and int data in equivalent binary form. Binary form represents the value stored exactly. To learn how to convert between decimal and binary representation refer to the appendix entitled [Data Conversions](../Resources-Appendices/data-conversions.md).
+C stores the `char` and `int` data in equivalent binary form. Binary form represents the value stored exactly. To learn how to convert between decimal and binary representation refer to the appendix entitled [Data Conversions](../Resources-Appendices/data-conversions.md).
 
 ### Characters and Symbols
 
-C stores characters and symbols in char types. Since characters and symbols have no intrinsic binary representation, the host platform provides the collating sequence for associating each character and symbol with a unique integer value. C stores the integer value from this sequence as the representative of the character or symbol.
+C stores characters and symbols in `char` types. Since characters and symbols have no intrinsic binary representation, the host platform provides the collating sequence for associating each character and symbol with a unique integer value. C stores the integer value from this sequence as the representative of the character or symbol.
 
 The two popular collating sequences are ASCII and EBCDIC. ASCII is more popular. [ASCII](../Resources-Appendices/ascii-collating-sequence.md) represents the letter A by the bit pattern 010000012, that is the hexadecimal value 0x41, that is the decimal value 65. [EBCDIC](../Resources-Appendices/ebcdic-collating-sequence.md) represents the letter A by the bit pattern 110000012, that is the hexadecimal value 0xC1, that is the decimal value 193.
 
@@ -764,7 +755,7 @@ Under IEEE 754, a double occupies 64 bits, has one sign bit, an 11-bit exponent 
     </tbody>
 </table>
 
-Since the number of bits in the significand is limited, the float and double types cannot store all possible floating-point values exactly. That is, the floating-point types store values approximately.
+Since the number of bits in the significand is limited, the `float` and `double` types cannot store all possible floating-point values exactly. That is, the floating-point types store values approximately.
 
 ## Value Ranges
 
@@ -774,115 +765,33 @@ The number of bytes allocated for a type determines the range of values that tha
 
 The ranges of values for the integral types are shown below. Ranges for some types depend on the execution environment:
 
-<table>
-    <thead>
-        <tr>
-            <td>Type</td>
-            <td>Size</td>
-            <td>Min</td>
-            <td>Max</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr className="highlight">
-            <td>char</td>
-            <td>8 bits</td>
-            <td>-128</td>
-            <td>127</td>
-        </tr>
-        <tr className="highlight">
-            <td>char</td>
-            <td>8 bits</td>
-            <td>0</td>
-            <td>255</td>
-        </tr>
-        <tr className="highlight">
-            <td>short</td>
-            <td>>= 16 bits</td>
-            <td>-32,768</td>
-            <td>32,767</td>
-        </tr>
-        <tr className="highlight">
-            <td>int</td>
-            <td>2 bytes</td>
-            <td>-32,768</td>
-            <td>32,767</td>
-        </tr>
-        <tr className="highlight">
-            <td>int</td>
-            <td>4 bytes</td>
-            <td>-2,147,483,648</td>
-            <td>2,147,483,647</td>
-        </tr>
-        <tr className="highlight">
-            <td>long</td>
-            <td>>= 32 bits</td>
-            <td>-2,147,483,648</td>
-            <td>2,147,483,647</td>
-        </tr>
-        <tr className="highlight">
-            <td>long long</td>
-            <td>>= 64 bits</td>
-            <td>-9,233,372,036,854,775,808</td>
-            <td>9,233,372,036,854,775,807</td>
-        </tr>
-    </tbody>
-</table>
+| Type        |    Size    |            Min             |            Max            |
+| ----------- | :--------: | :------------------------: | :-----------------------: |
+| `char`      |   8 bits   |            -128            |            127            |
+| `char`      |   8 bits   |             0              |            255            |
+| `short`     | >= 16 bits |          -32,768           |          32,767           |
+| `int`       |  2 bytes   |          -32,768           |          32,767           |
+| `int`       |  4 bytes   |       -2,147,483,648       |       2,147,483,647       |
+| `long`      | >= 32 bits |       -2,147,483,648       |       2,147,483,647       |
+| `long long` | >= 64 bits | -9,233,372,036,854,775,808 | 9,233,372,036,854,775,807 |
 
 ### Floating-Point Types
 
 The limits on a float and double depend on the execution environment:
 
-<table>
-    <thead>
-        <tr>
-            <td>Type</td>
-            <td>Size</td>
-            <td>Significant</td>
-            <td>Min Exponent</td>
-            <td>Max Exponent</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr className="highlight">
-            <td>float</td>
-            <td>minimum</td>
-            <td>6</td>
-            <td>-37</td>
-            <td>37</td>
-        </tr>
-        <tr className="highlight">
-            <td>float</td>
-            <td>typical</td>
-            <td>6</td>
-            <td>-37</td>
-            <td>37</td>
-        </tr>
-        <tr className="highlight">
-            <td>double</td>
-            <td>minimum</td>
-            <td>10</td>
-            <td>-37</td>
-            <td>37</td>
-        </tr>
-        <tr className="highlight">
-            <td>double</td>
-            <td>typical</td>
-            <td>15</td>
-            <td>-307</td>
-            <td>307</td>
-        </tr>
-        <tr className="highlight">
-            <td>long double</td>
-            <td>typical</td>
-            <td>15</td>
-            <td>-307</td>
-            <td>307</td>
-        </tr>
-    </tbody>
-</table>
+| Type          | Size    | Significant | Min Exponent | Max Exponent |
+| ------------- | ------- | :---------: | :----------: | :----------: |
+| `float`       | minimum |      6      |     -37      |      37      |
+| `float`       | typical |      6      |     -37      |      37      |
+| `double`      | minimum |     10      |     -37      |      37      |
+| `double`      | typical |     15      |     -307     |     307      |
+| `long double` | typical |     15      |     -307     |     307      |
 
-Note that both the number of significant digits and the range of the exponent are limited. The limits on the exponent are in base 10.
+:::note
+
+Both the number of significant digits and the range of the exponent are limited. The limits on the exponent are in base 10.
+
+:::
 
 ## Variable Declarations
 
@@ -890,7 +799,7 @@ We store program data in variables A declaration associates a program variable w
 
 In C, a declaration takes the form:
 
-```text
+```c
  [const] type identifier [= initial value];
 ```
 
@@ -924,10 +833,10 @@ For example,
 
 We may select any identifier for a variable that satisfies the following naming conventions:
 
-- starts with a letter or an underscore \(\_\)
-- contains any combination of letters, digits and underscores \(\_\)
+- starts with a letter or an underscore \(`_`\)
+- contains any combination of letters, digits and underscores \(`_`\)
 - contains less than 32 characters \(some compilers allow more, others do not\)
-- is not be a C reserved word
+- is not be a [C reserved word](#reserved-words)
 
 ### Reserved Words
 
