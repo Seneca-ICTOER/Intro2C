@@ -41,7 +41,7 @@ module.exports = {
             },
             {
               html: `
-                <a href='/static/Seneca-IPC144.pdf' id='pwa-button' class='footer__link-item' download='Seneca-IPC144.pdf'>Download</a>
+                <a href='Seneca-IPC144.pdf' id='pwa-button' class='footer__link-item' download='Seneca-IPC144.pdf'>Download</a>
               `,
             },
           ],
