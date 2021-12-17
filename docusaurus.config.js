@@ -36,10 +36,6 @@ module.exports = {
               to: '/',
             },
             {
-              label: 'Weekly Schedule',
-              to: '/weeklyContents',
-            },
-            {
               html: `<a href='#' id='pwa-button' class='footer__link-item' hidden>Install as an App</a>`,
             },
             {
