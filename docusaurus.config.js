@@ -5,7 +5,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 module.exports = {
   title: 'Introduction to C',
   tagline: 'C Programming',
-  url: 'https://ipc144.sdds.ca',
+  url: 'https://intro2c.sdds.ca',
   baseUrl: '/',
   trailingSlash: false,
   onBrokenLinks: 'throw',
@@ -39,7 +39,7 @@ module.exports = {
               html: `<a href='#' id='pwa-button' class='footer__link-item' hidden>Install as an App</a>`,
             },
             {
-              html: `<a href='Seneca-IPC144.pdf' id='download-pdf' class='footer__link-item' download='Seneca-IPC144.pdf'>Download Notes (PDF)</a>`,
+              html: `<a href='https://intro2c.sdds.ca/Introduction-to-C.pdf' id='download-pdf' class='footer__link-item' download='Introduction-to-C.pdf'>Download Notes (PDF)</a>`,
             },
           ],
         },

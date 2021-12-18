@@ -4,9 +4,9 @@
 	"display": "standalone",
 	"scope": "./",
 	"start_url": "./",
-	"name": "IPC144 - Course Notes",
-	"short_name": "IPC144",
-	"description": "IPC144 course notes",
+	"name": "Introduction to C",
+	"short_name": "Intro. to C",
+	"description": "Introduction to C programming",
 	"icons": [
 		{
 			"src": "img/pwa/icon-192x192.png",

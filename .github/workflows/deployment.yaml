@@ -24,10 +24,10 @@ jobs:
       - uses: webfactory/ssh-agent@v0.5.3
         with:
           ssh-private-key: ${{ secrets.GH_PAGES_DEPLOY }}
-      - name: Generate Seneca-IPC144.pdf
+      - name: Generate Introduction-to-C.pdf
         run: |
           yarn serve-convert
-          mv ./Seneca-IPC144.pdf ./static
+          mv ./Introduction-to-C.pdf ./static
       - name: Release to GitHub Pages
         env:
           USE_SSH: true
