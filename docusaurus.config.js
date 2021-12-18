@@ -3,7 +3,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'IPC144 - Course Notes',
+  title: 'Introduction to C',
   tagline: 'C Programming',
   url: 'https://ipc144.sdds.ca',
   baseUrl: '/',
@@ -15,7 +15,7 @@ module.exports = {
   projectName: 'IPC144',
   themeConfig: {
     navbar: {
-      title: 'IPC144',
+      title: 'Introduction to C',
       logo: {
         alt: 'Seneca College',
         src: 'img/logo.svg',
@@ -29,7 +29,7 @@ module.exports = {
       style: 'dark',
       links: [
         {
-          title: 'IPC144 - Course Notes',
+          title: 'Introduction to C',
           items: [
             {
               label: 'Contents',
