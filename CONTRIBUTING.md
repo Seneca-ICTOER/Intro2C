@@ -35,7 +35,7 @@ This command starts a local development server and opens up a browser window. Mo
 If you want to make a change, please use the following GitHub workflow:
 
 1. fork this repo on GitHub
-1. clone your forked repo to your local machine, `git clone https://github.com/{your username}/IPC144`
+1. clone your forked repo to your local machine, `git clone https://github.com/{your username}/Intro2C`
 1. create a new branch off of the `main` branch, `git checkout -b {new branch name} main`
 1. make your changes and save
 1. check it builds successfully, `yarn build`
@@ -120,7 +120,7 @@ Tool Recommendation: Firefox Browser (easier to make screenshots)
 
 ![](static/img/download-selected-region.png)
 
-8. Save image to the `/static/img` folder in the IPC144 repo
+8. Save image to the `/static/img` folder in the Intro2C repo
 
 9. This is how it should end up looking like:
 

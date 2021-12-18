@@ -12,7 +12,7 @@ module.exports = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'Seneca-ICTOER',
-  projectName: 'IPC144',
+  projectName: 'Intro2C',
   themeConfig: {
     navbar: {
       title: 'Introduction to C',
@@ -58,7 +58,7 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/',
-          editUrl: 'https://github.com/Seneca-ICTOER/IPC144/tree/main',
+          editUrl: 'https://github.com/Seneca-ICTOER/Intro2C/tree/main',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
