@@ -438,11 +438,16 @@ char *getline(char *s, int n)
     int i, c;
 
     for (i = 0; i < n - 1 && (c =getchar()) != EOF && c != (int)'\n'; i++)
+    {
         s[i] = c;
+    }
+
     s[i] = '\0';
 
     while (n > 1 && c != EOF && c != (int)'\n')
+    {
         c = getchar();
+    }
 
     return c != EOF ? s : NULL;
 }
@@ -510,7 +515,9 @@ int main(void)
             "---------------------\n");
 
         while (fscanf(fp, "%d;%13[^;];%lf%*c", &n, label, &price) == 3)
+        {
             printf("%2d %-13s%5.2lf\n", n, label, price);
+        }
 
         fclose(fp);
     }
@@ -568,9 +575,13 @@ int main(void)
         while (fscanf(fp,"%d;%13[^;]%c", &n, label, &c) == 3)
         {
             if (c == ';')
+            {
                 fscanf(fp,"%lf\n", &price);
+            }
             else
+            {
                 fscanf(fp, "%*[^;];%lf%*c", &price);
+            }
 
             printf("%2d %-13s%5.2lf\n", n, label, price);
         }

@@ -68,8 +68,10 @@ To synchronize user input with program execution the buffer should be empty. The
 //
 void clear(void)
 {
-	while (getchar() != '\n')
-		;  // empty statement intentional
+    while (getchar() != '\n')
+    {
+        ;  // empty statement intentional
+    }
 }
 ```
 
@@ -84,9 +86,11 @@ To pause execution at a selected point in a program, consider the following func
 //
 void pause_(void)
 {
-	printf("Press enter to continue ...");
-	while (getchar() != '\n')
-		;  // empty statement intentional
+    printf("Press enter to continue ...");
+    while (getchar() != '\n')
+    {
+        ;  // empty statement intentional
+    }
 }
 ```
 
@@ -145,13 +149,13 @@ The following program converts two input fields into data values of int type and
 
 int main(void)
 {
-	int items;
-	float price;
+    int items;
+    float price;
 
-	printf("Enter items, price : ");
-	scanf("%d%f", &items, &price);
+    printf("Enter items, price : ");
+    scanf("%d%f", &items, &price);
 
-	return 0;
+    return 0;
 }
 ```
 
@@ -247,12 +251,12 @@ void clear(void);
 
 int main(void)
 {
-	int input;
+    int input;
 
-	input = getInt(MIN, MAX);
-	printf("\nProgram accepted %d\n", input);
+    input = getInt(MIN, MAX);
+    printf("\nProgram accepted %d\n", input);
 
-	return 0;
+    return 0;
 }
 
 // getInt accepts an int between min and max
@@ -260,40 +264,44 @@ int main(void)
 //
 int getInt(int min, int max)
 {
-	int value, keeptrying = 1, rc;
-	char after;
+    int value, keeptrying = 1, rc;
+    char after;
 
-	do {
-		printf("Enter an integer in range [%d,%d] : ", min, max);
-		rc = scanf("%d%c", &value, &after);
+    do {
+        printf("Enter an integer in range [%d,%d] : ", min, max);
+        rc = scanf("%d%c", &value, &after);
 
-		if (rc == 0)
-		{
-			printf("**Bad char(s)!**\n");
-			clear();
-		}
-		else if (after != '\n')
-		{
-			printf("**Trail char(s)!**\n");
-			clear();
-		}
-		else if (value < min || value > max)
-		{
-			printf("**Out of range!**\n");
-		}
-		else
-			keeptrying = 0;
-	} while (keeptrying == 1);
+        if (rc == 0)
+        {
+            printf("**Bad char(s)!**\n");
+            clear();
+        }
+        else if (after != '\n')
+        {
+            printf("**Trail char(s)!**\n");
+            clear();
+        }
+        else if (value < min || value > max)
+        {
+            printf("**Out of range!**\n");
+        }
+        else
+        {
+            keeptrying = 0;
+        }
+    } while (keeptrying == 1);
 
-	return value;
+    return value;
 }
 
 // clear empties the input buffer
 //
 void clear(void)
 {
-	while (getchar() != '\n')
-		;  // empty statement intentional
+    while (getchar() != '\n')
+    {
+        ;  // empty statement intentional
+    }
 }
 ```
 

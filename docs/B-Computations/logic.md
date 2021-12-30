@@ -34,7 +34,7 @@ The simplest example of a structured construct is a _**sequence**_. A sequence i
 **Example Simple Statement**
 
 ```text
-// single statement (original)
+// single statement
 printf("I like pizza\n");
 ```
 
@@ -158,6 +158,14 @@ else
 }
 ```
 
+:::info Readability and maintainability
+
+Although it is not required to create a code block for single-line statements, it is suggested for maximum readability and maintainability of code that you create a code block.
+
+All code examples provided in these notes will assume this suggested style including the placement of the opening and closing curly braces be on their own dedicated lines ([Allman](https://en.wikipedia.org/wiki/Indentation_style#Allman_style)).
+
+:::
+
 #### Multiple Selection
 
 For three alternative paths, we append an _**if else**_ construct to the _**else**_ keyword.
@@ -179,15 +187,25 @@ The condition in a selection construct may be a _**compound**_ condition. A comp
 
 ```c
 if (age > 12 && age < 16)
+{
     printf("Student Fare - no id required\n");
- else if (age > 15 && age < 20)
+}
+else if (age > 15 && age < 20)
+{
     printf("Student Fare - id is required\n");
- else if (age < 13)
+}
+else if (age < 13)
+{
     printf("Child ride for free!\n");
- else if (age >= 65)
+}
+else if (age >= 65)
+{
     printf("Senior Fare - id is required\n");
- else
+}
+else
+{
     printf("Adult Fare\n");
+}
 ```
 
 #### Case-by-Case
@@ -465,12 +483,18 @@ A selection within another selection is called a _**nested selection**_.
 if (grade < 50)
 {
     if (sup == 1)
+    {
         printf("Sup\n");
+    }
     else
+    {
         printf("Failed\n");
+    }
 }
 else
+{
     printf("Pass\n);
+}
 ```
 
 ### Dangling Else
@@ -478,46 +502,47 @@ else
 An ambiguity arises in a _**nested if else**_ construct that contains an optional sequence \(_**if**_\). Consider the following code snippet:
 
 ```c
+// Problem: Ambiguity
 if (grade < 50)
-{
     if (sup == 1)
         printf("Sup\n");
-}
+else // <-- Does this belong to 'if (grade < 50)' OR 'if (sup == 1)'?
+    printf("Pass\n);
+```
+
+It is unclear as to which `if` the `else` belongs:
+
+```c
+// Interpretation #1:
+if (grade < 50)  // <-- The formatting suggests to this 'if'
+    if (sup == 1)
+        printf("Sup\n");
 else
     printf("Pass\n);
 ```
 
-It is unclear to which if the else belongs if we remove the first pair of braces:
+... OR if the `else` is indented ...
 
 ```c
-// does else belong to FIRST if?
+// Interpretation #2:
 if (grade < 50)
-    if (sup == 1)
-        printf("Sup\n");
-else
-    printf("Pass\n);
-```
-
-... OR ...
-
-```c
-// does else belong to SECOND if?
-if (grade < 50)
-    if (sup == 1)
+    if (sup == 1) // <-- now the formatting suggests this 'if'
         printf("Sup\n");
     else
         printf("Pass\n);
 ```
 
-The C language always attaches the dangling else to the innermost if.
+The C language always attaches the dangling `else` to the **innermost `if`** (regardless of how it is indented, interpretation #2 above is how it would be executed).
 
-To associate an else with the next innermost selection, we retain the braces that wrap the innermost selection.
+To guarantee the desired behaviour (interpretation #1 from above), we use code blocks (curly braces) to ensure the intended flow:
 
 ```c
 if (grade < 50)
 {
     if (sup == 1)
+    {
         printf("Sup\n");
+    }
 }
 else
 {

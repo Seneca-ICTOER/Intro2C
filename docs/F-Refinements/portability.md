@@ -106,14 +106,19 @@ Consider the following program:
 
 int main(void)
 {
-        char c;
-        c = getchar();
+    char c;
+    c = getchar();
 
-        if (c == EOF)
-                printf("End of data\n");
-        else
-                printf("You entered %c\n", c);
-        return 0;
+    if (c == EOF)
+    {
+        printf("End of data\n");
+    }
+    else
+    {
+        printf("You entered %c\n", c);
+    }
+
+    return 0;
 }
 ```
 
@@ -139,14 +144,19 @@ You entered ÿ
 
 int main(void)
 {
-        int c;  // store character as an int
-        c = getchar();
+    int c;  // store character as an int
+    c = getchar();
 
-        if (c == EOF)
-                printf("End of data\n");
-        else
-                printf("You entered %c\n", c);
-        return 0;
+    if (c == EOF)
+    {
+        printf("End of data\n");
+    }
+    else
+    {
+        printf("You entered %c\n", c);
+    }
+
+    return 0;
 }
 ```
 

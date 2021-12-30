@@ -77,8 +77,9 @@ grade[0]
 To display all elements of grade, we iterate:
 
 ```c
-for (int i = 0; i < NGRADES; i++) {
-	printf("%d" , grade[i]);
+for (int i = 0; i < NGRADES; i++)
+{
+    printf("%d" , grade[i]);
 }
 ```
 
@@ -132,16 +133,18 @@ In the following example, `sku[i]` holds the stock keeping unit (sku) for a prod
 
 int main(void)
 {
-	int i;
-	int sku[]      = { 2156, 4633, 3122, 5611};
-	double price[] = { 2.34, 7.89, 6.56, 9.32};
-	const int n    = 4;
+    int i;
+    int sku[]      = { 2156, 4633, 3122, 5611};
+    double price[] = { 2.34, 7.89, 6.56, 9.32};
+    const int n    = 4;
 
-	printf("  SKU Price\n");
-	for (i = 0; i < n; i++)
-		printf("%5d $%.2lf\n", sku[i], price[i]);
+    printf("  SKU Price\n");
+    for (i = 0; i < n; i++)
+    {
+        printf("%5d $%.2lf\n", sku[i], price[i]);
+    }
 
-	return 0;
+    return 0;
 }
 ```
 

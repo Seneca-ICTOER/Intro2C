@@ -48,13 +48,13 @@ Example:
 
 int main(void)
 {
-        int x = -12;
-        long y = -24L;
+    int x = -12;
+    long y = -24L;
 
-        printf("|%d| is %d\n", x, abs(x));
-        printf("|%ld| is %ld\n", y, labs(y));
+    printf("|%d| is %d\n", x, abs(x));
+    printf("|%ld| is %ld\n", y, labs(y));
 
-        return 0;
+    return 0;
 }
 ```
 
@@ -81,12 +81,14 @@ The following program outputs the same set of 10 pseudo-random integers for each
 
 int main(void)
 {
-        int i;
+    int i;
 
-        for (i = 0; i < 10 ; i++)
-                printf("Random number %d is %d\n", i+1, rand());
+    for (i = 0; i < 10 ; i++)
+    {
+        printf("Random number %d is %d\n", i+1, rand());
+    }
 
-        return 0;
+    return 0;
 }
 ```
 
@@ -98,14 +100,15 @@ The following program outputs the same set of 10 pseudo-random integers between 
 
 int main(void)
 {
-        int i, n, a = 6, b = 100;
+    int i, n, a = 6, b = 100;
 
-        for (i = 0; i < 10 ; i++) {
-                n = a + rand() % (b + 1 - a);
-                printf("Random number %d is %d\n", i+1, n);
-        }
+    for (i = 0; i < 10 ; i++)
+    {
+        n = a + rand() % (b + 1 - a);
+        printf("Random number %d is %d\n", i+1, n);
+    }
 
-        return 0;
+    return 0;
 }
 ```
 
@@ -117,16 +120,16 @@ The following program outputs the same set of 10 pseudo-random floating-point nu
 
 int main(void)
 {
-        int i;
-        double x, a = 3.0, b = 100.0;
+    int i;
+    double x, a = 3.0, b = 100.0;
 
-        for (i = 0; i < 10 ; i++)
-        {
-                x = a + ((double) rand() / RAND_MAX * (b - a));
-                printf("Random number %d is %.2lf\n", i+1, x);
-        }
+    for (i = 0; i < 10 ; i++)
+    {
+        x = a + ((double) rand() / RAND_MAX * (b - a));
+        printf("Random number %d is %.2lf\n", i+1, x);
+    }
 
-        return 0;
+    return 0;
 }
 ```
 
@@ -147,13 +150,15 @@ The following program outputs a different set of 10 pseudo-random numbers with e
 
 int main(void)
 {
-        int i;
+    int i;
 
-        srand(time(NULL)); // will set a unique seed for each run of the program
-        for (i = 0; i < 10 ; i++) // iterate with “i” as index
-                printf("Random number %d is %d\n", i+1, rand());
+    srand(time(NULL)); // will set a unique seed for each run of the program
+    for (i = 0; i < 10 ; i++) // iterate with “i” as index
+    {
+        printf("Random number %d is %d\n", i+1, rand());
+    }
 
-        return 0;
+    return 0;
 }
 ```
 
@@ -183,13 +188,13 @@ Example
 
 int main(void)
 {
-        float w = -12.5;
-        double x = -12.5;
+    float w = -12.5;
+    double x = -12.5;
 
-        printf("|%f| is %f\n", w, fabsf(w));
-        printf("|%lf| is %lf\n", x, fabs(x));
+    printf("|%f| is %f\n", w, fabsf(w));
+    printf("|%lf| is %lf\n", x, fabs(x));
 
-        return 0;
+    return 0;
 }
 ```
 
@@ -278,12 +283,12 @@ Example:
 
 int main(void)
 {
-        double base = 12.5;
+    double base = 12.5;
 
-        printf("%lf^3 is %lf\n", base,
-        pow(base,3));
+    printf("%lf^3 is %lf\n", base,
+    pow(base,3));
 
-        return 0;
+    return 0;
 }
 ```
 
@@ -354,20 +359,22 @@ The following program returns the time in seconds taken to execute the central i
 
 int main(void)
 {
-        double x;
-        int i, j, k;
-        time_t t0, t1;
+    double x;
+    int i, j, k;
+    time_t t0, t1;
 
-        x = 1;
-        t0 = time(NULL);
-        for (i = 0; i < NITER; i++)
-                x = x * 1.0000000001;
+    x = 1;
+    t0 = time(NULL);
+    for (i = 0; i < NITER; i++)
+    {
+        x = x * 1.0000000001;
+    }
 
-        t1 = time(NULL);
-        printf("Elapsed time is %.1lf secs\n", difftime(t1, t0));
-        printf("Value of x is %.10lf\n", x);
+    t1 = time(NULL);
+    printf("Elapsed time is %.1lf secs\n", difftime(t1, t0));
+    printf("Value of x is %.10lf\n", x);
 
-        return 0;
+    return 0;
 }
 ```
 
@@ -399,27 +406,34 @@ The following program returns the process time in seconds taken to execute the c
 
 int main(void)
 {
-        double x;
-        int i, j, k;
-        time_t t0, t1;
-        clock_t c0, c1;
+    double x;
+    int i, j, k;
+    time_t t0, t1;
+    clock_t c0, c1;
 
-        x = 1;
-        t0 = time(NULL);
-        c0 = clock();
-        for (i = 0; i < NITER; i++)
-            for (j = 0; j < NITER; j++)
-                for (k = 0; k < NITER; k++)
-                    x = x * 1.0000000001;
-        t1 = time(NULL);
-        c1 = clock();
-        printf("Elapsed time is %.1lf secs\n",
-            difftime(t1, t0));
-        printf("Process time is %.3lf secs\n",
-            (double)(c1-c0)/CLOCKS_PER_SEC);
-        printf("Value of x is %.10lf\n", x);
+    x = 1;
+    t0 = time(NULL);
+    c0 = clock();
 
-        return 0;
+    for (i = 0; i < NITER; i++)
+    {
+        for (j = 0; j < NITER; j++)
+        {
+            for (k = 0; k < NITER; k++)
+            {
+                x = x * 1.0000000001;
+            }
+        }
+    }
+
+    t1 = time(NULL);
+    c1 = clock();
+
+    printf("Elapsed time is %.1lf secs\n", difftime(t1, t0));
+    printf("Process time is %.3lf secs\n", (double)(c1-c0)/CLOCKS_PER_SEC);
+    printf("Value of x is %.10lf\n", x);
+
+    return 0;
 }
 ```
 

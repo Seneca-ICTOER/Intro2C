@@ -300,6 +300,7 @@ Variable names (identifiers) should...
 - help with the reading of the code
 - use "camelNotation" (first letter of each word is capitalized with the exception of the first word)
 - avoid underscore characters which are commonly used in system libraries to avoid conflicts
+- **not** use underscore (`_`) characters in order to avoid conflicts with system libraries
 
 :::
 

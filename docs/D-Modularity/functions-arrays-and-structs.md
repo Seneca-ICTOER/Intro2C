@@ -55,28 +55,30 @@ int power(int base, int exponent);
 
 int main(void)
 {
-        int base, exp, answer;
+    int base, exp, answer;
 
-        printf("Enter base : ");
-        scanf("%d", &base);
-        printf("Enter exponent : ");
-        scanf("%d", &exp);
+    printf("Enter base : ");
+    scanf("%d", &base);
+    printf("Enter exponent : ");
+    scanf("%d", &exp);
 
-        answer = power(base, exp);
-        printf("%d^%d = %d\n", base, exp, answer);
+    answer = power(base, exp);
+    printf("%d^%d = %d\n", base, exp, answer);
 
-        return 0;
+    return 0;
 }
 
 int power(int base, int exponent)
 {
-        int result, i;
+    int result, i;
 
-        result = 1;
-        for (i = 0; i < exponent; i++)
-                result = result * base;
+    result = 1;
+    for (i = 0; i < exponent; i++)
+    {
+        result = result * base;
+    }
 
-        return result;
+    return result;
 }
 ```
 
@@ -106,9 +108,9 @@ We include this header file in our source code whenever we call either of these 
 
 int main(void)
 {
-        printf("This is C\n");
+    printf("This is C\n");
 
-        return 0;
+    return 0;
 }
 ```
 
@@ -137,28 +139,30 @@ The corresponding **implementation file (.c)** will look like:
 
 int main(void)
 {
-        int base, exp, answer;
+    int base, exp, answer;
 
-        printf("Enter base : ");
-        scanf("%d", &base);
-        printf("Enter exponent : ");
-        scanf("%d", &exp);
+    printf("Enter base : ");
+    scanf("%d", &base);
+    printf("Enter exponent : ");
+    scanf("%d", &exp);
 
-        answer = power(base, exp);
-        printf("%d^%d = %d\n", base, exp, answer);
+    answer = power(base, exp);
+    printf("%d^%d = %d\n", base, exp, answer);
 
-        return 0;
+    return 0;
 }
 
 int power(int base, int exponent)
 {
-        int result, i;
+    int result, i;
 
-        result = 1;
-        for (i = 0; i < exponent; i++)
-                result = result * base;
+    result = 1;
+    for (i = 0; i < exponent; i++)
+    {
+        result = result * base;
+    }
 
-        return result;
+    return result;
 }
 ```
 
@@ -208,19 +212,21 @@ Consider the following program. The variable `x` within the code block hides the
 
 void foo(int x)
 {
-        int i = 4;
-        do {
-                int x = i;
-                printf("%d ", x);
-                i--;
-        } while(i > 0);
+    int i = 4;
+
+    do {
+        int x = i;
         printf("%d ", x);
+        i--;
+    } while(i > 0);
+
+    printf("%d ", x);
 }
 
 int main(void)
 {
-        foo(6);
-        return 0;
+    foo(6);
+    return 0;
 }
 ```
 
@@ -263,11 +269,11 @@ For example:
 
 int main(void)
 {
-        int grade[] = {10,9,10,8,7,9,8,10};
+    int grade[] = {10,9,10,8,7,9,8,10};
 
-        display(grade, NGRADES);
+    display(grade, NGRADES);
 
-        return 0;
+    return 0;
 }
 ```
 
@@ -291,8 +297,10 @@ The empty brackets following `identifier` in the first alternative tell the comp
 // array using []
 void display(int g[], int n)
 {
-       for(i = 0; i < n; i++)
-               printf("%d ", g[i]);
+    for(i = 0; i < n; i++)
+    {
+        printf("%d ", g[i]);
+    }
 }
 ```
 
@@ -302,8 +310,10 @@ OR:
 // array using * (pointer)
 void display(int *g, int n)
 {
-       for(i = 0; i < n; i++)
-               printf("%d ", g[i]);
+    for(i = 0; i < n; i++)
+    {
+        printf("%d ", g[i]);
+    }
 }
 ```
 
@@ -329,8 +339,10 @@ For example:
 // array using []
 void display(const int g[], int n)
 {
-       for(i = 0; i < n; i++)
-               printf("%d ", g[i]);
+    for(i = 0; i < n; i++)
+    {
+        printf("%d ", g[i]);
+    }
 }
 ```
 
@@ -340,8 +352,10 @@ OR:
 // array using * (pointer)
 void display(const int *g, int n)
 {
-       for(i = 0; i < n; i++)
-               printf("%d ", g[i]);
+    for(i = 0; i < n; i++)
+    {
+        printf("%d ", g[i]);
+    }
 }
 ```
 
@@ -365,27 +379,30 @@ Consider the following program. Note that the `Student` structure includes a mem
 
 struct Student
 {
-        int no;
-        int no_grades_filled;
-        float grade[4];
+    int no;
+    int no_grades_filled;
+    float grade[4];
 };
 
 void display(const struct Student s);  // pass by value
 
 int main(void)
 {
-        struct Student harry = {975, 3,
+    struct Student harry = {975, 3,
          {75.6f, 82.3f, 68.9f, 0.0f}};
 
-        display(harry);
+    display(harry);
 }
 
 void display(const struct Student st)
 {
-        int i;
-        printf("Grades for %d\n", st.no);
-        for (i = 0; i < st.no_grades_filled; i++)
-                printf("%.1f\n", st.grade[i]);
+    int i;
+    printf("Grades for %d\n", st.no);
+
+    for (i = 0; i < st.no_grades_filled; i++)
+    {
+        printf("%.1f\n", st.grade[i]);
+    }
 }
 ```
 
@@ -412,9 +429,9 @@ In the following example, the data stored in `harry` does not change after the f
 
 struct Student
 {
-        int no;
-        int no_grades_filled;
-        float grade[4];
+    int no;
+    int no_grades_filled;
+    float grade[4];
 };
 
 void set(struct Student st);
@@ -422,25 +439,28 @@ void display(const struct Student st);
 
 int main(void)
 {
-        struct Student harry = { 975, 2, {50.0f, 50.0f}};
+    struct Student harry = { 975, 2, {50.0f, 50.0f}};
 
-        set(harry);
-        display(harry);
+    set(harry);
+    display(harry);
 }
 
 void set(struct Student st)
 {
-        struct Student harry = {306, 2, {78.9, 91.6}};
+    struct Student harry = {306, 2, {78.9, 91.6}};
 
-        st = harry;
+    st = harry;
 }
 
 void display(const struct Student st)
 {
-        int i;
-        printf("Grades for %d\n", st.no);
-        for (i = 0; i < st.no_grades_filled; i++)
-                printf("%.1f\n", st.grade[i]);
+    int i;
+    printf("Grades for %d\n", st.no);
+
+    for (i = 0; i < st.no_grades_filled; i++)
+    {
+        printf("%.1f\n", st.grade[i]);
+    }
 }
 ```
 
@@ -509,25 +529,28 @@ void display(const struct Student st);
 
 int main(void)
 {
-        struct Student harry = { 975, 2, {50.0f, 50.0f}};
+    struct Student harry = { 975, 2, {50.0f, 50.0f}};
 
-        set(&harry);
-        display(harry);
+    set(&harry);
+    display(harry);
 }
 
 void set(struct Student* st)
 {
-        struct Student harry = {306, 2, {78.9, 91.6}};
+    struct Student harry = {306, 2, {78.9, 91.6}};
 
-        *st = harry;
+    *st = harry;
 }
 
 void display(const struct Student st)
 {
-        int i;
-        printf("Grades for %d\n", st.no);
-        for (i = 0; i < st.no_grades_filled; i++)
-                printf("%.1f\n", st.grade[i]);
+    int i;
+    printf("Grades for %d\n", st.no);
+
+    for (i = 0; i < st.no_grades_filled; i++)
+    {
+        printf("%.1f\n", st.grade[i]);
+    }
 }
 ```
 
@@ -589,9 +612,9 @@ Consider passing `harry` by address to function `display()` as well:
 
 struct Student
 {
-        int no;
-        int no_grades_filled;
-        float grade[4];
+    int no;
+    int no_grades_filled;
+    float grade[4];
 };
 
 void set(struct Student* st);
@@ -599,25 +622,28 @@ void display(const struct Student* st);
 
 int main(void)
 {
-        struct Student harry = { 975, 2, {50.0f, 50.0f}};
+    struct Student harry = { 975, 2, {50.0f, 50.0f}};
 
-        set(&harry);
-        display(&harry);
+    set(&harry);
+    display(&harry);
 }
 
 void set(struct Student* st)
 {
-        struct Student harry = {306, 2, {78.9, 91.6}};
+    struct Student harry = {306, 2, {78.9, 91.6}};
 
-        *st = harry;
+    *st = harry;
 }
 
 void display(const struct Student* st)
 {
-        int i;
-        printf("Grades for %d\n", (*st).no);
-        for (i = 0; i < (*st).no_grades_filled; i++)
-                printf("%.1f\n", (*st).grade[i]);
+    int i;
+    printf("Grades for %d\n", (*st).no);
+
+    for (i = 0; i < (*st).no_grades_filled; i++)
+    {
+        printf("%.1f\n", (*st).grade[i]);
+    }
 }
 ```
 
@@ -699,25 +725,28 @@ void display(const struct Student* st);
 
 int main(void)
 {
-        struct Student harry = { 975, 2, {50.0f, 50.0f}};
+    struct Student harry = { 975, 2, {50.0f, 50.0f}};
 
-        set(&harry);
-        display(&harry);
+    set(&harry);
+    display(&harry);
 }
 
 void set(struct Student* st)
 {
-        struct Student harry = {306, 2, {78.9, 91.6}};
+    struct Student harry = {306, 2, {78.9, 91.6}};
 
-        *st = harry;
+    *st = harry;
 }
 
 void display(const struct Student* st)
 {
-        int i;
-        printf("Grades for %d\n", st->no);
-        for (i = 0; i < st->no_grades_filled; i++)
-                printf("%.1f\n", st->grade[i]);
+    int i;
+    printf("Grades for %d\n", st->no);
+
+    for (i = 0; i < st->no_grades_filled; i++)
+    {
+        printf("%.1f\n", st->grade[i]);
+    }
 }
 ```
 
@@ -763,13 +792,15 @@ For example:
 //
 int power(int base, int exponent)
 {
-        int result, i;
+    int result, i;
 
-        result = 1;
-        for (i = 0; i < exponent; i++)
-            result = result * base;
+    result = 1;
+    for (i = 0; i < exponent; i++)
+    {
+        result = result * base;
+    }
 
-        return result;
+    return result;
 }
 ```
 
@@ -785,8 +816,8 @@ The following program contains several objects of type A. The walkthrough table 
 
 struct A
 {
-        int x;
-        double r;
+    int x;
+    double r;
 };
 
 void foo(struct A* c);
@@ -794,31 +825,34 @@ struct A goo(struct A d);
 
 int main(void)
 {
-        struct A a = {4, 6.67}, b;
+    struct A a = {4, 6.67}, b;
 
-        foo(&a);
-        printf("00%d.%.3lf.111\n", a.x, a.r);
-        b = goo(a);
-        printf("00%d.%.3lf.112\n", a.x, a.r);
-        printf("%d.%.3lf.113\n", b.x, b.r);
+    foo(&a);
+
+    printf("00%d.%.3lf.111\n", a.x, a.r);
+
+    b = goo(a);
+
+    printf("00%d.%.3lf.112\n", a.x, a.r);
+    printf("%d.%.3lf.113\n", b.x, b.r);
 }
 
 void foo(struct A* c)
 {
-        int i;
+    int i;
 
-        i = c->x;
-        c->x = c->r;
-        c->r = c->x % i + 202.134;
+    i = c->x;
+    c->x = c->r;
+    c->r = c->x % i + 202.134;
 }
 
 struct A goo(struct A d)
 {
-        struct A e;
+    struct A e;
 
-        d.x = d.r - 62;
-        e = d;
-        return e;
+    d.x = d.r - 62;
+    e = d;
+    return e;
 }
 ```
 

@@ -17,7 +17,7 @@ After reading this section, you will be able to:
 
 A well-written program is a pleasure to read. The coding style is consistent and clear throughout. The programmer looking for a bug sees a well-defined structure and finds it easy to focus on the portion of the code that is suspect. The programmer looking to upgrade the code sees how and where to incorporate changes. Although several programmers may have contributed to the code throughout its lifetime, the code itself appears to have been written by one programmer.
 
-This chapter describes the coding style used throughout these notes and recommended for an introductory course in programming. This style is based in part on the [Linux kernel coding style](https://www.kernel.org/doc/html/latest/process/coding-style.html#codingstyle/ 'Linux kernel coding style'). Conventions that apply specifically to syntax introduced in subsequent chapters are described in those chapters.
+This chapter describes the coding style used throughout these notes and recommended for an introductory course in programming. The style is referred to as the [Allman coding style](https://en.wikipedia.org/wiki/Indentation_style#Allman_style 'Allman Style').
 
 ## Identifiers
 
@@ -31,10 +31,12 @@ When selecting identifiers:
 
 - adopt self-descriptive names, adding comments only if clarification is necessary
 - prefer nouns for variable identifiers
-- keep variable identifiers short - `tmp`, rather than `temporary`, `no`, rather than `number`,
-- avoid cryptic identifiers - use just enough letters for the eye to infer the meaning from the context but no less
-- keep the identifiers of counters very short - use `i` rather than `loop\_counter`, `n` or `no` rather than `numberOfTheIteration` - follow mathematical conventions
-- avoid decorating the identifier with Hungarian or similar notations
+- keep variable identifiers short - `temp`, rather than `temporary`, `id`, rather than `identification`,
+- avoid cryptic identifiers - use just enough letters for the eye to infer the meaning from the context but no less (if you want to represent 'amount owed', `ao` is cryptic, while `amtOwed` is clear but concise)
+- keep the identifiers of counters very short - use `i` rather than `loop_counter`, and `n` rather than `numberOfIterations`. This is context dependant and should only be applied to iterators and counters otherwise, the name becomes meaningless or cryptic.
+- avoid decorating the identifier with Hungarian or similar notations (data type)
+- use "camelNotation" (first letter of each word is capitalized with the exception of the first word)
+- avoid underscore characters which are commonly used in system libraries to avoid conflicts
 
 ## Layout
 
@@ -52,23 +54,30 @@ Layout tools at our disposal include:
 
 ### Indentation
 
-Indentation helps define where a code block starts and ends, clearly showing the structure of our logic. The recommended indent in C programs is a tab of 8 characters.
+Indentation helps define where a code block starts and ends, clearly showing the structure of our logic. The recommended indent in C programs is a tab of 4 or 8 characters.
 
 Example:
 
 ```c
-for (i = 0; i < n; i++) {
-        for (j = 0; j < n; j++) {
-                for (k = 0; k < n; k++) {
-                        int ijk = i * j * k;
-                        if (ijk != 0)
-                                printf(" %4d", ijk);
-                        else
-                                printf("    ");
-                }
-                printf("\n");
+for (i = 0; i < n; i++)
+{
+    for (j = 0; j < n; j++)
+    {
+        for (k = 0; k < n; k++)
+        {
+            int ijk = i * j * k;
+            if (ijk != 0)
+            {
+                printf(" %4d", ijk);
+            }
+            else
+            {
+                printf("    ");
+            }
         }
         printf("\n");
+    }
+    printf("\n");
 }
 printf("That's all folks!!!\n");
 ```
@@ -119,58 +128,70 @@ Produces the following output:
 
 ### Braces
 
-The style of bracing used in these notes is that proposed by Kernigan and Ritchie. We put the opening brace at the end of a line and the closing brace as the first non-whitespace character on a new line.
+The style of bracing used in these notes is that proposed by Eric Allman. We put the opening brace on its own line indented to the preceding statement and the closing brace on its own line in alignment with the opening brace.
 
 ```c
-if (i == 7) {
+if (i == 7)
+{
     cost = 1.75;
     printf("Congrats!\n");
 }
 ```
 
-The closing brace is on a line of its own, except where the statement continues with more information:
+```c
+if (i == 7)
+{
+    cost = 1.75;
+    printf("Congrats!\n");
+}
+else
+{
+    cost = 2.75;
+    printf("Good luck next time!\n");
+}
+```
+
+The opening and closing braces for a `do/while` construct is an exception:
 
 ```c
-if (i == 7) {
+do {
+    printf("Guess i : ");
+    scanf("%d", &i);
+    if (i == 7)
+    {
         cost = 1.75;
         printf("Congrats!\n");
-} else {
+    }
+    else
+    {
         cost = 2.75;
         printf("Good luck next time!\n");
+    }
+} while (i != 7);
+```
+
+Although braces are unnecessary with single statements, it is more clear to read and maintain when they are provided:
+
+```c
+if (i == 7)
+{
+    printf("Congrats!\n");
+}
+else
+{
+    printf("Good luck next time!\n");
 }
 ```
 
 ```c
-do {
-        printf("Guess i : ");
-        scanf("%d", &i);
-        if (i == 7) {
-                cost = 1.75;
-                printf("Congrats!\n");
-        } else {
-                cost = 2.75;
-                printf("Good luck next time!\n");
-        }
-} while (i != 7);
-```
-
-Braces are unnecessary with single statements:
-
-```c
 if (i == 7)
+{
     printf("Congrats!\n");
+    done = 1;
+}
 else
+{
     printf("Good luck next time!\n");
-```
-
-However, we do use braces in all branches of a selection construct if one branch requires them:
-
-```c
-if (i == 7) {
-        printf("Congrats!\n");
-        done = 1;
-} else {
-        printf("Good luck next time!\n");
 }
 ```
 
@@ -188,10 +209,14 @@ scanf("%d", &i); // no space after unary operator
 i = i * i; // single spaces around binary operators
 
 if (i == 7) // no spaces between identifiers or constants and parentheses
-        printf("Congrats!\n");
+{
+    printf("Congrats!\n");
+}
 
 for (i = 0; i < 10; i++) // single space after ;
-        printf("%d ", i);   // no space after call identifier
+{
+    printf("%d ", i);   // no space after call identifier
+}
 ```
 
 We avoid trailing spaces at the end of a line.
@@ -227,7 +252,9 @@ We align comments with the code they describe, indenting both identically, showi
 // display even integers below 11
 //
 for (j = 0; j < 11; j += 2)
+{
     printf(" %d", j);
+}
 ```
 
 Such comments summarize the code that follows and help the reader avoid studying that code in detail if it is not the target code for which they are searching.
@@ -241,7 +268,7 @@ We refer to values that appear out of nowhere in program code as magic numbers. 
 
 ### Unmodifiable Variables
 
-An unmodifiable variable takes the form
+An **unmodifiable** variable takes the form
 
 ```c
  const type SYMBOL = value;
@@ -254,20 +281,21 @@ const double PI = 3.14159;
 
 int main(void)
 {
-        double radius, area;
+    double radius, area;
 
-        printf("Enter radius : ");
-        scanf("%lf", &radius);
-        area = PI * radius * radius;
-        printf("The area of your circle is : %lf\n", area);
+    printf("Enter radius : ");
+    scanf("%lf", &radius);
 
-        return 0;
+    area = PI * radius * radius;
+    printf("The area of your circle is : %lf\n", area);
+
+    return 0;
 }
 ```
 
 ### Macro Directive
 
-A macro directive takes the form
+A macro is **NOT** a variable but is used for substitution at compile-time. A macro directive takes the form:
 
 ```c
 #define SYMBOL value
@@ -275,7 +303,13 @@ A macro directive takes the form
 
 We terminate this directive with an end of line character immediately following value.
 
-The `define` directive instructs the C compiler to substitute every occurrence of SYMBOL with value throughout the code. Note the absence of a semi-colon at the end of the directive. The substitution is a straightforward search and replace. The value itself may include whitespace.
+The `define` directive instructs the C compiler to **substitute** every occurrence of SYMBOL with value throughout the code.
+
+:::note
+
+Notice the absence of a semi-colon at the end of the directive. The substitution is a straightforward **search** and **replace**. The value itself may include whitespace.
+
+:::
 
 For example,
 
@@ -288,7 +322,11 @@ int main(void)
 
         printf("Enter radius : ");
         scanf("%lf", &radius);
+
         area = PI * radius * radius;
+        // At compile-time, the above statement becomes:
+        // area = 3.14159 * radius * radius
+
         printf("The area of your circle is : %lf\n", area);
 
         return 0;

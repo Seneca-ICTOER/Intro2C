@@ -112,19 +112,19 @@ To open a file named alpha.txt for writing, we write:
 
 int main(void)
 {
-        FILE *fp = NULL;
+    FILE *fp = NULL;
 
-        fp = fopen("alpha.txt","w");
+    fp = fopen("alpha.txt","w");
 
-        if (fp != NULL)
-        {
-                // statements to be added later
-        }
-        else
-        {
-                printf("Failed to open file\n");
-        }
-        return 0;
+    if (fp != NULL)
+    {
+        // statements to be added later
+    }
+    else
+    {
+        printf("Failed to open file\n");
+    }
+    return 0;
 }
 ```
 
@@ -150,20 +150,20 @@ To close a file named `alpha.txt` that is open for writing, we write:
 
 int main(void)
 {
-        FILE *fp = NULL;
+    FILE *fp = NULL;
 
-        fp = fopen("alpha.txt","w");
+    fp = fopen("alpha.txt","w");
 
-        if (fp != NULL)
-        {
-                // statements to be added later
-                fclose(fp);
-        }
-        else
-        {
-                printf("Failed to open file\n");
-        }
-        return 0;
+    if (fp != NULL)
+    {
+        // statements to be added later
+        fclose(fp);
+    }
+    else
+    {
+        printf("Failed to open file\n");
+    }
+    return 0;
 }
 ```
 
@@ -200,22 +200,22 @@ For example:
 
 int main(void)
 {
-        FILE *fp = NULL;
-        int sku = 4664;
-        double price = 1.49;
+    FILE *fp = NULL;
+    int sku = 4664;
+    double price = 1.49;
 
-        fp = fopen("alpha.txt","w");
+    fp = fopen("alpha.txt","w");
 
-        if (fp != NULL)
-        {
-                fprintf(fp, "sku = %d price = %10.2lf\n", sku, price);
-                fclose(fp);
-        }
-        else
-        {
-                printf("Failed to open file\n");
-        }
-        return 0;
+    if (fp != NULL)
+    {
+        fprintf(fp, "sku = %d price = %10.2lf\n", sku, price);
+        fclose(fp);
+    }
+    else
+    {
+        printf("Failed to open file\n");
+    }
+    return 0;
 }
 ```
 
@@ -251,24 +251,24 @@ For example:
 
 int main(void)
 {
-        FILE *fp = NULL;
-        int sku;
-        double price;
+    FILE *fp = NULL;
+    int sku;
+    double price;
 
-        fp = fopen("alpha.txt","r");
+    fp = fopen("alpha.txt","r");
 
-        if (fp != NULL)
-        {
-                fscanf(fp, "%d %lf", &sku, &price);
-                printf("sku = %d price = %10.2lf\n", sku, price);
-                fclose(fp);
-        }
-        else
-        {
-                printf("Failed to open file\n");
-        }
+    if (fp != NULL)
+    {
+        fscanf(fp, "%d %lf", &sku, &price);
+        printf("sku = %d price = %10.2lf\n", sku, price);
+        fclose(fp);
+    }
+    else
+    {
+        printf("Failed to open file\n");
+    }
 
-        return 0;
+    return 0;
 }
 ```
 
@@ -319,30 +319,34 @@ The following program reads and displays this data, rewinds the file and reads a
 
 int main(void)
 {
-        FILE *fp = NULL;
-        int sku;
-        double price;
+    FILE *fp = NULL;
+    int sku;
+    double price;
 
-        fp = fopen("produce.txt","r");
+    fp = fopen("produce.txt","r");
 
-        if (fp != NULL)
+    if (fp != NULL)
+    {
+        while( fscanf(fp, "%d%lf", &sku, &price) != EOF)
         {
-                while( fscanf(fp, "%d%lf", &sku, &price) != EOF)
-                        printf("%5d %6.2lf\n", sku, price);
-
-                rewind(fp);
-
-                while (fscanf(fp, "%d%lf", &sku, &price) != EOF)
-                        printf("%5d %6.2lf\n", sku, price);
-
-                fclose(fp);
-        }
-        else
-        {
-                printf("Failed to open file\n");
+            printf("%5d %6.2lf\n", sku, price);
         }
 
-        return 0;
+        rewind(fp);
+
+        while (fscanf(fp, "%d%lf", &sku, &price) != EOF)
+        {
+            printf("%5d %6.2lf\n", sku, price);
+        }
+
+        fclose(fp);
+    }
+    else
+    {
+        printf("Failed to open file\n");
+    }
+
+    return 0;
 }
 ```
 

@@ -43,28 +43,29 @@ To determine the number of records in this file, we count the number of newline 
 
 int main(void)
 {
-        FILE *fp = NULL;
-        int c, nrecs;
+    FILE *fp = NULL;
+    int c, nrecs;
 
-        fp = fopen("produce.txt", "r");
+    fp = fopen("produce.txt", "r");
 
-        if (fp != NULL)
-        {
-                nrecs = 0;
-                do {
-                        c = fgetc(fp);
-                        if (c != EOF)
-                        {
-                                if ((char)c == '\n')
-                                        nrecs++;
-                        }
-                } while (feof(fp) == 0);
+    if (fp != NULL)
+    {
+        nrecs = 0;
+        do {
+            c = fgetc(fp);
 
-                printf("%d records on file\n", nrecs);
-                fclose(fp);
-        }
+            if (c != EOF)
+            {
+                if ((char)c == '\n')
+                nrecs++;
+            }
+        } while (feof(fp) == 0);
 
-        return 0;
+        printf("%d records on file\n", nrecs);
+        fclose(fp);
+    }
+
+    return 0;
 }
 ```
 
@@ -75,7 +76,9 @@ The above program produces the following output:
 ```
 
 :::note
+
 Since this program determines the number of records in the file by counting the newline characters, to report the correct number of records, the last record in the file must end with a newline character. If the last record does not end with a newline character, the count will be off by one.
+
 :::
 
 ## Fields
@@ -96,26 +99,28 @@ The following program reads the fields of each record in the file and displays t
 
 int main(void)
 {
-        FILE *fp = NULL;
-        int sku;
-        double price;
+    FILE *fp = NULL;
+    int sku;
+    double price;
 
-        fp = fopen("produce.txt", "r");
+    fp = fopen("produce.txt", "r");
 
-        if (fp != NULL)
+    if (fp != NULL)
+    {
+        printf(" Produce Items\n"
+        " =============\n\n"
+        "SKU       Price\n"
+        "---------------\n");
+
+        while (fscanf(fp,"%d%lf\n", &sku, &price) == 2)
         {
-                printf(" Produce Items\n"
-                    " =============\n\n"
-                    "SKU       Price\n"
-                    "---------------\n");
-
-                while (fscanf(fp,"%d%lf\n", &sku, &price) == 2)
-                        printf("%4d %10.2lf\n", sku, price);
-
-                fclose(fp);
+            printf("%4d %10.2lf\n", sku, price);
         }
 
-        return 0;
+        fclose(fp);
+    }
+
+    return 0;
 }
 ```
 
@@ -160,27 +165,29 @@ The following program reads each record from the file and displays the fields in
 
 int main(void)
 {
-        FILE *fp = NULL;
-        int sku;
-        char status;
-        double price;
+    FILE *fp = NULL;
+    int sku;
+    char status;
+    double price;
 
-        fp = fopen("sale.txt","r");
+    fp = fopen("sale.txt","r");
 
-        if (fp != NULL)
+    if (fp != NULL)
+    {
+        printf(" Produce Items\n"
+        " =============\n\n"
+        "SKU  Sale  Price\n"
+        "----------------\n");
+
+        while (fscanf(fp, "%d;%c;%lf", &sku, &status, &price) == 3)
         {
-                printf(" Produce Items\n"
-                    " =============\n\n"
-                    "SKU  Sale  Price\n"
-                    "----------------\n");
-
-                while (fscanf(fp, "%d;%c;%lf", &sku, &status, &price) == 3)
-                        printf("%4d %c %8.2lf\n", sku, status, price);
-
-                fclose(fp);
+            printf("%4d %c %8.2lf\n", sku, status, price);
         }
 
-        return 0;
+        fclose(fp);
+    }
+
+    return 0;
 }
 ```
 
