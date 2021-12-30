@@ -392,7 +392,7 @@ for (slices = 4; slices > 0; --slices)
 
 ## Flags
 
-Flagging is a method of coding iteration constructs within the single-entry single-exit rule of structured programming. Consider the flow-chart on the left side in the figure below. This design contains a path that crosses another path.
+Flagging is a method of coding iteration constructs within the **_single-entry single-exit principle_** of structured programming. Consider the flow-chart on the left side in the figure below. This design contains a path that crosses another path.
 
 ![Spaghetti code versus Structured code flow charts](/img/flags.png)
 
@@ -432,7 +432,21 @@ Enter integer (0 to stop) 0
 Total = 74
 ```
 
-The test condition is compound due to the evaluation of the flag. If **`done == 1`**, the iteration stops.
+The test condition is compound ([logical expression](expressions.md#logical-expressions)\) due to the evaluation of both, the iterator `i` and the flag `done`. If **`done == 1`**, the iteration stops.
+
+:::warning Important
+
+Until you learn how to evaluate and rationalize when to break the single-entry single-exit principle, you should apply the control flag approach to eloquently manage process flow. Listed below are some cases to avoid:
+
+- `break` (the `switch` construct should be the only construct using this, and only 1 per case)
+- `continue`
+- `exit`
+- `goto`
+- `return`
+- `exit`
+- iterator variable (should only be changed in a single place)
+
+:::
 
 ### Avoid Jumps \(Optional\)
 

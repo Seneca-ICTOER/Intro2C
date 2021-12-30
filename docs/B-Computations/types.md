@@ -258,6 +258,17 @@ For example:
  const double pi = 3.14159265;
 ```
 
+:::tip Good Practice
+
+It is good practice to:
+
+- declare all variables at the **beginning** of the function
+- group related variables together
+
+Following this practice will contribute towards optimal variable organization and easier to maintain code.
+
+:::
+
 ### Multiple Declarations
 
 We may group the identifiers of variables that share the same type within a single declaration by separating the identifiers by commas.
@@ -278,7 +289,20 @@ We may select any identifier for a variable that satisfies the following naming 
 - starts with a letter or an underscore \(`_`\)
 - contains any combination of letters, digits and underscores \(`_`\)
 - contains less than 32 characters \(some compilers allow more, others do not\)
-- is not be a [C reserved word](#reserved-words)
+- is not a [C reserved word](#reserved-words)
+
+:::tip Good Variable Naming Techniques
+
+Variable names (identifiers) should...
+
+- be self-documenting (should not require comments to describe what they are used for)
+- be concise but not so short that it is cryptic
+- accurately describes the data being stored
+- help with the reading of the code
+- use "camelNotation" (first letter of each word is capitalized with the exception of the first word)
+- avoid underscore characters which are commonly used in system libraries to avoid conflicts
+
+:::
 
 ### Reserved Words
 
