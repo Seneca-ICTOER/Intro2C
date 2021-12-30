@@ -120,7 +120,8 @@ void display(int data[][NCOLS], int rows, int cols)
 
     for (i = 0; i < rows; i++)
     {
-        for (j = 0; j < cols; j++){
+        for (j = 0; j < cols; j++)
+        {
             printf("%d ", data[i][j]);
         }
         printf("\n");
@@ -180,7 +181,8 @@ void displayRow(int data[], int cols)
 {
     int i;
 
-    for (i = 0; i < cols; i++){
+    for (i = 0; i < cols; i++)
+    {
         printf("%d ", data[i]);
     }
     printf("\n");
@@ -319,7 +321,8 @@ void display(char names[][31], int count)
 {
     int i;
 
-    for(i = 0; i < count; i++){
+    for(i = 0; i < count; i++)
+    {
         printf("%s\n", names[i]);
     }
 }

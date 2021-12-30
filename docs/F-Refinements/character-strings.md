@@ -239,7 +239,9 @@ int main(void)
     const char name[31] = "My name is Arnold";
 
     for (i = 0; name[i] != '\0'; i++)
+    {
         printf("%c", name[i]);
+    }
 
     putchar('\n');
 
@@ -278,7 +280,9 @@ void print(const char name[])
     int i;
 
     for (i = 0; name[i] != '\0'; i++)
+    {
         printf("%c", name[i]);
+    }
 
     putchar('\n');
 }

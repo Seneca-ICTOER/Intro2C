@@ -144,22 +144,24 @@ void display(int *a, int n);
 
 int main(void)
 {
-        int sku[] = { 2156, 4633, 3122, 5611};
-        const int n = 4;
+    int sku[] = { 2156, 4633, 3122, 5611};
+    const int n = 4;
 
-        display(&sku[1], n - 1);
+    display(&sku[1], n - 1);
 
-        return 0;
+    return 0;
 }
 
 void display(int *a, int n)
 {
-        int i;
+    int i;
 
-        for (i = 0; i < n; i++)
-                printf("%5d\n", a[i]);
+    for (i = 0; i < n; i++)
+    {
+        printf("%5d\n", a[i]);
+    }
 
-        printf("\n");
+    printf("\n");
 }
 ```
 
@@ -243,9 +245,9 @@ Consider the following structure:
 ```c
 struct Student
 {
-        int id;         // student ID
-        float grade[4]; // grades
-        char name[31];  // student name
+    int id;         // student ID
+    float grade[4]; // grades
+    char name[31];  // student name
 };
 
 int main(void)
@@ -287,15 +289,15 @@ Consider a section of a course that contains a list of enrolled students:
 ```c
 struct Student
 {
-        int id;         // student ID
-        float grade[4]; // grades
-        char name[31];  // student name
+    int id;         // student ID
+    float grade[4]; // grades
+    char name[31];  // student name
 };
 
 struct Section
 {
-        int studentCount;
-        struct Student students[40];
+    int studentCount;
+    struct Student students[40];
 };
 ```
 
@@ -307,8 +309,8 @@ A structure _type_ may **NOT** contain an object of its **own type** (see below 
 // A derrived type is not allowed to have its own type as a member!
 struct Section
 {
-        int studentCount;
-        struct Section section;  // <==== !!!! ERROR !!!!
+    int studentCount;
+    struct Section section;  // <==== !!!! ERROR !!!!
 };
 ```
 
@@ -358,31 +360,33 @@ void display(int g[], int n);
 
 int main(void)
 {
-        int i, n;
+    int i, n;
 
-        printf("Enter no of grades : ");
-        scanf("%d", &n);
-        int grade[n];    // Set array to size: n
+    printf("Enter no of grades : ");
+    scanf("%d", &n);
+    int grade[n];    // Set array to size: n
 
-        for (i = 0; i < n; i++)
-        {
-                printf("Grade %d : ", i + 1);
-                scanf("%d", &grade[i]);
-        }
+    for (i = 0; i < n; i++)
+    {
+        printf("Grade %d : ", i + 1);
+        scanf("%d", &grade[i]);
+    }
 
-        display(grade, n);
+    display(grade, n);
 
-        return 0;
+    return 0;
 }
 
 void display(int g[], int n)
 {
-        int i;
+    int i;
 
-        for (i = 0; i < n; i++)
-                printf("%d ", g[i]);
+    for (i = 0; i < n; i++)
+    {
+        printf("%d ", g[i]);
+    }
 
-        printf("\n");
+    printf("\n");
 }
 ```
 

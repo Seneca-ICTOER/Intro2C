@@ -67,9 +67,13 @@ int main(void)
     i = find(sku, itemCount, searchSKU);
 
     if (i >= 0 && i < itemCount)
+    {
         printf("Price : $%0.2lf\n", price[i]);
+    }
     else
+    {
         printf("%d not in system\n", searchSKU);
+    }
 
     return 0;
 }
@@ -105,14 +109,22 @@ Given a sorted key array, we start our search in the middle of the array and at 
 int find_ascend(int skuData[], int skuCount, int findSKU)
 {
     int i, low = 0, high = skuCount - 1, skuIndex = -1;
+
     do {
         i = (low + high) / 2;
+
         if (skuData[i] < findSKU)
+        {
             low = i + 1;
+        }
         else if (skuData[i] > findSKU)
+        {
             high = i - 1;
+        }
         else
+        {
             skuIndex = i;
+        }
     } while (low <= high && skuIndex == -1);
 
     return skuIndex;
@@ -131,9 +143,13 @@ int main(void)
     i = find_ascend(sku, itemCount, searchSKU);
 
     if (i >= 0 && i < itemCount)
+    {
         printf("Price : $%0.2lf\n", price[i]);
+    }
     else
+    {
         printf("%d not in system\n", searchSKU);
+    }
 
     return 0;
 }
@@ -201,9 +217,13 @@ int main(void)
                 scanf("%d", &quantity);
 
                 if (tax[i] == 1)
+                {
                     sum += quantity * price[i] * (1.0 + HST);
+                }
                 else
+                {
                     sum += quantity * price[i];
+                }
             }
             else
             {
@@ -291,7 +311,9 @@ int main(void)
     selectSort(sku, skuCount);
 
     for (i = 0; i < skuCount; i++)
+    {
         printf("%6d\n", sku[i]);
+    }
 
     return 0;
 }
@@ -346,7 +368,9 @@ int main(void)
     bubbleSort(sku, skuCount);
 
     for (i = 0; i < skuCount; i++)
+    {
         printf("%6d\n", sku[i]);
+    }
 
     return 0;
 }
@@ -386,6 +410,7 @@ int main(void)
     // Input the list of names
     printf("Enter names (^ to stop)\n");
     i = 0;
+
     do {
         printf("Name-%d: ", i + 1);
         scanf(" %"FMT_NAME_LEN"[^\n]", name[i]);
@@ -395,16 +420,22 @@ int main(void)
     } while (keepgoing == 1 && i < MAX_NAMES);
 
     if (keepgoing == 1)
+    {
         nameCount = MAX_NAMES;
+    }
     else
+    {
         nameCount = i - 1;
+    }
 
     // sort the names
     bubble(name, nameCount);
 
     // display thesorted list
     for (i = 0; i < nameCount; i++)
+    {
         printf("%s\n", name[i]);
+    }
 
     return 0;
 }
@@ -496,13 +527,17 @@ int main(void)
     int ball[BALL_COUNT];
 
     for (i = 0; i < BALL_COUNT; i++)
+    {
         ball[i] = i + 1;
+    }
 
     srand(time(NULL));
     shuffle(ball, BALL_COUNT);
 
     for (i = 0; i < BALL_COUNT; i++)
+    {
         printf("%2d\n", ball[i]);
+    }
 
     return 0;
 }

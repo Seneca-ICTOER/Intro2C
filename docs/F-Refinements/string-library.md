@@ -66,7 +66,9 @@ int main(void)
     len = strlen(str);
 
     for (i = len - 1; i >= 0; i--)
-    rev[len - 1 - i] = str[i];
+    {
+        rev[len - 1 - i] = str[i];
+    }
 
     rev[len] = '\0';
     puts(rev);
@@ -168,11 +170,17 @@ int main(void)
     scanf("%30[^\n]%*c", str2);
 
     if (strcmp(str1, str2) < 0)
+    {
         printf("%s precedes %s\n", str1, str2);
+    }
     else if(strcmp(str1, str2) > 0)
+    {
         printf("%s follows %s\n", str1, str2);
+    }
     else
+    {
         printf("%s matches %s\n", str1, str2);
+    }
 
     return 0;
 }
@@ -224,8 +232,10 @@ int main(void)
 
     printf("Given name  : ");
     scanf("%30[^\n]%*c", fullName);
+
     printf("Surname     : ");
     scanf("%30[^\n]%*c", surname);
+
     strcat(fullName, " ");
     strcat(fullName, surname);
     printf("Full name is %s\n", fullName);

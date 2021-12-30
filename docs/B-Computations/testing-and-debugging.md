@@ -117,29 +117,38 @@ int main(void)
   total = 0;
   count = 0;
   // End   Node 1 ---
+
   do {
       // Start Node 2 ---
       scanf("%d", &value);
       // End   Node 2 ---
-      if (value < 0) {
+
+      if (value < 0)
+      {
           // Start Node 3 ---
           total -= value;
           count++;
           // End   Node 3 ---
-      } else if (value > 0) {
+      }
+      else if (value > 0)
+      {
           // Start Node 4 ---
           total += value;
           count++;
           // End   Node 4 ---
       }
+
   // Start Node 5 ---
   } while (value != 0);
   // End   Node 5 ---
+
   if (count > 0)
+  {
       // Start Node 6 ---
       printf("The average value is %.2lf\n",
              (double)total/count);
       // End   Node 6 ---
+  }
 
   // Start Node 7 ---
   return 0;
@@ -192,18 +201,24 @@ int main(void)
   do {
       printf("Enter a value (0 to stop) ");
       scanf("%d", &value);
-      if (value < 0) {
+
+      if (value < 0)
+      {
           total -= value;
           count++;
-      } else if (value > 0) {
+      }
+      else if (value > 0)
+      {
           total += value;
           count++;
       }
   } while (value != 0);
+
   if (count > 0)
+  {
       printf("The average value is %.2lf\n",
              (double)total/count);
-
+  }
   return 0;
 }
 ```
@@ -402,23 +417,29 @@ Consider the following code:
 
 int main(void)
 {
-  int a;
-  double b, c;
+    int a;
+    double b, c;
 
-  a = 6;
-  b = 0.7;
-  while (a < 10 && b < 3.0) {
-    if (a < 8) {
-      a = a + 1;
-      b = b * 2;
-      c = a - b; // careful: mixed types
-    } else {
-      a = a - 2;
-      b = b + 0.8;
+    a = 6;
+    b = 0.7;
+
+    while (a < 10 && b < 3.0
+    {
+        if (a < 8)
+        {
+            a = a + 1;
+            b = b * 2;
+            c = a - b; // careful: mixed types
+        }
+        else
+        {
+            a = a - 2;
+            b = b + 0.8;
+        }
+
+        c = a - b;
+        printf("%.2lf-%d-%.2lf\n", c, a, b);
     }
-    c = a - b;
-    printf("%.2lf-%d-%.2lf\n", c, a, b);
-  }
 }
 ```
 

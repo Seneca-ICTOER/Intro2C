@@ -114,7 +114,6 @@ A function consists of a header and a body. The body is the code block that cont
 ```c
  type identifier(type parameter, ..., type parameter)
  {
-
     // function instructions
 
     return x; // x denotes the value returned by this function
