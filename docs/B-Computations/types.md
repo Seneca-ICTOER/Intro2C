@@ -292,7 +292,6 @@ We may select any identifier for a variable that satisfies the following naming 
 - is not a [C reserved word](#reserved-words)
 
 :::tip Good Variable Naming Techniques
-
 Variable names (identifiers) should...
 
 - be self-documenting (should not require comments to describe what they are used for)
