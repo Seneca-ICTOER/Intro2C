@@ -64,3 +64,7 @@ table {
   margin-right: auto;
   width: fit-content;
 }
+
+.theme-edit-this-page {
+  visibility: hidden;
+}
