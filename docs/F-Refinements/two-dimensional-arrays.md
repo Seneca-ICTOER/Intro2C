@@ -97,7 +97,7 @@ We pass a two-dimensional array to a function in the same way that we pass a one
 
 **For Example:**
 
-```c
+```c wasm=pass-2d-array.wasm
 // Two-Dimensional Arrays
 // pass2DArray.c
 
@@ -129,13 +129,6 @@ void display(int data[][NCOLS], int rows, int cols)
 }
 ```
 
-The above program produces the following output:
-
-```
-11 12 13
-21 22 23
-```
-
 The compiler needs the column dimension (`NCOLS`) to determine the start of each `row` within the array. As with one-dimensional arrays the first dimension does not need to be included.
 
 ### Passing a Specific Row of an Array
@@ -159,7 +152,7 @@ To pass a specific row to a function, we identify the row as part of the argumen
 
 **For example:**
 
-```c
+```c wasm=pass-row.wasm
 // Two-Dimensional Arrays
 // passRow.c
 
@@ -187,13 +180,6 @@ void displayRow(int data[], int cols)
     }
     printf("\n");
 }
-```
-
-The above program produces the following output:
-
-```
-11 12 13
-21 22 23
 ```
 
 `a[0]` points to the **first row** of `array a` and holds the address of the **first element** of that row.

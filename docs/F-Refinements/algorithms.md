@@ -268,7 +268,7 @@ A selection sort selects a reference element and steps through the rest of the e
 
 The following program sorts the array in ascending order. Starting with the first element in the array, it picks the first unsorted element as the reference element, swaps it with the smallest element in the unsorted part of the array, and iterates until it reaches the last element in the array.
 
-```c
+```c wasm=selection.wasm
 // Selection Sort
 // selectionSort.c
 
@@ -319,20 +319,11 @@ int main(void)
 }
 ```
 
-The above program produces the following output:
-
-```
-  2156
-  3122
-  4633
-  5611
-```
-
 ### Bubble Sort
 
 A bubble sort moves through the array element by element swapping elements if the next one does not satisfy the sort condition. The algorithm repeats this process for each unsorted subset of the array starting with the first element. The algorithm moves elements to their terminal positions just like bubbles rising through a liquid - hence the name bubble sort.
 
-```c
+```c wasm=bubble.wasm
 // Bubble Sort
 // bubbleSort.c
 
@@ -374,15 +365,6 @@ int main(void)
 
     return 0;
 }
-```
-
-The above program produces the following output:
-
-```
-  2156
-  3122
-  4633
-  5611
 ```
 
 ### Sorting Strings (Optional)
@@ -491,7 +473,7 @@ Mixing algorithms have applications in games of chance. Examples include shuffli
 
 Consider the following program, which tumbles 10 balls into a lottery chute. To simulate mixing, the algorithm picks the index of a reference element, randomly picks the index of another element further along in the array and swaps the values stored in the two elements. This algorithm is attributed to Donald Knuth, a pioneer of computer science.
 
-```c
+```c wasm=mixing.wasm
 // Mix Lottery Balls
 // mix.c
 
@@ -541,19 +523,4 @@ int main(void)
 
     return 0;
 }
-```
-
-The below output is a sample execution of the above program:
-
-```
- 2
- 7
- 3
- 8
- 6
- 9
- 5
-10
- 1
- 4
 ```

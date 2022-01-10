@@ -250,7 +250,7 @@ struct Product
 
 The program that uses the `Product` structure is listed below.
 
-```c
+```c wasm=product.wasm
 // Structure Example
 // structure.c
 
@@ -272,16 +272,6 @@ int main(void)
 
     return 0;
 }
-```
-
-The output produced from the above sample is shown below:
-
-```text
-  SKU Price
- 2156 $2.34
- 4633 $7.89
- 3122 $6.56
- 5611 $9.32
 ```
 
 ## Walkthrough

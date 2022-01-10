@@ -203,7 +203,7 @@ A variable occupies its own memory location from its declaration to the end of i
 
 Consider the following program. The variable `x` within the code block hides the local parameter `x` until the end of the iteration.
 
-```c
+```c wasm=lifetime.wasm
 /* Avoid Variables of the Same Name
  * lifetime.c
  */
@@ -228,12 +228,6 @@ int main(void)
     foo(6);
     return 0;
 }
-```
-
-The program above will produce the following output:
-
-```text
-4 3 2 1 6
 ```
 
 We say that the `x` declared within the code block **_shadows_** the parameter `x` declared in the function header.
@@ -371,7 +365,7 @@ We can pass an object of structure type to a function in either of two ways:
 
 Consider the following program. Note that the `Student` structure includes a member that identifies the number of grades filled. We pass `harry` as a single argument to `display()` and access its member within the function:
 
-```c
+```c wasm=pass-by-value-1.wasm
 // Passing a structure to a function
 // pass_by_value.c
 
@@ -406,22 +400,13 @@ void display(const struct Student st)
 }
 ```
 
-The above program produces the following output:
-
-```text
-Grades for 975
-75.6
-82.3
-68.9
-```
-
 The declaration of `Student` precedes the prototype for `display()`. The compiler needs this declaration to interpret the parameter type in the prototype.
 
 The C compiler passes objects of structure type by value. It copies the value of the argument in the function call into the parameter, as its initial value. Any change within the function affects only the copy and not the original value.
 
 In the following example, the data stored in `harry` does not change after the function `set()` returns control to `main()`:
 
-```c
+```c wasm=pass-by-value-2.wasm
 // Pass by Value
 // pass_by_value.c
 
@@ -464,14 +449,6 @@ void display(const struct Student st)
 }
 ```
 
-The above program produces the following output:
-
-```text
-Grades for 975
-50.0
-50.0
-```
-
 The values in the original object, its copy and the local object are shown in the table below:
 
 <table>
@@ -511,7 +488,7 @@ To change the data within an original object passed to the `set()` function, we 
 
 In the following program, we pass the address of harry to `set()`:
 
-```c
+```c wasm=pass-by-address-1.wasm
 // Pass by Address
 // pass_by_address.c
 
@@ -552,14 +529,6 @@ void display(const struct Student st)
         printf("%.1f\n", st.grade[i]);
     }
 }
-```
-
-The above program produces the following output:
-
-```text
-Grades for 306
-78.9
-91.6
 ```
 
 The values in the original object and the local object are shown in the table below:
@@ -604,7 +573,7 @@ Passing an object **_by address_** is efficient. It avoids copying all member va
 
 Consider passing `harry` by address to function `display()` as well:
 
-```c
+```c wasm=pass-by-address-2.wasm
 // Pass by Address 1
 // pass_by_address_1.c
 
@@ -645,14 +614,6 @@ void display(const struct Student* st)
         printf("%.1f\n", (*st).grade[i]);
     }
 }
-```
-
-The above program produces the following output:
-
-```text
-Grades for 306
-78.9
-91.6
 ```
 
 `display()` dereferences the address before selecting the members. Since the dot operator binds tighter than the dereferencing operator, the parentheses are necessary. Omitting them would generate a compiler error (the data member after the dot operator is not of type `Student*`).
@@ -707,7 +668,7 @@ The arrow operator takes a pointer to an object on its left and a member identif
 
 For example:
 
-```c
+```c wasm=pass-by-address-3.wasm
 // Pass by Address 3
 // arrow_notation.c
 
@@ -748,14 +709,6 @@ void display(const struct Student* st)
         printf("%.1f\n", st->grade[i]);
     }
 }
-```
-
-The above program produces the following output:
-
-```text
-Grades for 306
-78.9
-91.6
 ```
 
 ## Style
@@ -808,7 +761,7 @@ int power(int base, int exponent)
 
 The following program contains several objects of type A. The walkthrough table is shown below.
 
-```c
+```c wasm=structure-walkthrough.wasm
 // Structure Types - Walkthrough
 // struct_walk.c
 

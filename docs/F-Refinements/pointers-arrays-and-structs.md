@@ -134,7 +134,7 @@ If parameter `b` from the second function prototype example above points to an a
 
 To pass a part of an array to a function, we simply pass the address of the first element of that part:
 
-```c
+```c wasm=pass-part.wasm
 // Passing Part of an Array
 // pass_part.c
 
@@ -163,14 +163,6 @@ void display(int *a, int n)
 
     printf("\n");
 }
-```
-
-The above program produces the following output:
-
-```
-4633
-3122
-5611
 ```
 
 :::caution

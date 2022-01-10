@@ -25,7 +25,7 @@ This chapter introduces the principles of modular design, describes the syntax f
 
 Modular design identifies the components of a programming project that can be developed separately. Each module consists of a set of logical constructs that are related to one another. A module may refer to other modules. A trivial example is the program described in the chapter on [compilers](../A-Introduction/compilers.md):
 
-```c
+```c wasm=hello.wasm
 /* My first program
    hello.c          */
 

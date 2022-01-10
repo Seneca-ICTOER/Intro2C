@@ -52,7 +52,7 @@ int putchar (int);
 
 To send the character 'a' to the display device, we write:
 
-```c
+```c wasm=putchar.wasm
 // Single character output
 // putchar.c
 
@@ -63,12 +63,6 @@ int main(void)
     putchar('a');
     return 0;
 }
-```
-
-The above program produces the following output:
-
-```
-a
 ```
 
 ## Formatted Output
@@ -101,16 +95,16 @@ A conversion specifier begins with a `%` symbol and ends with a **_conversion ch
 
 For example:
 
-```c
-int i = 15;
-float x = 3.141593f;
-printf("i is %d; x is %f\n", i, x);
-```
+```c wasm=printf-1.wasm
+#include <stdio.h>
 
-The above code snippet produces the following output:
-
-```
-i is 15; x is 3.141593
+int main(void)
+{
+    int i = 15;
+    float x = 3.141593f;
+    printf("i is %d; x is %f\n", i, x);
+    return 0;
+}
 ```
 
 ### Conversion Controls
@@ -153,7 +147,7 @@ The five control characters are:
 
 To insert the special characters `\`, `'`, and `"`, we use their escape sequences. To insert the special character `%` into the format, we use the `%` symbol:
 
-```c
+```c wasm=special.wasm
 // Outputting special characters
 // special.c
 
@@ -164,17 +158,11 @@ int main(void)
 }
 ```
 
-The above program produces the following output:
-
-```
- \ ' " %
-```
-
 ### Reference Example
 
 The following program produces the output listed on the right for the [ASCII collating sequence](../Resources-Appendices/ascii-collating-sequence.md):
 
-```c
+```c wasm=printf-2.wasm
 // Playing with output formatting
 // printf.c
 #include <stdio.h>
@@ -215,42 +203,6 @@ int main(void)
     printf("%x|<--          %%x\n",'d');
     return 0;
 }
-```
-
-The above program produces the following output:
-
-```
-* ints *
-00000000011
-12345678901
-------------------------
-4321|<--        %d
-    4321|<--  %10d
-0000004321|<--  %010d
-4321      |<--  %-10d
-
-* floats *
-00000000011
-12345678901
-------------------------
-4321.987655|<-- %f
-
-* doubles *
-00000000011
-12345678901
-------------------------
-4321.987655|<-- %lf
-4321.988|<--  %10.3lf
-004321.988|<--  %010.3lf
-4321.988  |<--  %-10.3lf
-
-* chars *
-00000000011
-12345678901
-------------------------
-d|<--           %c
-100|<--         %d
-64|<--          %x
 ```
 
 :::note

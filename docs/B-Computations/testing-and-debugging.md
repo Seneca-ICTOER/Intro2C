@@ -412,7 +412,7 @@ A style that is sufficient for programs discussed in this set of notes is shown 
 
 Consider the following code:
 
-```c
+```c wasm=debug_example.wasm
 // by Evan Weaver
 
 int main(void)
