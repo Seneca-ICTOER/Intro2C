@@ -10,7 +10,7 @@ const serve = async () => {
   console.error(stderr);
 };
 const killPort = async () => {
-  const { stdout, stderr } = await execa(`npx`, ['kill-port', PORT]);
+  const { stdout, stderr } = await execa('npx', ['kill-port', PORT]);
   console.log(stdout);
   console.error(stderr);
   process.exit(0);
