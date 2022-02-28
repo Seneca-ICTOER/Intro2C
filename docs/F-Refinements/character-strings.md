@@ -227,7 +227,7 @@ Arrays of numbers require a separate variable to hold the number of elements tha
 
 The following program displays the string stored in name[31] character by character:
 
-```c
+```c wasm=string-iteration.wasm
 // Iterations on character strings
 // string_iterations.c
 
@@ -249,17 +249,11 @@ int main(void)
 }
 ```
 
-The above program produces the following output:
-
-```
-My name is Arnold
-```
-
 ### Functions
 
 Using a character string instead of an array of characters with a separate sizing variable achieves a more compact argument list for function calls. For example:
 
-```c
+```c wasm=string-to-function.wasm
 // Strings To Functions
 // string_to_function.c
 
@@ -286,12 +280,6 @@ void print(const char name[])
 
     putchar('\n');
 }
-```
-
-The above program produces the following output:
-
-```
-My name is Arnold
 ```
 
 ## Formatted String Input
@@ -892,7 +880,7 @@ Large Skateboards
 
 The `printf()` and `fprintf()` library functions support the `%s` conversion specifier for character string output. The corresponding argument is the **address** of the character string or strings literal. Under this specifier `printf()` displays all of the characters from the address provided up to but **excluding** the null terminator byte. For example:
 
-```c
+```c wasm=formatted-output.wasm
 // Displaying Strings
 // displayStrings.c
 
@@ -906,12 +894,6 @@ int main(void)
 
     return 0;
 }
-```
-
-The above program produces the following output:
-
-```
-My name is Arnold
 ```
 
 ```c
@@ -964,7 +946,7 @@ int puts(const char *);
 
 The parameter receives the address of the character string to be displayed. For example:
 
-```c
+```c wasm=puts.wasm
 // Displaying Lines
 // puts.c
 
@@ -978,12 +960,6 @@ int main(void)
 
     return 0;
 }
-```
-
-The above program produces the following output:
-
-```
-My name is Arnold
 ```
 
 **fputs**

@@ -285,7 +285,7 @@ We call the unary operator that precedes its operand a _**prefix**_ operator and
 
 The difference between the _**prefix**_ and _**postfix**_ expressions is in the value of the expression itself. The _**prefix**_ operator changes the value of its operand and sets the expression's value to be the changed value. The _**postfix**_ operator sets the expression's value to the operand's original value and then changes the operand's value. In other words, the _**prefix**_ operator changes the value before using it, while the _**postfix**_ operator changes the value after using it.
 
-```c
+```c wasm=pre-post.wasm
  // Prefix and Postfix Operators
  // pre_post.c
 

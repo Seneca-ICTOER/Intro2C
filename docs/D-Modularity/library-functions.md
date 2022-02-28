@@ -42,7 +42,7 @@ long long llabs(long long);
 
 Example:
 
-```c
+```c wasm=abs.wasm
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -58,13 +58,6 @@ int main(void)
 }
 ```
 
-The above program produces the following output:
-
-```
-|-12| is 12
-|-24| is 24
-```
-
 ### Random Numbers
 
 `rand()` returns a pseudo-random integer in the range `0` to `RAND_MAX`. `RAND_MAX` is implementation-dependent but **no less** than `32767`. The prototype for `rand()` is:
@@ -75,7 +68,7 @@ int rand(void);
 
 The following program outputs the same set of 10 pseudo-random integers for each successive run:
 
-```c
+```c wasm=rand-1.wasm
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -94,7 +87,7 @@ int main(void)
 
 The following program outputs the same set of 10 pseudo-random integers between `6` and `100` inclusive:
 
-```c
+```c wasm=rand-2.wasm
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -114,7 +107,7 @@ int main(void)
 
 The following program outputs the same set of 10 pseudo-random floating-point numbers between `3.0` and `100.0` inclusive:
 
-```c
+```c wasm=rand-3.wasm
  #include <stdlib.h>
  #include <stdio.h>
 
@@ -143,7 +136,7 @@ int srand(unsigned seed);
 
 The following program outputs a different set of 10 pseudo-random numbers with every run:
 
-```c
+```c wasm=rand-4.wasm
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h> // prototype for time(NULL)
@@ -182,7 +175,7 @@ long double fabsl(long double);
 
 Example
 
-```c
+```c wasm=fabs.wasm
 #include <math.h>
 #include <stdio.h>
 
@@ -196,13 +189,6 @@ int main(void)
 
     return 0;
 }
-```
-
-The above program produces the following output:
-
-```
-|-12.500000| is 12.500000
-|-12.500000| is 12.500000
 ```
 
 ### Floor
@@ -277,7 +263,7 @@ long double powl(long double base, long double exponent);
 
 Example:
 
-```c
+```c wasm=pow.wasm
 #include <math.h>
 #include <stdio.h>
 
@@ -290,12 +276,6 @@ int main(void)
 
     return 0;
 }
-```
-
-The above program produces the following output:
-
-```
-12.500000^3 is 1953.125000
 ```
 
 This set of functions was designed for floating-point arguments and each one is computationally intensive. Avoid using them for simpler integer arguments.
@@ -352,7 +332,7 @@ double difftime(time_t, time_t);
 
 The following program returns the time in seconds taken to execute the central iteration:
 
-```c
+```c wasm=difftime.wasm
 #include <time.h>
 #include <stdio.h>
 #define NITER 1000000000
@@ -378,13 +358,6 @@ int main(void)
 }
 ```
 
-The above program produces the following output:
-
-```
-Elapsed time is 40.0 secs
-Value of x is 1.1051709272
-```
-
 ### Process Time
 
 **clock**
@@ -399,7 +372,7 @@ clock_t clock(void);
 
 The following program returns the process time in seconds taken to execute the central iteration:
 
-```c
+```c wasm=clock.wasm
 #include <time.h>
 #include <stdio.h>
 #define NITER 400
@@ -435,14 +408,6 @@ int main(void)
 
     return 0;
 }
-```
-
-The above program produces the following output:
-
-```
-Elapsed time is 1.0 secs
-Process time is 0.040 secs
-Value of x is 1.0001000050
 ```
 
 :::note

@@ -125,7 +125,7 @@ A convenient way to store tabular information is through two parallel arrays. On
 
 In the following example, `sku[i]` holds the stock keeping unit (sku) for a product, while `price[i]` holds its unit price.
 
-```c
+```c wasm=parallel.wasm
 // Parallel Arrays
 // parallel.c
 
@@ -146,16 +146,6 @@ int main(void)
 
     return 0;
 }
-```
-
-Output of the above program:
-
-```text
-  SKU Price
- 2156 $2.34
- 4633 $7.89
- 3122 $6.56
- 5611 $9.32
 ```
 
 The `sku[]` array holds the key data, while the `price[]` array holds the value data. Note how the elements of parallel arrays with the same index make up the fields of a single record of information.

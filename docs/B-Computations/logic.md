@@ -556,7 +556,7 @@ An iteration within another iteration is called a _**nested iteration**_.
 
 The program below includes a nested iteration:
 
-```c
+```c wasm=row-columns.wasm
 // Rows and Columns
 // row_columns.c
 
@@ -576,14 +576,4 @@ int main(void)
 
     return 0;
 }
-```
-
-The output of the code above:
-
-```c
-0,0  0,1  0,2  0,3  0,4
-1,0  1,1  1,2  1,3  1,4
-2,0  2,1  2,2  2,3  2,4
-3,0  3,1  3,2  3,3  3,4
-4,0  4,1  4,2  4,3  4,4
 ```
