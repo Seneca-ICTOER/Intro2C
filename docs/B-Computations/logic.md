@@ -276,6 +276,8 @@ If the condition is true, the expression evaluates to the operand between **`?`*
 **Example**
 
 ```c
+#include <stdio.h>
+
 int main()
 {
     int minutes;
@@ -418,25 +420,35 @@ Flags are variables that determine whether an iteration continues or stops. A fl
 
 **Example**
 
-The following code snippet uses a flag to terminate the iteration prematurely.
+The following code example demonstrates a flag to terminate the iteration prematurely.
 
 ```c
-int done = 0;  // flag
-int total = 0; // accumulator
-for (i = 0; i < 10 && done == 0; i++)
-{
-    printf("Enter integer (0 to stop) ");
-    scanf("%d", &value);
-    if (value == 0)
+ #include <stdio.h>
+
+ int main(void)
+ {
+    int done = 0;  // flag
+    int total = 0; // accumulator
+	
+    for (i = 0; i < 10 && done == 0; i++)
     {
-        done = 1;
+        printf("Enter integer (0 to stop) ");
+        scanf("%d", &value);
+		
+        if (value == 0)
+        {
+            done = 1;
+        }
+        else
+        {
+            total += value;
+        }
     }
-    else
-    {
-        total += value;
-    }
-}
-printf("Total = %d\n", total);
+	
+    printf("Total = %d\n", total);
+	
+	return 0;
+ }
 ```
 
 Example execution of the code above:
@@ -557,25 +569,27 @@ An iteration within another iteration is called a _**nested iteration**_.
 The program below includes a nested iteration:
 
 ```c
-// Rows and Columns
-// row_columns.c
+ // Rows and Columns
+ // row_columns.c
 
-#include <stdio.h>
+ #include <stdio.h>
 
-int main(void)
-{
-    int i, j;
-    for (i = 0; i < 5; i++)
-    {
-        for (j = 0; j < 5; j++)
-        {
-            printf("%d,%d  ", i, j);
-        }
-        printf("\n");
-    }
+ int main(void)
+ {
+     int i, j;
+	 
+     for (i = 0; i < 5; i++)
+     {
+         for (j = 0; j < 5; j++)
+         {
+             printf("%d,%d  ", i, j);
+         }
+		 
+         printf("\n");
+     }
 
-    return 0;
-}
+     return 0;
+ }
 ```
 
 The output of the code above:

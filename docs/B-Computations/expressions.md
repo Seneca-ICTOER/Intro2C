@@ -117,7 +117,8 @@ Consider the following program, which multiplies two **`int`**'s and then two **
 ```c
  // Limits on Arithmetic Expressions
  // limits.c
-
+ #include <stdio.h>
+ 
  int main(void)
  {
          int i, j, ij;
@@ -166,6 +167,7 @@ The following program, accepts two **`int`**'s and outputs 1 if they are equal; 
 ```c
 // Relational Expressions
  // relational.c
+ #include <stdio.h>
 
  int main(void)
  {
@@ -205,6 +207,7 @@ The following program, accepts three **`int`**'s and outputs _**1**_ if the seco
 ```c
  // Logical Expressions
  // logical.c
+ #include <stdio.h>
 
  int main(void)
  {
@@ -288,6 +291,7 @@ The difference between the _**prefix**_ and _**postfix**_ expressions is in the 
 ```c
  // Prefix and Postfix Operators
  // pre_post.c
+ #include <stdio.h>
 
  int main(void)
  {
@@ -368,6 +372,7 @@ Consider the example below. To obtain the number of hours in fractional form, we
 ```c
  // From minutes to hours
  // cast.c
+ #include <stdio.h>
 
  int main(void)
  {
@@ -415,6 +420,7 @@ If the left operand in an assignment expression is of a higher type than the rig
 ```c
  // Promotion with Assignment Operators
  // promotion.c
+ #include <stdio.h>
 
  int main(void)
  {
@@ -437,6 +443,7 @@ If the left operand in an assignment expression is of a lower type than the righ
 ```c
  // Truncation with Assignment Operators
  // truncation.c
+ #include <stdio.h>
 
  int main(void)
  {
