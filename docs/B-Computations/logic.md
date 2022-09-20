@@ -278,7 +278,7 @@ If the condition is true, the expression evaluates to the operand between **`?`*
 ```c
 #include <stdio.h>
 
-int main()
+int main(void)
 {
     int minutes;
     char s;
@@ -427,14 +427,15 @@ The following code example demonstrates a flag to terminate the iteration premat
 
  int main(void)
  {
+    int value;
     int done = 0;  // flag
     int total = 0; // accumulator
-	
+
     for (i = 0; i < 10 && done == 0; i++)
     {
         printf("Enter integer (0 to stop) ");
         scanf("%d", &value);
-		
+
         if (value == 0)
         {
             done = 1;
@@ -444,9 +445,9 @@ The following code example demonstrates a flag to terminate the iteration premat
             total += value;
         }
     }
-	
+
     printf("Total = %d\n", total);
-	
+
 	return 0;
  }
 ```
@@ -577,14 +578,14 @@ The program below includes a nested iteration:
  int main(void)
  {
      int i, j;
-	 
+
      for (i = 0; i < 5; i++)
      {
          for (j = 0; j < 5; j++)
          {
              printf("%d,%d  ", i, j);
          }
-		 
+
          printf("\n");
      }
 
