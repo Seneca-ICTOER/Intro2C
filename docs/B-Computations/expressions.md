@@ -118,7 +118,7 @@ Consider the following program, which multiplies two **`int`**'s and then two **
  // Limits on Arithmetic Expressions
  // limits.c
  #include <stdio.h>
- 
+
  int main(void)
  {
          int i, j, ij;
@@ -192,7 +192,7 @@ The first conversion specifier in the format string of the last **`printf()`** c
 
 The C language does not have reserved words for true or false. It interprets the value 0 as false and any other value as true. C supports 3 logical operators. Logical expressions yield 1 if the result is true and 0 if the result is false. The value of a logical expression is of type int. Logical expressions take one of the forms listed below:
 
-| **Relational Expression**                     | **Meaning**                 |
+| **Logical Expression**                        | **Meaning**                 |
 | :-------------------------------------------- | :-------------------------- |
 | operand **`&&`** operand                      | both operands are true      |
 | operand **<code>&#124;&#124;</code>** operand | one of the operands is true |
