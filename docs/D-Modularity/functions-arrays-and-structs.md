@@ -367,7 +367,6 @@ We can pass an object of structure type to a function in either of two ways:
 
 - pass by value
 - pass by address
-- Pass By Value
 
 Consider the following program. Note that the `Student` structure includes a member that identifies the number of grades filled. We pass `harry` as a single argument to `display()` and access its member within the function:
 
