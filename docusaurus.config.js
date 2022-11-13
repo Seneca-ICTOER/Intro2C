@@ -39,7 +39,7 @@ module.exports = {
               html: `<a href='#' id='pwa-button' class='footer__link-item' hidden>Install as an App</a>`,
             },
             {
-              html: `<a href='https://intro2c.sdds.ca/Introduction-to-C.pdf' id='download-pdf' class='footer__link-item' download='Introduction-to-C.pdf'>Download Notes (PDF)</a>`,
+              html: `<a href='../Introduction-to-C.pdf' id='download-pdf' class='footer__link-item' download='Introduction-to-C.pdf'>Download Notes (PDF)</a>`,
             },
           ],
         },
