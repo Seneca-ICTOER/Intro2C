@@ -23,7 +23,21 @@ We transform the program instructions and program data into the bits and bytes t
 
 Programming languages demand completeness and greater precision than human languages. The ultimate interpreter of any computer program is the hardware. Hardware cannot interpret intent or nuance, and we need to provide much more detail in our instructions than we do in casual conversations amongst ourselves. In this sense, programming is a more arduous task than writing a formal report that someone else will read.
 
-!["Human languages, Programming languages and machine languages" ](/img/languages.png)
+```mermaid
+%%{ init: { 'flowchart': { 'useMaxWidth': false } } }%%
+flowchart
+  subgraph title1[Human Language]
+      subgraph title2[Programming Language]
+        title3([Machine Language]):::title
+      end
+    end
+    title1:::header1
+    title2:::header2
+    title3:::header3
+    classDef header1 font-size: 12px, font-weight: 600;
+    classDef header2 font-size: 10px, font-weight: 600, fill:lightblue;
+    classDef header3 font-size: 9px, font-weight: 600, fill:orange;
+```
 
 This chapter describes the generations of programming languages, identifies some key features of the C language, describes the compilers that we use to convert programs written in C into binary instructions that hardware can execute and explains the basic syntax found in any C program.
 
@@ -76,7 +90,48 @@ A C compiler is an operating system program that converts C language statements 
 
 To run our program, we direct the operating system to load the binary code into RAM and start executing that code. The user of our program provides input while that code is executing and receives output from it.
 
-![Compiling and executing processes](/img/compiler.png)
+```mermaid
+%%{ init: { 'flowchart': { 'curve': 'stepBefore', 'nodeSpacing': 75 } } }%%
+graph LR
+    C ---> E
+    subgraph <h2>Compiling</h2>
+    A[Source Code]:::cProgram --> B[Compiler]:::compiler
+    B --> C[Binary Code]:::machine
+    end
+    subgraph <h2>Executing</h2>
+    D[Input]:::user ---> E[Binary Code]:::cProgram
+    E ---> F[Output]:::user
+    end
+
+    classDef cProgram fill:#bef;
+    classDef machine fill:#fd8;
+    classDef compiler fill:#fe6, width:100px;
+    classDef user fill:#4b7, width:80px;
+```
+
+export const TextBox = ({ children, color }) => (
+  <div
+    style={{
+      backgroundColor: color,
+      border: '1px solid darkgray',
+      flex: '1 1 0px',
+      color: '#000',
+      fontSize: '12px',
+      fontWeight: '600',
+      textAlign: 'center',
+      padding: '12px 0',
+    }}
+  >
+    <span>{children}</span>
+  </div>
+);
+
+<div style={{ display: 'flex', gap: '1em' }}>
+  <TextBox color="#bef">C Program</TextBox>
+  <TextBox color="#fe6">Compiler</TextBox>
+  <TextBox color="#fd8">Machine Language Program</TextBox>
+  <TextBox color="#4b7">User</TextBox>
+</div>
 
 Compilers can optimize the program instructions that we provide to improve execution times.
 
@@ -112,7 +167,14 @@ To create a binary code version of our source code, enter the following command:
 gcc hello.c
 ```
 
-![Gcc compiler](/img/gcc.png)
+```mermaid
+%%{ init: { 'flowchart': { 'diagramPadding': 45 } } }%%
+graph LR
+  A[hello.c]:::cProgram ---> B[gcc]:::compiler ---> C[a.out]:::machine
+  classDef cProgram width: 90px, fill:lightblue;
+  classDef compiler width: 90px, fill:yellow;
+  classDef machine width: 90px, fill:#ffd580;
+```
 
 By default, the gcc compiler produces an output file named `a.out`. `a.out` contains all of the machine language instructions needed to execute the program.
 
@@ -136,7 +198,14 @@ The C compiler that runs on Windows platforms is called cl. To access this compi
 cl hello.c
 ```
 
-![cl compiler](/img/cl.png)
+```mermaid
+%%{ init: { 'flowchart': { 'diagramPadding': 45, 'nodeSpacing': 100 } } }%%
+flowchart LR
+  A[hello.c]:::cProgram ---> B[cl]:::compiler ---> C[hello.exe]:::machine
+  classDef cProgram width: 90px, fill:lightblue;
+  classDef compiler width: 90px, fill:yellow;
+  classDef machine width: 90px, fill:#ffd580;
+```
 
 By default, the cl compiler produces a file named `hello.exe`. `hello.exe` contains all of the machine language instructions needed to execute the program.
 

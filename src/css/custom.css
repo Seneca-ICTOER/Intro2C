@@ -68,3 +68,7 @@ table {
 .theme-edit-this-page {
   visibility: hidden;
 }
+
+.mermaid > svg {
+  width: 100%;
+}
