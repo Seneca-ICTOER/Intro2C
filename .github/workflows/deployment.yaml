@@ -27,7 +27,7 @@ jobs:
       - name: Generate Introduction-to-C.pdf
         run: |
           yarn serve-convert
-          mv ./Introduction-to-C.pdf ./static
+          # mv ./Introduction-to-C.pdf ./static
       - name: Release to GitHub Pages
         env:
           USE_SSH: true
