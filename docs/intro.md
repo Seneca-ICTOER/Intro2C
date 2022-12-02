@@ -12,7 +12,7 @@ description: Contents of Programming Computers Using C
 
 - [Computers](A-Introduction/computers.md)
 - [Information](A-Introduction/information.md)
-- [Compilers](A-Introduction/compilers.md)
+- [Compilers](A-Introduction/compilers.mdx)
 
 ## Computations
 

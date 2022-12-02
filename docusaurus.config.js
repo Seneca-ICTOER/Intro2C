@@ -1,5 +1,6 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const mdxMermaid = require('mdx-mermaid');
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
@@ -13,6 +14,7 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: 'Seneca-ICTOER',
   projectName: 'Intro2C',
+
   themeConfig: {
     navbar: {
       title: 'Introduction to C',
@@ -59,6 +61,7 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/',
           editUrl: 'https://github.com/Seneca-ICTOER/Intro2C/tree/main',
+          remarkPlugins: [mdxMermaid],
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

@@ -23,7 +23,7 @@ This chapter introduces the principles of modular design, describes the syntax f
 
 ## Modular Design
 
-Modular design identifies the components of a programming project that can be developed separately. Each module consists of a set of logical constructs that are related to one another. A module may refer to other modules. A trivial example is the program described in the chapter on [compilers](../A-Introduction/compilers.md):
+Modular design identifies the components of a programming project that can be developed separately. Each module consists of a set of logical constructs that are related to one another. A module may refer to other modules. A trivial example is the program described in the chapter on [compilers](../A-Introduction/compilers.mdx):
 
 ```c
 /* My first program
@@ -97,7 +97,7 @@ The C language is a procedural programming language. It supports modular design 
 
 ![function](/img/function.png)
 
-In the example from the introductory chapter on [compilers](../A-Introduction/compilers.md) listed above:
+In the example from the introductory chapter on [compilers](../A-Introduction/compilers.mdx) listed above:
 
 1. the `main()` function calls the `printf()` function
 2. the `printf()` function outputs the string
