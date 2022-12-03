@@ -46,7 +46,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Seneca College.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Chris Szalwinski and Seneca College.`,
     },
     prism: {
       theme: lightCodeTheme,
