@@ -15,6 +15,11 @@ module.exports = {
   organizationName: 'Seneca-ICTOER',
   projectName: 'Intro2C',
 
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
+
   themeConfig: {
     navbar: {
       title: 'Introduction to C',
