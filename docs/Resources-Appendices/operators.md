@@ -9,7 +9,7 @@ description: Operator Precedence is the order in which operands are bound to ope
 
 | Operators                                                                                                             | Associativity                            |
 | :-------------------------------------------------------------------------------------------------------------------- | :--------------------------------------- |
-| `()`&nbsp;&nbsp; `[]`<br/>`++`(postfix) &nbsp;`--`(postfix)                                                           | left to right **HIGH**<br/>right to left |
+| `()`&nbsp;&nbsp; `[]`<br/>`++`(postfix) &nbsp;`--` postfix)<br/> `.` &nbsp; `->` (struct member access)               | left to right **HIGH**<br/>right to left |
 | `++`(prefix) &nbsp;&nbsp;&nbsp;`--`(prefix)<br/>`!`&nbsp;&nbsp; `+`(unary) &nbsp;`-`(unary) &nbsp;`*`&nbsp;&nbsp; `&` | left to right<br/>right to left          |
 | `*`&nbsp;&nbsp; `/`&nbsp;&nbsp; `%`                                                                                   | left to right **MEDIUM**                 |
 | `+`(binary) `-`(binary)                                                                                               | left to right                            |
@@ -17,8 +17,8 @@ description: Operator Precedence is the order in which operands are bound to ope
 | `==`&nbsp;&nbsp; `!=`                                                                                                 | left to right                            |
 | `&&`                                                                                                                  | left to right                            |
 | <code>&#124;&#124;</code>                                                                                             | left to right                            |
-| `=`&nbsp;&nbsp;`+=`&nbsp;&nbsp;`-=`&nbsp;&nbsp;`*=`&nbsp;&nbsp; `/=`&nbsp;&nbsp; `%=`                                 | right to left                            |
 | `?:`                                                                                                                  | right to left **LOW**                    |
+| `=`&nbsp;&nbsp;`+=`&nbsp;&nbsp;`-=`&nbsp;&nbsp;`*=`&nbsp;&nbsp; `/=`&nbsp;&nbsp; `%=`                                 | right to left                            |
 | `,`                                                                                                                   | left to right                            |
 
 Unary `+`, `-` and `*` have higher precedence than the binary forms. The operator `()` refers to function call.

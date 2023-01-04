@@ -60,7 +60,7 @@ We list the types that belong to the structure along with their identifiers with
 ```c
 struct Tag
 {
-    // [type] [identifier];
+    [type] [identifier];
     // ... other types
 };
 ```
@@ -88,9 +88,9 @@ The members occupy memory in the order in which we have listed them in the decla
 
 ![Byte representation of a Student struct in memory.](/img/example1-memory-occupation.png)
 
-:::note
+:::info NOTE
 
-This declaration does not allocate any memory for any object; it only defines the structure and the rules for objects of that type.
+This declaration does **NOT allocate any memory** for any object; it only **defines the structure** and the rules for objects of that type (in other words, this is NOT a variable declaration).
 
 :::
 
@@ -109,6 +109,12 @@ struct Student
 ```
 
 When we place source code in a header (`.h`) file, we insert that header file's code into the source file that requires that information, as shown below. In such cases, our complete source code is stored in more than one file. When compiling multi-file source code, we only pass the `.c` file(s) to the compiler. The code in a header file is duplicated inside each C file in which it is included, which allows us to write code, like a `struct`, in one spot and edit it in that one spot alone.
+
+:::info Did you know?
+
+Header files play an important role in modularity and in the organization of code. Header files often contain additional things like macros and function prototypes which will be discussed in the [functions](/D-Modularity/functions#include) topic.
+
+:::
 
 ### Allocating Memory
 

@@ -91,7 +91,18 @@ A C compiler is an operating system program that converts C language statements 
 To run our program, we direct the operating system to load the binary code into RAM and start executing that code. The user of our program provides input while that code is executing and receives output from it.
 
 ```mermaid
-%%{ init: { 'flowchart': { 'curve': 'stepBefore', 'nodeSpacing': 75 } } }%%
+%%{ init: {
+	'flowchart': {
+		'curve': 'stepBefore',
+		'nodeSpacing': 75
+		}
+	}
+
+	'theme': 'base',
+	'themeVariables': {
+		'darkMode': 'true'
+	}
+}%%
 graph LR
     C ---> E
     subgraph <h2>Compiling</h2>
