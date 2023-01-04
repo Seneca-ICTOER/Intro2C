@@ -112,7 +112,7 @@ When we place source code in a header (`.h`) file, we insert that header file's 
 
 :::info Did you know?
 
-Header files play an important role in modularity and in the organization of code. Header files often contain additional things like macros and function prototypes which will be discussed in the [functions](/D-Modularity/functions#include) topic.
+Header files play an important role in modularity and in the organization of code. Header files often contain additional things like macros and function prototypes which will be discussed in the [functions](/D-Modularity/functions-arrays-and-structs#include) topic.
 
 :::
 
