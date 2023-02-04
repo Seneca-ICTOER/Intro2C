@@ -360,7 +360,7 @@ slices = 4;
 do {
     slices--;
     printf("Gulp! Slices left %d\n", slices);
-}while (slices > 0);
+} while (slices > 0);
 ```
 
 The above code produces the following output:
@@ -408,6 +408,15 @@ for (slices = 4; slices > 0; --slices)
 {
     printf("Gulp! Slices left %d\n", slices - 1);
 }
+```
+
+The above code produces the following output:
+
+```text
+Gulp! Slices left 3
+Gulp! Slices left 2
+Gulp! Slices left 1
+Gulp! Slices left 0
 ```
 
 ## Flags
