@@ -177,9 +177,9 @@ The scope of a program identifier determines its visibility. Its scope depends o
 
 ### Global Scope
 
-A variable **declared outside all function definitions** has _global scope_. We call such a variable a _global variable_. Any program instruction can access a global variable. The compiler allocates memory for a global variable alongside the string literals at startup and releases that memory at termination; that is, after the having executed the `return` statement of `main()`.
+A variable **declared outside all function definitions** has _global scope_. We call such a variable a _global variable_. Any program instruction can access a global variable. The compiler allocates memory for a global variable alongside the string literals at startup and releases that memory at termination; that is, after having executed the `return` statement of `main()`.
 
-Global variables introduce a high degree of coupling. For instance, if we change the name of the variable in its definition, we need to change it in all functions that reference that variable. Because of this high degree of coupling, we avoid global variables altogether. Their presence complicates maintainability: if 1000s of functions reference the variable, changing its name proves to be a nightmare.
+Global variables introduce a high degree of coupling. For instance, if we change the name of the variable in its definition, we need to change it in all functions that reference that variable. Because of this high degree of coupling, we avoid global variables altogether. Their presence complicates maintainability: if 1000s of functions reference the variable, changing its name proves to be a major undertaking and can lead to mistakes introducing bugs into the program.
 
 ### Function Scope
 
