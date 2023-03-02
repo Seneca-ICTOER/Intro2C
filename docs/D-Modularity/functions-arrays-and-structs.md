@@ -769,6 +769,7 @@ It is good programming style to:
 - use generic comments and variables names to enable future use in different applications without having to modify any of the function code
 - avoid calling the `main()` function recursively
 - limit the number of local variables to below 10, if possible
+- adhere to the single-entry single-exit principle having a **single return** statement
 
 ### Documentation
 
