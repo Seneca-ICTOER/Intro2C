@@ -123,7 +123,13 @@ We allocate memory for a C string in the same way that we allocate memory for an
 For example, to allocate memory for a string with up to `30` meaningful characters, we write:
 
 ```c
-char name[31]; // 30 chars plus 1 char for the null terminator byte
+// Macro (placed after #includes) representing the intended meaningful number
+//       of chars to manage in the char array
+#define NAME_SIZE 30
+.
+.
+// Variable declaration (char array) inside the function where you intend to use it
+char name[NAME_SIZE + 1]; // 30 chars plus 1 char for the null terminator byte
 ```
 
 ### Initializing Memory
@@ -131,14 +137,14 @@ char name[31]; // 30 chars plus 1 char for the null terminator byte
 To initialize a string at the time of memory allocation, we follow the definition with the assignment operator and the set of initial characters enclosed in braces.
 
 ```c
-const char name[31] = {'M','y',' ','n','a','m','e',' ','i','s',' ',
-                       'A','r','n','o','l','d','\0'};
+const char name[NAME_SIZE + 1] = {'M','y',' ','n','a','m','e',' ','i','s',' ',
+                                  'A','r','n','o','l','d','\0'};
 ```
 
 For a more compact form we enclosed the list of meaningful characters in double quotes.
 
 ```c
-const char name[31] = "My name is Arnold";  // null-byte is automatically appended
+const char name[NAME_SIZE + 1] = "My name is Arnold";  // null-byte is automatically appended
 ```
 
 The C compiler copies the characters in the string literal into the character string and appends the null-byte terminator after the last copied character.
@@ -233,10 +239,12 @@ The following program displays the string stored in name[31] character by charac
 
 #include <stdio.h>
 
+#define NAME_SIZE 30
+
 int main(void)
 {
     int i;
-    const char name[31] = "My name is Arnold";
+    const char name[NAME_SIZE + 1] = "My name is Arnold";
 
     for (i = 0; name[i] != '\0'; i++)
     {
@@ -264,12 +272,15 @@ Using a character string instead of an array of characters with a separate sizin
 // string_to_function.c
 
 #include <stdio.h>
+
+#define NAME_SIZE 30
+
 void print(const char name[]);
 
 int main(void)
 {
     int i;
-    const char name[31] = "My name is Arnold";
+    const char name[NAME_SIZE + 1] = "My name is Arnold";
 
     print(name);
     return 0;
@@ -315,7 +326,7 @@ The `%s` conversion specifier
 For example:
 
 ```c
-char name[31];
+char name[NAME_SIZE + 1];
 scanf("%s", name);  // <=== User enters: My name is Arnold
 ```
 
@@ -400,7 +411,7 @@ The characters `' name is Arnold'` remain in the input buffer.
 A qualifier on the conversion specifier limits the number of characters accepted. For instance, %10s reads no more than 10 characters:
 
 ```c
-char name[31];
+char name[NAME_SIZE + 1];
 scanf("%10s", name); // <=== User enters: Schwartzenegger
 ```
 
@@ -487,7 +498,7 @@ By specifying the maximum number of characters to be read at less than 31, we en
 For example, if enter many spaces before the Schwartzenegger value:
 
 ```c
-char name[31];
+char name[NAME_SIZE + 1];
 scanf("%10s", name);  // <=== User enters: '          Schwartzenegger'
 ```
 
@@ -583,7 +594,7 @@ For example, the `%[^\n]` conversion specifier:
 For example:
 
 ```c
-char name[31];
+char name[NAME_SIZE + 1];
 scanf("%[^\n]", name);  // <=== User enters: My name is Arnold
 ```
 
@@ -666,7 +677,7 @@ The `scanf()` function accepts the full line an stores:
 A qualifier on this conversion specifier before the opening bracket limits the number of characters accepted. For instance,`%10[^\n]` reads no more than 10 characters:
 
 ```c
-char name[31];
+char name[NAME_SIZE + 1];
 scanf("%10[^\n]", name);  // <=== User enters: My name is Arnold
 ```
 
@@ -753,7 +764,7 @@ We specify the maximum number of characters as the qualifier to ensure that `sca
 For example:
 
 ```c
-char name[31];
+char name[NAME_SIZE + 1];
 scanf("%10[^\n]", name);  // <=== User enters: '          My name is Arnold'
 ```
 
@@ -855,10 +866,12 @@ The following program reads and displays this data:
 
 #include <stdio.h>
 
+#define PHRASE_SIZE 60
+
 int main(void)
 {
     FILE *fp = NULL;
-    char phrase[61];
+    char phrase[PHRASE_SIZE + 1];
 
     fp = fopen("spring.dat","r");
 
@@ -898,9 +911,11 @@ The `printf()` and `fprintf()` library functions support the `%s` conversion spe
 
 #include <stdio.h>
 
+#define NAME_SIZE 30
+
 int main(void)
 {
-    const char name[31] = "My name is Arnold";
+    const char name[NAME_SIZE + 1] = "My name is Arnold";
 
     printf("%s\n", name);
 
@@ -970,9 +985,11 @@ The parameter receives the address of the character string to be displayed. For 
 
 #include <stdio.h>
 
+#define NAME_SIZE 30
+
 int main(void)
 {
-    const char name[31] = "My name is Arnold";
+    const char name[NAME_SIZE + 1] = "My name is Arnold";
 
     puts(name);
 
