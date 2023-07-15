@@ -1,0 +1,1 @@
+(self.webpackChunkipc144=self.webpackChunkipc144||[]).push([[918],{11748:(e,n,r)=>{var o={"./locale":89234,"./locale.js":89234};function c(e){var n=t(e);return r(n)}function t(e){if(!r.o(o,e)){var n=new Error("Cannot find module '"+e+"'");throw n.code="MODULE_NOT_FOUND",n}return o[e]}c.keys=function(){return Object.keys(o)},c.resolve=t,e.exports=c,c.id=11748}}]);
