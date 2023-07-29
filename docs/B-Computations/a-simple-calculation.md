@@ -39,7 +39,7 @@ const int x = 0x5C;  // same as     const int x = 92;
 
 **Example**
 
-To define the constant `pi` \(π\) to 8 significant digits, we select the `float` type and write
+To define the constant `pi` \(π\) to 5 significant digits, we select the `float` type and write
 
 ```c
 int main(void)
