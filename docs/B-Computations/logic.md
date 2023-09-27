@@ -436,7 +436,7 @@ The following code example demonstrates a flag to terminate the iteration premat
 
  int main(void)
  {
-    int value;
+    int i, value;
     int done = 0;  // flag
     int total = 0; // accumulator
 
