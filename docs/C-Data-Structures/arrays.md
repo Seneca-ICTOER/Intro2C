@@ -42,7 +42,7 @@ int grade[8];
 
 This statement allocates contiguous storage in RAM for an array named grade that consists of 8 int elements.
 
-![array with 8 int elements](/img/arrays/array-with-8-elements.png 'Array with 8 int elements')
+![array with 8 int elements](/img/svg/array-with-8-elements.svg 'Array with 8 int elements')
 
 We can specify the size of the array using **`#define`** or **`const int`**:
 
