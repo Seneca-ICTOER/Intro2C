@@ -379,7 +379,7 @@ Consider the following program. Note that the `Student` structure includes a mem
 struct Student
 {
     int no;
-    int no_grades_filled;
+    int noGradesFilled;
     float grade[4];
 };
 
@@ -398,7 +398,7 @@ void display(const struct Student st)
     int i;
     printf("Grades for %d\n", st.no);
 
-    for (i = 0; i < st.no_grades_filled; i++)
+    for (i = 0; i < st.noGradesFilled; i++)
     {
         printf("%.1f\n", st.grade[i]);
     }
@@ -429,7 +429,7 @@ In the following example, the data stored in `harry` does not change after the f
 struct Student
 {
     int no;
-    int no_grades_filled;
+    int noGradesFilled;
     float grade[4];
 };
 
@@ -456,7 +456,7 @@ void display(const struct Student st)
     int i;
     printf("Grades for %d\n", st.no);
 
-    for (i = 0; i < st.no_grades_filled; i++)
+    for (i = 0; i < st.noGradesFilled; i++)
     {
         printf("%.1f\n", st.grade[i]);
     }
@@ -519,7 +519,7 @@ In the following program, we pass the address of harry to `set()`:
 struct Student
 {
         int no;
-        int no_grades_filled;
+        int noGradesFilled;
         float grade[4];
 };
 
@@ -546,7 +546,7 @@ void display(const struct Student st)
     int i;
     printf("Grades for %d\n", st.no);
 
-    for (i = 0; i < st.no_grades_filled; i++)
+    for (i = 0; i < st.noGradesFilled; i++)
     {
         printf("%.1f\n", st.grade[i]);
     }
@@ -612,7 +612,7 @@ Consider passing `harry` by address to function `display()` as well:
 struct Student
 {
     int no;
-    int no_grades_filled;
+    int noGradesFilled;
     float grade[4];
 };
 
@@ -639,7 +639,7 @@ void display(const struct Student* st)
     int i;
     printf("Grades for %d\n", (*st).no);
 
-    for (i = 0; i < (*st).no_grades_filled; i++)
+    for (i = 0; i < (*st).noGradesFilled; i++)
     {
         printf("%.1f\n", (*st).grade[i]);
     }
@@ -715,7 +715,7 @@ For example:
 struct Student
 {
         int no;
-        int no_grades_filled;
+        int noGradesFilled;
         float grade[4];
 };
 
@@ -742,7 +742,7 @@ void display(const struct Student* st)
     int i;
     printf("Grades for %d\n", st->no);
 
-    for (i = 0; i < st->no_grades_filled; i++)
+    for (i = 0; i < st->noGradesFilled; i++)
     {
         printf("%.1f\n", st->grade[i]);
     }
