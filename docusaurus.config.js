@@ -29,6 +29,11 @@ module.exports = {
         srcDark: 'img/logo-dark.svg',
       },
     },
+    docs: {
+      sidebar: {
+        hideable: true,
+      },
+    },
     tableOfContents: {
       maxHeadingLevel: 4,
     },
